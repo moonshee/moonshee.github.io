@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <meta name="description" content="Software dev resource site.">
+  <meta name="keywords" content="technology">
+  <meta name="author" content="Momotaro Studios">
+
+  <meta charset="UTF-8">
+  <meta name="viewport"
+   content="width=device-width,initial-scale=1.0">
+  <title>Moonshee
+   </title>
+  <link href="/style.css"
+   rel="stylesheet"
+   type="text/css"
+   media="all">
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #000;
+      padding: 20px;
+    }
+
+  #chatbox {
+      width: 100%;
+      max-width: 400px;
+      height: 50%;
+	 max-height: 200px;
+      border: 1px solid #ccc;
+      background: #033;
+	color: red;
+      padding: 10px;
+      overflow-y: auto;
+      white-space: pre-wrap;
+      line-height: 1em; /* one-line spacing */
+    }
+   #userInput {
+      width: 100%;
+      max-width: 400px;
+      margin-top: 10px;
+    }
+  </style>
+
+  </head>
+  <body  style="background-color: black; color: beige;">
+   <center>
+   <h1><a href="#chatbox" title="Vegan AI" id="top">&#x1F4BB </a><a href="#files" title="Files and Misc.">&#128193 </a>
+<a href="#buddy" title="New Book by Chet Dowry entitled ADVENTURES OF BUDDY FROM IOWA - A rag to riches story (based on true events) of a poor farm boy turned multi-millionaire while making it look easy and with a parade of females following his wherever he goes.  It is a biography although names and places have been changed for privacy's sake.">&#128218 </a>
+ 	
+<a href="#contacts" title="Contacts">&#128243 </a>
+
+<a href="#guestbook" title="Sign Guestbook">&#128221</a></h1>
+	<hr>
+
+
+	<font color=beige>
+	<strong><em>MOONSHEE</em></strong>
+	<img src="./images/image1.png" width=5% height=5%></center>
+  </font>
+  
+  
+  
+  
+  
+  
+  
+  
+  </center><br>
+  <hr><br>
+
+<body>
+<div id="chatbox"></div>
+<input type="text" id="userInput" placeholder="Chat with Moonshee AI..." />
+<script>
+function submitChat() {
+  const input = document.getElementById("userInput");
+  const chatbox = document.getElementById("chatbox");
+  const userText = input.value.trim();
+
+  if (userText !== "") {
+    chatbox.textContent += `You: ${userText}\n\n`;
+
+    if (responseIndex < responses.length) {
+      chatbox.textContent += `AI: ${responses[responseIndex]}\n\n`;
+      responseIndex++;
+    } else {
+      chatbox.textContent += `AI: No more responses queued.\n\n`;
+    }
+
+    input.value = "";
+    chatbox.scrollTop = chatbox.scrollHeight;
+  }
+}
+
+
+  const responses = [
+    "Hello there! Welcome to Moonshee AI.",
+    "How can I help you today?",
+    "Let me know if you have any questions.",
+    "Thanks for reaching out!  So, first....let me ask du a few questions, ja?",
+	"Right, mate.  Well, shall we begin?   I like fortune telling.  How about du?  Fancy a reading then, old son?",
+	"Well, overall and in general, 2026 is showing alignments favourable for love and sess.  Would vous not agree, sahib?  Ja, a muezzin told me and I doublechecked.  He's right!!",
+	"Pisces and Cancro are coming alive, in sidereal terms, for 2026.",
+	"What is your birthday?",
+	"Do vous know your birth time?  What is it?",
+	"Ok, and what is your sidereal moon sign and sidereal rising sign in whole Haus?",
+	"You know, 3rd Haus is for communication, grade school, siblings and communication too.",
+	"Do you usually go with whole Haus method?",
+	"Well, I'm looking at your chart here.",
+	"Are you vegetarian?  Du bist vegetarian?",
+	"See these alignments?  Look at your chart.  Go ahead, pull it up on Astro-seek sidereal.",
+	"Well, I strongly recommend you go vegetarian, it could help with your quest.  See your North Node here?",
+	"North Node is for your mission.  But if you already finished it you might be able to head to South Node.  South Node can be sess, as in bottom of Tree of Life roots, or Kether.",
+	"Any health problems?",
+	"Well, you know...it might be a good idea to wear sunglasses and a hat if you go out a lot in the hot sun or if you go skiing and waterskiing.  Ja?",
+	"Where are you from?",
+	"Parlez-vous francais?",
+	"Well, I've been doing astrologie for a long time.",
+	"So, what would vous like to know?  Ask me anything, bitte.",
+	"Let's talk about your future.  We look at second Haus for that, whole sign sidereal.",
+	"See, your chart shows that it might be best to refrain from meat and Fisch for health reasons.",
+	"If you don't believe me, just ask another astrologer.  There are astrologers on Astro-Seek who will answer questions for free.",
+	"So, how about Ukrainia?  Now that there is peace in Palestine, perhaps we shall see peace in Kiev.  Because that's how mundane astrology works.  Peace in Mexico means peace in Texas quite often, in terms of astrologie.  Oui?",
+	"What college do you attend?  Are you a three letter man?",
+	"Have you ever considered joining a fraternity, old son?",
+	"Well, this time of Jahr in Tokyo is quite nice.  We have a lot of tree leaves falling and there are big Halloween parties and sess parties, vous know sahib.",
+	"Ja, I just love it when the weather cools down a bit.  So, let's talk about your North Node because it is opposite the South Node and the SN is very important.",
+	"If you complete all your tasts in Malkuth, you might be able to go back to SN and that is Kether.  So, let's take a look at your chart here.",
+	"Do you remember a time when things were better?  What was different for du then?",
+	"Ok, that's all for now.  Let's discuss this further perhaps next week or tonight over cocktails?",
+    "We will need to continue this later.  I must go now.  Sumimasen."
+  ];
+
+  let responseIndex = 0;
+
+  const chatbox = document.getElementById("chatbox");
+  const input = document.getElementById("userInput");
+
+  input.addEventListener("keypress", function(e) {
+    if (e.key === "Enter" && input.value.trim() !== "") {
+      const userText = input.value.trim();
+      chatbox.textContent += `You: ${userText}\n\n`;
+
+      if (responseIndex < responses.length) {
+        chatbox.textContent += `AI: ${responses[responseIndex]}\n\n`;
+        responseIndex++;
+      } else {
+        chatbox.textContent += `AI: Check back later.  I'm busy right now.  I'm meditating.  Ohm...Ohm...ohm hlim sham shanaya namah....Hare krishna.  Krishna krishna.  Hare hare.  Rama rama.\n\n`;
+      }
+
+      input.value = "";
+      chatbox.scrollTop = chatbox.scrollHeight;
+    }
+  });
+</script>
+<br>
+<button onclick="submitChat()" style="background-color: red; color: white;">Send Msg</button>
+<br><br>
+<button onclick="location.reload()">Start New Chat</button>
+<br><br><br><br><br><br><br><br><br><br>
+<div id="files"></div>
+<font size="2px">
+  <u><strong>FILES</u></strong><br>
+<br>
+Video Games<br>
+<em>These downloads are for PC, 32 bit, Windows, 7z, 800x600, x86.  Next planned release is Kagaku Club, scheduled for Nov. 2025, Tokyo.  The games cost $80.00 USD each for a one-year license.</em><br>
+<a href="http://miyazakibar.itch.io/wall-street-world">
+	Wall Street World</a><br>
+	The Mummy 2<br>
+	<a href="http://miyazakibar.itch.io">
+	Halloween 2<br>
+	Homecoming<br>
+	The Civil War<br>
+	Math Kamp<br>
+	HVAC Technician 2<br>
+	Kagaku Club<br>
+	Neko Sekai's Mars Rover<br>
+	Missionary Position 2<br>
+	Zauberkraft II - Pem & Tellez<br><br>
+   <p>&#128266 Sound Effects</p>
+     <ul>
+       <li id="sound"><a href="http://miyazakibar.itch.io/wall-street-world">&#128038&#128266 Bird sound effect.</a></li>
+	 Nightingale. 2 mins. Hi fidelity.  Ogg format.  345kB.  American songbird. High volume.  Recorded in Hollywood Hills, 2025.  To download, click on link and then navigate to the two audio assets you'll see listed.
+       <li><a href="http://miyazakibar.itch.io/wall-street-world"> &#128038 Bird2</a></li>
+	Similar to the other bird sound effect.  Ogg.  551kB.  2 minutes.<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><div id="contacts"></div>
+CONTACTS:<br>
+<a href="http://miyazakibar.itch.io" title="Moonshee is working with a group of developers on Itch.io producing games and content.  Rate, review, follow and subscribe at Miyazakibar.Itch.Io">&#129493 Moonshee's Itch Affiliation</a><br><br>
+Rate, review, subscribe, follow.  Send us a message, send us your selfies and we'll send you cartoon character portrait.	
+<br><br><br><br><br><br><br><br><br><br><br>
+
+RESOURCES:<br><br>
+       <li>Technology</li>
+	 <a href="#astro" title="Password may be required">Moonshee AI</a><br>
+	Most cutting-edge VLLM available outside of Hong Kong.  This version will be updated soon to vers 2.0 - testing underway.  The VLLM is mostly for life coaching and deep subjects.  If you just want some help with script or need to see the weather, we recommend <a href="bing.com/chat">Microsoft's Copilot</a> instead.  Copilot works well but this Moonshee system is more in-depth for personalized, very detailed and focused life coaching.<br>
+       <li><a href="http://gutenberg.org" title="Books a-Million">Public Library</a></li>
+	75,000 books.  Fiction and non-fiction.  Free.<br><br>	
+		<li><a href="#buddy" title="Amazing New Biography - Rags to Riches">Latest Release</a></li>
+		  A book based on true story of Iowa farm boy turned multi-millionaire.  A rag to riches story meant to inspire younsters and let them know you can be what you want to be if you work hard and have a little luck, and never give up on your dreams.
+
+		<br><br><br><br><br><br>
+	<br><br>	
+		<br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br>
+	
+<a href="#register"><button>Sign Up For Moonshee Club</button></a>
+	<br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br>
+	
+	<br><br><br><br><br><br><br><br><br>
+	About Moonshee International:<br>
+	The firm is located in Singapore with offices in Kowloon and Tokyo.  Moonshee produces video games and other content available on itch.io in the Miyazakibar portal.  Moonshee only hires the most advanced scripters, no rookies here.<br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+	<!--Enter custom search bar here-->
+	
+
+
+
+	      </ul>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <p id="resources"></p>
+  <u>Software Developer Resource List:</u><br>
+  <br>
+  <li><a href="http://vroid.com">VRoid</a> - Models, 3d animations, characters, clothing<br>
+  <li><a href="http://adventuregamestudio.co.uk">AGS</a> - Game and software scripting.  RPG, table top, any style.<br>
+    <li><a href="http://itch.io">Itch.io</a> - Game hosting.<br>
+	       <li><a href="../misc.html#compclub">Computer Club</a></li>	
+
+      <li><a href="http://github.com">Github</a> - Website hosting for reasonable pricing.  High quality.<br>
+      Also check out:<br>
+      icoconvert (for making software icons)<br>Winamp (for audio player)<br>Maker Studio (audio design and convertion)<br>7z (compression software)<br><a href="http://bing.com/chat">Copilot AI</a> (leading digital assistant)<br>A9 Cad (model design, drafting).
+
+<br><br><br><br>
+Other Resources (non-software):<br>
+		<li><a href="files/mlk.rtf" title="&#x1F4DA;">&#x1F4DA; Moonshee Publishing House - Latest Release</a></li>
+         <li><a href="http://gutenberg.org" title="&#x1F4DA;">&#x1F4DA;&#x1F4DA; Public Library - 75000 scrolls</a></li>	
+       <li><a href="#signon2">&#x1F4DA;&#x270D; Moonshee Publishers</a></li>
+	  Premier online book publisher heaquartered in Singapore, Moonshee landed new and upcoming author Chet Dowry and his Adventures of Buddy from Iowa series.  The story is based on a real life rags to riches story of poor Iowa farmboy turned multi-millionaire, a lesson to those who would follow in his large footsteps. The publisher also is behind video games, comics, manga and more.  Works closely with Momotaro Studios and Dokyo Entertainment Ltd, Hong Kong.<br><br>	
+
+<br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br>
+	
+</font><font size="2pm">
+<br>
+<br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div id="guestbook"></div>
+<strong>Danke schon fur visiting our humble website.  It is our great honour to have you stop by.  Would vous like to sign our &#128217 guest book?<br>
+</strong>
+<table border="1"  id="register"><tr><td>
+	<br>
+	<label><p>
+	   Phone number & contact info / website / social media:</p></td></tr><tr><td>
+	   <input type="text" style="width:90%;" name="contact"></td>
+	</label></tr><br><tr><td>
+	<label>
+	   Name or nickname:</td></tr><tr><td>
+	   <input type="text" name="nom"></td>
+	</label></tr><br><tr><td>
+	<label>
+	   Age:</td></tr><tr><td>
+	   <input type="text" style="width:30%;" name="age"></td></tr>
+	</label><br><tr><td>
+	<label>
+	   Comments:</td><td></td></tr>
+	<tr><td>
+	   <input type="text" style="width:90%;" name="social"></td></tr>
+	</label><br><br><br>
+	<tr><td>
+	<label>
+	   Upload your selfie and other attachments here.  If you have a big game to upload, don't do it  Instead, put the link in comment section, si vous plait.  Merci beaucoup.</td></tr><tr><td>  
+	   <input type="file" name="upload">
+	</label></td></tr>
+	</form>
+	
+	</table>
+	<center>
+	<button type="submit"  style="background-color: red; color: white;" id="btn22">DONE</button></center>
+	<br><br>
+	<a href="#guestbk"><button style="background-color: black; color: white;">View Guestbook</button></a></center>
+	
+	<form
+		action="https://formspree.io/f/mjkapgww"
+		method="POST"
+		enctype="multipart/form-data"
+	>		
+	
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div id="guestbk"></div>
+<stong><u>Guestbook Contents</strong></u>
+<br><br>
+<font color="yellow">Kinyobi Oct 17, 2025</font><br>
+<font color="pink">
+Cammie from Tokyo<br>
+Hi guys!  Great to meet you at the computer club last week.  Are you coming to my birthday party at the baru?  Let me know!<br><br>
+</font>
+<hr>
+<font color="brown">Doyobi Oct 18, 2025</font><br>
+<font color="blue">
+Yoshi from Osaka<br>
+Ohayo.  Your girlfriend left her bra in the backseat of my Kawasaki.  Do vous want me to drop it off?  Is she at the office now?<br><br>
+</font>
+<hr><font color="brown">
+Doyobi Oct 18, 2025<br></font>
+<font color="green">
+Shinobi from East 37th Street<br>
+Guys, we're getting together for sushi on Getsuyobi at the club.  [-,-]  Be there are be square and bring Sandra and her friend.<br><br>
+</font>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div id="signon"></div>
+<p id="esignon">Employee Sign-On</p>
+        <p>
+	<textarea style="
+		width: 150px;
+		height: 30px;
+		resize: none;
+		font-family: monospace;
+		"
+		onkeydown="if(event.key === 'Enter') 					event.preventDefault();">
+	</textarea>
+	</p>
+        <p>
+	<table border="1"><tr><td>
+	<a href="#emplwrong">SUBMIT</a></p></td></tr></table> 
+   </td>
+   </tr>
+   </table>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><div id="emplwrong"></div>
+<font color="red">&#x274C;</font> SORRY <font color="red">&#x2757;</font> <font color="orange">WE ARE NOT ABLE TO FIND THAT PIN NUMBER.  TRY AGAIN, SI VOUS PLAIT.  DANKE SCHON </font><font color="red">&#x274C;</font><br>
+<br><br>
+<table border="1"><tr><td>
+<a href="#signon">Try Again</a></td><td width=50></td><td>
+<a href="#top">Back To Top</a></td></tr></table>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><div id="emplwrong"></div>
+	
+<div id="buddy"></div><br><br><br>
+
+   <font size="4">&#128218 Moonshee Publishing</font></center>
+	<img src="images/image1.png" width=2% height=2%>   
+   
+	<hr>
+   </tr>
+   </table></a>
+        <table border="1"><tr><td><font size="3"><a href="#top">&#127968 Back To Top</a></td><td width="50"></td><td>
+
+
+
+	<a href="#top"><center><font size="3">&#x1F4BB Moonshee AI<center></a></td></tr></table>
+
+
+	<br><br>
+     <u><strong>ADVENTURES OF BUDDY FROM IOWA</strong></u><br><br> <em>by Chet Dowry</em>
+     <ul>
+<br><br><br><br>
+	<a href="#contents"><table border="1"><tr><td>&#128217Table of Contents</td></tr></table></a>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+
+      </ul>
+    </th>
+   </tr>
+	</table>
+
+	</center>
+
+<br><br><br><br><br>
+
+
+
+
+
+
+
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+
+
+
+
+
+
+
+
+				<em>From Rags To Riches. Iowa Boy Made Good<br>
+					-Based On True Story-</em><br>
+
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---------------------------------------------------------------------------------------------------------------------------
+
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+
+
+
+
+
+Moonshee Publishing House<br>
+(c)2025 All Rights Reserved<br><br><br>
+
+First Edition<br>
+Edited in Tokyo, JP<br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<em>Dedicated to Gail McKee</em>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<div id="contents"></div>
+<br><br>
+TABLE OF CONTENTS<br><br>
+<a href="#prologue">Prologue</a><br>
+Introduction<br><br>
+<a href="#chapone" title="Chapter One">Chapter Ichi</a><br>
+Early Life<br><br>
+<a href="#chaptwo" title="Chapter Two">Chapter Ni</a><br>
+School Days<br><br>
+<a href="#chap3" title="Chapter Three">Chapter San</a><br>
+Big Man On Campus<br><br>
+<a href="#chap4" title="Chapter Four">Chapter Shi</a><br>
+Vietnam War<br><br>
+<a href="#chap5" title="Chapter Five">
+Chapter Go</a><br>
+Post-war Period<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<div id="prologue"></div>
+Prologue<br>
+Introduction<br><br>
+There is a mighty man, still going strong in California, who has had many adventures and has transformed himself from poor farm boy from Iowa to multi-millionaire without even trying hard, or it would seem to a casual observer.  This book is a biography of Buddy, a true American hero who rose the ranks of the military and found riches.  Nobody every thought this ladies' man from a poor little town in Iowa would become a decorated officer in the armed services and well-loved at the bank and the stock broker's office.
+Buddy started off on a rural farm.  His upbringing was so quaint that nobody was even sure what day he was born.  Buddy was apparently born at home in the small rural farmhouse although nobody knows for sure or can remember.  In those days, things were different.  One room school houses, horses and buggies.  But, not too many horses.  This was around 1950 so people were mainly using automobiles to get around town.  However, Buddy grew up around horses, his family had a pair at one time until they were sold to raise funds.
+This biography is good for youngsters to read because people don't need to be poor and suffer.  No need to sleep on an empty stomach if you can learn from biographies like this one.  A true self-made man, pulled himself up all by himself with nobody's help really except his loving wife, friends, parents and church buddies.  So, if Buddy can do it, so can anybody.  With a little hard work and luck, any youngster can grow rich, but it genarally takes time.
+
+Buddy is doing well now, in his 80's.  A specimen of good health, lost weight recently.  Full head of hair.  Still has a great sense of humour.  So, even though Buddy worked hard, sometimes 3 jobs at a time, raised a big family, cared for an ill spouse and volunteered extensively, he still continues on with his good work in the community shaking hands and kissing babies.  He continues his gardening and goes out regularly with family.  He has a butler that lives with him, a trained black belt.  So, his security is sure.  And his butler also cooks for him so he eats well.
+What was Buddy's secret to make multi-million dollars and keep them?  How could he do that and make it look easy?  Read on to find out.  Buddy started as poor labourer then went to University where he excelled.  After leaving University, he joined war effort and later had a full career in non-military industry roles.  So, there is a lot to tell when it comes to the adventures of Buddy.  Names and places have been changed for privacy.  Buddy is well loved by all in the community he lives in and is know as a joker and someone who knows how to fix things and help people when they feel down and need someone to talk to.  His father was a caregiver and Buddy is also a two-time caregiver or more if you include all his volunteer work and babysitting roles.  Buddy cared for his ill father-in-law for years and his wife as well.  A true American hero!
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<div id="chapone"></div>
+Chapter One<br>
+Early life<br><br>
+
+Buddy (aka Buddy) was born in farm country to a pair of farmers, Edith and Glenn.  The two were very hard-working and Buddy was their second child.  The eldest was a boy, Franklin.  The second was Buddy.  Next, came several other including Ronaldo, Daniello, Karina and Denie.  So, it was quite a large family.  They lived in a farm in southeast Iowa near the home of John Wayne, famous cowboy film actor.   Buddy really loved John Wayne growing up and still does.  He has a large poster in his palacial Califonie mansion.<br><br>
+Buddy spent his early childhood in Iowa on the farm.  There was no running water.  Just a cistern, well and outhouse.  The family raised animals such as rabbits, chickens, horses.  Buddy's father was from Nebraska but he left there and came to Iowa where he met Edith and married when the two were at a young age, just out of high school.  Glenn finished the sixth grade.  Edith graduated high school.  They settled in the Afton, Iowa area.  One funny story is this:  Glenn was busy at work one day when a man drove up to the modest farm house way out in the country and offered to buy the horses.  There were two of them.  Edith agreed and the horses were sold. This was not pleasing to Glenn.  Another story involved FDR and his farm rules.  Glenn was impacted by all the animal slaughters and other rules, it changed him.  He really loved animals and fish, and so he had no respect for FDR, the way he caused a great slaughter.  Glenn raised a lot of vegetables in a huge garden like rubarb, peas, beans.<br><br>
+
+Glenn, Buddy's father, got a got working for a creamery - a popular occupation at the time.  Creameries hired many drivers to deliver milk.  And so, Glenn made a living for the family in the 1950's.  The family attended an LDS, Mormon church at the time in the area until one day when Buddy was in 5th grade or so and the family pulled up to the church parking lot in their vehicle and Edith or Glenn or both saw something they didn't like.  Perhaps it was dancing, or a girl showing her ankle.  Whatever it was, it really turned off Buddy's parents so they took off out of the LDS church, never to return.  They headed to the Lutheran church nearby and never looked back.  When the family arrived in their automobile at the Lutheran church, Buddy's older brother, Franklin, was already there, having a ball with the girlies.<br><br>
+This was a point of consternation for a while between Buddy's parents because Edith's family was all LDS.  Not much is known of Glenn's family.  Nobody ever met them or saw them or heard their names!  But Buddy insists that they live in Nebraska and they are unfriendly alcoholics.  Buddy says that one time in the 1950's or so, the family drove out to Nebraska as was customary in those days on Sundays.  At that time, people would drop in on friends and relatives, go for a Sunday drive.  But, Nebraska is part of the West too, so it has some rough terrain, if you will.  It's not the Wild West anymore like it once was, like California is now, but still it apparently has some rough edges because Buddy and the family arrived at Glenn's relatives' home and were greeted with guns.  So, they didn't return much.<br><br>
+
+Early in life, Buddy also went all the way to California, drove out with whole family to Yosemite Valley and visited everything in between Iowa and Yosemite on the way there and back.  Buddy really enjoyed this trip and it may have inspired his life-long love of travel and the travel industry.  Buddy was born with a very auspicious astrological chart.  He has a close-orb grand water trine and he has an aspect with Neptune.  Also, he is a 2nd decan Pisces, sidereal.<br><br><br><br><br><br><br><br><br><br><br>
+  <div id="chaptwo"></div>
+Chapter Two<br>
+School Days<br><br>
+
+Buddy went to a high school near Afton and was the most popular kid in school.  They called him The Roman because the ladies loved him and he was a star athlete, looked like a statue you would see in a museum.  His name is plastered all over Iowa, with records in his given sports.  If you go to gymnasiums and hallways, wherever records are kept, there is Buddy's name over and over again mostly around SW Iowa.  In high school Buddy often was seen with his best friend Geo.  They rode together to school and worked odd summer jobs together.  In Iowa, money is tight.  People have to work hard to make a living.  So, Buddy worked construction and labour position.  Buddy loves to tell the story of when he hung from the side of a building with a rope harness and used a jackhammer against a wall.  And another time, he helped build the big arch in St. Louis but all the fiberglass bothered him a bit, the skin was irritated.   But Buddy never quit.  He always stuck around to collect his paycheck, always early or on-time.  Rarely called in sick for work.  But, we're getting ahead of the story.  Let's return to Buddy's young days in Iowa.<br><br>
+
+In high school, Buddy was highly sought after by the ladies.  However, he devoted himself to his studies and refused the many invitations to homecoming and prom dances, choosing instead to work in the laboratory on his experiments.  He was working to develop new types of tomatos which are blight resistant naturally, without gene-splicing or any far-out ideas like that.<br><br>
+
+Buddy was determined to work in a field like biology because he loved tomato, onion, animals and outdoors.  He spent a lot of time in the field, birdwatching and collecting samples of animal footprints, scat, dead insects.  These he collected and labeled carefully, running chemical analysis experiments and writing up detailed reports.  This pattern of scientific devotion would serve his well later in life as his career soared in California private industry.<br><br>
+
+In high school, one of the main sports Buddy did was track.  The wrestling coach and girls all begged him to join the wrestling team, but he was busy with American Football and track.  In football, he played defense.  He begged the coach to let him play offense too, because he was the best quarterback on the team, however, the coach did not want to run up the score too high on all the other teams and make them look bad.  This cost Buddy a scholarship for star QB to Univ. of Iowa.  Instead, Buddy was star defense end like Lawrence Taylor.  Opposing teams feared the day they would come to Afton, they knew it was impossible to lose by less than 28 points.<br><br>
+On the track team, they called him The Roman.  The ladies never used to come to the football games, too cold and lots of mosquitos.  However, once Buddy started playing for the Wildcats (that was the mascot), attendance soared and there was a large number of female fans.  Of course, at the same time, the team suddenly started winning, going undefeated in the regular season with Buddy causing many turnovers.  When he played football, the coach would take all the team out to eat the night before the game.  They would go to a vegetarian restaurant and the coach would pay.  The coach said it was important that all the kids have the right vitamins for the game, so they would eat a lot of corn like corn on cob, corn biscuits, cornbread, polenta, vegetables breaded with cornmeal and oven friend in soybean oil.<br><br>
+Thus, Buddy continued to excel in high school.  His family left the farm while he was around 6th grade and moved to a big huge house in the best part of a little town.  It was next to a lake and on the edge of town, perfect.  Buddy continued his studies in town and enjoyed going to Dairy Queen for treats  There was a movie theater, shops, sports store, a drag.  So, Buddy enjoyed his time at the jr. high school and high school as well.  He received high marks but was best known for sports prowess.<br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div id="chap3"></div>
+Chapter Three<br>
+Big Man On Campus<br><br>
+
+After graduating high school with honours, Buddy continued his course of work at a junior college in SW Iowa and then proceeded to Iowa State University where he majored in Fish and Wildlife.  He had a passion for animals and wanted to work against poaching.  But at the university, the ladies were constantly begging Buddy for dates and tutoring and this impacted his grades so eventually he left the university after meeting his future wife to join the war effort.  His fiance was very patriotic and was taken by the recruiting mottos and hype, so she convinced Buddy to join up.  He wanted to join Marines or Army but his dear mother, Edith, convinced him to join Navy instead because she didn't want Buddy to get injured or killed in line of duty.<br><br> 
+
+By this time, Buddy's mom had been confined to a wheelchair, no longer able to walk or move arms, hands.  She could talk a bit.  This happened after she received a polio vaccine.  Her symptoms were attributed to polio but many thought it could have been the polio vaccine.  This caused Buddy to worry constantly and buy his dear mother many gifts which dampered his budget temporarily.  Of course, once everyone found out that Buddy was leaving Ames to join the armed services and fight in the Vietnam War, there was a general hue and outcry.  Some students were patriotic and glad Buddy was following his heart.  Other students were not anti-war but they were very upset that Buddy was leaving Ames, Iowa and would be in harm's way on the frontlines of a bloody war.<br><br>
+All this was happening when one day a knock came at his dorm room.  Buddy answered and saw the woman of his dreams, Karina.  She was a brunette, very attractive, outgoing.  She was wearing a poodle skirt and a nice blouse with sweater.  Karina was there to meet Buddy's roommate, Red.  However, Red was out at the time of her visit and the two, Karina and Buddy, fell madly in love.  From that point on they were often seen together and had many outings.<br><br>
+
+Karina was from the finest suburb north of Chicago.  Her family is Hollywood royalty.  Two of her first cousins are very famous movie and tv actors.  She was very rich, of course.  She passed away around 2015 from natural causes.  She was born in sidereal leo, first decan, and her personality was very artistic and outgoing.  She had blue eyes and curly hair.  5'4", 115 lbs.  Many guys asked her out constantly but she was madly in love with Buddy.  Karina worked on campus of ISU as a soda-jerk and she met a prostitute who worked at the cafe.  Karina went to Guatemala with the prostitute to meet her family and see the country.  She never lost her love for spanish food after that trip, often cooking up vegetarian tacos in buffet style.<br><br>
+Karina's mother was a nurse in Chicago at a hospital and that's where she met Karina's father, the son of a Danish immigrant.  Karina's grandparents were American (two of them) and the others were Danish and Norweigen.  Karina grew up with her maternal grandmother and parents along with brother on a large 5 acre estate with multiple homes in the best suburb of Chicago at that time, up to the north a wee bit from downtown.  Karina's father did not fight in the wars but he did work in the mills to support war effort even though he took a stand against the firebombings and nuke attacks.  Her father was named Gilberto and he worked in furniture sales at Marshall Field's Department Store.  He too the train to work rather than pollute the air because at that time the fuel was heavily leaded and the air was thick with lead.  Nowadays, the fuel is unleaded which means no lead added but there's still some land and other dangerous pollutants in gasoline so we must all drive Teslas and Ford e-bikes when possible.<br><br>
+
+When Karina found out that Buddy was going to leave ISU and join the armed services, she was at work (the campus cafe).  Karina immediately made plans to follow him and transfer her coursework to a college near his base assignment.   She went to see her advisor and planned to transfer her subjects and credits to a new suitable college with a matching course (computer science and home economics minor). The couple married in early December (3rd face Scorpio whole sign Hauser - Orphiuchus) and Buddy travelled the world as a high ranking enlisted man before achieving the ranks of NCO.  Buddy spent a lot of time in Japan and many other continents like Europe.  He worked for the intelligence service.  Nobody ever thought he would become a multi-millionaire because he was very unassuming and told a lot of jokes as is common in Iowa.  Another thing that happens in Iowa is this:  At Halloween the kids go trick and treating.  But the children are often required to tell jokes before they receive the candy.  And if they do not have a joke they may be teased a bit but Buddy always strove against teasing and such dirty tricks, he preferred to simply hand out the candy no questions asked.  Later in life, after Buddy had amassed his first 500k, he would sit on the front porch of his palacial estate and wait for the trickersters to arrive demanding candy.<br><br>
+
+Buddy would wear a scary rubber mask and then jump out of his hiding place and scare the kids each Halloween on the porch.  It was a tradition the children looked forward to each year.  But one year the estate was lightly egged and Buddy took it personally, perhaps wrongly concluding that the egging was a result of the mask charades.  However, little did Buddy know, the egging was unrelated to his prants, rather the likely cause was his daughter's missteps.  Nevertheless, the incident took a toll on poor Buddy and he never again donned the mask of horrow, fearing retribution from scared Kinder.<br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div id="chap4"></div>
+Chapter Vier<br>
+Der Vietnam War<br><br>
+
+Karina followed him all over the world but she mainly stayed in the USA on base and off-base.  The two moved to Denver, Washington, Alameda and several other locations before landing in Hillsborough, California area.  They rented a place south of Hillsborough and lived there for a short time before buying a huge mansion house in San Mateo County.  Buddy went to asia and fought the war and the kids stayed in California.  The couple lived in Fruitvale, Oakland for awhile and volunteered around the area, helping people from church with household chores.  Buddy was a wiz around a wrench, knew how to fix all kinds of appliances and vehicles.  So, it was natural for him to help out at church cutting grass and helping old ladies at their modest homes in Oakland.<br><br>
+When Karina married Buddy, an Iowa farm boy, her parents (city slickers from one of the biggest cities in America) had reservations.  Karina's mother seemed pleased, after all, Karina had not attended prom or homecoming.  And Karina's mother Dora worried about her sometimes.  Her father was a sidereal capricorn (1st face) sun sign.    So, he was a successful salesman and outgoing at times, like for his career and later in life when he lived at The Sequoias in Portola Valley.  However, at home and with family he was more reserved.<br><br>
+
+Buddy was out fighting the war, travelling about asia but Karina was left at home all by herself and that's when she started meeting church friends and going to more church events like bible studies.  The war was unpopular so Karina and Buddy were not heralded in the community.  Rather, they had to not wear uniforms too much or fly flag because they did not want to provoke their neighbors in East Oakland or the ghetto in San Mateo County, once they moved there.<br><br>
+So, the war dragged on for many years and Buddy wasn't injured.  He was fine but emotionally, the war took a toll on both sides.  After the war, Buddy found work with Pan American World Airways and went to New York City for training.  After that, he returned to San Francisco and worked downtown for many years while staying in the service part-time.  This is a story of rags to riches, but at this point in the story, it's mostly rags.  Karina, although she grew up in the finest suburb of Chicago, was born to a thrift father and grandmother so she did not know luxury.  Buddy was born into a poor farm family and barely had food to eat, not because of his father's fault, but just because the family was so big and his brothers were hungry.  There's never enough food or supplies for a family like that.  Even if Buddy's father was a millionaire, there would have been shortages in such a big family because just think of when you go shopping at local mom and pop store with a little kid.  What do they always want to do?  They will want to buy every single thing in the store.  So, you have to tell them, "No."  So, Buddy grew up wanting as many do all around the world.  However, Buddy became a multi-millionaire.  What was his secret?<br><br>
+During the war, Buddy spent a lot of time in Hawaii and so Hawaii 5-0 and other Hawaii television shows were always Buddy's favorites along with many other shows like Charlie Sheen's comedies and Duck Dynasty.  He wore several different uniform colours during the war and steadily made his way up the ranks.  His uniforms were black, white and beige.  He had a jet black moustache and thick black head of hair.  He was always ready with a joke, a true Iowan in that comedian style.  Buddy never flinched when gunfire went off or when there was an air raid or a tornado.  He had nerves of steel.<br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div id="chap5"></div>
+Chapter Five<br>
+Post-War Period<br><br>
+After the war, Buddy had a few kids and so he was looking for a larger nest.  At the time he was stationed at Alameda and did work also at Treasure Island.  His wife found a place in the ghetto part of San Mateo County near Atherton.  It was a rental, a step up from their existence in Oakland's Fruitvale neighborhood.<br><br>
+TO BE CONTINUED....<br>
+To order, text ORDER to Beverly Hills Publishing House (424) 235-5733.  Text STOP to opt-out.  Messaging rates may apply.
+
+
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+
+	This is the wholesale order form for Adventures of Buddy by Chet Dowry<br>
+	<table border="1"  id="wholesale"><tr><td>
+	<br>
+	<label><p>
+	   Address and phone number (required):</p></td></tr><tr><td>
+	   <input type="text" style="width:90%;" name="contact"></td>
+	</label></tr><br><tr><td>
+	<label>
+	   Name or nickname:</td></tr><tr><td>
+	   <input type="text" name="nom"></td>
+	</label></tr><br><tr><td>
+	<label>
+	   Age:</td></tr><tr><td>
+	   <input type="text" style="width:30%;" name="age"></td></tr>
+	</label><br><tr><td>
+	<label>
+	   Comments (Indicate how many cases of copies you want.  Minimum is 10 cases):</td><td></td></tr>
+	<tr><td>
+	   <input type="text" style="width:90%;" name="social"></td></tr>
+	</label><br><br><br>
+	<tr><td>
+	<label>
+	   Print out the completed form and then scan it and upload it here.</td></tr><tr><td>  
+	   <input type="file" name="upload">
+	</label></td></tr>
+	<button type="submit">DONE</button>
+	</form>
+	
+	</table>
+	<br><br>
+	<form
+		action="https://formspree.io/f/mjkapgww"
+		method="POST"
+		enctype="multipart/form-data"
+	>		
+	
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><hr><br><br><br><br><br><br><br><br><hr>
+
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><hr><br><br><br><br><br><br><br><br><hr>
+	<p id="signon2">Author Sign-On Portal</p>
+        <p>
+	<textarea style="
+		width: 150px;
+		height: 30px;
+		resize: none;
+		font-family: monospace;
+		"
+		onkeydown="if(event.key === 'Enter') 					event.preventDefault();">
+	</textarea>
+	</p>
+        <p>
+	<table border="1"><tr><td>
+	<a href="#top">SUBMIT</a></p></td></tr></table> 
+   </td>
+   </tr>
+   </table>
+   </body>
+   <br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br>
+<marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
+  Have a beautiful day!  From your friends at Moonshee International.<!-- Your scrolling content here -->
+</marquee>
+  </center>
+
+<br><br><br><br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<font size="1">
+NOW TRENDING ON MOONSHEE AI<br><br>
+NVDA - sell now?<br>
+Tesla<br>
+Cushman<br>
+Fuel cell<br>
+Vegan<br>
+Air fryer<br>
+Imitation fish<br>
+Japan<br>
+Amazon outage<br>
+Halloween costumes<br>
+Festuvis gift ideas<br>
+Coding<br>
+Scripting<br>
+De-coding the Bible<br>
+Real meaning of angel word<br>
+Directions to Vegetarian Club<br>
+Resume help<br>
+How to tie showlaces<br>
+How to whistle<br>
+Egypt<br>
+Gaza holocaust<br>
+Slaughter in Palesting<br>
+Netanyahu war criminal<br>
+Harbor Sign and Sess Club<br>
+Sanbec Guey Bano<br>
+Latino Fiesta Sabado<br>
+Louisa Hernandez<br>
+Our Lady of Guadalupe<br>
+Shroud of Turin proven to be fake<br>
+</font>
+   </body>
+   </center>
+</html>   
+
+
+
+
+
+
+
+
+
+
+
+
+
