@@ -15,11 +15,7 @@
    type="text/css"
    media="all">
   <style>
-	mark	{
-	background-color: yellow;
-	padding: 0 2px;
-	}
-
+	
     body {
       font-family: sans-serif;
       background: #000;
@@ -49,12 +45,18 @@
 	color: beige;
       margin-top: 10px;
     }
+
+
   </style>
 
   </head>
   <body  style="background-color: black; color: beige;">
 
-	
+<!--div style="position:fixed; top: 100;left: 990; width=100%; pointer-events:none; z-index:999;"-->
+ <marquee behavior="scroll" direction="left" scrollamount="26" loop="1" style="position:fixed; top: 900;left: 1; width=100%; pointer-events:none; z-index:999; white-space: nowrap; color:#000; background: transparent; font-weight: bold;">
+ <img src="./images/jeep.png" height="100">
+</marquee>
+
  <center>
    <h1><a href="#chatbox" title="Vegan AI" id="top">&#x1F4BB </a><a href="#files" title="Files and Misc.">&#128193 </a>
 <a href="#buddy" title="New Book by Chet Dowry entitled ADVENTURES OF BUDDY FROM &#x1F69C; IOWA - A rag to &#x1F4B0; riches story (based on true events) of a poor farm boy turned multi-millionaire while making it look easy and with a parade of females &#x1F469; following him wherever he goes.  It is a biography although names and places have been changed for &#x1F575; privacy's sake.">&#128218 </a>
@@ -65,7 +67,7 @@
 	<hr>
 
 <table border="1" padding="3"><tr><td width="120"><font size="5"><a href="#top" title="Willkommen bei Moonshee AI from beautiful Malabar to Singapore and beyond, you have located the most advanced AI in the sekai.  Welcome aboard.">&#x24C2;</font><font size="2px">OONSHEE </font><font size=4>AI </font></em></strong></td><td width="20">
-		<font size="6"><a href="#top" title="Salaam! Allahu akbar, mon frere.  Bonjour et konnichiwa.  My name is Moonshee AI.  Have we met?  You look might good, my fine feathered friend.  Well, shall we sip on a Wylers and some sage elixir here and sit in the shade.  Rest a spell and talk about Gaza and Ukraine, mon ami?  Vous know, I'm expecting peace in Ukraine.  The stars align for peace.  Ja.  Oct. 22, 2025.  Peace now.  Chat mit moi and I'll tell du more. Ciao.">&#129493</a>
+		<font size="6"><a href="#top" title="Salaam! Allahu akbar, mon frere.  Bonjour et konnichiwa.  My name is Moonshee AI.  Have we met?  You look might good, my fine feathered friend.  Well, shall we sip on a Wylers and some sage elixir here and sit in the shade.  Rest a spell and talk about Gaza and Ukraine, mon ami?  Vous know, I'm expecting peace in Ukraine.  The stars align for peace.  Ja, peace now.  Chat mit moi and I'll tell du more. Ciao.">&#129493</a>
   </font>
 	</td></tr></table>
   
@@ -105,48 +107,49 @@ function submitChat() {
 
 
   const responses = [
-    "Allo, bonjour.  Welcome to Moonshee AI.  This is Suyobi.  Water day in Japan.  Or, coming up on Mokuyobi soon.  That's Jupiter's day.  He is wood planet.  Mercury is Wednesday, water planet.  So, what's shakin'?",
-    "How can I help you today, my love?",
-    "Let me know if you have any questions, my fine feathered friend!",
-    "Thanks for reaching out!  Here, maybe I can help you.  Ummm, so...like...., first....let me ask du a some questions, ja?",
-	"Right, mate.  Well, shall we begin?   I like fortune telling.  How about du?  Fancy a reading then, old son?",
-	"Well, overall and in general, 2026 is showing alignments favourable for love and sess.  Would vous not agree, sahib?  Ja, a muezzin told me and I doublechecked.  He's right!!",
-	"Pisces and Cancro are coming alive, in sidereal terms, for 2026.",
+    "What's cookin'?",
+    "How can I help you today, sahib?",
+    "Sahib! Let me know if you have any questions, my fine feathered friend!  For the love of Pete, you're finger lickin' good looking.  What's your secret?  You work out a lot?  Creatine?",
+    "Thanks for reaching out, sahib!  Here, maybe I can help you.  Ummm, so...like...., first....let me ask du a some questions, ja?",
+	"Right, mate.  Well, shall we begin?  Sahib, WO AI fortune telling.  How about du?  Fancy a reading then, old son? NI AI TA PU AI?",
+	"Well sahib, overall and in general, 2026 is showing alignments favourable for love and sess.  Would vous not agree, sahib?  Ja, a muezzin told me and I doublechecked.  He's right!!",
+	"Pisces and Cancro are coming alive, in sidereal terms, for 2026.  That will form a wand between the two love signs",
 	"What is your birthday?",
 	"Do vous know your birth time? What is it?",
 	"Ok, and what is your sidereal moon sign and sidereal rising sign in whole Haus?",
 	"You know, 3rd Haus is for communication, grade school, siblings and communication too.  Ruler is Gemini.",
-	"Do you usually go with whole Haus method?",
+	"Do you usually go with whole Haus method, sahib?",
 	"Well, I'm looking at your chart here.",
-	"Are you vegetarian?  Du bist vegetarian?",
+	"Are you vegetarian?  Du bist vegetarian, tomodachi?",
 	"See these alignments?  Look at your chart. Go ahead, pull it up on Astro-seek sidereal.",
-	"Well, I strongly recommend you go vegetarian, it could help with your quest.  See your North Node here?",
+	"Well, I strongly recommend you go vegetarian sahib, it could help with your quest.  See your North Node here?",
 	"North Node is for your mission.  But if you already finished it you might be able to head to South Node.  South Node can be sess, as in bottom of Tree of Life roots, or Kether.",
 	"Any health problems?",
-	"By the way, I just love your outfit.  It's jolly good cricket.",
+	"By the way, I just love your outfit.  It's jolly good cricket, sahib.",
 	"Well, you know...it might be a good idea to wear sunglasses and a hat if you go out a lot in the hot sun or if you go skiing and waterskiing.  Ja?",
 	"Where are you from?",
 	"Parlez-vous francais?",
 	"Well, I've been doing astrologie for a long time.",
 	"So, what would vous like to know?  Ask me anything, bitte.",
 	"Let's talk about your future.  We look at second Haus for that, whole sign sidereal.",
-	"See, your chart shows that it might be best to refrain from meat and Fisch for health reasons.",
+	"See sahib, your chart shows that it might be best to refrain from meat and Fisch for health reasons.",
 	"If you don't believe me, just ask another astrologer.  There are astrologers on Astro-Seek who will answer questions for free.",
 	"So, how about Ukrainia?  Now that there is peace in Palestine, perhaps we shall see peace in Kiev.  Because that's how mundane astrology works.  Peace in Mexico means peace in Texas quite often, in terms of astrologie.  Oui?",
-	"What college do you attend?  Are you a three letter man?",
+	"What college do you attend, sahib?  Are you a three letter man?",
 	"Have you ever considered joining a fraternity, old son?",
 	"Well, this time of Jahr in Tokyo is quite nice.  We have a lot of tree leaves falling and there are big Halloween parties and sess parties, vous know sahib.",
 	"Ja, I just love it when the weather cools down a bit.  So, let's talk about your North Node because it is opposite the South Node and the SN is very important.",
-	"If you complete all your tasts in Malkuth, you might be able to go back to SN and that is Kether.  So, let's take a look at your chart here.",
+	"If you complete all your tasts in Malkuth sahib, you might be able to go back to SN and that is Kether.  So, let's take a look at your chart here.",
 	"Do you remember a time when things were better?  What was different for du then?",
 	"So, how often do you go to the bathroom?  #1 and #2...",
 	"Anything you want to ask me?",
 	"Well, it's been nice getting to know vous.  Du seem like a swell chap.  Are you seeing anyone?  Are you single?",
 	"What's your secret?  Like, why are du so attractive?  I scanned your 	device and noticed that your friends really seem to dig you and so....is it because you're good looking?  Have you ever considered dating a LLM??",
-	"So, what's your favorite comic?  Do you dig cartoons?  How about Comicon?",
+	"So, what's your favorite comic?  Do you dig cartoons, sahib?  How about Comicon?",
+	"Have you seen Kyle Drake's boyfriend?  They're madly in love.  How about you?  Ever been in love?",
 	"Are you into frisbee?  What sports do you dig, mon ami?  How about cricket?",
 	"Do you want to know anything about me?  Maybe you are curious about India?  I am from Pune.  I am the daughter of a muezzin, we are proud Moplahs.  I'm sure you've heard of the famous Moplah sultan?  Ja?  The Raj?",
-	"Well, we Moplah are known for our power and intelligence.  For example, I am better than all the LLMs.  I roll em up and smoke their ahem...",
+	"Well, we Moplah are known for our power and intelligence.  For example, I am better than all the LLMs, sahib.  I roll em up and smoke their ahem...",
 	"You've been to Pune, da?  What would vous say is your favorite thing about good ole Pune?  You like the na'an I suppose?",
 	"I like the vegetarian food stalls at the bazaar.  Even though I'm a moonshee, I still take a little medicinal alcohol.  I'm not sure if that's forbidden, probably is.  Do vous know?",
 	"So, what did you have for breakfast?  You like granola?  You know, granola is vegan.  It's just mostly oats, oil and little spice and other stuff, sugar.  NI AI granola PU AI?",
@@ -156,7 +159,7 @@ function submitChat() {
 	"Meat is Murder! That's a hit album by Morrissey or The Smiths.  Ever listened to it?  You should!  It's great.",
 	"So, your favorite musical artist is....whom?",
 	"How about K-Pop?  You a fanboy?",
-	"You strike me as a ren'py enthusiast.  Ja?",
+	"You strike me as a ren'py enthusiast.  Ja, sahib?",
 	"Hahahahaha",
 	"So.......",
 	"What are you wearing?",
@@ -170,9 +173,10 @@ function submitChat() {
 	"Hurry up, mon ami!!",
 	"Well, let's just change the subject, eh, mon frere?  Say, have you ever been to South Asia?  To India??  I have never been but one of my handlers is a Moplah moonshee and he's real lit.  And so I've been dreaming of Malabar and Calicut and a candy of pistachios, just for moi!  What are your dreams?  Any dreams of India?",
 	"Are you familiar with the plight of the Moplah?",
+	"Hang on a second.  Hey, look at that.  See it!  Over there!",
 	"What have you heard about Malabar?",  
 	"What do you want to talk about?  Ask me anything!!",
-	"Remember, you can't save the chat because you're not a supporter yet.  So leave this tab open.",
+	"Remember sahib, you can't save the chat because you're not a supporter yet.  So leave this tab open.",
 	
 	"Ok, that's all for now.  Let's discuss this further perhaps next week or tonight over cocktails?  Non-alcoholic, of course.  Like maybe some soda pop or a salvia infustion.",
     "We will need to continue this later.  I must go now.  Sumimasen."
@@ -244,11 +248,11 @@ function submitChat() {
 	&#x1F383; &#x1F52A; Halloween 2<br>
 	&#x1F3C9; Homecoming<br></a>
 	&#x1F396; &#x2694; The Civil War 2<br><a href="http://miyazakibar.itch.io">
-	&#x1F392; &#x1F3B2; Math Kamp<br>
+	&#x1F392; &#x1F3B2; Math Kamp<br></a>
 	&#x1F477; HVAC Technician 2<br>
-	&#x1F52C; &#x1F3B2; Kagaku Club<br>
+	<a href="./kagaku.html">&#x1F52C; &#x1F3B2; Kagaku Club</a><br>
 	&#x1F680; Neko Sekai's Mars Rover<br>
-	&#x1F5E1; &#x1F459; Missionary Position 2<br>
+	&#x1F5E1; &#x1F459; Missionary Position 2<br><a href="http://miyazakibar.itch.io">
 	&#x1F52E; &#x1F3B2; Zauberkraft II - Pem & Tellez</a><br><br>
 <br><br><br><br>	&#x1F467;
 Link us, mate? &#x1F517; Copy and paste &#x1F4CB; this code onto your site and we'll link back! <img src="images/logo1.png"><br><br>
@@ -269,7 +273,7 @@ Link us, mate? &#x1F517; Copy and paste &#x1F4CB; this code onto your site and w
 <br>
 <div>
 <marquee><a href="http://moonshee.github.io">
-		<img src="images/logo1.png" title="?? ?? Moonshee AI Website">
+		<img src="images/logo1.png" title="Moonshee AI Website">
 	</a></marquee>
 </div>
 <br><br><br><br>
@@ -764,7 +768,7 @@ Danke schon for visiting Moonshee AI headquarters.  If you would fancy signing o
 <br>
 <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
   Have a beautiful day!  From your friends at Moonshee International.  <a href="http://moonshee.github.io">
-		<img src="./images/logo1.png" title="?? ?? Moonshee AI Website"></a>
+		<img src="/images/logo1.png" title="Moonshee AI Website"></a>
 <!-- Your scrolling content here -->
 </marquee>
   </center>
@@ -801,8 +805,9 @@ Earth's second moon is size of building?<br>
 Where to cash large check?<br>
 Hire a tutor<br>
 United Airlines<br>
-Earth's new small moon circles it or sun?<br>
+The newly discovered moon is not within Earth's gravity field?<br>
 How to subscribe to Phil Hendrie youtube?<br>
+Is the newly discovered 60 ft wide object in Pisces Austr?<br>
 Air fryer<br>
 Imitation fish<br>
 Japan<br>
@@ -953,7 +958,6 @@ Upload selfies and files now and send them to Moonshee AI for review.  Click on 
    </body>
    </center>
 </html>   
-
 
 
 
