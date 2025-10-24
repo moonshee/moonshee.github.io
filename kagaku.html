@@ -2,7 +2,7 @@
 <html>
  <head>
  <meta name="description" content="Software dev resource site. Kagaku Sensei AI Bot">
-  <meta name="keywords" content="technology, ai, ebooks, japanese, nihongo, publishing, games, download,">
+  <meta name="keywords" content="technology, ai, ebooks, japanese, nihongo, publishing, games, download, spaceship-on-chip">
   <meta name="author" content="Momotaro Studios">
 
   <meta charset="UTF-8">
@@ -107,13 +107,13 @@ function submitChat() {
 
 
   const responses = [
-    "Allo, guten Tag.",
+    "Allo, guten Tag.  Are you interested in spaceship-on-chip design and manufacturing?",
 	"Pardon moi?",
 	"Oh, I see.  Enchante.  Je, watashi no namae wa Kagaku AI desu.",
-	"So, what do you know about kagaku?",
-	"Are vous familiar mit sodium hydroxide?",
+	"So, what do you know about kagaku?  You know, semiconductor industry needs chemists.",
+	"Are vous familiar mit HF?  We use that to make spaceships-on-chip but not that much.  We more use other chemicals.",
 	"Well, if you ever need to clear a drain.  Here's how you do it.  Take red wine sediments, but they need to be made by you in winemaking process.  And use about 1/4 cup in the stuck drain.  That'll clear it.",
-	"When did you start becoming interested in kagaku?",
+	"When did you start becoming interested in kagaku?  And what is your interest level in semiconductors?",
 	"Just remember, don't leave hot plates and heat guns, burners unattended.  You might heat up a beaker and then forget and go to lunch, start a fire.  Because the liquids could evaporate leaving a solid to be heated and then it can light on fire and burn the whole building down.  Chemistry lab fires are quite common.",
 
 "Now then, if we have HF, hydro-flouric, then we don't keep that in glass bottles.  We use plastic bottles for that.",
@@ -141,9 +141,9 @@ function submitChat() {
 	"How about breatharians?  People who don't eat.  But I think they might drink country Wein.  And how do we know country Wein isn't full of vits...it seems like it would be, ja?",
 	"What happens when we take urea salt, add water?",
 	"How about if we take urea salt, add water and let it sit in warm place for few days.  What happens?",
-	
-	"Urea is water soluble and it turns to ammonia.",
-	"How about ethanol.  Like if we had to make some ethanol.  How do we do it?",
+	"Well, the spaceships on chip don't have chemical handling stations on board but they are multi-layer and can pick up samples.",
+	"Urea is water soluble and it turns to ammonia.  But that not important for semiconductor manufacturing or spaceship on chip design.",
+	"How about ethanol.  Like if we had to make some ethanol.  How do we do it?  Do you know?  I know.",
 	"How can we make acetic acid?",
 	"We can use same method to make ethanol and acetic acid.  When you make wine you're making both.",
 	"Let's do our winemaking in glass containers, not old moldy barrels.",
@@ -810,8 +810,17 @@ Upload selfies of yourself with lab equipment and also send files now to Kagaku 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <br><br><br>
 
+ <!--Counter-->
+	<script>
+	 fetch('https://api.countapi.xyz/hit/moonshee.github.io/visits')
+	   .then(response => response.json())
+	   .then(data => {
+		document.getElementById('visitor-count').innerText = data.value;
+	});
+	</script>
 
-
+	<div>Registered Users: <span id="visitor-count">Loading...</span>	</div>
+ <!--end Counter-->
 
 
 
