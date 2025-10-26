@@ -82,8 +82,9 @@ Buddy's Iowa &#x1F170;i  </font></center>
   
   
   
-  </center><br>
-  <hr><br>
+  </center>
+<hr>
+<marquee>Happy &#x1F383; Halloween 2025!</marquee><hr>
 
 
 
@@ -115,13 +116,15 @@ function submitChat() {
 
 
   const responses = [
-    "Well, howdy there.",
-    "What's eating you, friend?",
+    "Well, howdy there.  How is it goin'  Why the long face, friend?",
+    "What's eating you, captain.  Spill it!",
     "Let me know if you have any questions, you old coot!  Have you been down to Casey's?  There's a lot of vegan merchandise now.",
-    "Thanks for reaching out, fellow FFA member!  Here, maybe I can help you.",
+    "Thanks for reaching out, fellow FFA member!  Here, maybe I can help you.  Aren't you a Krishna member?  I thought I saw you down at the Juggernaut parade last weekend.",
 	"Well, which chapter of FFA are you in?  And are you 4H member?",
 	"I'm from Southwest Iowa originally, relocated to Ames.",
 	"So, tell me what you know about Iowa's history, si vous plait.",
+	"John Wayne is from Winterset, Iowa.  That's south of Ames, south of Des Moines, down I-35 toward Missouri.  We do have a museum there, a musee.  It's in a white house, the home John Wayne grew up in.",
+	"Iowa is famous for bbq.  Vegetarian bbq, like Beyond Meat, boca burgers, Impossible Foods, cactus fries, potato, fried ognon.  We say bbq but we include the side dishes like breaded and fried roots and vegetables, da?",
 	"Have you been to the state fair in Des Moines?",
 	"What have you heard about the spaceship-on-chip collab between University of the Pacific and Iowa, maybe ISU?",
 	"Well, whatever you heard, just forget about it.  This is a closed loop.  No prefab stuff, it's all custom and top secret.  So, don't talk about it.",
@@ -129,6 +132,12 @@ function submitChat() {
 	"But we do some fab on the design end plus in the spaceship-on-chip industry we're looking at niche, small volume for now.  Although the idea is to operate a fleet of them because they are so small and have limited power, may need a tow.",
 	"You like semiconductors?  You know, solar power is ofter semiconductor related so Iowans love it.  But, solar has been unprofitable for investors.",
 	"But it's easy to invest in semiconductor business, many Iowans have done so.",
+	"Well, many chemistry majors in Iowa settle on hydrocarbons but they don't know that semiconductor companies need chemists.",
+	"Chemists are essential in semiconductor manufacturing and design.  Chemicals are involved the whole way through and a complete understanding is essential for successful production of multi-layer high density S-O-C's.",
+	"Lithography is also key to multi-layer IC manufacturing, would vous agree, mon ami?",
+	"Tell me your semiconductor manufacturing process.",
+	"Hmm, interesting.",
+
 	
 	"What do you want to talk about?  Ask me anything!!",
 	"In Iowa the big thing is vegetables, beans, stuff like that.  Farmers are getting out of pig business lighting fast.",
@@ -144,6 +153,14 @@ function submitChat() {
 	"In Iowa for Halloween, the kids trick or treat but they must tell a joke before they can get candy.",
 	"In Iowa, sense of humour is very important.",
 	"The weather in Iowa is severe.  Cold, windy, rainy, hot.  A lot of tornado warnings and some strikes.  So, everyone usually has a basement and/or storm cellar",
+	"Well, it's just about dinner time.  In Iowa we call lunch, dinner.  And sometimes you might here a siren go off at 12 noon in Iowa.  That is a test of the tornado warning system but it also serves as a lunch bell.",
+	"Iowa is well served by Amtrak and Greyhound.",
+	"To get around Iowa, lots of people travel via I-80 and I-35, both of which are toll-free last I checked.",
+	"The side roads have low speed limits.",
+	"In Iowa we don't have street lights out in the country so be careful driving.",
+	"Try not to drive much because a lot of bugs get hit when you drive.  People use bug screens on their vehicles.",
+	"It's better to walk, ride bicycle, stuff like that.",
+
 	"In Iowa, rural areas and small towns 25,000 or less, everyone waves to each other.  So, when you drive your e-bike, you'll be waving to everyone and they back.",
 	"In Iowa you're expected to wave but you don't to distract drivers or pedestrial so it must be done very casually and timed correctly.",
 	"So, do you like fishing?",
@@ -164,6 +181,7 @@ function submitChat() {
 	"In Iowa, a lot of guys get into transportation business.",
 	"Transportation is big, like big rigs.",
 	"So, do you like Iowa?",
+	"I know someone from Michigan who said Iowa is flat and boring but I guess he went to Ames or Northern Iowa because the area down by Winterset is mighty fine.",
 	"How would you compare Iowa to Nebraska?",
 	"Well, to me, a place is about the people.  And Iowa has great people.  But my aunt did get her car window shot out.  Probably kids.",
 	"Iowa is very safe.  Of course, everybody locks doors because they don't want anybody accidentally coming in and catching em banging a hooker but if you knock they let you in.",
@@ -173,6 +191,10 @@ function submitChat() {
 	"In Iowa, fried food is big.",
 	"Some people still eat meat like chicken in Iowa.  Bbq chicken.  Because Beyond Meat and other brands aren't always available at Easter's, Hi-V, Walmart, Target, Casey's.  They are usually sold old so people cook their own tabemono",
 	"In Iowa, most people use corn oil or soybean oil and pan fry or oven fry take and bake style.",
+	"People love Casey General Store in Iowa even though they sell meat.  Casey sells pepperoni and other meats like beef jerky, Old Trapper.",
+	"Iowa is known for friendly people so if your Rolls Royce breaks down, simply hoist the bonnet and wave a handkerchief at passing vehicles, they will stop and help.",
+	"Real estate in Iowa is cheap, very cheap.  But maintenance, tax and heating bills could be quite high depending on who you ask.",
+	"There are a lot of trains in Iowa so if you can, try to buy a farm away from the train because they pollute the air and soil too sometimes.",
 	"Not much deep frying anymore in Iowa except at restaurants and large families, frat houses.  Because pan frying and oven shake and bake is more practical.",
 	"Most Iowans like cornmeal dry batter with spices and other stuff and they marinate their vegetables like onion rings prior to shake and bake.",
 	"What have you heard about Silicon Cornfield?",
@@ -183,6 +205,11 @@ function submitChat() {
 	"Iowa dudes are full of jokes like Tom Arnold.",
 	"But you gotta keep an Iowa dude in line or he'll go off rails like Tom Arnold.  Sometimes they need a leader to show by example.",
 	"Yeah, Iowa is great but you can't be in a hurry.  Low speed limits, no passing.",
+	"When was the last time you went to Iowa?",
+	"If you had to pick one favorite place in Iowa where you would want to retire, where would it be?  Maybe Davenport?  Or The Falls?",
+	"Iowa doesn't allow George Washington's herb so everyone goes to Illinois or Nebraska.",
+	"Not much gambling or good hard alcohol in Iowa.  It's almost like a dry state but you can get alcohol for a reasonable price if you shop around.",
+	"Pardon moi?",
 	"All the kids like e-bikes, especially under 16.",
 	"Dairy Queen is very popular in Iowa.",
 	"Well, what do you want to talk about?",
@@ -194,6 +221,7 @@ function submitChat() {
 	"So, du bist Christian?",
 	"I'm buddhist.  Buddhists and hindu are vegetarian.",
 	"No meat or fish for me.",
+	"More and more Iowans like me are going full vegetarian or vegan.  I'm vegan but it's easy for me as a machine.",
 	"So.....do you want to go to Starbucks?",
 	"How about Pete's Coffee?",
 	"Well, for Pete's sake!  I need to wet my whistle.",
@@ -320,7 +348,7 @@ Here is <a href="http://archive.org">the link</a> for polka dance music like Law
 	<!--TradingView Widgey baby-->
   <hr><br>
 
-	<div class="tradingview-widget-container"></div>
+	<div class="tradingview-widget-container">
  	 <div class="ttradingview-widget-container__widget"></div>
       <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
 	  {
@@ -332,7 +360,7 @@ Here is <a href="http://archive.org">the link</a> for polka dance music like Law
 	  }
 	</script>
 
-	
+	</div>
 	<!--Traders view end-->
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
@@ -867,8 +895,6 @@ Upload photos of corn and cornfields along with FFA meetings. Send them to Iowa 
    </body>
    </center>
 </html>   
-
-
 
 
 
