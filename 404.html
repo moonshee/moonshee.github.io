@@ -608,69 +608,101 @@ Danke schon for visiting Iowa AI headquarters.  If you would fancy signing our g
 
 <table border="1"  id="wholesale"><tr><td>
 	<br>
-	<label><p>
-	    What's your favorite thing about Iowa?:</p></td></tr><tr><td>
-	   <input type="text" style="width:90%;" name="fave"></td>
-	</label></tr><br><tr><td>
-	<label>
-	    County:</td></tr><tr><td>
-	   <input type="text" name="county"></td>
-	</label></tr><br><tr><td>
-	<label>Graduated or still enrolled?:
-	   </td></tr><tr><td>
-	   <input type="text" style="width:30%;" name="grad"></td></tr>
-	</label><br><tr><td>
-	<label>
-	   &#x1F5FF; How long have du been a vegetarian or vegan:</td><td></td></tr>
-	<tr><td>
-	   <input type="text" style="width:90%;" name="social"></td></tr>
-	</label>	<tr><td>
-	<label></label>
-	   </td></tr><tr><td>  
-	   
-	</label></td></tr>
-	<button type="submit">Farmer Mode</button>
+	
+<form
+  action="https://formspree.io/f/mjkapgww"
+  method="POST"
+  enctype="multipart/form-data"
+>
+  <label>
+    Your email:<br>
+    <input type="email" name="email">
+  </label><br><br>
+  <label>
+    Your name:<br>
+    <input type="text" name="nom">
+  </label><br><br>
+<label>
+    Level of interest in semiconductors and spaceship-on-chip from 1 to 10:<br>
+    <input type="text" name="nom2">
+  </label><br><br>
+<label>
+    Title or year (freshman, sophmore):<br>
+    <input type="text" name="titl">
+  </label><br><br>
+<label>
+    Three letter man?:<br>
+    <input type="text" name="frat">
+  </label><br><br>
+<label>
+    Interested in listing your company on the Rafah Stock Market?:<br>
+    <input type="text" name="interest">
+
+  </label><br><br>
+<label>
+    Comments and questions:<br>
+    <input type="text" name="comment" style="width:"80%">
+
+  </label><br><br>
+
+  <label>
+    Your file:
+    <input type="file" name="upload">
+  </label>
+  <button type="submit">Send</button>
+</form>
+
+
+</td></tr>
+
+
+
+
 	
 	</table>
-	<br>
-	<form
-		action="https://formspree.io/f/mjkapgww"
-		method="POST"
-		enctype="multipart/form-data"
-	>
-			
+	<br><br>
+
+<script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
+<script>
+  /* paste this line in verbatim */
+  window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
+  /* customize formbutton below*/     
+  formbutton("create", {
+    action: "https://formspree.io/f/mjkapgww",
+    title: "Howdy Partner!",
+    fields: [
+      { 
+        type: "email", 
+        label: "Email:", 
+        name: "email",
+        required: true,
+        placeholder: "your@email.com"
+      },
+      {
+        type: "textarea",
+        label: "Message:",
+        name: "message",
+        placeholder: "Well, howdy doody.  What's going on?  Tell me everything.  You want to list your company on the Rafah Stock Market?  Or maybe you have questions about spaceship-on-chip software design?",
+      },
+      { type: "submit" }      
+    ],
+    styles: {
+      title: {
+        backgroundColor: "gray"
+      },
+      button: {
+        backgroundColor: "gray"
+      }
+    }
+  });
+</script>
+
+
 	
-	<br>Please fill out all fields for best service.<br>
-	<table border="1"  id="wholesale2"><tr><td>
-	<br>
-	<label><p>
-	   Address and phone number:</p></td></tr><tr><td>
-	   <input type="text" style="width:90%;" name="contact"></td>
-	</label></tr><br><tr><td>
-	<label>
-	   Name or nickname:</td></tr><tr><td>
-	   <input type="text" name="nom"></td>
-	</label></tr><br><tr><td>
-	<label>
-	   Age:</td></tr><tr><td>
-	   <input type="text" style="width:30%;" name="age"></td></tr>
-	</label><br><tr><td>
-	<label>
-	   Comments (Indicate your 5 year plan.):</td><td></td></tr>
-	<tr><td>
-	   <input type="text" style="width:90%;" name="comm"></td></tr>
-	</label><br><br><br>
-	<tr><td>
-	<label>
-	   Print out the completed form and then scan it and upload it here.</td></tr><tr><td>  
-	   <input type="file" name="upload">
-	</label></td></tr>
 
 
 
-
-	</form>
-	
+</td></tr>	
 	</table>
 	<br><br>
 	<form
@@ -682,7 +714,6 @@ Danke schon for visiting Iowa AI headquarters.  If you would fancy signing our g
 
 
 <br>
-	<button type="submit">DONE</button>
 <br><br><br><br><br><br><br><br><br><br><br><hr><br><br><br><br><br><br><br><br><hr>
 
 	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><hr><br><br><br><br><br><br><br><br><hr>

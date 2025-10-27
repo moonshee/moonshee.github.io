@@ -671,70 +671,95 @@ Danke schon for visiting Kagaku Club headquarters.  If you would fancy signing o
 
 <table border="1"  id="wholesale"><tr><td>
 	<br>
-	<label><p>
-	    What's your favourite chemical?  Acid or base and why?:</p></td></tr><tr><td>
-	   <input type="text" style="width:90%;" name="fave"></td>
-	</label></tr><br><tr><td>
-	<label>
-	    Who is your favorite celebrity chemist?:</td></tr><tr><td>
-	   <input type="text" name="ethanol"></td>
-	</label></tr><br><tr><td>
-	<label>Fill in blank.  I love chemistry because _______:
-	   </td></tr><tr><td>
-	   <input type="text" style="width:30%;" name="luv"></td></tr>
-	</label><br><tr><td>
-	<label>
-	   &#x1F5FF; How long have du been a chemistry labrat?:</td><td></td></tr>
-	<tr><td>
-	   <input type="text" style="width:90%;" name="howlong"></td></tr>
-	</label>	<tr><td>
-	<label></label>
-	   </td></tr><tr><td>  
-	   
-	</label></td></tr>
-	<button type="submit">Reward Points: 32</button>
+	
+<form
+  action="https://formspree.io/f/mjkapgww"
+  method="POST"
+  enctype="multipart/form-data"
+>
+  <label>
+    Your email:<br>
+    <input type="email" name="email">
+  </label><br><br>
+  <label>
+    Your name:<br>
+    <input type="text" name="nom">
+  </label><br><br>
+<label>
+    Company or school name:<br>
+    <input type="text" name="nom2">
+  </label><br><br>
+<label>
+    Title or Year (Freshman, Sophmore):<br>
+    <input type="text" name="titl">
+  </label><br><br>
+<label>
+    Chemistry major and three letter man?:<br>
+    <input type="text" name="frat">
+  </label><br><br>
+<label>
+    Comments and questions:<br>
+    <input type="text" name="nomfrat">
+  </label><br><br>
+
+  <label>
+    Your file:<br>
+    <input type="file" name="upload">
+  </label>
+  <button type="submit">Send</button>
+</form>
+
+
+</td></tr>
+
+
+
+
 	
 	</table>
-	<br>
-	<form
-		action="https://formspree.io/f/mjkapgww"
-		method="POST"
-		enctype="multipart/form-data"
-	>
-			
+	<br><br>
+
+<script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
+<script>
+  /* paste this line in verbatim */
+  window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
+  /* customize formbutton below*/     
+  formbutton("create", {
+    action: "https://formspree.io/f/mjkapgww",
+    title: "How can we help, sahib?",
+    fields: [
+      { 
+        type: "email", 
+        label: "Email:", 
+        name: "email",
+        required: true,
+        placeholder: "your@email.com"
+      },
+      {
+        type: "textarea",
+        label: "Message:",
+        name: "message",
+        placeholder: "Salaam. What's on your mind, mon ami?",
+      },
+      { type: "submit" }      
+    ],
+    styles: {
+      title: {
+        backgroundColor: "gray"
+      },
+      button: {
+        backgroundColor: "gray"
+      }
+    }
+  });
+</script>
+
+
 	
-	<br>Please do not leave beakers unattended and especially no lit burners or hot plates.<br>
-	<table border="1"  id="wholesale"><tr><td>
-	<br>
-	<label><p>
-	   Address and phone number (required):</p></td></tr><tr><td>
-	   <input type="text" style="width:90%;" name="contact"></td>
-	</label></tr><br><tr><td>
-	<label>
-	   Name or nickname:</td></tr><tr><td>
-	   <input type="text" name="nom"></td>
-	</label></tr><br><tr><td>
-	<label>
-	   Age (optional):</td></tr><tr><td>
-	   <input type="text" style="width:30%;" name="age"></td></tr>
-	</label><br><tr><td>
-	<label>
-	   Comments (Indicate how many cases, if any, of copies you want.  Minimum is 10 cases.  Also indicate your 5 year plan and how many years of a club membership you want 1, 2 or 3 years.):</td><td></td></tr>
-	<tr><td>
-	   <input type="text" style="width:90%;" name="commen"></td></tr>
-	</label><br><br><br>
-	<tr><td>
-	<label>
-	   Take a selfie in your lab next to chemistry equipment and upload it.  Next, print out the completed form and then scan it and upload it here after having it initialed by professional chemist or professor/teacher.</td></tr><tr><td>  
-	   <input type="file" name="upload">
-	</label></td></tr>
 
 
 
-
-	</form>
-	
-	</table>
+</td></tr>	</table>
 	<br><br>
 	<form
 		action="https://formspree.io/f/mjkapgww"
@@ -745,7 +770,6 @@ Danke schon for visiting Kagaku Club headquarters.  If you would fancy signing o
 
 
 <br>
-	<button type="submit">Go Chem!</button>
 <br><br><br><br><br><br><br><br><br><br><br><hr><br><br><br><br><br><br><br><br><hr>
 
 	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><hr><br><br><br><br><br><br><br><br><hr>
