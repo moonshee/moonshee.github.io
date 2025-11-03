@@ -1,0 +1,1 @@
+main = putStrLn "Allo, bonjour.  This area is closed.  You have credentials?  Sign on here https://moonshee.github.io/kagaku.html"
