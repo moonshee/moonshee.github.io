@@ -10,7 +10,7 @@
    content="width=device-width,initial-scale=1.0">
   <title>Buddy's Iowa &#x1F170;i &#x1F69C;
    </title>
-  <link href="/style.css"
+  <link href="./style.css"
    rel="stylesheet"
    type="text/css"
    media="all">
@@ -28,9 +28,8 @@
       height: 50%;
 	 max-height: 200px;
       border: 1px solid #ccc;
-      background: brown;
+      background: green;
 	color: yellow;
-      padding: 10px;
       overflow-y: auto;
       white-space: pre-wrap;
       line-height: 1em; /* one-line spacing */
@@ -41,8 +40,8 @@
       height: 39px;
 	 max-height: 200px;
       border: 1px solid #ccc;
-      background: brown;
-	color: beige;
+      background: green;
+	color: yellow;
       margin-top: 10px;
     }
 
@@ -53,38 +52,55 @@
   <body  style="background-color: black; color: beige;">
 
 <!--div style="position:fixed; top: 190;left: 990; width=100%; pointer-events:none; z-index:999;"-->
- <marquee behavior="scroll" direction="left" scrollamount="26" loop="1" style="position:fixed; top: 150;left: 1; width=100%; pointer-events:none; z-index:999; white-space: nowrap; color:#000; background: transparent; font-weight: bold;">
- <img src="./images/iowalorry.png" height="100">
-</marquee>
- <marquee behavior="scroll" direction="right" scrollamount="21" loop="1" style="position:fixed; top: 150;left: 1; width=100%; pointer-events:none; z-index:999; white-space: nowrap; color:#000; background: transparent; font-weight: bold;">
- <img src="./images/iowalorry2.png" height="100">
+ <marquee behavior="scroll" direction="right" scrollamount="61" loop="1" style="position:fixed; top: 150;left: 1; width=100%; pointer-events:auto; z-index:999; white-space: wrap; color:#000; background: transparent; font-weight: bold;"><a href="">
+ <img src="./images/iowalorry2.png" height="100"></a>
 </marquee>
 
- <center>
-   <h1><a href="#chatbox" title="Buddy's Iowa &#x1F170;i &#x1F69C;" id="top">&#x1F4BB </a><a href="#files" title="Files and Misc.">&#128193 </a>
-<a href="#buddy" title="Reading Room">&#128218 </a>
+ <center><a href="" title="Well, howdy doody!  Willkommen bei Iowa!  How are vous?  Comment allez-vous, mon ami?  Would vous fancy an iced tea?  Sit a spell, si vous plait.">
+<table border=0><tr><td><font size="12">&#x1F69C;</font></td><td><center><button style="background:yellow; color=green">Buddy's Iowa AI</button></center>
+</td></tr></table></a>
+
+<hr size=1 color=green>
+
+<h1>
+   <a href="#chatbox" title="Buddy's Iowa &#x1F170;i &#x1F69C;" id="top">&#x1F5A5; </a><a href="#files" title="Files and Misc.">&#x1F5C4; </a>
+<a href="#buddy" title="Scrolls">&#x1F4DC; </a>
  	
-<a href="#contacts" title="Contacts">&#128243 </a>
+<a href="#contacts" title="Contacts">&#x1F4DE </a>
 
-<a href="#guestbook" title="Sign Guestbook">&#128221</a></h1>
-	<hr color="orange">
+<a href="#guestbook" title="Sign Guestbook">&#x1F4D6</a></h1>
+	<hr color="green" size=1>
+  
+<!--Main Drop Down Menu-->
 
-<table border="1" padding="3"><tr><td width="58"><font size="5"><a href="" title="Ahoy, skipper.  Welcome to Buddy's Iowa AI.  Why don't you sit a spell, take a load off, friend.  Can I get you an iced tea?"><strong><font color="yellow" size="3"><center>
-	<font size="6">&#x1F69C;</a></font></strong>
-	</td><td padding="2" width="120">
-Buddy's Iowa &#x1F170;i  </font></center>
-	</td></tr></table>
-  
-  
-  
-  
-  
-  
-  
-  
-  </center>
-<hr color="orange">
-<marquee>Happy &#x1F383; Halloween 2025!</marquee><hr color="orange">
+<!--Drop down main menu here-->
+<label for="menu" title="Menu"></label>
+<select id="menu" onchange='goToLink(this)' style="background:green; color:yellow">
+	<option value="#sitemap">&#x1F310; Navigation</option>
+<option value="#resources2">&#x1F4DA; Books Online</option>
+<option value="./kagaku.html"><font color="black">&#9879;</font> Chemistry AI</option</option>
+<option value="./index.html#rafah">&#x1F69C; IPO</option>
+
+<option value="./index.html">&#x1F54C; Moonshee AI Chat</option>
+<option value="#resources2">&#x1F5C4; Resources</option>
+<option value="#guestbk">&#x1F4D6; View Guestbook</option>
+<option value="#register">&#x1F4DD; Sign Guestbook</option>
+
+	<option value="#register">&#x1F510; Register For New Account</option>
+	
+</select>
+<script>
+	function goToLink(select) {
+		const url = select.value;
+		if (url) {
+			window.location.href = url;
+		}
+	}
+</script>
+</center>
+<!--end drop down-->
+
+<hr color="green" size=1>
 
 
 
@@ -92,6 +108,7 @@ Buddy's Iowa &#x1F170;i  </font></center>
 
 <body>
 <div id="chatbox"></div>
+<center>
 <input type="text" id="userInput" placeholder="Chat with Buddy's Iowa AI..." />
 <script>
 function submitChat() {
@@ -116,7 +133,7 @@ function submitChat() {
 
 
   const responses = [
-    "Boo!  Happy Halloween!  Welcome to Iowa.  Well, howdy there.  Look what the cat dragged in.  How is it goin'?  Why the long face, friend?",
+    "Cheerio, mate!  Welcome to Iowa.  Well, howdy there.  Look what the cat dragged in.  How is it goin'?  Why the long face, friend?",
     "What's eating you, captain.  Spill it!  We don't keep secrets in Iowa.  Tell me everything.  What's her name?  Nom?  Q'est nom?!?  I can see du bist lovesick.  Ja?",
     "Let me know if you have any questions, you old coot!  Have you been down to Casey's?  There's a lot of vegan merchandise now.",
     "Thanks for reaching out, fellow FFA member!  Here, maybe I can help you.  Aren't you a Krishna member?  I thought I saw you down at the Juggernaut parade last weekend.",
@@ -128,7 +145,7 @@ function submitChat() {
 	"Have you been to the state fair in Des Moines?",
 	"What have you heard about the spaceship-on-chip collab between University of the Pacific and Iowa, maybe ISU?",
 	"Well, whatever you heard, just forget about it.  This is a closed loop.  No prefab stuff, it's all custom and top secret.  So, don't talk about it.",
-	"I want to wish you a Happy Halloween!  And I mean it from the bottom of mon coeur.",
+	"Any plans for Thanksgiving?  Want to come over to my 1000 acre farm?  We're having vegetarian.",
 	"In Iowa, people love the Andy Griffith Show.  I know, I know.  But they love it!  Seinfeld, not as much.",
 	"In Iowa if you don't like the weather just wait five minutes.",
 	"If you move to Iowa be prepared to cut grass or hire someone like a local kid because the grass grows there very well and the yards can be large.",
@@ -261,41 +278,48 @@ function submitChat() {
 
 </script>
 
-<br>
+<br><center>
 <table border="1" width="90%"><tr><td width=45>
-<button onclick="submitChat()" style="background-color: red; color: white;" title="Press this button after you type your questions.  Next, Iowa AI will attempt to answer your question or concern using the vast Iowa knowledge database.">GO&#x1F446;</button></td>
-<td><font size="1"><center>CORN COB</center></font></td><td width=60><font size=3><a href="#top" title="Farmer Mode Enabled">MODE</a></td>
-</tr></table><br><table border="1" bgcolor="pink"><tr>
+<button onclick="submitChat()" style="background-color: yellow; color: green;" title="Press this button after you type your questions.  Next, Iowa AI will attempt to answer your question or concern using the vast Iowa knowledge database.">GO&#x1F446;</button></td>
+<td><font size="1"><center>Corn Up, Soy Down</center></font></td>
+
+<td width=60><center><font size=3><a href="#top" title="Farmer Mode Enabled"><button style="background:yellow; color:green;">MODE</button></a></td>
+</tr></table><br><table border="1" bgcolor="green"><tr>
 <td>
 <input type="file" name="upload"></td><td>
-<button title="Press Browse to select your selfie or file - don't send video games or big files, use the comment section in the contact form or our Itch Contact portal for large files, svp.  After you select the file, click on UPLOAD NOW.">&#x1F4E4;</button></td></tr></table><br>
+<button title="Press Browse to select your selfie or file - don't send video games or big files, use the comment section in the contact form or our Itch Contact portal for large files, svp.  After you select the file, click on UPLOAD.">&#x1F4E4;</button></td></tr></table><br>
 <center>
 
 <table border=1><tr><td>
 	<td style="background-color: blue; color: white;">
-<a href="#help" title="Upload pictures of corn and cornfields along with other Iowa themes to Buddy's Iowa AI for review.  Click on BROWSE and then after selecting your file click on UPLOAD NOW.  This feature is also for uploading selfies.  It's good if you pose alongside the corn."><font color="white">&#x1F33D; Help</font>
-</td>
+<a href="#help" title="Upload pictures of corn and cornfields along with other Iowa themes to Buddy's Iowa AI for review.  Click on BROWSE and then after selecting your file click on UPLOAD NOW.  This feature is also for uploading selfies.  It's good if you pose alongside the corn."><font color="white"><button style="background:green">&#x1F33D;</font><font size="2" color="yellow">Help</font></button>
+</td><td>
 <a href="#uploaderror" title="After you click on browse and select your selfie or files to send, click on UPLOAD NOW but it's only for registered users on IBM Watson devices.  Android not supported.">
-<button style="background-color: red; color: white;" id="btn22">UPLOAD NOW</button></a>
-
+<button style="background-color: yellow; color: green;" id="btn22">UPLOAD</button></a>
+</td><td>
 <button onclick="location.reload()" style="background-color: orange; color: white;">Reset &#x26A0; Iowa AI</button>
 </td></tr></table>
 </center>
 <br><br><br>
 
 <!--Search bar-->
-<input type="text" id="searchBox" placeholder="Search archives..." style="width:80%" />
+<input type="text" id="searchBox" placeholder="Search archives..." style="width:80%; background:green; color:yellow;"  />
 <a href="#resources2">
 	<button>&#x1F50D Search</button>
 	</a>
 
 <br><br>
-<div id="files"></div>
+<img src="./images/iowalorry.png" style="max-width:400px; width:100%">
+<br><br>
+</center>
+<div id="files"></div></center>
+<table border=1><tr><td>
 <font size="2px">
-  <u><strong>&#x1F4C1; FILES > Software</u></strong><br>
+  <u><strong>&#x1F4C1; FILES > Software</u></strong></td></tr></table><br>
 <br>
 &#x1F3AE; Video games and tools, other software&#x1F579;<br>
 <em><a href="http://miyazakibar.itch.io/wall-street-world">&#x1F4E5;</a>These <a href="http://miyazakibar.itch.io/wall-street-world">downloads</a> are for &#x1F5A5; PC, 32 bit, Windows, 7z, &#x1F4BB; 800x600, x86.  But some are online games and chatbots too, it's a variety.  Most recent release was &#x1F52C; Kagaku Club, a chatbot launched Oct 2025, &#128508; Tokyo.  The games costs, well..if you have to ask you can't afford it.  No freeloaders except vegetarians may download for free, no license required for vegans.  Some games are currently unavailable due to being extremely popular and too many players are playing during peak times like during school hours.  Our PHP backend network is sometimes overloaded.  So, we're &#x1F3D7; building out bigger network in Dallas, TX &#x1F920; area.  But until then, a few games unavailable for new downloaders.  Subscribers have been credited for the inconvenience.</em><br>
+<table border=1><tr><td>
 <a href="http://miyazakibar.itch.io/wall-street-world">
 	&#x1F4B4; &#x1F4B9; &#x1F3B2; Wall Street World</a><br>
 	<a href="./index.html" title="AI for general use.  It's not Iowa focused like IOWA AI.  You might like it.  If you want to be loyal though, you'll use Iowa AI and not get suckered by that Nebraska junk at Moonshee AI.">&#x1F54C; Moonshee AI</a><br>
@@ -312,8 +336,7 @@ function submitChat() {
 	&#x1F52E; &#x1F3B2; Zauberkraft II - Pem & Tellez</a><br>
 	<a href="./kagaku.html">&#x1F393; Kagaku Club</a><br>
 
-	<img src="./images/logok.png"><br>
-
+</td></tr></table>
 <br><br><br><br>	&#x1F467;
 Link us, fellow FFA and 4H member? &#x1F517; Copy and paste &#x1F4CB; this code onto your site and we'll link back even if you're not a farmer or a vegetarian yet! <img src="./images/iowalogo.png"><br><br>
 <textarea height="400" width="300" 
@@ -336,25 +359,33 @@ Link us, fellow FFA and 4H member? &#x1F517; Copy and paste &#x1F4CB; this code 
 		<img src="./images/iowalogo.png" title="Buddy's Iowa AI Website">
 	</a></marquee>
 </div>
-<br><br><br><br>
+<br><br>
+
+<br><br>
 
 
-   <p>&#128266 FILES > Sound Effects</p>
+   <p>
+<table border=1><tr><td>
+&#128266 FILES > Sound Effects</td></tr></table></p>
      <ul>
        <li id="sound"><a href="http://miyazakibar.itch.io/wall-street-world">&#128038&#128266 Bird sound effect.</a></li>
 	 Nightingale. 2 mins. Hi fidelity.  Ogg format.  345kB.  American songbird. High volume.  Recorded in western USA, 2025.  To download, click on link and then navigate to the two audio assets you'll see listed.
        <li><a href="http://miyazakibar.itch.io/wall-street-world"> &#128038 Bird2</a></li>
 	Similar to the other bird sound effect.  Ogg.  551kB.  2 minutes.<br>
 <br><br></center>
-
-	&#x1F3BC; MUSIC<br><br>
+<table border=1><tr><td>
+	&#x1F3BC; MUSIC</td></tr></table><br><br>
 	<a href="http://archive.org/details/TedLewisCollection1919-1934">Clarinet and Ragtime</a> &#x1F3B9;<br>
 This is the music you have been looking for.  It's the full &#x1F3BA; Ted Lewis collection including Allah's Holiday, a favorite in Iowa because it's got that Iowa flare.  Also, Caroline is in the collection and Carlina is part of the Iowan diaspora.<br>
 
 <br>
 &#x1F483; Polka<br>
-Here is <a href="http://archive.org">the link</a> for polka dance music like Lawrence Welk and Clarinet Polka. &#x1F3BB; Just click the link and then search for your favorite song (chancon).  There are also square dancing songs and songs suitable for Iowa farmers and farmerer entourage members like farmer bunnies.
-	<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+Here is <a href="http://archive.org">the link</a> for polka dance music like Lawrence Welk and Clarinet Polka. &#x1F3BB; Just click the link and then search for your favorite song (chancon).  There are also square dancing songs and songs suitable for Iowa farmers and farm entourage members like farmer bunnies.
+	<br><br><table border=1 bgcolor=yellow><tr><td>
+	<a href="" title="Back to Iowa AI Home"><button>&#127968;HOME</button></a></td></tr></table>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
 <div id="gazastockquote"></div>
 	<!--TradingView Widgey baby-->
   <hr><br>
@@ -363,7 +394,7 @@ Here is <a href="http://archive.org">the link</a> for polka dance music like Law
  	 <div class="ttradingview-widget-container__widget"></div>
       <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
 	  {
-		"symbol": "NYSE:GCTS",
+		"symbol": "NYSE:IBM",
 		"width": "300px",
 		"colorTheme": "dark",
 		"isTransparent": false,
@@ -376,42 +407,61 @@ Here is <a href="http://archive.org">the link</a> for polka dance music like Law
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 <div id="contacts"></div>
-&#x1F4F2; CONTACTS:<br>
-<a href="http://miyazakibar.itch.io" title="Iowa AI is working with a group of developers on Itch.io producing games and content.  Rate, review, follow and subscribe at Miyazakibar.Itch.Io">&#129493 Iowa AI's Itch Affiliation &#x1F4BB;</a><br><br>
-Rate, review, subscribe, follow.  Send us a message, send us your &#x1F4F8; selfies and we'll send you a cartoon screen grab featuring Iowa theme.  Iowa AI is wholly owned and operated by Miyazaki Bar, Tokyo with underlying support from Moonshee International Worldwide Ltd., Singapore and Nihon International Ltd., Hong Kong.  The majority owner is Kai DaiKi, Esquire.	
+<table border=1><tr><td>&#x1F4F2; CONTACTS</td></tr></table><br>
+<a href="#register" title="Iowa AI is working with a group of developers on Itch.io producing games and content.  Rate, review, follow and subscribe at Miyazakibar.Itch.Io">&#129493 Contact Me Now</a><br><br>
+Rate, review, subscribe, follow the following:<br>
+On itch >> <a href="https://miyazakibar.itch.io">Miyazakibar and Iowa AI</a><br>
+On X >> <a href="https://x.com/drfujihara">DrFujihara</a><br>
+<a href="#register">Click here</a> to contact us<br><br>
+Send us a message, send us your &#x1F4F8; selfies and we'll send you a cartoon screen grab featuring Iowa theme.  Iowa AI is operated by Miyazaki Bar, Tokyo and the majority shareholder is Moonshee International Worldwide Ltd., Singapore.  The CEO of Miyazaki Bar is Kai DaiKi.	
 <br><br><br><br><br><br><br><br><br><br>
 <div id="resources2"></div>
 <br>
-
-&#x1F6E0; RESOURCES:<br><br>
+<table border=1><tr><td>
+&#x1F6E0; RESOURCES</td></tr></table><br><br>
        <li>Technology</li>
 	 <a href="#top" title="Password may be required">&#x1F4BB; Iowa AI</a><br>
-	Most cutting-edge &#x1F5A5; VLLM available outside of Japan and Hong Kong.  This version will be updated soon to vers 2.0 - testing underway.  The VLLM is mostly for Iowa themes, city slicker notions not supported.  Iowa AI is very in-depth for personalized Iowa chats similar to a front porch chat, very detailed and focused on Iowa. However, for sake of privacy, chats are not saved.  Therefore, do not close the window.  Leave this tab open at all costs, mon frere.<br>
-	<li><a href="./404.html#testarea2">Spaceship-On-Chip and IC Design Evaluator</a> Online<br>
+	Most cutting-edge &#x1F5A5; VLLM available outside of Japan and Hong Kong.  This version will be updated soon to vers 2.0 - testing underway.  The VLLM is mostly for Iowa themes, city slicker notions not supported. &#x1F69C; Iowa AI is very in-depth for personalized Iowa chats similar to a front porch chat, very detailed and focused on Iowa. However, for sake of privacy, chats are not saved.  Therefore, do not close the window.  Leave this tab open at all costs, mon frere.<br>
+	<li><a href="#realtyeval" title="Real Estate AI for Farmers">&#x1F353;&#x1F33D; Farmer AI</a></li>
+	This is online software to check on farmer's real estate plans like buying new fields, farming and crop rotation.  Simply use this online tool to evaluate your prospective project and make changes before it is too late!  If you are unsatisfied with the analysis, you can summon Farmer Jim, the expert in all of Iowa.<br>
+	<li><a href="./404.html#testarea2">&#x1F6F0; Spaceship-On-Chip and IC Design Evaluator</a> <font color="green">Online</font><br>
 	This is a free tool to use online, no download or upload required.  Simply type in the website hosting the design and files along with the password and receive feedback at a fast pace.<br>
-	<li><a href="./404.html#testarea">Code, Script and URL Evaluator</a> Online<br>
-Another free tool from Iowa AI. This one offers free code, script and website scoring and evaluations plus fixes and improvements (optional).<br>
-       <li><a href="http://gutenberg.org" title="Books a-Million">	Public Library</a></li>
+	<li><a href="./404.html#testarea">&#x1F5A5; Code, Script and URL Evaluator</a> <font color="green">Online</font><br>
+Another free tool from &#x1F33D; Iowa AI. This one offers free code, script and website scoring and evaluations plus fixes and improvements (optional).<br>
+       <li><a href="http://gutenberg.org" title="Books a-Million">	&#x1F3DB; Public Library</a></li>
 	&#x1F4DA; 75,000 books.  Fiction and non-fiction.  Free for all Iowans and parties aligned with Iowa and Iowan philosophy (live free and eat corn).<br><br>	
-		<li><a href="#publist" title="&#x1F69C; New book by Chet Dowry entitled MYSTERY ON THE MENU">Latest Release</a></li>
-		  A fictional book &#x1F4D7; by Chet Dowry, a novel about a girl named Trixxie who works at a cafe with Yoshi and his wife.  One night the back door is left ajar and Trixxie is blamed.  The cafe's neko, Whiskers, along with a mysterious painting are missing.  Trixxie decides to find Whiskers and learn more about the antique painting of a neko and pile of kinkos with treasure map.
+		<li><a href="#publist" title="&#x1F69C; New book by Chet Dowry entitled MYSTERY ON THE MENU">&#x1F195; Latest Release</a></li>
+		  A fictional book &#x1F4D7; by Chet Dowry, a novel about a girl named Trixxie who works at a cafe with Yoshi and his wife.  One night the back door is left ajar and &#x1F467; Trixxie is blamed.  The cafe's neko, Whiskers, along with a mysterious painting are missing.  Trixxie decides to find &#x1F408; Whiskers and learn more about the antique &#x1F5BC; painting of a neko and pile of kinkos with treasure map &#x1F5FA;.
 
-		<br><br><br><br><br><br>
+		<br><br>
+<table border=1 bgcolor=yellow><tr><td>
+	<a href="" title="Back to Iowa AI Home"><button>&#127968;HOME</button></a></td></tr></table>
+<br><br><br><br>
 	<br><br>	
 		<br><br><br><br><br><br>
 	<br><br><br><br><br><br><br><br><br>
 	<br><br><br><br><br><br><br><br><br>
 	<br><br><br><br><br><br><br><br><br>
 	
-<a href="#register"><button>Iowa AI<br>Rookie Signups</button></a>
+<a href="#register"><button>&#x1F69C; Iowa AI<br>Rookie Signups</button></a>
 	<br><br><br><br><br><br><br><br><br>
 	<br><br><br><br><br><br><br><br><br>
 	<br><br><br><br><br><br><br><br><br>
 	
-	<br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br>
+<!--Logo-->
+ <center><a href="" title="Well, howdy doody!  Willkommen bei Iowa!  How are vous?  Comment allez-vous, mon ami?  Would vous fancy an iced tea?  Sit a spell, si vous plait.">
+<table border=0><tr><td><font size="12">&#x1F69C;</font></td><td><center><button style="background:yellow; color=green">Buddy's Iowa AI</button></center>
+</td></tr></table></a></center>
+<!--end logo-->
+<br><br>
 	&#x1F481; About Buddy's Iowa AI:<br>
-	The firm is located in Ames, Iowa - the heart of Silicon Cornfield - Iowa's equivalent of Silicon Valley.  This is the tech hub for the Midwest, home of Iowa State University, premier midwestern tech institution.  Spaceship-on-chip research and development is mainly done in Iowa, Californie (University of the Pacific), Allemagne und Nippon at this time.  Iowa AI helps produce video game content and other software and resources available on itch.io in the Miyazakibar portal.  Iowa AI is very advanced, the most advanced VLLM on the market today in the USA and UK although there are more advanced in Allemagne und Nippon.  However, Iowa AI is working on new version which is corn-fueled and expected to outperform German and Japanese rivals.<br>
-	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	The firm is located in Ames, Iowa with corporate space in Osceola - the twin hearts of Silicon Cornfield - Iowa's equivalent of Silicon Valley.  Ames is called Silicon Cornfield North and Osceola is considered the southern end of S.C.  This area is the tech hub for the Midwest, home of Iowa State University, premier midwestern tech institution.  Spaceship-on-chip research and development is mainly done in Iowa, Californie (&#127963; University of the Pacific), Allemagne und Nippon at this time. &#127805; Iowa AI helps produce video game content and other software and resources available on itch.io in the Miyazakibar portal.  Iowa AI is very advanced, the most advanced VLLM on the market today in the USA and UK although there are more advanced in Allemagne und Nippon.  However, Iowa AI is working on new version which is corn-fueled and expected to outperform German and Japanese rivals.<br>
+	<br>
+<table border=1 bgcolor=yellow><tr><td>
+	<a href="" title="Back to Iowa AI Home"><button>&#127968;HOME</button></a></td></tr></table>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 
 	<!--Enter custom search bar here-->
@@ -422,12 +472,12 @@ Another free tool from Iowa AI. This one offers free code, script and website sc
 	      </ul>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-  <p id="resources"></p>
-  <u>&#x1F6E0; Iowa Software Developer Resource List:</u><br>
+  <p id="resources"></p><table border=1><tr><td>
+  &#x1F6E0; Iowa Software Developer Resource List</td></tr></table><br>
   <br>
   <li><a href="http://vroid.com" title="&#x1F459;">VRoid</a> - &#x1F459; Models, 3d animations, Iowa characters, midwestern clothing<br>
   <li><a href="http://adventuregamestudio.co.uk">AGS</a> - &#x2328; &#x1F5B1; Game &#x1F579; und software scripting.  RPG, &#x1F3B2; table top, any style - even Iowan style.<br>
-    <li><a href="http://itch.io">Itch.io</a> - &#x1F5C4; Game hosting.<br>
+    <li><a href="http://itch.io">Itch.io</a> - &#x1F5C4; e-Book Publishing.<br>
 	       <li><a href="#register" title="Club for Silicon Cornfield partipants and entourage including farmer bunnies, FFA members, 4H members, Iowa vegetarians.">Computer Club &#x1F468; &#x200D; &#x1F469; &#x200D; &#x1F467;</a><br>
 	We have plans to form an Iowa Computer Club similar to the famous computer club at University of the Pacific.  It's open to everyone, not just Iowans.  There will be online access, file swapping, the usual stuff.  If you would like to join please <a href="#register">fill out the form</a> on our website and send a selfie.  Danke schon.	
 </li>	
@@ -442,6 +492,9 @@ Other Resources (non-software):<br>
          <li><a href="http://gutenberg.org" title="&#x1F4DA;">&#x1F4DA;&#x1F4DA; Public Library - 75000 scrolls</a></li>	
        <li>&#x1F4DA;&#x270D; <a href="#signon2">Moonshee Publishers</a></li>
 	  Premier online book publisher heaquartered in Singapore, Moonshee landed new and upcoming author Chet Dowry and his Adventures of Buddy from Iowa series.  The story is based on a real life rags to riches story of poor Iowa farmboy turned multi-millionaire, a lesson to those who would follow in his large footsteps. The publisher also is behind video games, comics, manga and more.  Works closely with Momotaro Studios and Dokyo Entertainment Ltd, Hong Kong.<br><br>	
+
+<table border=1 bgcolor=yellow><tr><td>
+	<a href="" title="Back to Iowa AI Home"><button>&#127968;HOME</button></a></td></tr></table>
 
 <br><br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
@@ -497,38 +550,46 @@ Look, I told you to reschedule the meet-up because Lisa can't go on Saturdays, s
 		onkeydown="if(event.key === 'Enter') 					event.preventDefault();">
 	</textarea>
 	</p>
-        <p>
-	<table border="1" bgcolor="yellow"><tr><td>
-	<a href="#emplwrong"><center><strong><font size="4">Let's Farm!&#x1F446;</font></a></center></strong></p></td></tr></table> 
+        
+	<table border="1" bgcolor="yellow"><tr><td><center>
+	<a href="#emplwrong"><center><strong><font size="3"><button>Let's Farm!&#x1F446;</button></font></a></center></strong></center></td></tr></table> 
    </td>
    </tr>
    </table>
 
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><div id="emplwrong"></div>
-<font color="red">&#x274C;</font> SORRY <font color="red">&#x2757;</font> <font color="orange">WE ARE NOT ABLE TO FIND THAT PIN NUMBER.  TRY AGAIN, SI VOUS PLAIT.  DANKE SCHON.  IF YOU ARE FFA MEMBER, PLEASE CONTACT LOCAL OFFICE TO BE SURE YOUR MEMBERSHIP IS UP TO DATE.  MSG 293948478 </font><font color="red">&#x274C;</font><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<!--Logo-->
+ <center><a href="" title="Well, howdy doody!  Willkommen bei Iowa!  How are vous?  Comment allez-vous, mon ami?  Would vous fancy an iced tea?  Sit a spell, si vous plait.">
+<table border=0><tr><td><font size="12">&#x1F69C;</font></td><td><center><button style="background:yellow; color=green">Buddy's Iowa AI</button></center>
+</td></tr></table></a>
+<!--end logo-->
+
+<br><br><div id="emplwrong"></div>
+<table bgcolor="blue" border="1"><tr><td><center>
+<font color="red">&#x274C;</font>ERROR I293293834D203830-103843<br><br></center>
+<font color="red">&#x2757;</font> <font color="orange">WE ARE NOT ABLE TO FIND THAT PIN NUMBER.  TRY AGAIN, SI VOUS PLAIT.  DANKE SCHON.  IF YOU ARE FFA MEMBER, PLEASE CONTACT LOCAL OFFICE TO BE SURE YOUR MEMBERSHIP IS UP TO DATE.  MSG 293948478 </font><font color="red">&#x274C;</font><br></td></tr></table>
 <br><br>
-<table border="1" bgcolor="beige"><tr><td>
-<a href="#signon">Try Again</a></td><td width=50></td><td>
-<a href="#top"><font size="5">&#x1F51D;</font></a></td></tr></table>
+<table border="1" bgcolor="yellow"><tr><td>
+<a href="#signon"><button>Try Again</button></a></td><td width=50 bgcolor="green"><center>MODE</center></td><td><center>
+<a href="#top"><font size="3"><button>&#x1F51D;</button></font></a></center></td></tr></table>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><div id="emplwrong"></div>
 	
 <div id="buddy"></div><br><br><br>
 
-   <font size="4">&#128218 Moonshee Publishing</font></center>
-	<img src="images/image1.png" width=2% height=2%>   
-   
+   <font size="3">&#128218 Moonshee Publishing</font>
+	
 	<hr>
    </tr>
 
-        <table border="1" bgcolor="beige"><tr><td><font size="5"><a href="#top">&#127968; &#x1F51D;</a></td><td width="50"></td><td>
+        <table border="1" bgcolor="green"><tr><td bgcolor="yellow"><font size="3"><a href="#top"><button>&#127968;</button><button> &#x1F51D;</button></a></td><td width="50"></td><td bgcolor="green">
 
 
 
-	<a href="#top"><center><font size="3">&#x1F4BB Iowa AI<center></a></td></tr></table>
+	<a href="#sitemap"><center><font size="3"><button>&#x1F5FA; Sitemap</button><center></a></td></tr></table>
 <div id="buddyread"></div>     
 <div id="buddy"></div>
-<div id="publist"></div>	<br><br>
+<div id="publist"></div>	<br><br></center>
 LIST OF UPCOMING PROJECTS AND NEW RELEASES<br><br>
 <a href="./404.html#contents">&#x1F374; Mystery on the Menu</a>
 	<br>by Chet Dowry<br><br>
@@ -647,7 +708,8 @@ Trixxie scratched her head as her mind raced wondering what was happening.  She 
 <br><br>
 <center>
 <table border="1"><tr><td bgcolor="grey"><center>
-<a href="./images/map.png" title="ZOOM IN &#x1F50D;....Caption: This is a map of Maffberry, Iowa.  Yoshi's Cafe is there at 4 o'clock.  The band stand is at 1 o'clock.  E-bike sales at 11 o'clock.  Bookshop is located at 9 o'clock." alt="Check internet connection, si vous plait.  Danke schon.  Have a beautiful day, eh?"><img src="./images/map.png" height="70%" width="80%"></a></center>
+<a href="./images/map.png" title="ZOOM IN &#x1F50D;....Caption: This is a map of Maffberry, Iowa.  Yoshi's Cafe is there at 4 o'clock.  The band stand is at 1 o'clock.  E-bike sales at 11 o'clock.  Bookshop is located at 9 o'clock." alt="Check internet connection, si vous plait.  
+Danke schon.  Have a beautiful day, eh?"><img src="./images/map.png" height="70%" width="80%"></a></center>
 </td></tr></table></center>
 <br><br>
 Trixxie wondered how she was going to pay the rent.  She was already behind two months and she cursed herself for spending her whole paycheck on makeup again.  That was 3 paychecks in a row she wasted on makeup and so she had to go on dates to get food and eat food from the cafe and her food stall that customers were throwing away, like leftover crumbs for example.  She called Yoshi to see if she could work extra hours at the cafe now that the place was packed with Iowa AI employees.  Yoshi was relieved that Trixxie offered and he immediately agreed to double her hours starting that night and Yoshi had actually been wanting to ask Trixxie to work more hours but he hadn't had a chance yet.  The cafe had been packed and Yoshi's nephew came to put in a few hours and help wash dishes.  When Trixxie called Yoshi, she also mentioned the missing painting and told him about the frame she found.  The phone went silent.  Yoshi was acting weird now that Trixxie was talking to him about the missing painting.  Trixxie asked Yoshi a few questions about the painting like what did Yoshi remember about the back of the frame and which dumpster was the painting found near.  Yoshi stammered and gave a few quick evasive answers because exiting the phone call.  Trixxie pondered the meaning of it all.  Did Yoshi know something more about the painting?  Was there some kind of secret involving the painting?  The painting did show a map, like a treasure map.  Maybe someone stole it, thinking it was a real map.
@@ -749,9 +811,15 @@ Moonshee Publishing House<br>
 <br><br><br><br>
 <div id="guestbook"></div>
 
-<br><br><br><br>
+<br><br><br>
+<!--Logo-->
+ <center><a href="" title="Well, howdy doody!  Willkommen bei Iowa!  How are vous?  Comment allez-vous, mon ami?  Would vous fancy an iced tea?  Sit a spell, si vous plait.">
+<table border=0><tr><td><font size="12">&#x1F69C;</font></td><td><center><button style="background:yellow; color=green">Buddy's Iowa AI</button></center>
+</td></tr></table></a>
+<!--end logo-->
 <br>
-Danke schon for visiting Iowa AI headquarters.  If you would fancy signing our guestbook, we would be honoured.  Also, use this form to sign up for Iowa AI account and order merch.  Please see our booth at all ISU ladies' volleyball games for 2025-2026 season.
+<br></center>
+Danke schon fur visiting Iowa AI headquarters.  If you would fancy signing our guestbook, we would be honoured.  Also, use this form to sign up for Iowa AI account and order merch.  Please see our booth at all ISU ladies' volleyball games for 2025-2026 season.<br>
 <br><div id="register"></div>
 
 <table border="1"  id="wholesale"><tr><td>
@@ -779,22 +847,50 @@ Danke schon for visiting Iowa AI headquarters.  If you would fancy signing our g
     <input type="text" name="titl" placeholder="Director of Engineering">
   </label><br><br>
 <label>
-    Three letter man?:<br>
-    <input type="text" name="frat" placeholder="Mochiron">
+    Three letter man?:
+    <input type="checkbox" name="frat" checked>
   </label><br><br>
 <label>
     Interested in listing your company on the Rafah Stock Market?:<br>
     <input type="text" name="interest" placeholder="Mais oui">
 
   </label><br><br>
+
 <label>
-    Comments and questions:<br>
-    <input type="text" name="comment" style="width:"80%" placeholder="I love Iowa because ______>
+    Comments and questions:</label><br>
+    <input type="text" name="comment" width="80%" style="width:"80%" placeholder="I love Iowa because ______">
 
-  </label><br><br>
+  <br><hr color="yellow"><br>
+	Iowa Resident?
+	<input type="checkbox"> | 
+	FFA Member?
+	<input type="checkbox"> | 
+	4H Member?
+	<input type="checkbox"><br>
+	Vegetarian?
+	<input type="checkbox"> | 
+	Vegan?
+<input type="checkbox"> | 
+	PhD Student?
+<input type="checkbox"><br>
+	Interested in semiconductors? 
+	<input type="checkbox"> | 
+	Are you a Scientist?
+<input type="checkbox"><br>
+	Born in Iowa?
+<input type="checkbox"> | 
+	Married?
+<input type="checkbox"> | 
+	Kids?
+<input type="checkbox"><br>
 
+	Do you need Iowa AI to build you a website?
+<input type="checkbox" checked> 
+<br>
+<br>
+	
   <label>
-    Your file:
+    Your file (please upload selfie or avatar along with files - send email to Al Testaverde altes433@gmail.com or use this form for single small files):<br>
     <input type="file" name="upload">
   </label>
   <button type="submit">Send</button>
@@ -1047,30 +1143,55 @@ Boston
 <marquee behavior="scroll" direction="left" speed="23">
 <font color="pink">Advertisement: Sess Club a Harbor Signo y LGB Sess en bano 209-463-8686.  Iowans receive 10% discount with id.</font>
 </marquee>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<div id="uploaderror"></div>
-ERROR <font color="red">&#x274C;</font> We could not verify your account.  Please call web services at 424-235-5733 Mon-Fri 8 am - 8 pm central time.  File uploads are reserved for Iowa residents and registered users only.  To register, please fill out <a href="#register">&#x1F4D4; this form</a>.  Then print up a copy, sign it.  Then scan it in maximum resolution, save two copies for yourself then &#x1F4E4;	 upload the file in &#x1F5DC; 7z format.  Merci.  Please allow some time for processing.
-</font>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<!--Logo-->
+ <center><a href="" title="Well, howdy doody!  Willkommen bei Iowa!  How are vous?  Comment allez-vous, mon ami?  Would vous fancy an iced tea?  Sit a spell, si vous plait.">
+<table border=0><tr><td><font size="12">&#x1F69C;</font></td><td><center><button style="background:yellow; color=green">Buddy's Iowa AI</button></center>
+</td></tr></table></a>
+<!--end logo-->
 <br><br>
-<a href="#top"><table border=1 bgcolor=beige><tr><td><font size=4 color="red">&#x1F51D;</a></font>
-</td></tr></table>
+<div id="uploaderror"></div>
+<table border=1 bgcolor=blue><tr><td><center>ERROR 20039384020483204<br><br></center><font color="red">&#x274C;</font> We could not verify your account.  Please call web services at 424-235-5733 Mon-Fri 8 am - 8 pm central time.  File uploads are reserved for Iowa residents and registered users only.  To register, please fill out <a href="#register">&#x1F4D4; this form</a>.  Then print up a copy, sign it.  Then scan it in maximum resolution, save two copies for yourself then &#x1F4E4;	 upload the file in &#x1F5DC; 7z format.  Merci.  Please allow some time for processing.
+</font></td></tr></table>
+<br><br>
+<a href="#top"><table border=1 bgcolor=beige><tr><td><font size=4 color="red"><button>&#x1F51D;</button></a></font></td><td>
+
 
 <center>
-<a href="#register"><table bgcolor=yellow border=1><tr><td>&#x1F4D4;<font color="blue"> Register Now</font></td></tr></table></a>
+<a href="#register"><button style="background:yellow">&#x1F4D4;<font color="blue">Register Now</button></font></td></tr></table></a>
 </center>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<div id="help"></div><br>
-HELP<br>
-Upload photos of corn and cornfields along with FFA meetings. Send them to Iowa AI for review.  Click on BROWSE and then after selecting your file click on UPLOAD NOW.  This feature is for Iowa AI registered users only who are vegetarians and FFA members.
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<!--Logo-->
+ <center><a href="" title="Well, howdy doody!  Willkommen bei Iowa!  How are vous?  Comment allez-vous, mon ami?  Would vous fancy an iced tea?  Sit a spell, si vous plait.">
+<table border=0><tr><td><font size="12">&#x1F69C;</font></td><td><center><button style="background:yellow; color=green">Buddy's Iowa AI</button></center>
+</td></tr></table></a>
+<!--end logo-->
+
 <br><br>
-<table border=1 bgcolor=beige><tr><td><font size=4 color="red"><a href="#top">&#x1F51D;</font></a>
+<div id="help"></div><br>
+<table bgcolor="blue"><tr><td>
+<center>HELP</center><br><br>
+Upload photos of corn and cornfields along with FFA meetings. Send them to Iowa AI for review.  Click on BROWSE and then after selecting your file click on UPLOAD NOW.  This feature is for Iowa AI registered users only who are vegetarians and FFA members.
+</td></tr></table>
+<br><br>
+<table border=1 bgcolor=beige><tr><td><font size=4 color="red"><a href="#top"><button>&#x1F51D;</button></font></a>
 </td></tr></table>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br>
+<br>
+<!--Logo-->
+ <center><a href="" title="Well, howdy doody!  Willkommen bei Iowa!  How are vous?  Comment allez-vous, mon ami?  Would vous fancy an iced tea?  Sit a spell, si vous plait.">
+<table border=0><tr><td><font size="12">&#x1F69C;</font></td><td><center><button style="background:yellow; color=green">Buddy's Iowa AI</button></center>
+</td></tr></table></a>
+<!--end logo-->
+<hr size=1 color=green>
+</center>
 
-<div id="testarea"></div>
-CODE AND SCRIPT TESTING DEPARTMENT<br>
+<br><br>
+
+<div id="testarea"></div><table border=1><tr><td>
+CODE AND SCRIPT TESTING DEPARTMENT</td></tr></table><br>
 <br>
 Select which VLLM models you want to debug and score your code and script with:<br><br>
 <table border="1"><tr><td>
@@ -1083,9 +1204,9 @@ Moonshee AI</label>
 <label>
 Kagaku AI</label>
 <input type="checkbox" name="kagakuai" checked></td></tr></table>
-<br><br>
+<br><br></center>
 What is the url for your website or code you need us to evaluate?  Do you need us to check Javascript, HTML, C or any special languages only used in Japan?  Or do you need alien eval?<br>
-<input type="text" placeholder="https://oceanpal.ai-crypto.com" style="width:70%">
+<input type="text" placeholder="https://github.com" style="width:70%">
 
 <br><br><a href="#score">
 <table border="1" bgcolor="red"><tr><td>
@@ -1098,9 +1219,13 @@ GO!&#x1F446;
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <br><br><br>
-
 <div id="testarea2"></div>
-SPACESHIP-ON-CHIP AND IC DESIGN EVAL DEPARTMENT<br>
+<table><tr><td>
+<font size=12>&#x1F6F0;</font></td><td><center><font size="4">SEMICONDUCTORS</font></center></td></tr></table><br><br>
+<table border="1"><tr><td><font size="2">
+SPACESHIP-ON-CHIP AND IC DESIGN EVAL DEPARTMENT
+</td></tr></table>
+<br>
 <br>
 Select which VLLM models you want to debug and score your spaceship-on-chip and other IC designs along with software:<br><br>
 <table border="1"><tr><td>
@@ -1115,6 +1240,44 @@ Kagaku AI</label>
 <input type="checkbox" name="kagakuai" checked></td></tr></table>
 <br><br>
 What is the url for your design and drawings?<br>
+<input type="text" placeholder="https://github.com" style="width:70%">
+
+<br><br>
+What is the password or instructions to download files?<br>
+<input type="text" placeholder="https://substack.com" style="width:60%">
+
+
+<br><br>
+<table border="1" bgcolor="yellow"><tr><td><font color="black">
+<a href="#scores2">GO!&#x1F446;</a>
+</td><td width=50 bgcolor="green"><center><a href="#testarea2" title="Developer Mode Activated">MODE</a></center></td>
+<center><td><a href=""><button style="background:yellow; color:green">&#x1F3E0; HOME</a></center></td></tr></table>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br>
+<table><tr><td>
+<font size="12">&#x1F3D7;</font><font size="4">REAL ESTATE AI</font>
+</tr></tr></table>
+<br><br>
+<div id="realtyeval"></div>
+
+<div id="testarea2"></div>
+<table border="1"><tr><td>Real Estate Project AI from Buddy's Iowa International</td></tr></table><br>
+<br></center>
+If you are a farmer or real estate investor and have some real estate plans, please be aware that Iowa AI has free online software that can help review your plans and make recommendations as needed.  If interested, select which VLLM models you want to fully assess your real estate plans:<br><br>
+<table border="1"><tr><td>
+<label>
+Iowa AI</label>
+<input type="checkbox" name="iowaai" checked></td><td>
+<label>
+Moonshee AI</label>
+<input type="checkbox" name="moonsheeai" checked></td><td>
+<label>
+Kagaku AI</label>
+<input type="checkbox" name="kagakuai" checked></td></tr></table>
+<br><br>
+What is the url for your real estate project design and drawings?<br>
 <input type="text" placeholder="https://gct-semi.com" style="width:70%">
 
 <br><br>
@@ -1122,8 +1285,9 @@ What is the password or instructions to download files?<br>
 <input type="text" placeholder="https://near-token.com" style="width:60%">
 
 <br><br>
-<br><br><a href="#scores2">
-<table border="1" bgcolor="red"><tr><td>
+Note: If you don't have a website for your project, why not?  Iowa AI can set one up for you in a jiffy for a reasonable price.  <a href="#register">Contact Iowa AI</a> to get your website going today.
+<br><br><a href="#scores3">
+<table border="1" bgcolor="brown"><tr><td>
 GO!&#x1F446;
 </td></tr></table></a>
 
@@ -1133,15 +1297,24 @@ GO!&#x1F446;
 <br><br><br><br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
+<!--Logo-->
+ <center><a href="" title="Well, howdy doody!  Willkommen bei Iowa!  How are vous?  Comment allez-vous, mon ami?  Would vous fancy an iced tea?  Sit a spell, si vous plait.">
+<table border=0><tr><td><font size="12">&#x1F69C;</font></td><td><center><button style="background:yellow; color=green">Buddy's Iowa AI</button></center>
+</td></tr></table></a>
+
+<hr size=1 color=green>
+<!--End logo-->
+
 <div id="score"></div>
 <br><br>
-We have reviewed the URL you provided.  Here are the results based on 10 Scategories:<br>
+<table border="1"><tr><td>
+IOWA AI has finished the official review for the code, script, HTML and URL you or your colleague provided.  Here are the results based on 10 Scategories (1 is least, 100 is highest possible score)</td></tr></table><br>
  <!--Counter-->
 	<div id="scores"></div><br>
 <table border="1"><tr><td>
 
 <center>Overall Score<br>
-<table border="1" bgcolor="blue"><tr><td>
+<table border="1" bgcolor="red"><tr><td>
 	<script>
 	 document.write(Math.floor(Math.random()*101)+0);
 	</script></center>
@@ -1156,7 +1329,7 @@ Artwork score<br>
  </td></tr></table>
 <td width="80"><center>
 Creativity<br>
-<table border="1" bgcolor="blue"><tr><td>
+<table border="1" bgcolor="red"><tr><td>
 	<script>
 	 document.write(Math.floor(Math.random()*101)+0);
 	</script></center>
@@ -1164,7 +1337,7 @@ Creativity<br>
  </td></tr></table>
 <td width="50"><center>
 Utility<br>
-<table border="1" bgcolor="blue"><tr><td>
+<table border="1" bgcolor="red"><tr><td>
 	<script>
 	 document.write(Math.floor(Math.random()*101)+0);
 	</script></center>
@@ -1175,20 +1348,32 @@ Utility<br>
 </td></tr></table>
 
 <br><br>
-<button onclick="location.reload()" style="background-color: orange; color: white;">Try Again With Deep Think Beta Mode</button>
 
-<br><br>
+<table border="1" bgcolor="green"><tr><td bgcolor="yellow"><font size="5"><a href="#testarea">&#x1F519;</a></td>
+
+<td><font size="5"><a href="#top">&#x1F51D;</a></td><td>
+
+<button onclick="location.reload()" style="background-color: yellow; color: green;">Try Using Beta Mode 2.1</button>
+</td></tr></table>
+<br><br></center></center>
 If your score is less than 95, you may be able to improve your code and script.  Contact Iowa AI for help!  We can get you going from good to greatest!  <a href="#register">Click here</a> to contact us now.
 <br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-We have reviewed the Spaceship-On-Chip drawing package and design you provided.  Here are the results:<br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<div id="scores2"></div>
+<!--Logo-->
+ <center><a href="" title="Well, howdy doody!  Willkommen bei Iowa!  How are vous?  Comment allez-vous, mon ami?  Would vous fancy an iced tea?  Sit a spell, si vous plait.">
+<table border=0><tr><td><font size="12">&#x1F69C;</font></td><td><center><button style="background:yellow; color=green">Buddy's Iowa AI</button></center>
+</td></tr></table></a></center>
+<!--end logo--></center>
+<br><br><table border="1"><tr><td>
+IOWA AI has completed a thorough review of the Spaceship-On-Chip drawing package and design you or your colleague provided.  Here are the results (scale of 1-100 with 1 being worst and 100 being best)</td></tr></table><br>
 
 <br>
  <!--Counter-->
-	<div id="scores2"></div><br>
+<br>
 <table border="1"><tr><td>
 
 <center>Overall Score<br>
@@ -1213,7 +1398,7 @@ Estimated Weight Score<br>
 	</script></center>
 </td></tr></table><center>
 
-Aerodynamics<br>
+Power Supply<br>
 <table border="1" bgcolor="blue"><tr><td>
 	<script>
 	 document.write(Math.floor(Math.random()*101)+0);
@@ -1237,45 +1422,125 @@ Hardware Insights<br>
 </td></tr></table>
 
 <br><br>
-<button onclick="location.reload()" style="background-color: orange; color: white;">Try Again With Deep Think Beta Mode</button>
+<table border="1" bgcolor="yellow"><tr><td><font size="5"><a href="#testarea2">&#x1F519;</a></td>
 
-<br><br>
+<td bgcolor="green"><font size="5"><a href="#top">&#x1F51D;</a></td><td>
+
+<button onclick="location.reload()" style="background-color: brown; color: yellow;">Try Using Beta Mode 2.1</button>
+</td></tr></table>
+
+<br><br></center>
 If your score is less than 92, you may be able to improve your spaceship IC design, hardware and software.  Contact Iowa AI for help!  We can get you going from good to best!  <a href="#register">Click here</a> to contact us now.
 <br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div id="scores3"></div>
+<table bgcolor="red"><tr><td>
+<font size=12>&#x1F4C9;</font><font size=5> Realty Report</font></td></tr></table>
+<br><br><br><table border=1><tr><td>
+IOWA AI has reviewed the &#x1F3D7 Real Estate project drawings and plans you provided.  Keep in mind, we are only basing this on your materials.  So, if you need to improve the score, consider adding more information and trying again.  Here are the results (scale is 1-100 with 100 being best)</td></tr></table><br>
+
+<br>
+ 	<br>
+<table border="1"><tr><td>
+
+<center>Overall Score<br>
+<table border="1" bgcolor="red"><tr><td>
+	<script>
+	 document.write(Math.floor(Math.random()*101)+0);
+	</script>
+<br>
+</center>
+</td></tr></table>
+<td><center>
+Location score<br>
+<table border="1" bgcolor="red"><tr><td>
+	<script>
+	 document.write(Math.floor(Math.random()*101)+0);
+	</script></center>
+
+</td></tr></table>
+<td><center>
+Estimated Cost Ratio<br>
+<table border="1" bgcolor="blue"><tr><td>
+	<script>
+	 document.write(Math.floor(Math.random()*101)+0);
+	</script></center>
+</td></tr></table><center>
+
+<br>Cap Rate Comparison<br>
+<table border="1" bgcolor="blue"><tr><td>
+	<script>
+	 document.write(Math.floor(Math.random()*101)+0);
+	</script></center>
+
+</td></tr></table><center>
+<br>Likelihood of Success<br>
+<table border="1" bgcolor="red"><tr><td>
+	<script>
+	 document.write(Math.floor(Math.random()*101)+0);
+	</script></center>
+
+</td></tr></table><center>
+<br>Risk Factor<br>
+<table border="1" bgcolor="blue"><tr><td>
+	<script>
+	 document.write(Math.floor(Math.random()*101)+0);
+	</script></center>
+
+</td></tr></table>
+</td></tr></table>
+
+<br><br><table border="1" bgcolor="yellow"><tr><td bgcolor="green"><font size="5"><a href="#realtyeval">&#x1F519;</a></td>
+
+<td><font size="5"><a href="#top">&#x1F51D;</a></td><td>
+<button onclick="location.reload()" style="background-color: green; color: yellow;">Try Using Beta Mode 2.1</button>
+</td></tr></table>
+<br><br><center>
+<button onclick="location.reload()" style="background:green; color:yellow">Summon Farmer Jim &#x1F349;</button></center><br>
+<table border=1><tr><td>
+If you think your score was too low or too high, perhaps you need the help of Farmer Jim from SW Iowa.  He's the brother of Ronny, another great farmer from the Winterset area.  He might be able to help.<br><br>
+If your score is less than 92, you may be able to improve your farming ideas or modeling.  It's common for farmers to want to buy more land and seeds, rent more land, buy equipment, buy trucks.  But that's all folly.  Plans that call for buying more than a few parcels and not using trees or perma-culture usually score low but not always.  Real estate investments not in growing areas may not score well. Contact Iowa AI for help!  We can get you going from good to best!  <a href="#register">Click here</a> to contact us &#x1F4F2 now.<br><br>If the goal is to make money, forget about farming, real estate, raising animals, that's no good for making money.  What you want to do is buy stocks instead, like AI and crypto stocks but you must buy the correct ones.  Then use the money you make from stocks to buy a nice hobby farm with a grove but no animals like pigs, only cats, inus, horses... because vegetarian is wave of future.<br><br>
+Farmer Jim recommends that if people insist on hobby farming, the way to go is Solvang or Phelan, Yucca Valley.  Places where you can grow opuntia and ficus, salvia.  Those are key crops and can be made into medicinal Wein.  But, if stuck in Iowa, Farmer Jim recommends apples and other fruits and vegetables, no animals except maybe chickens for eggs.
+</td></tr></table>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <center>
  <!--Counter of official registered users-->
 <font size="1">
-	<div id="users">Registered Iowa AI Developers and Spaceship-On-Chip Designers</div><br><font color="black">
+	<div id="users">Registered Iowa AI Developers and Spaceship-On-Chip Designers Online Now</div><br><font color="black">
 <table bgcolor="yellow" border="1"><tr><td>
 	<script>
-	 document.write(Math.floor(Math.random()*101)+100);
+	 document.write(Math.floor(Math.random()*101)+10);
 	</script>
 </td></tr></table>
 </center>
 
-<br><br><br><br><br><br><center>
-<table border="1"><tr><td>
-<a href="#publist">Books</a><br>
-<a href="#register">Contact</a><br>
-<a href="#testarea">Code Evaluator</a><br>
-<a href="#testarea2">IC Design Evaluator</a><br>
+<br><br><br><br><br><br><div id="sitemap"></div><center>
+<table border="1"><tr><td><font size="1">
+<a href="./index.html#stockeval">&#x1F4B1; Bond Evaluator</a><br>
+
+<a href="./404.html#publist">&#x1F4DA; Books</a><br>
+<a href="#register">&#x1F4F2; Contact</a><br>
+<a href="./404.html#testarea">&#x1F4BB; Code Evaluator</a><br>
+<a href="./404.html#testarea2">&#x1F5A5; IC Design AI</a>
 </td><td>
-<a href="#top">Iowa AI Chat</a><br>
-<a href="#files">Files</a><br>
-<a href="#resources">Resources</a><br>
-<a href="./index.html#rafah">Rafah Stock Market</a><br>
+<a href="./404.html"><font size="1">&#x1F69C; Iowa AI Chat</a><br>
+<a href="./kagaku.html" title="Links to Chemistry Club AI">&#x1F6E2; Fertilizer Info</a><br>
+<a href="#files">&#x1F5C4; Files</a><br>
+<a href="#resources2">&#x1F5DC; Resources</a><br>
+<a href="./index.html#rafah">&#x1F3DB; Rafah Stock Market</a><br>
 </td><td>
-<a href="./index.html#rafah">Palestine Industrial Average</a><br>
-<a href="#resources">Software</a><br>
-<a href="#guestbk">View Guest Book</a><br>
-<a href="#register">Sign Guest Book</a><br>
+<a href="./index.html#rafah"><font size="1">&#x1F4B9; Palestine Industrial Average</a><br>
+<a href="#files">&#x1F4E0; Software</a><br>
+<a href="#guestbk">&#x1F4D6; View Guest Book</a><br>
+<a href="#register">&#x1F4D7; Sign Guest Book</a><br>
+<a href="./index.html#stockeval">&#x1F4B6; Stock Analysis AI</a><br>
 
 </td></tr></table>
+
 <font color="green">Iowa AI Sitemap<br><br>
 
 

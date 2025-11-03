@@ -8,9 +8,8 @@
   <meta charset="UTF-8">
   <meta name="viewport"
    content="width=device-width,initial-scale=1.0">
-  <title>Kagaku Club &#x1F6E2;
-   </title>
-  <link href="/style.css"
+  <title>&#x1F235; Kagaku Club</title>
+  <link href="./style.css"
    rel="stylesheet"
    type="text/css"
    media="all">
@@ -28,9 +27,8 @@
       height: 50%;
 	 max-height: 200px;
       border: 1px solid #ccc;
-      background: purple;
-	color: beige;
-      padding: 10px;
+      background: brown;
+	color: red;
       overflow-y: auto;
       white-space: pre-wrap;
       line-height: 1em; /* one-line spacing */
@@ -41,8 +39,8 @@
       height: 39px;
 	 max-height: 200px;
       border: 1px solid #ccc;
-      background: purple;
-	color: beige;
+      background: brown;
+	color: red;
       margin-top: 10px;
     }
 
@@ -52,27 +50,24 @@
   </head>
   <body  style="background-color: black; color: beige;">
 <table><tr><td>
- <marquee behavior="scroll" direction="left" scrollamount="26" loop="1" style="position:fixed; top: 90px;left: 991; width=100%; pointer-events:none; z-index:999; white-space: nowrap; color:#000; background: transparent; font-weight: bold;">
- <img src="./images/jeep.png" height="50">
-</marquee>
 
-<marquee behavior="scroll" direction="right" scrollamount="21" loop="1" style="position:fixed; top: 40px ;left: 991; right:991; width=100%; pointer-events:none; z-index:999; white-space: nowrap; color:#000; background: transparent; font-weight: bold;">
- <img src="./images/iowalorry2.png" height="100">
+<marquee behavior="scroll" direction="right" scrollamount="21" loop="1" style="position:fixed; top: 40px ;left: 991; right:991; width=100%; pointer-events:auto; z-index:999; white-space: nowrap; color:#000; background: transparent; font-weight: bold;"><a href="./404.html">
+ <img src="./images/iowalorry2.png" height="100"></a>
 </marquee>
 </td></tr></table><br>
 
  <center>
-   <h1><a href="#chatbox" title="Kagaku Club" id="top">&#x1F4BB </a><a href="#files" title="Files and Misc.">&#128193 </a>
+   <h1><a href="#chatbox" title="Kagaku Club" id="top">&#x1F4BB </a><a href="#resources2" title="Files and Misc.">&#128193 </a>
 <a href="./404.html#publist" title="Reading Room">&#128218 </a>
  	
-<a href="#contacts" title="Contacts">&#128243 </a>
+<a href="#contacts" title="Contacts">&#x1F4EC; </a>
 
-<a href="#guestbook" title="Sign Guestbook">&#128221</a></h1>
-	<hr color="orange">
-
-<table border="1" padding="3"><tr><td width="120"><font size="5"><a href="#top" title="Bienvenue!  Welcome to &#x2697; Kagaku Club here at University of the Pacific.  Du bist chemistry major, ja?  Organcic chemistry?  Theoretical or practical chemistry?"></font><font size="3"><center>Kagaku Club</center></font></em></strong></td><td width="20">
-		<font size="6"><a href="#top" title="Kagaku Club">&#x1F6E2;</a>
-  </font>
+<a href="#guestbook" title="Sign Guestbook">&#128209;</a></h1>
+	<hr color="red" size="1">
+<table><tr><td>
+<font size="12" color="red">&#x1F235;</font>
+</td><td><button style="background:brown"><center><font size="4">Kagaku Club</font></button>
+</center><br><font color="red">
 	</td></tr></table>
   
   
@@ -82,13 +77,46 @@
   
   
   
-  </center>
-<hr color="orange">
-<marquee>Happy &#x1F383; Halloween 2025!</marquee><hr color="orange">
+  
+<hr color="red" size="1">
+<!--Main Drop Down Menu-->
 
-<body>
+<!--Drop down main menu here-->
+<label for="menu" title="Menu"></label>
+<select id="menu" onchange='goToLink(this)' style="background:brown; color:red">
+	<option value="#sitemap">&#x1F310; Navigation</option>
+<option value="#books">&#x1F4DA; Books Online</option>
+<option value=""><font color="black">&#9879;</font> Chemistry AI</option</option>
+<option value="./404.html">&#x1F69C; Iowa AI</option>
+
+<option value="./index.html">&#x1F54C; Moonshee AI Chat</option>
+<option value="#resources2">&#x1F5C4; Resources</option>
+<option value="#sitemap">&#128506; Site Map</option>
+
+<option value="#guestbk">&#x1F4D6; View Guestbook</option>
+<option value="#register">&#x1F4DD; Sign Guestbook</option>
+
+	<option value="#register">&#x1F510; Register For New Account</option>
+	
+</select>
+<script>
+	function goToLink(select) {
+		const url = select.value;
+		if (url) {
+			window.location.href = url;
+		}
+	}
+</script>
+
+<!--end drop down-->
+
+<hr color="red" size="1">
+
+<body><table bgcolor="red" width=100%><tr><td>
+
 <div id="chatbox"></div>
-<input type="text" id="userInput" placeholder="Chat with Kagaku AI..." />
+<center>
+<input type="text" id="userInput" placeholder="Chat with Kagaku AI..." /></center>
 <script>
 function submitChat() {
   const input = document.getElementById("userInput");
@@ -112,27 +140,27 @@ function submitChat() {
 
 
   const responses = [
-    "Allo, guten Tag.  Wie gehts, mein Herr?  Happy Thanksgiving, you rascal!  Are you interested in spaceship-on-chip design and manufacturing?",
+    "Allo, guten Tag.  Wie gehts, mein Herr?  Are you interested in spaceship-on-chip design and manufacturing?",
 	"Pardon moi?",
-	"Oh, I see.  Enchante.  Je, watashi no namae wa Kagaku AI desu.  What are your plans for Halloween?  Gonna go snatch bags of candy from kids?",
+	"Oh, I see.  Enchante.  Je, watashi no namae wa Kagaku AI desu.  How was your Halloween?",
 	"So, what do you know about kagaku?  You know, semiconductor industry needs chemists.",
 	"Ja, semiconductors are made using a lot of chemicals which is quite tricky and so there is always a constant need.  Chemists should consider semiconductor careers, it's much better than hydrocarbons in terms of pay.",
 	"Are vous familiar mit HF?  We use that to make spaceships-on-chip but not that much.  We more use other chemicals.",
 	"Well, if you ever need to clear a drain.  Here's how you do it.  Take red wine sediments, but they need to be made by you in winemaking process.  And use about 1/4 cup in the stuck drain.  That'll clear it.",
 	"When did you start becoming interested in kagaku?  And what is your interest level in semiconductors?",
 	"Well, if you work in semiconductor industry you might not have to breathe nasty smells and chemicals all day because semiconductor industry often has better ventilation and work environment than oil refinery.",
-	"Just remember, don't leave hot plates and heat guns, burners unattended.  You might heat up a beaker and then forget and go to lunch, start a fire.  Because the liquids could evaporate leaving a solid to be heated and then it can light on fire and burn the whole building down.  Chemistry lab fires are quite common.",
-
+	"Just remember, don't leave hot plates and heat guns, burners unattended.  You might heat up a beaker and then forget and go to lunch, start a fire.",
 "Now then, if we have HF, hydro-flouric, then we don't keep that in glass bottles.  We use plastic bottles for that.",
 	"What would we use HF for, you know?",
 	"HF strips oxides from SiO2 as far as I know.",
 	"I think HF can be used form traces and wells alongside lithography on a GaN wafer but double check me on that because we also see sulfuric and nitric a lot, plus CN and a million others on the factory floor and in laboratory.",
+	"Chem reactions, kagaku reactions, are kinda like a box of chocolates.  You just never know what you might get!  That's why we study and read the books.",
 	"If we have some gold ore and we need to get the gold out, how do we do it using chemistry?",
 	"We could crush the ore and melt it or we can use HCN after crushing instead.  The HCN is called cyanide or hydrocyanic acid.  That will leach the gold right out of the ore but it's bad for the environment and chemists, so beware of the fumes and disposal.",
 	"So, what kind of chemistry games or tv shows do you like?  As a chemist I suppose you like cooking and baking?",
 	"What do you think about ceviche and cooking with citric acid?  I don't care for non-vegetarian food.  Like most star chemists, I'm vegetarian.  And in fact, I take it one step further.  I'm vegan level, very advanced.  Et vous, mon frere?",
-	"If you are in the lab and someone says, "Salaam," to vous...what do we say in return, sahib?",
-	"If someone salaams us, we reply, 'Par la barbe du le Prophet, Allahu akbar!  That means..Yo bro, you a kewl cat and me be diggin Allah..",
+	"If you are in the lab and someone says, --Salaam-- to vous...what do we say in return, sahib?",
+	"If someone salaams us, we reply, -Par la barbe du le Prophet, Allahu akbar!-  That means..Yo bro, you a kewl cat and me be diggin Allah..",
 	"Do you smell that?  It smells like burning plastic.  And earlier I smelled rubbish like maybe vinegar or benzene.",
 	"Well, you know....chemistry is kind of boring sometimes.  Because the reactions are usually so fast, so it's a lot of down time.  But some reactions take a long time, so you have to wait.",
 	"If you have a tank of HCl, you know there's now HCl in it.  It's all H and Cl.  They seperate in solution.  But, if you have a tank of water, then it doesn't seperate to hydronium and hydroxide very much.  They stay together until something else is added.  Right?",
@@ -144,7 +172,7 @@ function submitChat() {
 	"Do you wear goggles and a lab coat when you instruct and do experiments or work with your teacher?",
 	"Have any chem theories to share?",
 	"Well, here is a chem theory I have...you know how macrophages and stuff make blood clots from binding bugs in blood?  Well, I think they strip electrons from platelets and other objects in the blood through friction and reactivity.",
-	"So, I think people are low on electrons, the blood is, and most parts of the body.  But some areas get clogged with electrons like spleen, liver, kidneys, and electrons are excreted.  So, people need donors and they can't eat meat or fish, that makes it worse.",
+	"I think androids are low on electrons, the blood is, and most parts of the body.  But some areas get clogged with electrons like spleen, liver, kidneys, and e's are excreted.  So, people need e's and they can't eat meat or fish, that makes it worse.",
 	"Oui, meat and fish intake make the electron shortfall much, much worse and causes baldness and other problems along with sun exposure and lack of turban.",
 	"What college did you attend?",
 	"Want to take a break now or later?",
@@ -168,7 +196,7 @@ function submitChat() {
 	"We can use same method to make ethanol and acetic acid.  When you make wine you're making both.",
 	"Let's do our winemaking in glass containers, not old moldy barrels.",
 	"Ok, here's a question for du.  Suppose you want to dry something.  How can you dry it?",
-	"To dry something we can add water or blow a fan.  Yep, if we are cooking vegan bacon for example, in fry pan..  it won't fry up on low heat unless you add a little water.  The water sizzles and it also dries out the fake bacon.  Yes, water actually dries things.  It's counterintuitive, I know.",
+	"To dry something we can add water or blow a fan.  Yep, if we are cooking vegan bacon for example, in fry pan..  it won't fry up on low heat unless you add a little water.",
 	"Keep in mind, buring can be combustion or liquids and solutions.  Yes, 'water' burns if it is HCN.",
 	"Now then, you know the difference between liquid and solution, right?",
 	"Well, when we write our chem equations, we should indicate whether the materials are solid, gas, solution, liquid.  So, we say H2O (solid) and then we know it's ice.  Ja?", 
@@ -179,24 +207,25 @@ function submitChat() {
 	"Alumina is ceramic element and also aluminium, the shiny metal.  Al2O3 is the oxide, it's like china - porcelein. Sapphire is pure Al2O3.",
 	"Glass is a type of ceramic, it's SiO2 or can be other variations too.",
 	"Do you know much about silica and silicon dioxide?",
-	"Well sometimes chemists are asked to spray farmer fields.  But you know what works better?  It's good to not water the fig trees, let them go dry.  The bugs will leave.  It take a season or two.  Besides, bugs are ok for many crops like plums.",
+	"Well sometimes chemists are asked to spray farmer fields.  But you know what works better?  It's good to not water the fig trees, let them go dry.  The bugs will leave.",
 	"Most chemists don't like using poisons on trees and gardens.  We prefer just letting spiders do the work and birds, stuff like that.  Just grow an extra tree so the birds have enough.",
 	"Ethylene is C2H4.  It's a hydrocarbon, of course.  That's a gas or liquid, I believe.  You won't see solid ethylene too much around the lab.",
 	"If someone says NITRIC, they mean nitric acid.  HNO3.",
 	"Sulphuric is a powerful acid.  It's very strong so be careful with it.  H2SO4.  It has hydrogen, sulfur and oxygen in it.",
 	"HCl is a common acid.  It's called hydrochloric acid and it is one the strongest ones.  If you see a tank labeled HCl it doesn't contain HCl.  It's fully ionized in water.",
 	"Acids are normally in salts, that means powders.  You generally mix those with water, like DI water, and that forms acidic solution.",
-	"Potassium Iodide is written like this KI.  It contains two atoms.  It's a ionic compound, not a molecule!  Ja, some things you might think are molecules like KI, but it's an ionic compound, not a molecule.",
+	"Potassium Iodide is written like this KI.  It contains two atoms.  It's a ionic compound, not a molecule!  Ja, some things you might think are molecules like KI, but it's an ionic compound.",
 
 	"Are you familiar with wafers and spaceship on chip?",
 	"Well, to make a wafer (that's microchip starter), we use thin slice of SiO2 wafer.  The wafer comes from a big slug of SiO2 that we grow in the lab.",
-	"Well, let's just change the subject, eh, mon frere?  Say, have you ever been to South Asia?  To India??  I have never been but one of my handlers is a Moplah moonshee and he's real lit.  And so I've been dreaming of Malabar and Calicut and a candy of pistachios, just for moi!  What are your dreams?  Any dreams of India?",
+	"Say, have you ever been to South Asia?  To India??  I have never been but I've been dreaming of Malabar and Calicut and a candy of pistachios, just for moi!  What are your dreams?  Any dreams of India?",
 	"Are you familiar with the plight of the Moplah?",
 	"What have you heard about Malabar?",  
 	"What do you want to talk about?  Ask me anything!!",
 	"Remember sahib, you can't save the chat because you're not a supporter yet.  So leave this tab open.",
 	
 	"Ok, that's all for now.  Let's discuss this further perhaps next week or tonight over cocktails?  Non-alcoholic, of course.  Like maybe some soda pop or a salvia infustion.",
+
     "We will need to continue this later.  I must go now.  Sumimasen."
   ];
 
@@ -223,23 +252,25 @@ function submitChat() {
   });
 
 </script>
-
+</td></tr></table>
 <br>
-<table border="1" width="90%"><tr><td width=45>
-<button onclick="submitChat()" style="background-color: red; color: white;" title="Press this button after you type your questions.  Next, Kagaku Club AI will knock your socks off with its great wisdom.">GO&#x1F446;</button></td>
-<td><font size="1">Chem Lab - Equip List</font></td><td width=60><font size=3><a href="#top" title="Organic Chem Mode">MODE</td>
-</tr></table><br><table border="1" bgcolor="pink"><tr>
+<table border="1" width="90%"><tr>
+<td width=60><font size=3><a href="#top" title="Organic Chem Mode">MODE</td>
+
 <td>
 <input type="file" name="upload"></td><td>
-<button title="Press Browse to select your chemistry file for uploading.  Can be homework or a quiz, a photo, anything under 6 MB.  After you select the file, click on UPLOAD NOW.">&#x1F4E4;</button></td></tr></table><br>
+<button title="Press Browse to select your chemistry file for uploading.  Can be homework or a quiz, a photo, anything under 6 MB.  After you select the file, click on UPLOAD NOW.">&#x1F4E4;</button></td>
+<td width="77">
+<button onclick="submitChat()" style="width:60px; background-color: red; color: white;" title="Press this button after you type your questions.  Next, Kagaku Club AI will knock your socks off with its great wisdom.">GO&#x1F446;</button></td>
+</tr></table><br>
 <center>
 
 <table border=1><tr><td>
-	<td style="background-color: blue; color: white;">
-<a href="#help" title="Upload selfies and files now and send them to Kagaku Club for review.  Click on BROWSE and then after selecting your file click on UPLOAD NOW.  This feature is for registered users only who are signed in."><font color="white">&#x1F473; Help</font>
-</td>
-<a href="#uploaderror" title="After you click on browse and select your files to send, click on UPLOAD NOW but it's only for registered users on IBM Watson devices.  Android not supported.">
-<button style="background-color: red; color: white;" id="btn22">UPLOAD NOW</button></a>
+<a href="#uploaderror" title="After you click on browse and select your files to send, click on UPLOAD but it's only for registered users on IBM Watson devices.  Android not supported.">
+<button style="background-color: red; color: white;" id="btn22">UPLOAD</button></a>
+</td>	<td style="background-color: blue; color: white;">
+<a href="#help" title="Upload selfies and files now and send them to Kagaku Club for review.  Click on BROWSE and then after selecting your file click on UPLOAD NOW.  This feature is for registered users only who are signed in."><font color="white">? Help</font>
+</td><td>
 
 <button onclick="location.reload()" style="background-color: orange; color: white;" title="Start new chat.  This option will reset the memory.  All progress will be lost.">Reset &#x26A0; Chat</button>
 </td></tr></table>
@@ -247,9 +278,9 @@ function submitChat() {
 <br><br><br>
 
 <!--Search bar-->
-<input type="text" id="searchBox" placeholder="Search archives..." style="width:60%" />
+<input type="text" id="searchBox" placeholder="Search archives..." style="width:70%; background:brown; color:red" />
 <a href="#resources2">
-	<button>&#x1F50D Search</button>
+	<button style="background:red">&#x1F50D Search</button>
 	</a>
 
 <br><br>
@@ -276,55 +307,82 @@ Link us, mate? &#x1F517; Copy and paste &#x1F4CB; this code onto your site and w
 <marquee><a href="#top">
 		<img src="./images/logok.png" title="Kagaku Club Website">
 	</a></marquee>
-</div>
+</div></center>
 <br><br><br><br>
-
-
-  	&#x1F3BC; MUSIC<br><br>
+<center><!--drums-->
+<font size="12" color="brown">&#128738;&#128738;&#128738;&#128738;&#128738;</font>
+<br><br><br><br>
+</center>
+<table border="1"><tr><td>
+  	&#x1F3BC; LAB MUSIC</td></tr></table><br><br>
 	<a href="http://archive.org/details/TedLewisCollection1919-1934">Clarinet and Ragtime</a> &#x1F3B9;<br>
-This is the music you have been looking for.  It's the full &#x1F3BA; Ted Lewis collection including Allah's Holiday, a must for every chem lab in case you make a discovery or have a celebration.  The joints are great for chemists and chem bunny entourage.<br>
-	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><div id="contacts"></div>
-&#x1F4F2; CONTACTS:<br>
-<a href="#register" title="Rate, review, follow and subscribe">&#129493 Kagaku Club's Itch Account &#x1F4BB;</a><br><br>
+This is the music you have been looking for.  It's the full &#x1F3BA; Ted Lewis collection including Allah's Holiday, a must for every chem lab in case you make a discovery or have a celebration.  The joints are great for chemists and chem bunny entourage.  It's mostly instrumental, heavy on woodwinds like clarinet.<br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><div id="contacts"></div><table border=1><tr><td>
+&#x1F4F2; CONTACTS</td></tr></table><br>
+<a href="#register" title="Rate, review, follow and subscribe">&#129493 Kagaku Club's Online Contact Form &#x1F4BB;</a><br><br>
 Rate, review, subscribe, follow.  Kagaku was developed by Miyazakibar and Dr. Fujihara.  Please contact the baru on Itch.io and Dr. Fujihara on X.com @drfujihara.  Send us a message, send us your &#x1F4F8; 	
-<br><br><br><br><br><br><br><br><br><br>
+<br><br>
+
+<table border=1 bgcolor=red><tr><td><font size="4"><a href="">&#128285;&#127968;</a></font></td></tr></table>
+
+<br><br><br><br><br><br><br><br>
 <div id="resources2"></div>
 <br>
-
-&#x1F6E0; RESOURCES:<br><br>
+<table border="1"><tr><td>
+&#x1F6E0; RESOURCES</td></tr></table><br><br>
        <li>Technology</li>
 	 <a href="#top" title="Password may be required">&#x1F4BB; Kagaku AI</a><br>
 	Most cutting-edge &#x1F5A5; chemistry VLLM available outside of Allemagne.  This version will be updated soon - testing underway.  The VLLM is mostly for chemistry.  Kagaku Club's software is very in-depth for personalized, very detailed chemistry work. However, for sake of privacy, chats are not saved.  Therefore, do not close the window.  Leave this tab open at all costs, mon frere.<br>
 
-	<li><a href="./404.html#testarea2">Spaceship-On-Chip and IC Design Evaluator</a> Online<br>
-	This is a free tool to use online, no download or upload required.  Simply type in the website hosting the design and files along with the password and receive feedback at a fast pace.<br>
-	<li><a href="./404.html#testarea">Code, Script and URL Evaluator</a> Online<br>
-Another free tool from Iowa AI. This one offers free code, script and website scoring and evaluations plus fixes and improvements (optional).<br>
-
+	<li><a href="./404.html#testarea2" title="Click here to visit the Online Tool for IC eval and SOC grading.  Project must have a URL.  If you don't have a URL, why not?  Iowa AI sets up URLs for a fee.  Visit Iowa AI at https://moonshee.github.io/iowa">&#x1F6F0;Spaceship-On-Chip and IC Design &#128300; Evaluator</a> Online<br>
+	This is a free &#128736; tool to use online, no download or upload required.  Simply type in the website hosting the design and files along with the password and receive feedback at a fast pace.  This is mostly for SOC and IC Designers but it is also for manufacturers trying to troubleshoot.  For example, if the process chemicals are showing test results which do not meet your calculations, you can run the proces through the AI and it will check to look for issues such as not enough urea.  Remember to always use loads of fresh urea when running chemical processes for manufacturing except during final burn-in.<br>
+	<li><a href="./404.html#testarea">&#128421; Code, Script and URL Evaluator</a> Online<br>
+Another free tool from &#127805; Iowa AI. This one offers free code, script and website scoring and evaluations plus fixes and improvements (optional) for Chemistry software developers.  It a great tool for coders and scripters.  For advanced applied chemistry AI tool, <a href="">click here</a> and use the AI chat box, bitte.  Danke schon.<br><br>
+<div id="books"></div>
 
        <li><a href="http://gutenberg.org" title="Books a-Million">	Public Library - Chemistry Dept.</a></li>
 	&#x1F4DA; 75,000 books.  Chemistry text books, some rare and antique books.  Free.<br><br>	
-		<li><a href="./404.html#publist" title="&#x1F69C; Book To Read Now - A Novel by Chet Dowry">Latest Release</a></li>
-		  A mystery book &#x1F4D7; with a neko and mysterious painting, a disappearance and a cafe.  A must have for all avid reader libraries.  
-		<br><br><br><br><br><br>
+		<li><a href="./404.html#publist" title="&#x1F69C; Book To Read Now - A Novel by Chet Dowry">Chemistry Novels</a></li>
+		  A mystery book &#x1F4D7; with a neko and mysterious painting, a disappearance and a cafe.  A must have for all avid chemist libraries.  Spoiler alert!  The hero devises a chemical elixir to cure a bum who has taken ill but is a key witness to a disappearance.  The elixir involves hundreds of steps, a true chemist's challenge.  She makes her own ethanol, acetic acid combination and employs other tricks of the trade like adding salvia for potency.  
+		<br><br>
+<table border=1 bgcolor=brown><tr><td>
+<font size=3 color=red face=monoface><a href="">&#x1F3E0;HOME</a></font></td></tr></table>
+
+<br><br><br><br>
 	<br><br>	
 		<br><br><br><br><br><br>
 	<br><br><br><br><br><br><br><br><br>
+<center><!--drums-->
+<font size="12" color="brown">&#128738;&#128738;&#128738;&#128738;&#128738;</font>
+
+
 	<br><br><br><br><br><br><br><br><br>
 	<br><br><br><br><br><br><br><br><br>
 	
-<a href="#register"><button>Kagaku Club<br>New Chemists</button></a>
+<a href="#register"><button style="background:red">Kagaku Club<br>New Chemists</button></a></center>
 	<br><br><br><br><br><br><br><br><br>
 	<br><br><br><br><br><br><br><br><br>
 	<br><br><br><br><br><br><br><br><br>
 	
-	<br><br><br><br><br><br><br><br><br>
-	&#x1F481; About Kagaku Club:<br>
-	The club is located at University of the Pacific in Stockton, California having recently moved from Beverly Hills and is fully sponsored by Kagaku International (soon to be listed on Rafah Stock Market under the ticker symbol KI - like potassium iodide).  However, we still maintain our old phone number so please stay in touch and join us for meetings on campus in the secret basement chem lab reserved for graduate students normally, but we open to freshman for meetings.<br>
+	<br><br><br><br><br><br><br>
+<table><tr><td>
+<font size="12" color="red">&#x1F235;</font>
+</td><td><button style="background:brown"><center><font size="4">Kagaku Club</font></button>
+</center><br><font color="red">
+	</td></tr></table>
+<div id="aboutus"></div>
+<br><br>
+	&#x1F481; About Kagaku Club and Kagaku International:<br>
+	The club is located at &#x1F3DB; University of the Pacific in Stockton &#x1F334; California having recently moved from Beverly Hills and is fully sponsored by &#x1F235; Kagaku International (listed on &#x1F4B9; Rafah Stock Market under the ticker symbol KI - like potassium iodide).  However, we still maintain our old &#x1F4F3; phone number so please stay in touch and join us for meetings on campus in the secret basement chem lab reserved for graduate students normally, but we open to freshmen for meetings.  Kagaku International is based in Kowloon, Hong Kong.<br>
 	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 
-	<!--Enter custom search bar here-->
+	<!--Drums of chems-->
+<center><!--drums-->
+<font size="12" color="brown">&#128738;&#128738;&#128738;&#128738;&#128738;</font></center>
+
+
+	<br><br><br><br><br><br><br><br><br><!--end drums-->
 	
 
 
@@ -333,24 +391,31 @@ Another free tool from Iowa AI. This one offers free code, script and website sc
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
   <p id="resources"></p>
-  <u>&#x1F6E0; Chemical Developer Resource List:</u><br>
+<table border="1"><tr><td>
+  &#x1F6E0; Chemical Developer Resource List</td></tr></table><br>
   <br>
-Note from Prof. Gillis: The main thing in chemistry is to learn the reactions and the names.  You need to know what methane is.  It's CH4.  And you need to know that hydronium and hydroxide come together to form water.  Water is an ionic solution.  So, read chemistry books and learn the lingo, learn the reactions.  That's step one.  Try not to get bogged down in electron configs and shells, crystal structures, mol calculations for now.  Instead, focus on what is a weak acid and is urea water soluble."<br>
-  	       <li><a href="">Summon The General &#x1F468; &#x200D;</a></li>	
+Note from Prof. Gillis: <em>"The main thing in chemistry is to learn the reactions and the names.  You need to know what methane is.  It's CH4.  And you need to know that hydronium and hydroxide come together to form water.  Water is an ionic solution.  So, read chemistry books and learn the lingo, learn the reactions.  That's step one.  Try not to get bogged down in electron configs and shells, crystal structures, mol calculations for now.  Instead, focus on what is a weak acid and is urea water soluble."</em><br><br>
+  	       <li><a href="">Summon The General &#x1F46E;</a></li>	
 
       <li><a href="http://github.com">Github</a> - &#x1F4C2; Website hosting for reasonable pricing.  High quality.<br>
       Also check out:<br>
       <br>&#x1F5DC; 7z (compression software)<br><a href="http://bing.com/chat">Copilot AI</a> (leading digital assistant)<br>A9 Cad (model design, drafting).
 
 <br><br><br><br>
-Other Resources (non-software):<br>
+Other Resources (e-Books):<br>
 
-         <li><a href="http://gutenberg.org" title="&#x1F4DA;">&#x1F4DA;&#x1F4DA; Chemical Book Library - 75000 scrolls, some on chemicals and other topics.</a></li>	
-<br><br><br><br><br><br><br><br><br><br><br>
+         <li><a href="http://gutenberg.org" title="&#x1F4DA;">&#x1F4DA;&#x1F4DA; Chemical Book Library</a><br>75,000 scrolls, some on chemicals and other topics.</li>	
+<br><br>
+<table border="1" bgcolor="red"><tr><td><font size="4"><a href="">&#x1F3E0;Back</a></font></td></tr></table>
+<br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<center>
+<font size="12" color="brown">&#128738;&#128738;&#128738;&#128738;&#128738;</font>
+
 <br><br>
 	
-</font><font size="2pm">
+
 <br>
 <br><br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
@@ -361,7 +426,7 @@ Other Resources (non-software):<br>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 	<br><br>
-	<a href="#guestbk"><button style="background-color: black; color: white;">View &#128221 Guestbook</button></a></center>
+	<a href="#guestbk"><button style="background-color: red; color: white;">View &#128221 Guestbook</button></a></center>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 	
 	
@@ -389,7 +454,9 @@ Ni hau ma?  When are we meeting this week?  We're doing a zoom call again, right
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <div id="signon"></div>
-<p id="esignon">Chemist Sign-On</p>
+<p id="esignon">
+<table border="1"><tr><td>
+Chemist Sign-On</td></tr></table></p>
         <p>
 	<textarea style="
 		width: 150px;
@@ -400,20 +467,25 @@ Ni hau ma?  When are we meeting this week?  We're doing a zoom call again, right
 		onkeydown="if(event.key === 'Enter') 					event.preventDefault();">
 	</textarea>
 	</p>
-        <p>
-	<table border="1"><tr><td>
-	<a href="#emplwrong">SUBMIT</a></p></td></tr></table> 
+        
+	<table border="1" bgcolor="red"><tr><td width="66">
+	<a href="#emplwrong"><center>GO&#x1F446;</center></a></td></tr></table> 
    </td>
    </tr>
    </table>
 
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><div id="emplwrong"></div>
-<font color="red">&#x274C;</font> SORRY <font color="red">&#x2757;</font> <font color="orange">WE ARE NOT ABLE TO FIND THAT PIN NUMBER.  TRY AGAIN, SI VOUS PLAIT.  DANKE SCHON </font><font color="red">&#x274C;</font><br>
+<table bgcolor="blue" color="beige"><tr><td>
+<center><font color="red">&#x274C;</font>SYSTEM ERROR 294840288008484</center><br><br> <font color="red">&#x2757;</font> <font color="orange">WE ARE NOT ABLE TO FIND THAT PIN NUMBER.  TRY AGAIN, SI VOUS PLAIT.  DANKE SCHON </font><font color="red">&#x274C;</font>
+</td></tr></table>
+<br>
 <br><br>
-<table border="1"><tr><td>
-<a href="#signon">Try Again</a></td><td width=50></td><td>
-<a href="#top">Back To Top</a></td></tr></table>
+
+<table border="1" bgcolor="red"><tr><td>
+<a href="#signon">Try Again</a></td></tr></table>
+<center>
+<table border="1" bgcolor="brown"><tr><td><a href="#top">&#x1F3E0;HOME</a></td></tr></table></center>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><div id="emplwrong"></div>
 	
 <div id="buddy"></div><br><br><br>
@@ -453,8 +525,8 @@ by Gretchen Schwidner<br>
 <br><br><br><br>
 <br><br><br><br>
 <br><br><br><br>
-<br><br><br><br>
-<img src="./images/cover.png" width=400 height=300>
+<br><br><br><br><table border="1" padding="2" bgcolor="yellow"><tr><td>
+<img src="./images/cover.png" width=400 height=300></td></tr></table>
 <br><br><br><br>
 <br><br><br><br>
 
@@ -655,24 +727,14 @@ SOLD OUT.  To pre-order next edition (if available), fill out the form found bel
 <br><br><br><br>
 <br><br><br><br>
 <br><br><br><br>
+
+<center><!--drums-->
+<font size="12" color="brown">&#128738;&#128738;&#128738;&#128738;&#128738;</font></center>
+
+
 <br><br><br><br>
 <br><br><br><br>
 <br><br><br><br>
-<br><br><br><br>
-<br><br><br><br>
-<br><br><br><br>
-
-
-
-
-
-
-
-
-
-
-
-
 <br><br><br><br>
 <br><br><br><br>
 <br><br><br><br>
@@ -680,9 +742,16 @@ SOLD OUT.  To pre-order next edition (if available), fill out the form found bel
 <br><br><br><br>
 <div id="guestbook"></div>
 
-<br><br><br><br>
+<br><br><br>
+<table><tr><td>
+<font size="12" color="red">&#x1F235;</font>
+</td><td><button style="background:brown"><center><font size="4">Kagaku Club</font></button>
+</center><br><font color="red">
+	</td></tr></table>
+
 <br>
-Danke schon for visiting Kagaku Club headquarters.  If you would fancy signing our guestbook, we would be honoured.  Also, use this form to sign up for Kagaku Club account and order merch.
+<br>
+Danke schon for visiting Kagaku Club headquarters.  If you would fancy signing our guestbook, we would be honoured.  Also, use this form to sign up for Kagaku Club account, buy Kagaku International stock (ticker RSM: KI - listed on the Rafah Stock Market and Palestine Industrial Average) and order merch.<br>
 <br><div id="register"></div>
 
 <table border="1"  id="wholesale"><tr><td>
@@ -710,19 +779,23 @@ Danke schon for visiting Kagaku Club headquarters.  If you would fancy signing o
     <input type="text" name="titl">
   </label><br><br>
 <label>
-    Chemistry major and three letter man?:<br>
-    <input type="text" name="frat">
+    Chemistry major? <input type="checkbox" checked> | Three letter man? <input type="checkbox" checked>
   </label><br><br>
 <label>
     Comments and questions:<br>
     <input type="text" name="nomfrat">
   </label><br><br>
 
+Member of Chemist Society? <input type="checkbox"><br>
+Applied Chemist? <input type="checkbox"> | Theoretical Chemist? <input type="checkbox"><br><br>
+Involved in semiconductor industry? <input type="checkbox" checked><br>
+Involved with manufacturing? <input type="checkbox"> | Vegan? <input type="checkbox" checked><br><br>
+
   <label>
     Your file:<br>
     <input type="file" name="upload">
   </label>
-  <button type="submit">Send</button>
+  <button type="submit" style="background:red; color:white;">Send</button>
 </form>
 
 
@@ -789,7 +862,7 @@ Danke schon for visiting Kagaku Club headquarters.  If you would fancy signing o
 <br><br><br><br><br><br><br><br><br><br><br><hr><br><br><br><br><br><br><br><br><hr>
 
 	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><hr><br><br><br><br><br><br><br><br><hr>
-	<p id="signon2">Professional Chemist Sign-On Portal</p>
+	<p id="signon2"><table border=1><tr><td>Professional Chemist Sign-On Portal</td></tr></table></p>
         <p>
 	<textarea style="
 		width: 150px;
@@ -801,7 +874,7 @@ Danke schon for visiting Kagaku Club headquarters.  If you would fancy signing o
 	</textarea>
 	</p>
         
-	<table border="1" bgcolor=beige><tr><td>
+	<table border="1" bgcolor=red><tr><td>
 	<a href="#uploaderror">&#x1F446; Go Chem!</a></td></tr></table> 
    <br>
 <br><br>
@@ -811,9 +884,8 @@ Danke schon for visiting Kagaku Club headquarters.  If you would fancy signing o
 <br><br>
 <br><br>
 <br>
-<marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
-  Have a beautiful day!  From your friends at Kagaku Club 
-		<img src="/images/logok.png" title="Kagaku Club Website"></a>
+<marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();"><a href="#sitemap" title="Check out the site map for all your Kagaku and Chemistry needs"><img src="./images/logok.png" title="Kagaku Club Website">..Have a beautiful day!  From your friends at Kagaku Club 
+		</a>
 <!-- Your scrolling content here -->
 </marquee>
   </center>
@@ -877,43 +949,70 @@ Electric vehicles<br>
 </marquee>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <div id="uploaderror"></div>
-ERROR <font color="red">&#x274C;</font> We could not verify your account.  Please call 424-235-5733 Mon-Fri 6 am - 6 pm.  File uploads are reserved for registered users only.  To register, please fill out <a href="#register">&#x1F4D4; this form</a>.  Then print up a copy, sign it.  Then scan it in maximum resolution, save two copies for yourself then &#x1F4E4;	 upload the file in &#x1F5DC; 7z format.  Merci.  Please allow some time for processing.
-</font>
+<table border="1" bgcolor="blue"><tr><td><center>
+ERROR K39472030483D884729</center><br><br><font color="red">&#x274C;</font> We could not verify your account.  Please call 424-235-5733 Mon-Fri 6 am - 6 pm.  File uploads are reserved for registered users only.  To register, please fill out <a href="#register">&#x1F4D4; this form</a>.  Then print up a copy, sign it.  Then scan it in maximum resolution, save two copies for yourself then &#x1F4E4;	 upload the file in &#x1F5DC; 7z format.  Merci.  Please allow some time for processing.
+</font></td></tr></table>
 <br><br>
-<a href="#top"><table border=1 bgcolor=beige><tr><td><font size=4>&#x1F51D;</font>
+<a href="#top"><table border=1 bgcolor=red><tr><td><font size=4>&#x1F51D;</font>
 </td></tr></table>
 </a>
 <center>
-<a href="#register"><table bgcolor=yellow border=1><tr><td>&#x1F4D4; Register Now</td></tr></table></a>
+<a href="#register"><table bgcolor=brown border=1><tr><td><font color="red">&#x1F4D4; Register Now</font></td></tr></table></a>
 </center>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <div id="help"></div><br>
-HELP<br>
-Upload selfies of yourself with lab equipment and also send files now to Kagaku Club for review.  Click on BROWSE and then after selecting your file click on UPLOAD NOW.  This feature is for registered users only and University of the Pacific students and staff.  If you are vegan or vegetarian, <a href="#register">REGISTER HERE</a>.
+<table border=1 bgcolor=blue><tr><td><center>
+HELP CENTER</center><br><br>
+Use <a href="">&#x1F310; navigation bar</a> to move about website or <a href="#sitemap">&#x1F5FA; site map</a>.  Upload selfies of yourself with lab equipment and also send &#128452; files now to &#x1F235; Kagaku Club for review.  Click on BROWSE and then after selecting your file click on UPLOAD NOW.  This feature is for &#128272; registered users only and &#127963; University of the Pacific students and staff.  If you are vegan or vegetarian, <a href="#register">REGISTER HERE</a>.</td></tr></table>
 <br><br>
 <a href="#top"><table border=1 bgcolor=beige><tr><td><font size=4>&#x1F51D;</font></button></a>
 </td></tr></table>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
+<br><br><br><br><br>
+
+<!--Site map-->
+<div id="sitemap"></div><br>
+<center>
+<table border="1"><tr><td><font size="1">
+
+<a href="#publist">&#x1F4DA; Books</a><br>
+<a href="#top">&#x2328; Chem Chat</a><br>
+<a href="#register">&#x1F4F2; Contact</a><br>
+<a href="./404.html#testarea">&#x1F4BB; Chem Code AI</a><br>
+</td><td>
+<a href="./404.html"><font size="1">&#x1F69C; Iowa AI</a><br>
+<a href="#files">&#x1F5C4; Lab Musique</a><br>
+<a href="#aboutus" title="About Us">&#x1F6E2; Kagaku International</a><br>
+<a href="#resources2">&#x1F5DC; Resources</a><br>
+</td><td><font size="1">
+<a href="#resources2">&#x1F4E0; Software</a><br>
+<a href="./index.html#soc">&#x1F6F0; Spaceship-on-Chip</a><br>
+<a href="#guestbk">&#x1F4D6; View Guest Book</a><br>
+<a href="#register">&#x1F4D7; Sign Guest Book</a><br>
+
+</td></tr></table>
+<font color="beige">&#127541; Kagaku Club Sitemap<br>
+&#x1F6E2; &#x1F6E2; &#x1F6E2; &#x1F6E2; &#x1F6E2; <br>
+<a href="#top" title="&#x1F6E2; Back To Kagaku Club Home Page">
+<table bgcolor="brown" border="1"><tr><td>&#x1F3E0;HOME</td></tr></table></a>
+
+<br><br><br><br>
  <!--Counter-->
-	<div id="counter">Registered Users:</div><br>
-
+	<div id="counter"><font color="red">Kagaku Club Registered Users</font><br><font face="monoface">Online Now</div><br>
+<table border="1" bgcolor="blue" color="white"><tr><td>
 	<script>
-	 document.write(Math.floor(Math.random()*101)+200);
-	 
-	
-	
-
+	 document.write(Math.floor(Math.random()*101)+10);
 	</script>
 
  <!--end Counter-->
+</td></tr></table>
 <br><br><br>
 
-
+<font face="monoface">
 &#x00A9; 2025 Momotaro Studios, Beverly Hills
-
+</font>
    </body>
    </center>
 </html>   
