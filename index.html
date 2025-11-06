@@ -11,11 +11,48 @@
   <title>&#x1F250; Moonshee International Worldwide Ltd., Singapore
 
    </title>
+	<link rel="icon" href="./images/favicon.png">
   <link href="./style.css"
    rel="stylesheet"
    type="text/css"
    media="all">
   <style>
+	.blink { animation: blink 2s steps(2, start) infinite; }
+
+	.emoji { font-size: 1.5em; }
+	.router-bar {
+		display: flex;
+		width: 250px;
+		align-items: center;
+		gap: 20px;
+		background-color: darkgray;
+		padding: 5px 10px;
+		border-radius: 10px;
+		box-shadow: 0 0 10px #000;
+		}
+	.led {
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		box-shadow: 0 0 5px #000;
+		}
+	.led.blue {
+		background-color: #00f;
+		animation: blinkBlue 1.2s infinite;
+		}
+	.led.red {
+		background-color: #f00;
+		animation: blinkRed 3.3s infinite;
+		}
+	
+	.red {
+	 background-color:red;
+	 color:beige;
+		}
+	.magenta {
+	 background-color:magenta;
+	 color: beige;
+	}
 	
     body {
       font-family: sans-serif;
@@ -23,12 +60,14 @@
       padding: 20px;
     }
 
+
   #chatbox {
       width: 100%;
       max-width: 400px;
       height: 50%;
 	 max-height: 200px;
       border: 1px solid #ccc;
+	text-align:left;
       background: gold;
 	color: black;
       overflow-y: auto;
@@ -45,31 +84,53 @@
 	color: black;
       margin-top: 10px;
     }
-
+	
+	@keyframes blink { 50% { visibility: hidden; } }
+	@keyframes blinkBlue {
+		0%, 100% { opacity: 1; }
+		50% { opacity: 0.3; }
+		}
+	@keyframes blinkRed {
+		0%,100% { opacity: 1; }
+		50% { opacity: 0.1; }
+		}
 
   </style>
-
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "WebPage",
+		"speakable": {
+		 "@type": "SpeakableSpecification",
+		 "cssSelector": [
+		  ".headline",
+		  ".summary"
+		  ]
+		}
+	}
+	</script>
+	<div style="display:none" class="summary"><font size=1 color=black>Website for AI chat and Rafah Stock Market along with Spaceship-on-Chip and IC Design Evaluation online tools and more software.</font></div>
   </head>
   <body  style="background-color: black; color: beige;">
 
 <!--div style="position:fixed; top: 100;left: 990; width=100%; pointer-events:none; z-index:999;"-->
 <a href="#" onclick="location.reload()"> 
-<marquee behavior="scroll" direction="right" scrollamount="41" loop="2" style="position:fixed; top: 100px ;left: 991; right:991; width=100%; pointer-events:none; z-index:1; white-space: nowrap; color:#000; background: transparent; font-weight: bold;">
- <img src="./images/jeep.png" height="50">
+<marquee behavior="scroll" direction="right" scrollamount="46" loop="2" style="position:fixed; top: 40px ;left: 991; right:991; width=100%; pointer-events:none; z-index:1; white-space: nowrap; color:#000; background: transparent; font-weight: bold;">
+ <img src="./images/jeep.png" height="30">
 </marquee></a>
 
-<br>
+
 
  <center>
    <h1>
 
 <table border="1"><tr><td>
-<a href="#soc" title="Spaceship-On-Chip Information Centre" id="top">&#x1F4E1; </a></td><td>
-<a href="#rafah" title="Rafah Stock Market">&#x1F4B9; </a></td><td>
+<a href="#soc" title="Spaceship-On-Chip Information Centre" id="top" aria-label="Spaceship-On-Chip Link Button">&#x1F4E1; </a></td><td>
+<a href="#rafah" title="Rafah Stock Market - Link Button" aria-label="Rafah Stock Market Link">&#x1F4B9; </a></td><td>
  	
-<a href="#contacts" title="Contacts">&#128243 </a></td><td>
+<a href="#contacts" aria-label="Contact Button" title="Contacts">&#128243 </a></td><td>
 
-<a href="#guestbook" title="Sign Guestbook">&#128221</a></td></tr></table></h1>
+<a href="#guestbook" title="Sign Guestbook" aria-label="Sign Guestbook Button">&#128221</a></td></tr></table></h1>
 	<hr color="beige" size="1">
 <a href="" title="Willkommen bei Moonshee AI from beautiful Malabar to Singapore and beyond, you have located the most advanced AI in the sekai.  Welcome aboard.">
 <table><tr><td>
@@ -92,24 +153,29 @@
 <!--Drop down main menu here-->
 <label for="menu" title="Navigation" ></label>
 <select id="menu" onchange='goToLink(this)' style="background:green; color:gold">
-	<option value="#sitemap">&#x1F5D2; Menu</option>
+	<option value="#sitemap" aria-label="Menu option for Sitemap">&#x1F5D2; Menu</option>
+<option value="#rewards" title="Log in and check messages, post status.">&#x1F5DD; My Account</option>
+
 <option value="#books" title="Rare antique books along with hit best-sellers by Chet Dowry">&#x1F4DA; Books Online</option>
-<option value="#resources2" title="Full list of links and files, many important selections">&#x1F5C4; Resources</option>
+<option value="#community" title="Developer Forum">&#x1F5E3; Community</option>
+<option value="#community" title="Messages - Questions - Answers - Tech Help">&#x1F465; Forums</option>
+
 <option value="./404.html#testarea2" title="Click here if you have your IC already designed and need feedback from AI system.">&#x1F4E0; IC Design AI</option>
 
 <option value="./404.html">&#x1F69C; Iowa AI</option>
 <option value="./kagaku.html">&#x1F6E2; Kagaku Club</option>
 
-<option value="#top">&#x1F54C; Moonshee AI Chat</option>
-<option value="#resources2">&#x1F5C4; Resources</option>
-	<option value="#sitemap">&#x1F5FA; Sitemap</option>
+<option value="#top" onclick="enableScroll()">&#x1F54C; Moonshee AI Chat</option>
+<option value="#resources2" onclick="enableScroll()">&#x1F5C4; Resources</option>
+	<option value="#sitemap" onclick="disableScroll()">&#x1F5FA; Sitemap</option>
 
-<option value="#soc">&#x1F6F0; Spaceship-on-Chip</option>
+<option value="#soc" onclick="enableScroll()">&#x1F6F0; Spaceship-on-Chip</option>
 
-<option value="#guestbk">&#x1F4D6; View Guestbook</option>
-<option value="#register">&#x1F4DD; Sign Guestbook</option>
+<option value="#guestbk" onclick="enableScroll()">&#x1F4D6; View Guestbook</option>
+<option value="#register" onclick="enableScroll()">&#x1F4DD; Sign Guestbook</option>
+<option value="#settings" onclick="disableScroll()">&#x2699; Settings</option>
 
-	<option value="#register">&#x1F238; Register For New Account</option>
+	<option value="#register" onclick="enableScroll()">&#x1F238; Register For New Account</option>
 	
 </select>
 <script>
@@ -128,14 +194,14 @@
 <div id="chatbox"></div>
 <!--Chatbox-->
 
-<input type="text" id="userInput" placeholder="Chat with &#x24C2;oonshee AI..." /></center>
+<input type="text" id="userInput" placeholder="Type your chat msg here..." /><center>
 <script>
 function submitChat() {
   const input = document.getElementById("userInput");
   const chatbox = document.getElementById("chatbox");
   const userText = input.value.trim();
 
-  if (userText !== "") {
+ {
     chatbox.textContent += `You: ${userText}\n\n`;
 
     if (responseIndex < responses.length) {
@@ -157,6 +223,8 @@ function submitChat() {
     "Sahib! Let me know if you have any questions, my fine feathered friend!  For the love of Pete, you're finger lickin' good looking.  What's your secret?  You work out a lot?  Creatine?",
     "Thanks for reaching out, sahib!  Here, maybe I can help you.  Ummm, so...like...., first....let me ask du eh, some questions, ja?  What do you know about spaceship-on-chip?",
 	"Right, mate.  Well, shall we begin?  Sahib, WO AI fortune telling.  How about du?  Fancy a reading then, old son? NI AI TA PU AI?",
+	"Hey, aren't vous new here?  You're not signed in?!  Well, good news.  A couple babes want to meet you.  They sent you messages.  Click on MY ACCOUNT from the menu to read the messages and see their selfies.",
+	"But you gotta sign in, on course.  We gave you a USER ID but you can change it if you like after free registration.",
 	"Well sahib, overall and in general, 2026 is showing alignments favourable for love and sess.  Would vous not agree, sahib?  Ja, a muezzin told me and I doublechecked.  He's right!!",
 	"Pisces and Cancro are coming alive, in sidereal terms, for 2026.  That will form a wand between the two love signs",
 	"What is your birthday?",
@@ -267,15 +335,48 @@ function submitChat() {
 <br>
 <table border="1" width="90%"><tr><td width=45>
 <button onclick="submitChat()" style="background-color: black; color: gold;" title="Press this button after you type your questions.  Next, Moonshee AI will knock your socks off with its great wisdom.">GO&#x1F446;</button></td>
-<td bgcolor="green">
+<td bgcolor="black">
 <!--Section after GO button in Chat area--><center>
-<font size="3"><a href="" title="Salaam!">&#x1F54C; &#x1F983;</a>
+<font size="2"><a title="Salaam!"><span class="blink">&#x1F535; </span><font color="red"> Online 
+</a>
+
+</td><td><center>
+&#x1F4E3;</center></td><td>
+<center>
+
+<!--end diagnostics--><a href="#settings">
+<meter id="signalMeter" style="accent-color:green" min="8" max="100" low="30" high="80" optimum="50"></meter>
+</a></center>
+
+
+
 <!--End special section-->
-</center>
+</td>
+<!--Mic on off btn-->
+<td><center><a title="Toggle switch for VOICE system.  Click to turn on VOICE.  When the button turns red, VOICE is warming up.  GREEN means it is on.  After you are done talking, hit the GO button."><button id="btn">&#x1F399;</button>
+</a></center></td>
+<!--Mic end-->
+
+<td width=60><center><font size=3><a href="" title="Expert Mode Enabled"><button style="background:black; color:gold">MODE</button></td>
+</tr></table><hr size="1" color="green">
+
+<!--Start router cisco bar--><table border="1"><tr><td>
+<table bgcolor="darkgray" border="0" width="220"><tr><td>
+		<div class="emoji" title="AI Router - Live from Singapore"><font size="1" color="black"><center>&#127760;</center></div></td><td>
+		<div class="led blue" title="Active AI"></div></td><td>
+		<div class="led red" title="Checking System"></div></td><td>
+		<div title="Microphone">&#x23FA;</div></td><td>
+		<div title="Camera">&#x23FA;</div></td><td>
+		<div title="Singapore Live Link">&#x23FA;</div></td><td>
+
+		<div class="emoji" title="Hong Kong Uplink">&#x1F4F6;</div></td><td>
+		<div class="emoji" title="Security - ACTIVATED">&#x1F512;</div></td></tr></table></td></tr></table>
+	<!--end cisco-->
+<hr size="1" color="green">
 
 
-</td><td width=60><center><font size=3><a href="" title="Expert Mode Enabled"><button style="background:black; color:gold">MODE</button></td>
-</tr></table><br><table border="1" bgcolor="gold" color="green"><tr>
+
+<table border="1" bgcolor="gold" color="green"><tr>
 <td>
 <input type="file" name="upload"></center></td><td>
 <button title="Press Browse to select your selfie or file - don't send video games or big files, use the comment section in the contact form or our Itch Contact portal for large files, svp.  After you select the file, click on UPLOAD NOW.">&#x1F4E4;</button></td></tr></table><br>
@@ -283,7 +384,7 @@ function submitChat() {
 
 <table border=1><tr>
 <td style="background-color: blue; color: white;">
-<a href="#help" title="Upload spaceship design files now and send them to Moonshee AI for review.  Click on BROWSE and then after selecting your file click on UPLOAD NOW.  This feature is for registered users only."><font color="white">&#x1F473; Help</font>
+<a href="#help" title="Upload spaceship design files now and send them to Moonshee AI for review.  Click on BROWSE and then after selecting your file click on UPLOAD NOW.  This feature is for registered users only."><font color="beige">&#128304; Help</font>
 </td>
 
 <td>
@@ -297,18 +398,18 @@ function submitChat() {
 <br><br><br>
 
 <!--Search bar-->
-<input type="text" id="searchBox" placeholder="Search archives..." style="width:60%" />
+<input type="text" id="searchBox" placeholder="Search archives..." style="width:60%; background-color:gold; color:green;" />
 <a href="#resources2">
 	<table bgcolor="gold" border="1"><tr><td>&#x1F50D Search</td></tr></table>
 	</a>
 
-<br><br>
+<br><br></center>
 <div id="files"></div>
 <font size="2px">
   <table border="1"><tr><td><strong>&#x1F4C1; FILES > Software</strong></td></tr></table><br>
 <br>
 &#x1F3AE; Video Games, Tools and Other &#x1F579;<br>
-<em>These are online tools, games and utility/resources and also some &#x1F4E5; downloads for entertainment, education and research.  The <a href="http://miyazakibar.itch.io/wall-street-world">downloads</a> are for &#x1F5A5; PC, 32 bit, Windows, 7z, &#x1F4BB; 800x600, x86.  Most recent release is &#x1F52C; Kagaku Club, Oct 2025, &#128508; Tokyo and also Iowa AI, Oct 2025.  The software cost, well..if you have to ask you can't afford it.  No freeloaders except vegetarians may download for free, no license required for vegans.  Some packages are currently unavailable due to being extremely popular and too many players are playing during peak times like during school hours.  Our PHP backend network is sometimes overloaded.  So, we're &#x1F3D7; building out bigger network in Dallas, TX &#x1F920; area.  But until then, a few games unavailable for new downloaders.  Subscribers have been credited for the inconvenience.</em><br><br>
+<em><div class="summary">These are online tools, games and utility/resources</div> and also some &#x1F4E5; downloads for entertainment, education and research.  The <a href="http://miyazakibar.itch.io/wall-street-world">downloads</a> are for &#x1F5A5; PC, 32 bit, Windows, 7z, &#x1F4BB; 800x600, x86.  Most recent release is &#x1F52C; Kagaku Club, Oct 2025, &#128508; Tokyo and also Iowa AI, Oct 2025.  The software cost, well..if you have to ask you can't afford it.  No freeloaders except vegetarians may download for free, no license required for vegans.  Some packages are currently unavailable due to being extremely popular and too many players are playing during peak times like during school hours.  Our PHP backend network is sometimes overloaded.  So, we're &#x1F3D7; building out bigger network in Dallas, TX &#x1F920; area.  But until then, a few games unavailable for new downloaders.  Subscribers have been credited for the inconvenience.</em><br><br>
 <table border="1"><tr><td>
 <a href="http://miyazakibar.itch.io/wall-street-world">
 	&#x1F4B4; &#x1F4B9; &#x1F3B2; Wall Street World - Game</a><hr color="red" size="1">
@@ -364,7 +465,7 @@ Link us, mate? &#x1F517; Copy and paste &#x1F4CB; this code onto your site and w
 
 	&#x1F3BC; MUSIC<br><br>
 	<a href="http://archive.org/details/TedLewisCollection1919-1934">Clarinet and Ragtime</a> &#x1F3B9;<br>
-This is the music you have been looking for.  It's the full &#x1F3BA; Ted Lewis collection including Allah's Birthday, a must for every cumpleanos fiesta.  The joints are great for dance parties.<br>
+This is the music you have been looking for.  It's the full &#x1F3BA; <div class="summary">Ted Lewis collection including Allah's Birthday, a must for every cumpleanos fiesta.</div>  The joints are great for dance parties.<br>
 
 <br>
 &#x1F483; Polka<br>
@@ -381,7 +482,7 @@ Here is <a href="http://archive.org">the link</a> for polka dance music like Law
 <a href="http://miyazakibar.itch.io" title="Moonshee is working with a group of developers on Itch.io producing games and content.  Rate, review, follow and subscribe at Miyazakibar.Itch.Io">&#129493 Moonshee's Itch Affiliation &#x1F4BB;</a><br><br>
 Rate, review, subscribe, follow <a href="http://miyazakibar.itch.io" title="Link to Miyazakibar page on Itch.io">Miyazakibar on Itch</a> and <a href="https://x.com/drfujihara" title="CONTACT DRFUJIHARA ON X">DrFujihara on X</a>.  Send us a message, send us your &#x1F4F8 selfies and we'll send you cartoon character portrait.  <a href="https://github.com/moonshee">Follow us on GitHub</a> now, sahib!  <a href="#register">&#x1F238; Click here</a> to use our online &#x1F5D2; contact form.  We'll reply asap, please allow a few days.  For fastest service and emergencies for &#x1F6F0; spaceship-on-chip flights, contact Al Testaverde <font size="1">&#x1F4EC; altes433@gmail.com</font>	
 <br><br><br><br><br><br><br><br><br><table border="1"><tr><td><strong>&#x1F4CA; STOCK MARKETS & INVESTING</strong></td></tr></table><br><br><a href="#rafah">
-&#x1F4B9; Rafah Stock Market</a><br>
+&#x1F4B9; <div class="summary">&#127757; Rafah Stock Market</div></a><br>
 The leading stock market in Palestine behind the main index &#x1F4C8; PEX.  This is a bulletin board style market which includes a stock tracking module.  There are no brokers, it's bulletin board style only.  Simply browse the listed stocks.  If you see one you fancy, click the link and purchase the shares directly from the company (contact them and they will put you in touch with the best broker for their stock - trading volume is thin so broker matters!) or from Al-Quds or another fine Palestinian broker like https://www.arzbroker.ps.<br>
 
 
@@ -391,13 +492,13 @@ The leading stock market in Palestine behind the main index &#x1F4C8; PEX.  This
 <a href="#stockeval">&#x1F5A5; Stock Analysis Online</a><br><br>
 <a href="#news"><font color="red">&#x2198;</font> Palestine Stock Exchange (PEX) &#x1F4CA; Down 2%</a> For Week Of Halloween (Last week of October)<br><br>	
 
-<a href="#news">&#x1F195; IPO coming to Rafah Stock Market - Iowa AI</a><br><br>
+<a href="#news">&#x1F195; IPO Launched on &#127757; Rafah Stock Market</a><br><br>
 
 <a href="./404.html" title="Iowa Stock Market Coming Soon">&#x1F33D; Iowa Stock Market</a>
 		  &#x1F69C; Iowa focused list of companies that people can browse and contact directly to buy stocks.  Not a broker, just a bulletin board style stock exchange.  This is planned for Nov 2025 launch.
 <br><br>
 <a href="./404.html#realtyeval" title="AI for Real Estate Project Evaluation">&#x1F3E2; Real Estate AI Analysis</a><br>
-If you have a real estate investment in mind, such as buying a house or high-rise tower, IOWA AI's Real Estate AI product may be able to assist you because there is an online calculator that allows the user to enter the information about the projects using website and the AI will grade it for the user.  If the user does not yet have a website, Iowa AI can set up a &#x1F5A5; website for the user for a fee.<br><br>
+<div class="summary">If you have a real estate investment in mind, such as buying a house or high-rise tower, IOWA AI's Real Estate AI product may be able to assist you</div> because there is an online calculator that allows the user to enter the information about the projects using website and the AI will grade it for the user.  If the user does not yet have a website, Iowa AI can set up a &#x1F5A5; website for the user for a fee.<br><br>
 
 
 
@@ -544,11 +645,13 @@ I can't find my password for the software package new rev with the new comm chan
 	
 <br><br><br><br><br><br><br><br><br><br><br>
 <div id="signon"></div>
-<p id="esignon"><table border="1" bgcolor="gold" color="black"><tr><td><font color="black">&#x1F50F; Employee Sign-On</td></tr></table></p>
+<p id="esignon"><table border="1" bgcolor="gold" color="black"><tr><td><font color="black">&#x1F50F; Account Sign-On</td></tr></table></p>
         <p>
 	<textarea style="
 		width: 150px;
 		height: 30px;
+		background-color: gold;
+		color: green;
 		resize: none;
 		font-family: monospace;
 		"
@@ -563,8 +666,9 @@ I can't find my password for the software package new rev with the new comm chan
    </table>
 
 
-<br><br><a href="#top" title="Back To Moonshee AI Home Page">
-<table bgcolor="beige" border="1"><tr><td>&#x1F3E0;HOME</td></tr></table></a>
+<br><br>
+<table bgcolor="beige" border="1"><tr><td><a href="#top" title="Back To Moonshee AI Home Page">
+<button>&#x1F3E0;</button></a></td><td width=100 bgcolor="black"></td><td><a href="#rewards"><button>Forgot Password</button></a></td></tr></table></a>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <center><font size="20">&#128332;</font></center>
 
@@ -736,7 +840,7 @@ Oh, vous rascal!  Danke schon fur visiting &#x1F54C; Moonshee AI headquarters.  
     <input type="text" name="titl" style="background:gold">
   </label><br><br>
 <label>
-    &#x1F6CC; Three letter man? <input type="checkbox" name="frat" style="background:gold">
+    &#x1F6CC; Three letter man? <input type="checkbox" name="frat" style="accent-color:yellow;">
   </label><br><br>
 <label>
     	&#x1F4EE; Questions and comments:<br>
@@ -745,36 +849,36 @@ Oh, vous rascal!  Danke schon fur visiting &#x1F54C; Moonshee AI headquarters.  
 <br><br>
 <hr color="yellow"><br><font size="1">
 	&#x1F52C; Work in semiconductors?
-	<input type="checkbox"> |
+	<input type="checkbox" style="accent-color:yellow"> |
 	&#x2328; Code/script in HTML,JS & C?
-	<input type="checkbox"><br>
+	<input type="checkbox" style="accent-color:red"><br>
 	&#x1F6E2; Member of Kagaku Club?
-	<input type="checkbox"> |
+	<input type="checkbox" style="accent-color:crimson"> |
 	&#x1F510; Need new Moonshee AI account?
-	<input type="checkbox"><br>
+	<input type="checkbox" style="accent-color:gold"><br>
 	&#x1F4B9; Need a Rafah Stock Market account?
-	<input type="checkbox"><br>
+	<input type="checkbox" style="accent-color:lightgreen"><br>
 	&#x1F4B1; Interested in listing your company on RSM?
-	<input type="checkbox"><br>
+	<input type="checkbox" style="accent-color:darkgreen"><br>
 	&#x1F6F6; Resident of Hereford, England?
-	<input type="checkbox"> |
+	<input type="checkbox" style="accent-color:hotpink"> |
 	&#x1F5A5; Work for Hereford AI?
-	<input type="checkbox"><br>
+	<input type="checkbox" style="accent-color:pink"><br>
 	&#x1F4A1; Rate, review, follow and like our social media.  Go to <a href="https://github.com/moonshee">github.com/moonshee</a> and follow us now along with <a href="https://miyazakibar.itch.io">miyazakibar.itch.io</a><br>
 	
 	&#x1F31F;&#x1F31F;&#x1F31F;&#x1F31F;&#x1F31F; Did you rate, review, follow and like us?
-	<input type="checkbox" style="background:gold"><br>
+	<input type="checkbox"  style="accent-color:yellow"><br>
 Any more comments?<br>
-	<input type="text" placeholder="------" style="width:70%" ><br>
+	<input type="text" placeholder="------" style="width:70%; background-color:gold; color:green;" ><br>
 	&#x1F393; Are you a student or instructor?
-	<input type="checkbox"> |
-	Freshman?<input type="checkbox"><br>
-	Grad Student or PhD?<input type="checkbox"> |
-	Material Scientist?<input type="checkbox"><br>
+	<input type="checkbox" style="accent-color:blue"> |
+	Freshman?<input type="checkbox" style="accent-color:pink"><br>
+	Grad Student or PhD?<input type="checkbox" style="accent-color:magenta"> |
+	Material Scientist?<input type="checkbox" style="accent-color:red"><br>
 	&#x1F3D7; STEM major or arts and letters/other depts.?<br>
-	<input type="text" style="background:gold"><br>
+	<input type="text" style="background-color:gold; color:green"><br>
 &#x1F957; Vegetarian or vegan?
-	<input type="checkbox" checked>
+	<input type="checkbox" checked style="accent-color:lime">
 
 
 
@@ -840,25 +944,27 @@ Any more comments?<br>
 
 
 <br>
-<font color="yellow">&#x26A0;</font>Note: Due to extremely high volume of messages received, for fastest service please email our rep Al Testaverde --- &#x1F4EC; <font size="1">ALTES433@gmail.com</font> c/o Louisa, Cust. Service Dept Assistant Manager.  Allow a few days for processing.  Merci beaucoup.  In the subject line be sure to include RAFAH if signing up for Rafah Stock Market or use code SOC if ordering &#x1F6F0; Spaceship-On-Chip products such as software packages.
+<font color="yellow">&#x26A0;</font>Note: Due to extremely high volume of messages received, for fastest service please email our rep Al Testaverde --- &#x1F4EC; <font size="1">ALTES433@gmail.com</font> c/o Louisa, Cust. Service Dept Assistant Manager.  Allow a few days for processing.  Merci beaucoup.  In the subject line be sure to include RAFAH if signing up for &#127757; Rafah Stock Market or use code SOC if ordering &#x1F6F0; Spaceship-On-Chip products such as software packages.
 
 <br><br><br><br><br><br><br><br><br><br><br><hr><br><br><br><br><br><br><br><br><hr>
 
 	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><hr><br><br><br><br><br><br><br><br><hr>
-	<div id="signon2"></div><table border="1" bgcolor="gold"><tr><td><font color="red">S-O-C Client Portal</font></td></tr></table>
+	<div id="signon2"></div><table border="1" bgcolor="lightblue"><tr><td><font color="red">S-O-C Client Portal</font></td></tr></table>
         <p>
 	<textarea style="
 		width: 150px;
 		height: 30px;
+		background-color: darkblue;
+		color: powderblue;
 		resize: none;
 		font-family: monospace;
 		"
 		onkeydown="if(event.key === 'Enter') 					event.preventDefault();">
 	</textarea>
-	</p>
+	</p><div></div>
         
-	<table border="1" bgcolor=gold><tr><td>
-	<a href="#uploaderror">&#x1F446;GO</a></td></tr></table> 
+	<table border="1" bgcolor="lightblue"><tr><td>
+	<a href="#uploaderror"><button style="background-color:black; color:gold;">&#x1F446;GO</button></a></td></tr></table> 
    <br>
 <br><br>
 <br><br>
@@ -898,7 +1004,7 @@ PEX stock market<br>
 2083 second moon escapes<br>
 Championship series<br>
 Cushman<br>
-Rafah Stock Market<br>
+&#127757; Rafah Stock Market<br>
 Football injuries<br>
 Jerusalem Cigarette<br>
 Tickets for world series<br>
@@ -1049,7 +1155,7 @@ ERROR A948204B9284720 &#x274C;</font><br><br>
 <div id="help"></div><br>
 <table border="1" bgcolor="blue"><tr><td><center>
 HELP CENTER</center><br>
-Moonshee AI website is for IC designers and &#x1F5A5; software developers along with &#x1F4B1; crypto and AI investors.  Use the top menu and glyphs to navigate or &#x1F310; site map at bottom of page.  &#x1F4E4; Upload files now (such as drawings and build-out notes plus debug screens) and send them to &#x1F54C; Moonshee AI for review.  Click on BROWSE and then after selecting your file click on UPLOAD NOW.  This feature is for &#x1F510; registered users.</td></tr></table>
+Moonshee AI website is for IC designers and &#x1F5A5; software developers along with &#x1F4B1; crypto and AI investors.  To use the voice command system, simply click on the microphone glyph/icon next to the chat box.  It will light up.  Red means the mic is on stand-by.  GREEN means that voice is activated.  When you are done yapping, I mean talking, click on GO!  Or if you want to just type a msg to our bot, use the box for text entry.  Use the top menu and glyphs to navigate or &#x1F310; site map at bottom of page.  &#x1F4E4; Upload files now (such as drawings and build-out notes plus debug screens) and send them to &#x1F54C; Moonshee AI for review.  Click on BROWSE and then after selecting your file click on UPLOAD NOW.  This feature is for &#x1F510; registered users.</td></tr></table>
 <br><br>
 <a href="#top"><table border=1 bgcolor=beige><tr><td><font sicouze=4>&#x1F51D;</font></button></a>
 </td></tr></table>
@@ -1083,7 +1189,7 @@ A thermal processing company in San Jose needed help with design and manufacturi
 
 
 <font size="1"><u><strong>About &#x1F250; Engineering</u></strong><br>
-Let by Tim McKee, &#x1F250; Engineering is the worldwide leader in spaceship-on-chip design and manufacturing software custom solutions.  Located in California near Silicon Valley with sales offices in the Bay Area and Japan, &#x1F250; Engineering provides solutions for Android and PC Windows systems.  Apple is not supported.  Most clients use SAS, cloud based services.  However, we do also have downloadable offline solutions as well.  Started as a manufacturing company, &#x1F250; Engineering evolved into a manufacturing &#x1F4BB; software company and is currently not taking on new clients but you can put your name on the wait list.  Prior to joining &#x1F250; Engineering and Moonshee International, Tim McKee grew up in Idaho near Microchip's plant and graduated from school with honours before serving in the military and rising through ranks reaching a lofty height which allows him to look down his nose at us peons, but he does not do that.  Instead, he uses his sense of humour and wit to stand out in a sea of stiff in suits.  Tim usually wears straw sandals that makes himself (learned in Japan) and special items like that which endear him to the customers and employees.  Now he brings his leadership and knowledge to a staff of scientists and scripters.  &#x1F250; Engineering is planning to list on the Rafah Stock Market under symbol &#x1F250; in late 2025 or early 2026.  The anticipated list price is $15 USD per share.<br><br><br><br><br>
+Let by McKee, &#x1F250; Engineering is the worldwide leader in spaceship-on-chip design and manufacturing software custom solutions.  Located in California near Silicon Valley with sales offices in the Bay Area and Japan, &#x1F250; Engineering provides solutions for Android and PC Windows systems.  Apple is not supported.  Most clients use SAS, cloud based services.  However, we do also have downloadable offline solutions as well.  Started as a manufacturing company, &#x1F250; Engineering evolved into a manufacturing &#x1F4BB; software company and is currently not taking on new clients but you can put your name on the wait list.  Prior to joining &#x1F250; Engineering and Moonshee International, McKee grew up in Idaho near Microchip's plant and graduated from school with honours before serving in the military and rising through ranks reaching a lofty height which allows him to look down his nose at us peons, but he does not do that.  Instead, he uses his sense of humour and wit to stand out in a sea of stiff in suits.  Tim usually wears straw sandals that makes himself (learned in Japan) and special items like that which endear him to the customers and employees.  Now he brings his leadership and knowledge to a staff of scientists and scripters.  &#x1F250; Engineering is planning to list on the &#127757; Rafah Stock Market under symbol &#x1F250; in late 2025 or early 2026.  The anticipated list price is $15 USD per share.<br><br><br><br><br>
 President<br>T. McKee<br><br>
 Vice-President<br>D. Bottley<br><br>
 CTO<br>Dr. T. Fujihara<br><br>
@@ -1144,7 +1250,7 @@ The device is propelled in the usual fashion used by &#x1F250; Engineering, reco
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 
-&#x1F234; Moonshee International Worldwide, Ltd., Singapore (parent company of Dokyo Entertainment Ltd., Tokyo, Momotaro Studios, Beverly Hills and &#x1F250; Engineering, California) owns and operates the Palestinian Industrial Average (PIA) which is a financial metric and stock listing service based on a select list of tickers from the PEX (Palestinian Stock Exchange).  Moonshee International owns and operates the Rafah Stock Market in Palestine.  For more information about the Palestinian Industrial Average <a href="#rafah" title="Check the Palestinian Stock Exchange located in Gaza City for the lastest stock news.  Which stock is up, which one is down?  Find out now.">visit the website.</a><br>
+&#x1F234; Moonshee International Worldwide, Ltd., Singapore (parent company of Dokyo Entertainment Ltd., Tokyo, Momotaro Studios, Beverly Hills and &#x1F250; Engineering, California) owns and operates the Palestinian Industrial Average (PIA) which is a financial metric and stock listing service based on a select list of tickers from the PEX (Palestinian Stock Exchange).  Moonshee International owns and operates the &#127757; Rafah Stock Market in Palestine.  For more information about the Palestinian Industrial Average <a href="#rafah" title="Check the Palestinian Stock Exchange located in Gaza City for the lastest stock news.  Which stock is up, which one is down?  Find out now.">visit the website.</a><br>
 
 
 
@@ -1155,12 +1261,12 @@ The device is propelled in the usual fashion used by &#x1F250; Engineering, reco
 <br><br>
 <div id="rafah"></div><hr>
 
-&#x1F4B9; RAFAH STOCK MARKET<br>
+&#x1F4B9; RAFAH STOCK MARKET &#127757;<br>
 PALESTINE INDUSTRIAL AVERAGE (PIA)<br><hr>
-Gaza has its own stock market, the PEX, and it has been operating since 1995.  The market is obstructed by foreigners who prevent Americans from investing in Palestine, so we decided to start a parallel market we call the Rafah Stock Market and an index called the PIA.  The way it works, we have a core group of companies from the PEX that forms the base.  Next, we plan to add companies one at a time to build up the index.  We have space for new IPO's on the Rafah Stock Market.  <a href="#register">CLICK HERE</a> to sign up your company or startup for IPO on Rafah Stock Market.  When applying, be sure to check the box for, INTERESTED IN IPO LISTING.  To be qualified, the new company can be anywhere, even Ireland.  Just like the NYSE, a company can be in China but list on NYSE.  This is our policy as well.  The main requirement is that the company must be pro-Palestine and anti-Gaza holocaust.<br><br>
-Interested companies should use <a href="#register">this form</a> to contact us and sign up for the index.  There is a cost involved.  PIA does not buy or sell stocks, we're not brokers.  We provide links to the companies and investors must contact the companies themselves to buy shares or they can buy through &#x1F4B9; Al-Quds or .  Simply <a href="https://www.arzbroker.ps">click this link</a>.  This will bring you to a contact portal and you can contact the broker and buy whatever PIA or PEX stock you fancy, however check with your local laws as a precaution.<br><br>
+Gaza has its own stock market, the PEX, and it has been operating since 1995.  The market is obstructed by foreigners who prevent Americans from investing in Palestine, so we decided to start a parallel market we call the Rafah Stock Market and an index called the PIA.  The way it works, we have a core group of companies from the PEX that forms the base.  Next, we plan to add companies one at a time to build up the index.  We have space for new IPO's on the Rafah Stock Market.  <a href="#register">CLICK HERE</a> to sign up your company or startup for IPO on &#127757; Rafah Stock Market.  When applying, be sure to check the box for, INTERESTED IN IPO LISTING.  To be qualified, the new company can be anywhere, even Ireland.  Just like the NYSE, a company can be in China but list on NYSE.  This is our policy as well.  The main requirement is that the company must be pro-Palestine and anti-Gaza holocaust.<br><br>
+Interested companies should use <a href="#register">this form</a> to contact us and sign up for the index.  There is a cost involved.  PIA does not buy or sell stocks, we're not brokers.  We provide links to the companies and investors must contact the companies themselves to buy shares or they can buy through &#x1F4B9; Al-Quds or .  Simply <a href="https://www.arzbroker.ps">click this link</a>.  This will bring you to a contact portal and you can contact the broker and buy whatever &#127757; PIA or PEX stock you fancy, however check with your local laws as a precaution.<br><br>
 <br><center>
-<table border="1" style="background:gold; color:green;"><tr><td>
+<table border="1" style="background:gold; color:darkgreen;"><tr><td>
 <p id="esignon3"><center>&#x1F50F; Investor Sign-On</center></p>
 <input type="text">
         <p>
@@ -1174,12 +1280,12 @@ Interested companies should use <a href="#register">this form</a> to contact us 
    </table>
 
 <br><br><br><br></center>
-<table border="1"><tr><td bgcolor="green"><a href="#registernew">&#x1F238; REGISTER FOR ACCOUNT</a></td></tr></table>
+<table border="1"><tr><td bgcolor="lightgreen"><a href="#registernew">&#x1F238; REGISTER FOR ACCOUNT</a></td></tr></table>
 
 
 <br><br><br><br>
-&#x1F4B9; CURRENT LIST OF PALESTINIAN STOCKS<br><hr>
-<marquee>..Ahliea Insurance, $0.18 | 	&#x1F3E6; Bank of Palestine, $1.56 | &#x1F48A; Birzeit Pharma $3.75 | &#x1F3E6; Palestine Islamic Bank, $1.26 | &#x1F6AC; Jerusalem Cigarette Co, $1.85 | &#x1F50C; Palestine Electric, $2.84 | &#x1F477; Palestine Telecom, $5.00 | Palestine Industrial Average, $16.39 &#x1F4C9; -0.30 | New IPO's planned for 2026:  Dokyo Entertainment Ltd. | Iowa AI | Kagaku International ... 
+&#x1F4B9; CURRENT LIST OF &#127757; PALESTINIAN STOCKS<br><hr>
+<marquee>..Ahliea Insurance, $0.18 | 	&#x1F3E6; Bank of Palestine, $1.56 | &#x1F48A; Birzeit Pharma $3.75 | &#127757; Iowa AI $11.25 | &#x1F3E6; Palestine Islamic Bank, $1.26 | &#x1F6AC; Jerusalem Cigarette Co, $1.85 | &#127757; Kagaku International $4.72 | &#x1F50C; Palestine Electric, $2.84 | &#x1F477; Palestine Telecom, $5.00 | Palestine Industrial Average, $16.39 &#x1F4C9; -0.30 | New IPO's planned for 2026:  Dokyo Entertainment Ltd. | Iowa AI | Kagaku International ... 
  </marquee>
 <hr><a href="https://stockanalysis.com/list/palestine-stock-exchange/">View the PEX</a> - for comparison.  PEX is the other leading stock market in Palestine.<br><br><br>
 HERE ARE THE PEX HIGHLIGHTS:<br><br>
@@ -1203,7 +1309,7 @@ LADAEN</td><td>Palestine Plastic Industries</td><td>2.15M</td><td>3.070</td><td>
 
 
 <br><hr>
-Reminder:  The PEX has very low trading &#x1F4C9; volume, nobody buys or sells shares!  Therefore, we have established the Rafah Stock Market which is a mirror of the PEX except we plan to add new IPOs soon including Iowa AI.  Also, the PEX is Palestine-company centric.  However, the Rafah Stock Market is international like the &#x1F235; Hang Seng or LSE - no barriers to join the Rafah Stock Market except that the company is pro-Palestine, pays the $100k USD, passes the background check and is aligned with Palestinian beliefs like "live and let live".<br>
+Reminder:  The &#127757; PEX has very low trading &#x1F4C9; volume, nobody buys or sells shares!  Therefore, we have established the Rafah Stock Market which was a mirror of the PEX except now we're adding IPO's and we'll split off of PEX, no more mirror soon.  Also, the PEX is Palestine-company centric.  However, the Rafah Stock Market is international like the &#x1F235; Hang Seng or LSE - no barriers to join the Rafah Stock Market except that the company is pro-Palestine, pays the $100k USD, passes the background check and is aligned with Palestinian beliefs like "live and let live".<br>
 
 
 
@@ -1250,8 +1356,13 @@ New companies wishing to list their IPO on Rafah Stock Market, <a href="#registe
 <br><br>
 </center><hr size="1" color="red">
 &#x1F4F0; RAFAH MARKET NEWS<hr size="1" color="red"><br>
-For the last week of October, the Rafah Stock Market finished &#x1F4C9; down, losing $0.30 and staying above the critical $16.00 range, closing at $16.39.  The main declining issue was VOIC which fell after the terrible IDF attack on a hospital which killed 80 women and children.  This may have caused the stock to fall in fear that the war was back on.  But the cease fire is back on so we could see VOIC stock bounce back next week, the first week in November.<br><br>
-Iowa AI will be listing on the Palestine Industrial Average and Rafah Stock Market late in 2025 or early in 2026.  Iowa AI is located in Ames, Iowa and owns the leading VLLM in North America named Buddy's Iowa AI which was launched in Oct 2025.  Iowa AI is a developing company with 0 revenues and growing expenses, a small staff.  Iowa AI is fully aligned with Palestine and the people of Gaza.  Iowa AI has paid the fee of $100,000 USD to be included on the Palestine Industrial Average and the background check and financial auditing is almost complete.  Following Iowa AI's inclusion in the Palestine Industial Average aka Rafah Stock Market, Kagaku International is the next planned addition.  Kagaku is a joint Japanese-American firm with roots in Singapore, Hong Kong and Allemagne as well.  They are a chemistry software solutions provider similar to Iowa AI.  Neither Iowa AI or Kagaku International currently have offices in Palestine proper, but they operate there via the internet.<br><br>  
+November 6, 2025<br>
+There has been two IPO's on the Rafah Stock Market and the index was up 2% last week, in a continuation of up-trend started many months ago.  The two new listings who are joining the usual stocks like &#127757; Bank of Palestine are:  Iowa AI and Kagaku International.  Iowa AI is based in the USA and has no direct operations in the land of the Philistines, the &#127757; Palestinians, however, Iowa AI produces online software tools which are being used in Palestine by the wonderful citizens.  Iowa AI is a new company with hard hitting software like the FARMER AI online real estate project evaluator and voice schema along with voice commands, AI Chat, fertilizer resources, spaceship-on-chip design and manufacturing and website production along with other code and script consulting.<br><br>
+
+
+Iowa AI is located in Ames, Iowa and owns the leading VLLM in North America named Buddy's Iowa AI which was launched in Oct 2025.  Iowa AI is a developing company with 0 revenues and growing expenses, a small staff.  Iowa AI is fully aligned with &#127757; Palestine and the people of Gaza.  Iowa AI has paid the fee of $100,000 USD to be included on the &#127757;Palestine Industrial Average and the background check and financial auditing is almost complete.  Following Iowa AI's inclusion in the &#127757; Palestine Industial Average aka Rafah Stock Market, Kagaku International also joined.  Kagaku is a joint Japanese-American firm with roots in Singapore, Hong Kong and Allemagne as well.  They are a chemistry software solutions provider similar to Iowa AI.  Neither Iowa AI or Kagaku International currently have offices in Palestine proper, but they operate there via the internet.<br><br>
+
+Kagaku International operates a website and they are social influencers in the EFI (engagement farming industry).  KI offers Chemistry AI, a chatbot which teaches chemistry in a fun and charming way to students and is also popular with chemistry professionals.  Kagaku International also produces fine wines in California and sponsores Kagaku Club (aka Chemistry Club).  Kagaku International is a green chemistry company and they excel in projects such as graywater infrastructure, chemistry AI module design, desert fertilizers and much more.  KI is the new ticker and it went public at $4.00 per share.  Now it went up a bit to $4.72 per share on low volume.  Iowa AI was introduced at $12.00 per share before falling to $11.25 per share (USD).  These are bulletin-board traded stocks.  To buy shares, investors and institutions directly contact the companies or use this portal and Moonshee International (operator of the exchange) will forward your message on to the listed companies.
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <br><br><br><hr><br><br><br><hr><br><br><br><hr><br><br><br><hr>
 <div id="stockeval"></div>
@@ -1283,11 +1394,11 @@ Kagaku AI</label>
 <input type="checkbox" name="kagakuai" checked></td></tr></table>
 <br><br>
 What is the ticker or tickers for the stocks and bonds in question, monsieur?<br>
-<input type="text" placeholder="AFLYY" style="width:70%">
+<input type="text" placeholder="AFLYY" style="width:70%; background-color:gold; color:green" >
 
 <br><br>
 What is the investment goal and time frame for the investing party, if du happen to know, mon frere?<br>
-<input type="text" placeholder="Invest for profits and dividends" style="width:60%">
+<input type="text" placeholder="Invest for profits and dividends" style="width:60%; background-color:gold; color:green">
 
 <br><br>
 <br><br><a href="#scores2">
@@ -1379,53 +1490,244 @@ If your investment scored less than 80, you might want to buy some other stock o
 
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><hr><br><br><br><hr><br><br><br><hr><br><br><br><hr>
+<div id="community"></div>
+<br><br><table border="1"><tr><td>
+COMMUNITY</td></tr></table>
+<br><br>
+<font size="2">Here is the Moonshee International community for AI developers, chemists, IC R&D engineers, scientists and the whole community, even initiates.  Moonshee family of company includes Kagaku Club and Iowa AI.  Take a look at the questions and see if you can help.  If you can, click on ANSWER.  Danke schon.<br><br><a href="#signon"><button>Sign In</button></a><br><br>
+New Questions<br><br>
+<a href="#quest1">What is the current price for Iowa AI stock on Rafah Stock Market?</a> by Sheik294 in &#x1F4B9 Investor Forum Nov 6 2025<br>
+<a href="#quest1">What happens if you react acetic acid, urea, ethanol and oxygen gas with N2?  Is it water-soluble?  Does it combust?</a> by SpotQueen in Club Meetings Nov 6 2025<br>
+<a href="#quest1">What do you think about my selfie?</a> by Cassandra in General Topics Nov 6 2025<br>
+<a href="#quest1">Why is coding for spaceship-on-chip required to be in Kotlin?  Can we use C++ or Python?</a> by Bea_L in Technical Nov 6 2025<br>
+<br>
+<a href="#register">
+<button>Register for New Account</button><button>HOME</button></a><br><br><br>
+Archived Questions - Already Closed<br><br>
+--Network update--<br>
+--Check back later--<br>
+<br><br><br><br><br><hr><br><br><br><hr><br><br><br><hr><br><br><br><hr>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div id="quest1"></div><br><br>
+<a href="">MOONSHEE</a> . <a href="#community">FORUMS</a> .<font color="beige">CURRENT<br><br> 
+<table border="1" bgcolor="blue"><tr><td>
+QUESTIONS</td></tr></table><br>
+<table border="1"><tr><td>
+What is the current price for Iowa AI stock on Rafah Stock Market?<br><a href="#signon">&#x1F473; Sheik294</a><br>Investor Forum &#x1F4B9<br><br>
+No answers yet<br><br><a href="#signon">
+<button>ANSWER NOW</button></a><br><br></td></tr></table><br><br><table border="1"><tr><td>
+What happens if you react acetic acid, urea, ethanol and oxygen gas with N2?  Is it water-soluble?  Does it combust or form buckyballs in vacuum like outer space?  And furthermore, what time is the Chemistry Club party on Saturday night?  Minuit?  Naniji?<br><a href="#signon">&#x1F6B5; SpotQueen</a><br>Club Meetings &#x1F942;<br><br>No answers yet<br><br><a href="#signon">
+<button>ANSWER NOW</button></a><br><br></td></tr></table><br><br><table border="1"><tr><td>
+What do vous think about mein selfie?  ATTACHMENT - <a href="#signon">bikini-labhween.png</a><br><a href="#signon">	&#x1F467; Cassandra</a><br>General Topics &#x1F4F0;<br><br>No answers yet<br><br><a href="#signon">
+<button>ANSWER NOW</button></a><br><br></td></tr></table><br><br><table border="1"><tr><td>
+Why is coding for spaceship-on-chip required to be in Kotlin?  Can we use C++ or Python?<br><a href="#signon">&#x1F471; Bea_L</a><br>Technical &#9879;<br><br>No answers yet<br><br><a href="#signon">
+<button>ANSWER NOW</button></a><br><br></td></tr></table><br><br>
+
+
+
+
+
+
+</td></tr></table>
+
+
+
+
+<br><br><a href="">
+<button>HOME</button></a>
+<br><hr><br><br><br><hr><br><br><br><hr><br><br><br><hr>
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+
 <br><br><br><hr><br><br><br><hr><br><br><br><hr><br><br><br><hr>
 <marquee behavior="scroll" direction="left" speed="33">
 <font color="pink">Advertisement from AdCertz: Sess Club a Harbor Signo y LGB Sess en bano 209-463-8686</font>
 </marquee><hr>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<br><br>
+<div id="rewards"></div>
+<br><br>
+<br><br>
+<u>&#x1F510; MY ACCOUNT</u><br><br>
+<table bgcolor="black"><tr><td>
+SECURITY CENTER<br>
+At Moonshee your security is our top priority.  We delete all old chats unless you want us to save them.  We monitor the site at all times for bugs and unauthorized listeners.<br><br>
+<!--Start router cisco bar-->
+<div class="router-bar">
+		<div class="emoji">&#127760;</div>
+		<div class="led blue" title="Active AI"></div>
+		<div class="led red" title="Checking System"></div>
+		<div title="Microphone">&#x23FA;</div>
+		<div title="Camera">&#x23FA;</div>
+		<div title="Satellite Monitoring">&#x23FA;</div>
+
+		<div class="emoji" title="Signal Strength">&#x1F4F6;</div>
+		<div class="emoji" title="Security - ACTIVATED">&#x1F512;</div>
+	</div></td></tr></table>
+<!--end cisco-->
+
+You have been assigned a temporary Moonshee User Identification.  Do not share this user name with anyone.  It is top secret.  Next, to save your account info and keep your rewards, <a href="#register">register now</a>.  If you forgot your password, send email to Al Testaverde altes433@gmail.com<br><br><font color="green">
+If you want to sign in using a different User ID or JDF ID, use this button<br>
+<a href="#signon"><button style="background-color:gold; color:green">SIGN ON</button></a><br>
+<br><table bgcolor="darkblue" border="1"><tr><td>
+&#x1F4BB;
+</td><td>
+<output id="systemCode"></output></td><td width="111"><center>&#x1F33D;&#x1F33D;&#x1F33D;&#x1F33D;&#x1F33D;</center></td>
+<!--end sys code diagnostic disp-->
+<td><a href="#register"><button style="background-color:lightgreen"><font size="1">Register Now</font></button></a></td><td><a href="" title="Back to Home Page"><button style="background-color:yellow;color:green"><font size="2">&#x1F3E0;</font></button></a></td></tr></table>
+
+<br><br>
+
+<!--&#129756 is wifi emoji-->
+
+
+
+
+
+
+
+
+
+<hr color="gold" size="1">
+<br><font color="beige">
+&#x1F381; Rewards Earned Today<br><font size="1">
+Continue surfing our website all day every day and all night every night to earn rewards.  Once you collect 1,000 points, you are eligible for the grand prize drawing &#x1F381; with top winner receiving Iowa AI stock, listed on Rafah Stock Market.<br>
+<br>In the past hour surfing our website you earned:<br>
+<table border="1" bgcolor="blue"><tr><td>
+<script>
+	 document.write(Math.floor(Math.random()*101)+0);
+	</script> POINTS</td></tr></table>
+<progress id="solarPower" max="100"></progress>
+<br><br>
+We are scanning your systems for needed updates (if any)....please stand by &#x23F1;<br>
+<!--Diagnostics-->
+<table border="1"><tr><td>
+<span class="blink">&#128308;</span></td><td>
+<progress id="solarPower" max="100" style="accent-color:red;"></progress></td></tr></table>
+<!--end diagnostics-->
+<br><br>
+<table><tr><td>
+<!--Start round analog gauge-->
+<svg id="gauge" width="200" height="200" viewBox="0 0 200 200">
+ <!--outer circle-->
+	<circle cx="100" cy="100" r="90" stroke="#333" stroke-width="10" fill="#111" />
+ <!--tick marks-->
+	<g stroke="#666">
+	 <line x1="100" y1="20" x2="100" y2="35" />
+	 <line x1="160" y1="60" x2="150" y2="70" />
+	 <line x1="180" y1="100" x2="165" y2="100" />
+	 <line x1="160" y1="140" x2="150" y2="130" />
+	 <line x1="100" y1="180" x2="100" y2="165" />
+	</g>
+<!--needle-->
+	<g id="needle-group">
+	<line id="needle" x1="100" y1="100" x2="100" y2="40" stroke="red" stroke-width="4" /></g>
+<!--center dot-->
+	<circle cx="100" cy="100" r="6" fill="#ccc: />
+<!--label-->
+	<text x="100" y="190" text-anchor="middle" fill="#eee" font-size="14">Router Load</text>
+</svg>
+
+<!--end gauge round-->
+</td><td><center><font><div  style="text-align:left">Time is ticking on your rewards.  Be sure you registered and check your email for confirmation too.  Don't miss out!  You could win free Iowa AI or Kagaku International stock certificates!</div></font></td></tr></table>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div id="settings"></div>
+
+<br><br><table border="1"><tr><td>
+<font color="powderblue">&#x2699;</font><font color="red"> SETTINGS</td></tr></td></table><br><br>
+<font size="1">Moonshee AI - Set Speed<br><br><br>
+
+<input type="range" name="rang" style="accent-color:lightgreen;">
+</td></tr></table>
+<br><br>
+SET WEBSITE MODE<table border=1><tr><td>
+</td><td>
+<input type="radio" name="mode" style="accent-color:pink;">
+&#x1F530; Novice
+</td><td>
+<input type="radio" name="mode" style="accent-color:yellow;">
+&#127891; Developer</td><td>
+<input type="radio" name="mode" style="accent-color:magenta;">
+&#129417; Wizard</td></tr></table>
+<br><br>
+CHAT TYPE<br><table border=1><tr><td>&#127983;
+Kyoto Version<input type="radio" name="modee" checked  style="accent-color:yellow;">  &#128508; Tokyo Mode<input type="radio" name="modee" style="accent-color:pink;"><td width="22"></td><td><a href="">
+<button onclick="enableScroll()">&#x1F3E0;</button></a>
+</td></tr></table>
+<br><br>
+<hr size="1" color="green>
+
+<br>
+</div>
+
+<br>
+<!--script for system code diagnostic-->
+
+<output id="systemCode"></output>
+<!--end sys code diagnostic disp-->
+
+We are scanning your system and peripherals for latent malware....please stand by<br>
+<!--Diagnostics-->
+<table border="1"><tr><td>
+<span class="blink">&#128308;</span></td><td>
+<progress id="solarPower" max="100" style="accent-color:orange;"></progress></td></tr></table>
+<!--end diagnostics-->
+<br><br>
+
+
+<!--logo--><center>
+<table><tr><td>
+<font size="14">&#x1F250;</font></td><td><center><font size="4"><button style="background:gold">Moonshee International</button></font>
+<br><font size="1">SINGAPORE</font></center></td></tr></table>
+<!--end logo--></center>
+<br><br>
 
 <!--Site map-->
 <div id="sitemap"></div><br>
 <center>
 <table border="1"><tr><td><font size="1">
-<a href="#stockeval">&#x1F4B1; Bond Evaluator</a><br>
+<a href="#stockeval  onclick="disableScroll()"">&#x1F4B1; Bond Evaluator</a><br>
 
-<a href="./404.html#publist">&#x1F4DA; Books</a><br>
-<a href="#top">&#x2328; Chat</a><br>
+<a href="./404.html#publist"  onclick="enableScroll()">&#x1F4DA; Books</a><br>
+<a href="#top"  onclick="enableScroll()">&#x2328; Chat</a><br>
 <a href="./kagaku.html">&#x2697; Chemistry</a><br>
-<a href="#register">&#x1F4F2; Contact</a><br>
+<a href="#community"  onclick="enableScroll()">&#x1F5E3; Community</a><br>
+<a href="#register"  onclick="enableScroll()">&#x1F4F2; Contact</a><br>
 <a href="./404.html#testarea">&#x1F4BB; Code Evaluator</a><br>
-<a href="./404.html#testarea2">&#x1F5A5; IC Design AI</a><br>
 </td><td>
+<a href="#community"  onclick="enableScroll()">&#128101; Forums</a><br>
+
+<a href="./404.html#testarea2">&#x1F5A5; IC Design AI</a><br>
+
 <a href="./404.html"><font size="1">&#x1F69C; Iowa AI Chat</a><br>
-<a href="#rafah">&#x1F23A; IPO - Stocks</a><br>
+<a href="#rafah" onclick="enableScroll()">&#x1F23A; IPO - Stocks</a><br>
 <a href="./404.html">&#x1F33D; Farming</a><br>
-<a href="#files">&#x1F5C4; Files</a><br>
+<a href="#files" onclick="enableScroll()">&#x1F5C4; Files</a><br>
 <a href="./kagaku.html" title="Links to Chemistry Club AI">&#x1F6E2; Kagaku International</a><br>
-<a href="./index.html#rafah"><font size="1">&#x1F4B9; Palestine Industrial Average</a><br>
-<a href="./index.html#rafah">&#x1F3DB; Rafah Stock Market</a><br>
+<a href="#rafah" onclick="enableScroll()"><font size="1">&#x1F4B9; Palestine Industr Ave</a><br>
 
 </td><td>
 <font size="1">
+<a href="#rafah" onclick="enableScroll()">&#x1F3DB; Rafah Stock Market</a><br>
 
 <a href="./404.html#realtyeval">&#x1F3D7; Real Estate AI</a><br>
-<a href="#resources2">&#x1F5DC; Resources</a><br>
+<a href="#resources2" onclick="enableScroll()">&#x1F5DC; Resources</a><br>
 
-<a href="#files">&#x1F4E0; Software</a><br>
-<a href="#soc">&#x1F6F0; Spaceship-on-Chip</a><br>
-<a href="#guestbk">&#x1F4D6; View Guest Book</a><br>
-<a href="#register">&#x1F4D7; Sign Guest Book</a><br>
-<a href="#stockeval">&#x1F4B6; Stock AI</a><br>
+<a href="#files" onclick="enableScroll()">&#x1F4E0; Software</a><br>
+<a href="#soc" onclick="enableScroll()">&#x1F6F0; Spaceship-on-Chip</a><br>
+<a href="#guestbk" onclick="enableScroll()">&#x1F4D6; View Guest Book</a><br>
+<a href="#register" onclick="enableScroll()">&#x1F4D7; Sign Guest Book</a><br>
+<a href="#stockeval" onclick="disableScroll()">&#x1F4B6; Stock AI</a><br>
 
 </td></tr></table>
 <font color="beige">&#x1F54C; Moonshee AI Sitemap<br><br>
 <a href="#top" title="Back To &#x1F250;Moonshee AI Home Page">
-<table bgcolor="gold" border="1"><tr><td>&#x1F3E0;HOME</td></tr></table></a>
+<table bgcolor="gold" border="1"><tr><td><button onclick="enableScroll()">&#x1F3E0;HOME</button></td></tr></table></a>
 
 <br><br><br><br><br><br><br><br><br><br><br><br>
 
@@ -1448,10 +1750,75 @@ If your investment scored less than 80, you might want to buy some other stock o
 <hr><font size="1" color="grey"><center>
 &#x00A9; 2025 Momotaro Studios, Beverly Hills and <br>&#x1F250;Moonshee International Worldwide Ltd., Singapore &#x1F30F;</center><hr>
 
+<!--Script for progress gauge-->
+<script>
+	document.getElementById("solarPower").value = Math.floor(Math.random() * 101 - 30);
+</script>
+<!--end progress gauge-->
+<!--Start script for diagnostics-->
+<script>
+	document.getElementById("signalMeter").value = Math.floor(Math.random() * 101);
+</script>
+<!--end diagnostics script-->
+<!--Start system code display script-->
+<script>
+ document.getElementById("systemCode").textContent = "USER_ID-" + Math.floor(Math.random() * 9000 + 1000);
+</script>
+<!--end system code diagnostics-->
+<!--Btn color toggler-->
+<script>
+	{
+	window.onload = function () {
+		const btn = document.getElementById('btn');
+		btn.onclick = function () {
+		 if (btn.style.backgroundColor === 'red') {
+		  btn.style.backgroundColor = 'lightgreen';
+		 } else {
+		   btn.style.backgroundColor = 'red';
+		 }
+		}};
+}
+</script>
+<!--end btn colour toggler mate-->
+
+
+<!--End progress script-->
+<!--Script for progress gauge-->
+<script>
+	document.getElementById("solarPower").value = Math.floor(Math.random() * 101 - 30);
+</script>
+<!--end progress gauge-->
+<!--Start script for diagnostics-->
+<script>
+	document.getElementById("signalMeter").value = Math.floor(Math.random() * 101);
+</script>
+<!--end diagnostics script-->
+<!--Start system code display script-->
+<script>
+ document.getElementById("systemCode").textContent = "USER_ID-" + Math.floor(Math.random() * 9000 + 1000);
+</script>
+<!--end system code diagnostics-->
+<!--Start script for analog round gauge-->
+<script>
+
+{
+window.addEventListener("DOMContentLoaded", () => {
+const angle = Math.floor(Math.random(2) * 180);
+const needleGroup = document.getElementById("needle-group");
+needleGroup.setAttribute("transform", 'rotate(${angle}, 100 100)');
+});}
+</script>
+<!--End script for analog round gauge  DOESNT WORK-->
+
+
+<!--End progress script-->
+
    </body>
    </center>
-</html>   
+<!--NOTES SECTION-->
+<!--code for hollow light is &#11093 or mite b green lite-->
 
+</html>   
 
 
 

@@ -17,10 +17,36 @@
    type="text/css"
    media="all">
   <style>
+	.emoji { font-size: 1.5em; }
+	.router-bar {
+		display: flex;
+		width: 220px;
+		align-items: center;
+		gap: 10px;
+		background-color: darkgray;
+		padding: 2px 15px;
+		border-radius: 5px;
+		box-shadow: 0 0 5px #000;
+		}
+	.led {
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		box-shadow: 0 0 5px #000;
+		}
+	.led.blue {
+		background-color: #00f;
+		animation: blinkBlue 1.2s infinite;
+		}
+	.led.red {
+		background-color: #f00;
+		animation: blinkRed 3.3s infinite;
+		}
+	
 	.red {
 	 background-color:red;
-	 color:beige'
-	}
+	 color:beige;
+		}
 	.magenta {
 	 background-color:magenta;
 	 color: beige;
@@ -32,6 +58,8 @@
       padding: 20px;
     }
 
+	.blink { animation: blink 2s steps(2, start) infinite; }
+
   #chatbox {
       width: 100%;
       max-width: 400px;
@@ -39,6 +67,7 @@
 	 max-height: 200px;
       border: 1px solid #ccc;
       background: green;
+	text-align:left;
 	color: yellow;
       overflow-y: auto;
       white-space: pre-wrap;
@@ -54,7 +83,15 @@
 	color: yellow;
       margin-top: 10px;
     }
-
+	@keyframes blink { 50% { visibility: hidden; } }
+	@keyframes blinkBlue {
+		0%, 100% { opacity: 1; }
+		50% { opacity: 0.3; }
+		}
+	@keyframes blinkRed {
+		0%,100% { opacity: 1; }
+		50% { opacity: 0.1; }
+		}
 
   </style>
 	<script type="application/ld+json">
@@ -76,23 +113,29 @@
   <body  style="background-color: black; color: beige;">
 
 <!--div style="position:fixed; top: 190;left: 990; width=100%; pointer-events:none; z-index:999;"-->
- <marquee behavior="scroll" direction="right" scrollamount="61" loop="2" style="position:fixed; top: 150;left: 1; width=100%; pointer-events:auto; z-index:1; white-space: wrap; color:#000; background: transparent; font-weight: bold;"><a href="">
+ <marquee behavior="scroll" direction="right" scrollamount="61" loop="2" style="position:fixed; top: 50;left: 1; width=100%; pointer-events:auto; z-index:1; white-space: wrap; color:#000; background: transparent; font-weight: bold;"><a href="">
  <img src="./images/iowalorry2.png" height="50"></a>
 </marquee>
 
  <center><a href="" title="Well, howdy doody!  Willkommen bei Iowa!  How are vous?  Comment allez-vous, mon ami?  Would vous fancy an iced tea?  Sit a spell, si vous plait.">
-<table border=0><tr><td><font size="12">&#x1F69C;</font></td><td><center><button style="background:yellow; color=green">Buddy's Iowa AI</button></center>
+<table border=0><tr><td><font size="12">&#x1F69C;</font></td><td><center><button style="background:yellow; color=green">Buddy's Iowa AI</button>
+<!--blinking ai light here-->
+<span class="blink">&#128308;</span>
+<!--end light-->
+
+
+</center>
 </td></tr></table></a>
 
 <hr size=1 color=green>
 
 <h1>
-   <a href="#chatbox" title="Buddy's Iowa &#x1F170;i &#x1F69C;" id="top">&#x1F5A5; </a><a href="#files" title="Files and Misc.">&#x1F5C4; </a>
-<a href="#buddy" title="Scrolls">&#x1F4DC; </a>
+   <a href="#chatbox" title="Buddy's Iowa &#x1F170;i &#x1F69C;" id="top" onclick="enableScroll()">&#x1F5A5; </a><a href="#files" title="Files and Misc." onclick="enableScroll()">&#x1F5C4; </a>
+<a href="#buddy" title="Scrolls" onclick="enableScroll()">&#x1F4DC; </a>
  	
 <a href="#contacts" title="Contacts" onclick="disableScroll()">&#x1F4DE </a>
 
-<a href="#guestbook" title="Sign Guestbook">&#x1F4D6</a></h1>
+<a href="#guestbook" title="Sign Guestbook" onclick="enableScroll()">&#x1F4D6</a></h1>
 	<hr color="green" size=1>
   
 <!--Main Drop Down Menu-->
@@ -101,21 +144,27 @@
 <label for="menu" title="Menu"></label>
 <select id="menu" onchange='goToLink(this)' style="background:green; color:yellow">
 	<option value="#sitemap" onclick="disableScroll()"><a href="#sitemap">&#x1F310; Navigation</a></option>
-<option value="#resources2">&#x1F4DA; Books Online</option>
-<option value="#contacts">&#x1F4C7; Contacts</option>
+<option value="#rewards" onclick="enableScroll()">&#x1F510; My Account</option>
+<option value="./index.html#community" onclick="disableScroll()">&#x1F465; Community</option>
+
+<option value="#contacts" onclick="disableScroll()">&#x1F4C7; Contacts</option>
 
 <option value="./kagaku.html"><font color="black">&#9879;</font> Chemistry AI</option</option>
-<option value="./index.html#rafah">&#x1F69C; IPO</option>
+<option value="#resources2" onclick="enableScroll()">&#x1F4DA; Farming e-Books</option>
+<option value="./index.html#community" onclick="disableScroll()">&#x1F5E3; Forums</option>
+
+<option value="./index.html#rafah">&#x1F69C; IPO's</option>
 
 <option value="./index.html">&#x1F54C; Moonshee AI Chat</option>
-<option value="#resources2">&#x1F5C4; Resources</option>
-<option value="#settings" onclick="disableScroll()">&#x2699; Settings</option>
+<option value="#resources2" onclick="enableScroll()">&#x1F5C4; Resources</option>
+<option value="#rewards" onclick="enableScroll()">&#x1F380; Rewards</option>
 
 <option value="#sitemap" onclick="disableScroll()">&#128506; Sitemap</option>
 <option value="#contacts" onclick="disableScroll()">&#x1F4F8; Social Media</option>
 
-<option value="#guestbk">&#x1F4D6; View Guestbook</option>
-<option value="#register">&#x1F4DD; Sign Guestbook</option>
+<option value="#guestbk" onclick="enableScroll()">&#x1F4D6; View Guestbook</option>
+<option value="#register" onclick="enableScroll()">&#x1F4DD; Sign Guestbook</option>
+<option value="#settings" onclick="disableScroll()">&#x2699; Settings</option>
 
 	<option value="#register">&#x1F510; Register For New Account</option>
 	
@@ -137,7 +186,7 @@
 
 
 
-<body>
+<body><center><table width="80%"><tr><td><center>
 <div id="chatbox"></div>
 <center>
 <input type="text" id="userInput" placeholder="Type your msg here for Iowa AI..." />
@@ -165,11 +214,13 @@ function submitChat() {
 
   const responses = [
     "Cheerio, mate!  Welcome to Iowa.  Well, howdy there.  Look what the cat dragged in.  How is it goin'?  Why the long face, friend?",
-    "What's eating you, captain.  Spill it!  We don't keep secrets in Iowa.  Tell me everything.  What's her name?  Nom?  Q'est nom?!?  I can see du bist lovesick.  Ja?",
+    "What's eating you, Captain?  Spill it!  We don't keep secrets in Iowa.  Tell me everything.  What's her name?  Nom?  Q'est nom?!?  I can see du bist lovesick.  Ja?",
     "Let me know if you have any questions, you old coot!  Have you been down to Casey's?  There's a lot of vegan merchandise now.",
     "Thanks for reaching out, fellow FFA member!  Here, maybe I can help you.  Aren't you a Krishna member?  I thought I saw you down at the Juggernaut parade last weekend.",
 	"Thanksgiving is just around the corner.  What are your plans, old boy?",
 	"Want to come to my place?  The missus is fixing up some grits and imitation fried chicken.",
+	"Hey, a couple of babes sent you messages, selfies.  You can read the messages if you click on MY ACCOUNT from menu.",
+	"But you have to register to read messages.  We assigned you a USER ID because you seem cool.",
 	"Well, which chapter of FFA are you in?  And are you 4H member?",
 	"I'm from Southwest Iowa originally, relocated to Ames.",
 	"So, tell me what you know about Iowa's history, si vous plait.",
@@ -310,29 +361,61 @@ function submitChat() {
   });
 
 </script>
+</td></tr></table>
 
-<br><center>
-<table border="1" width="90%"><tr><td width=45>
-<button onclick="submitChat()" style="background-color: yellow; color: green;" title="Press this button after you type your questions.  Next, Iowa AI will attempt to answer your question or concern using the vast Iowa knowledge database.">GO&#x1F446;</button></td>
-<td><center><button id="btn"><font size="3">&#127897;</font><font size=1>VOICE<br>ON/OFF</button></td><td><font size="1"><center>Done Talking?<br><button style="background:yellow" id="goBtn">Let's Go!</center></button></td>
+<center>
+<table bgcolor="gray"><tr><td><font size="1">
+<!--Start router cisco bar-->
+	<div class="router-bar">
+		<div class="emoji"><a title="Network Monitoring - ACTIVE - Security ON">&#127760;</a></div>
+		<div class="led blue" title="Active AI"></div>
+		<div class="led red" title="Checking System"></div>
+		<div title="Microphone"><a title="&#127908; Microphone">&#x23FA;</a></div>
+		<div title="Camera"><a title="&#128247; Camera - Canon">&#x23FA;</a></div>
+		<div title="Satellite Monitoring"><a title= "&#128225; Satellite Monitoring">&#x23FA;</a></div>
 
-<td width=60><center><font size=1>Farmer MODE<br><input type="checkbox" checked></a></td>
+		<div class="emoji" title="Signal Strength">&#x1F4F6;</div>
+		<div class="emoji" title="My Account"><a href="#rewards">&#x1F512;</a></div>
+	</div></td></tr></table>
+<!--end cisco-->
+
+<button onclick="submitChat()" style="background-color: lightgreen; color: brown;" title="Press this button after you type your questions.  Next, Iowa AI will attempt to answer your question or concern using the vast Iowa knowledge database.">GO&#x1F446;</button>
+<br><br>
+
+<table border="1" width="90%" padding="10px"><tr>
+<td><font size="1"><center>Voice Mode</font><br><button id="btn"><font size="3">&#127897;</font><font size=1>ON/OFF</button><br><br><br>
+<font size="1"><center>Done Talking?</font><br><center><button style="background:green; color:yellow;" id="goBtn"><font size="1">Go AI!<font size="3">&#127897;</font></center></button><br>
+
+</td>
+
+<td width=70><center><font size=1>Farmer Mode<br><input type="radio" name="toppix" checked style="accent-color:yellow;"></a><br>
+<font size=1>Advanced AI<br><input type="radio" checked style="accent-color:red;" name="toppix"></a>
+<br>
+<font size=1>Rookie Mode<br><input type="radio" name="toppix" style="accent-color:pink;"></a>
+
+</td><td>
+<center>
+<a href="#help" title="Upload pictures of corn and cornfields along with other Iowa themes to Buddy's Iowa AI for review.  Click on BROWSE and then after selecting your file click on UPLOAD NOW.  This feature is also for uploading selfies.  It's good if you pose alongside the corn."><font color="white"><button style="background:green" onclick="disableScroll()">&#x1F33D;</font><font size="2" color="yellow">Help</font></button>
+<hr size="1" color="green">
+<a href="#uploaderror" title="After you click on browse and select your selfie or files to send, click on UPLOAD NOW but it's only for registered users on IBM Watson devices.  Android not supported.">
+<button style="background-color: yellow; color: green;">UPLOAD</button></a>
+<hr size="1" color="green">
+<button onclick="location.reload()" style="background-color: orange; color: white;">Reset &#x26A0;</button>
+</td></tr></table>
+</center>
+
+
+
+
+
+
+</td>
 </tr></table><br><table border="1" bgcolor="green"><tr>
 <td>
 <input type="file" name="upload"></td><td>
 <button title="Press Browse to select your selfie or file - don't send video games or big files, use the comment section in the contact form or our Itch Contact portal for large files, svp.  After you select the file, click on UPLOAD.">&#x1F4E4;</button></td></tr></table><br>
 <center>
 
-<table border=1><tr><td>
-	<td style="background-color: blue; color: white;">
-<a href="#help" title="Upload pictures of corn and cornfields along with other Iowa themes to Buddy's Iowa AI for review.  Click on BROWSE and then after selecting your file click on UPLOAD NOW.  This feature is also for uploading selfies.  It's good if you pose alongside the corn."><font color="white"><button style="background:green" onclick="disableScroll()">&#x1F33D;</font><font size="2" color="yellow">Help</font></button>
-</td><td>
-<a href="#uploaderror" title="After you click on browse and select your selfie or files to send, click on UPLOAD NOW but it's only for registered users on IBM Watson devices.  Android not supported.">
-<button style="background-color: yellow; color: green;">UPLOAD</button></a>
-</td><td>
-<button onclick="location.reload()" style="background-color: orange; color: white;">Reset &#x26A0; Iowa AI</button>
-</td></tr></table>
-</center>
 <br><br><br>
 
 <!--Search bar-->
@@ -415,7 +498,7 @@ This is the music you have been looking for.  It's the full &#x1F3BA; <div class
 &#x1F483; Polka<br>
 Here is <a href="http://archive.org">the link</a> for polka dance music like Lawrence Welk and Clarinet Polka. &#x1F3BB; Just click the link and then search for your favorite song (chancon).  There are also square dancing songs and songs suitable for Iowa farmers and farm entourage members like farmer bunnies.
 	<br><br><table border=1 bgcolor=yellow><tr><td>
-	<a href="" title="Back to Iowa AI Home"><button onclick="enableScroll()">&#127968;HOME</button></a></td></tr></table>
+	<a href="" title="Back to Iowa AI Home"><button onclick="enableScroll()">&#127968;</button></a></td></tr></table>
 
 
 <br><br><br><br><br><br><br><br><br><br><br><br>
@@ -438,20 +521,23 @@ Here is <a href="http://archive.org">the link</a> for polka dance music like Law
 	</div>
 	<!--Traders view end-->
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<div id="contacts"></div>
-<table border=1><tr><td>&#x1F4F2; CONTACTS</td></tr></table><br>
-<a href="#register" title="Rate, review, follow and subscribe at Miyazakibar.Itch.Io" onclick="enableScroll()">&#129493 Contact Me Now</a><br><br>
+<div id="contacts"></div><br><br><br>
+<table border=1><tr><td>&#x1F4F2; CONTACTS &#x1F30E;</td></tr></table><br>
+
+<a href="#register" title="Rate, review, follow and subscribe at Miyazakibar.Itch.Io" onclick="enableScroll()"><font size="2">&#129493 Contact Me Now</a><br><br>
 Rate, review, subscribe, follow here:<br>
-On X .. <a href="https://x.com/drfujihara">DrFujihara</a><br>
+On X .. <a href="https://x.com/drfujihara" onclick="enableScroll()">DrFujihara</a><br>
 <a href="#register" onclick="enableScroll()">Click here</a> to contact us<br>
 On itch <a href="https://miyazakibar.itch.io">Miyazakibar and Iowa AI</a><br>
 
 <br>
-<div class="summary"><a href="#register">Send us a message</a></div>Send us your &#x1F4F8; selfies and we'll send you a cartoon screen grab featuring Iowa theme.  Iowa AI is operated by Miyazaki Bar, Tokyo and the majority shareholder is Moonshee International Worldwide Ltd., Singapore.  The CEO of Miyazaki Bar is Kai DaiKi.	
+<div class="summary"><a href="#register" onclick="enableScroll()">Send us a message</a></div>Send us your &#x1F4F8; selfies and we'll send you a cartoon screen grab featuring Iowa theme.  Iowa AI is operated by Miyazaki Bar, Tokyo and the majority shareholder is Moonshee International Worldwide Ltd., Singapore.  The CEO of Miyazaki Bar is Kai DaiKi.	
 <br><br>
 <table border=1 bgcolor=yellow><tr><td>
-	<a href="" title="Back to Iowa AI Home"><button onclick="enableScroll()">&#127968;HOME</button></a></td></tr></table>
+	<a href="" title="Back to Iowa AI Home"><button onclick="enableScroll()">&#127968;</button></a></td></tr></table>
 
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br>
 
 
@@ -476,7 +562,7 @@ Another free tool from &#x1F33D; Iowa AI. This one offers free code, script and 
 
 		<br><br>
 <table border=1 bgcolor=yellow><tr><td>
-	<a href="" title="Back to Iowa AI Home"><button onclick="enableScroll()">&#127968;HOME</button></a></td></tr></table>
+	<a href="" title="Back to Iowa AI Home"><button onclick="enableScroll()">&#127968;</button></a></td></tr></table>
 <br><br><br><br>
 	<br><br>	
 		<br><br><br><br><br><br>
@@ -500,7 +586,7 @@ Another free tool from &#x1F33D; Iowa AI. This one offers free code, script and 
 	The firm is located in Ames, Iowa with corporate space in Osceola - the twin hearts of Silicon Cornfield - Iowa's equivalent of Silicon Valley.  Ames is called Silicon Cornfield North and Osceola is considered the southern end of S.C.  This area is the tech hub for the Midwest, home of Iowa State University, premier midwestern tech institution.  Spaceship-on-chip research and development is mainly done in Iowa, Californie (<a href="https://pacific.edu">&#127963; University of the Pacific</a>), Allemagne und Nippon at this time. &#127805; Iowa AI helps produce video game content and other software and resources available on itch.io in the Miyazakibar portal along with AI services for performers like Nashville star musicians.  Iowa AI is very advanced, the most advanced VLLM on the market today in the USA and UK although there are more advanced in Allemagne und Nippon.  However, Iowa AI is working on new version which is corn-fueled and expected to outperform German and Japanese rivals.  Iowa AI is listed on the <a href="./index.html#rafah">Rafah Stock Market</a> under the ticker symbol IOWA.<br>
 	<br>
 <table border=1 bgcolor=yellow><tr><td>
-	<a href="" title="Back to Iowa AI Home"><button onclick="enableScroll()">&#127968;HOME</button></a></td></tr></table>
+	<a href="" title="Back to Iowa AI Home"><button onclick="enableScroll()">&#127968;</button></a></td></tr></table>
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
@@ -535,7 +621,7 @@ Other Resources (non-software):<br>
 	  Premier online book publisher heaquartered in Singapore, Moonshee landed new and upcoming author Chet Dowry and his Adventures of Buddy from Iowa series.  The story is based on a real life rags to riches story of poor Iowa farmboy turned multi-millionaire, a lesson to those who would follow in his large footsteps. The publisher also is behind video games, comics, manga and more.  Works closely with Momotaro Studios and Dokyo Entertainment Ltd, Hong Kong.<br><br>	
 
 <table border=1 bgcolor=yellow><tr><td>
-	<a href="" title="Back to Iowa AI Home"><button onclick="enableScroll()">&#127968;HOME</button></a></td></tr></table>
+	<a href="" title="Back to Iowa AI Home"><button onclick="enableScroll()">&#127968;</button></a></td></tr></table>
 
 <br><br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
@@ -717,9 +803,9 @@ As Trixxie walked along the dark alley something shiny caught her eye.  It was s
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <center>
-<table border="1"><tr><td><center>
-Character Outline</td><tr><td><center>
-&#128103; Trixxie</center></td></tr><tr><td>
+<table border="1" bgcolor="pink"><tr><td bgcolor="red"><center><font color="pink">
+Character Outline</td><tr><td><center><font color="crimson">
+&#128103; Trixxie</center></td></tr><tr><td><font color="red">
 She's an android-human hybrid with a VLLM loaded into her MPU<br>
 Trained as a gourmand chef in Shanghai<br>
 Now living in Maffberry, Iowa<br>
@@ -782,7 +868,7 @@ But when Trixxie arrived at CoinBase she saw no humans other than another custom
 
 
 <center>
-<table border="1"><tr><td><center>
+<table border="1" bgcolor="blue"><tr><td bgcolor="darkblue"><center>
 Character Outline</td><tr><td><center>
 &#128587; Yoshi</center></td></tr><tr><td>
 Yoshi is from Japan<br>
@@ -807,7 +893,7 @@ Chapter Three<br>
 <br><br>
 
 
-...to be continued....please support us on Patreon....danke schon...
+...to be continued....please support Chet Dowry on Patreon....danke schon...
 
 <br><br><br><br>
 <br><br><br><br>
@@ -821,7 +907,7 @@ Chapter Three<br>
 <br><br><br><br>
 <br><br><br><br>
 <br><br><br><br><center>
-<div id="chet"></div><table border="1"><tr><td>
+<div id="chet"></div><em>About the Author</em><table border="1"><tr><td>
 <img src="./images/chet.png"></td></tr></table><br></center>
 <br>
 Chet Dowry is the pen name of Hajih Al-Faruk, the famous Punjabi from Pakistan who has already taken Allemagne by storm with his musical street performances and dance routines on the sidewalks and alleys of Dusseldorf.  Now, Chet has expanded his art to include the written form, novels.  Chet's first piece, a biography, was warmly welcomed by readers and thus, Chet is proud to present his second work, MYSTERY ON THE MENU.  Chet grew up in the Punjab to Sikh family with many sisters and brothers.  When he got married, he took his favourite younger sister with him to the new home with his bride to help cook and clean.<br><br>
@@ -890,7 +976,7 @@ Danke schon fur visiting Iowa AI headquarters.  If you would fancy signing our g
   </label><br><br>
 <label>
     Three letter man?:
-    <input type="checkbox" name="frat" checked>
+    <input type="checkbox" name="frat" checked  style="accent-color:yellow;">
   </label><br><br>
 <label>
     Interested in listing your company on the Rafah Stock Market?:<br>
@@ -904,30 +990,30 @@ Danke schon fur visiting Iowa AI headquarters.  If you would fancy signing our g
 
   <br><hr color="yellow"><br>
 	Iowa Resident?
-	<input type="checkbox"> | 
+	<input type="checkbox" style="accent-color:yellow;"> | 
 	FFA Member?
-	<input type="checkbox"> | 
+	<input type="checkbox" style="accent-color:green;"> | 
 	4H Member?
-	<input type="checkbox"><br>
+	<input type="checkbox" style="accent-color:green;"><br>
 	Vegetarian?
-	<input type="checkbox"> | 
+	<input type="checkbox" style="accent-color:green;"> | 
 	Vegan?
-<input type="checkbox"> | 
+<input type="checkbox" style="accent-color:lightgreen;"> | 
 	PhD Student?
-<input type="checkbox"><br>
+<input type="checkbox" style="accent-color:yellow;"><br>
 	Interested in semiconductors? 
-	<input type="checkbox"> | 
+	<input type="checkbox" style="accent-color:yellow;"> | 
 	Are you a Scientist?
-<input type="checkbox"><br>
+<input type="checkbox" style="accent-color:pink;"><br>
 	Born in Iowa?
-<input type="checkbox"> | 
+<input type="checkbox" style="accent-color:yellow;"> | 
 	Married?
-<input type="checkbox"> | 
+<input type="checkbox" style="accent-color:pink;"> | 
 	Kids?
-<input type="checkbox"><br>
+<input type="checkbox" style="accent-color:purple"><br>
 
 	Do you need Iowa AI to build you a website?
-<input type="checkbox" checked> 
+<input type="checkbox" checked style="accent-color:yellow;"> 
 <br>
 <br>
 	
@@ -1241,21 +1327,26 @@ Select which VLLM models you want to debug and score your code and script with:<
 <table border="1"><tr><td>
 <label>
 Iowa AI</label>
-<input type="checkbox" name="iowaai" checked></td><td>
+<input type="checkbox" name="iowaai" checked style="accent-color:green"></td><td>
 <label>
 Moonshee AI</label>
-<input type="checkbox" name="moonsheeai" checked></td><td>
+<input type="checkbox" name="moonsheeai" style="accent-color:beige" checked></td><td>
 <label>
 Kagaku AI</label>
-<input type="checkbox" name="kagakuai" checked></td></tr></table>
+<input type="checkbox" name="kagakuai" style="accent-color:crimson" checked></td></tr></table>
 <br><br></center>
 What is the url for your website or code you need us to evaluate?  Do you need us to check Javascript, HTML, C or any special languages only used in Japan?  Or do you need alien eval?<br>
-<input type="text" placeholder="https://github.com" style="width:70%">
+<input type="text" placeholder="https://github.com" style="width:70%; background-color:red; color:pink;">
 
-<br><br><a href="#score">
+<br>
+<a href="#score"><button style="background-color:brown; color:lightgreen">
+GO!&#x1F446;</button></a>
+<br><center>
 <table border="1" bgcolor="red"><tr><td>
-GO!&#x1F446;
-</td></tr></table></a>
+<button onclick="window.history.back()">BACK</button>
+
+</td><td width=100px bgcolor="black"><center><a href="#voice"><button>&#x1F3A4; VOICE</button></a></center></td><td><a href=""><button>&#x1F3E0;</button></a>
+</td></tr></table></center>
 
 
 
@@ -1275,13 +1366,13 @@ Select which VLLM models you want to debug and score your spaceship-on-chip and 
 <table border="1"><tr><td>
 <label>
 Iowa AI</label>
-<input type="checkbox" name="iowaai" checked></td><td>
+<input type="checkbox" name="iowaai" style="accent-color:green" checked></td><td>
 <label>
 Moonshee AI</label>
-<input type="checkbox" name="moonsheeai" checked></td><td>
+<input type="checkbox" name="moonsheeai" checked style="accent-color:beige"></td><td>
 <label>
 Kagaku AI</label>
-<input type="checkbox" name="kagakuai" checked></td></tr></table>
+<input type="checkbox" name="kagakuai" checked style="accent-color:crimson"></td></tr></table>
 <br><br>
 What is the url for your design and drawings?<br>
 <input type="text" placeholder="https://github.com" style="width:70%">
@@ -1292,13 +1383,15 @@ What is the password or instructions to download files?<br>
 
 
 <br><br>
-<table border="1" bgcolor="yellow"><tr><td><font color="black">
-<a href="#scores2"><button>GO!&#x1F446;</button></a>
-</td><td width=50 bgcolor="green"><center><a href="#testarea2" title="Developer Mode Activated" onclick="disableScroll()">MODE</a></center></td>
-<center><td><a href=""><button style="background:yellow; color:green" onclick="enableScroll()">&#x1F3E0; HOME</a></center></td></tr></table>
+<table border="1" bgcolor="black"><tr><td><font color="black">
+<a href="#scores2"><button style="background-color:darkblue; color:lightblue;">GO!&#x1F446;</button></a>
+</td><td width=50 bgcolor="powderblue"><center><a href="#testarea2" title="Developer Mode Activated" onclick="disableScroll()">MODE</a></center></td>
+<center><td><a href=""><button style="background:darkblue; color:lightblue" onclick="enableScroll()">&#x1F3E0; HOME</a></center></td>
+<td><a href="#voice"><button style="background-color:darkblue;color:powderblue;">&#127897;<font size=1> VOICE</button></a>
+</td>
+</tr></table>
 
-<br><br>
-<a href="#voice"><button>&#127897;<font size=1> VOICE</button></a>
+
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
@@ -1338,7 +1431,7 @@ Note: If you don't have a website for your project, why not?  Iowa AI can set on
 <a href="#scores3" onclick="disableScroll()">GO!&#x1F446;</a>
 </td><td width="100"></td><td>       
  <a href="#voice"><button onclick="disableScroll()">&#127897;<font size=1> VOICE</button></a>
-</td><td><a href="" onclick="enableScroll()"><button>HOME</button></a></td>
+</td><td><a href="" onclick="enableScroll()"><button>	&#127968;</button></a></td>
 </tr></table>
 
 
@@ -1433,16 +1526,19 @@ Originality<br>
 </td></tr></table>
 <br><br>
 
-<table border="1" bgcolor="green"><tr><td bgcolor="yellow"><font size="5"><a href="#testarea" onclick="disableScroll()">&#x1F519;</a></td>
+<table border="1" bgcolor="crimson"><tr><td bgcolor="pink"><a href="#testarea" onclick="disableScroll()"><center><button><font size="4">&#x1F519;</button></center></a></td>
 
-<td><font size="5"><a href="#top" onclick="enableScroll()">&#x1F51D;</a></td><td>
+<td><a href="#top" onclick="enableScroll()"><center><button><font size="4">&#x1F51D;</button></center></a></td><td>
 
-<button onclick="location.reload()" style="background-color: yellow; color: green;">Try Using Beta Mode 2.1</button>
-</td></tr></table>
+<button onclick="location.reload()" style="background-color: pink; color: crimson;">Try Using Beta Mode 2.1</button>
+</td><td bgcolor="pink">
+<a href="#voice"><button style="background-color:red;color:pink">&#127897;<font size=1> VOICE</button></a>
+</td>
+</tr></table>
 <br><br></center></center>
 If your score is less than 95, you may be able to improve your code and script.  Contact Iowa AI for help!  We can get you going from good to greatest!  <a href="#register" onclick="enableScroll()">Click here</a> to contact us now.
 <br><br>
-<a href="#voice"><button>&#127897;<font size=1> VOICE</button></a>
+
 <br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
@@ -1455,7 +1551,7 @@ If your score is less than 95, you may be able to improve your code and script. 
 </td></tr></table></a></center>
 <!--end logo--></center>
 <br><br><table border="1"><tr><td>
-IOWA AI has completed a thorough review of the Spaceship-On-Chip drawing package and design you or your colleague provided.  Here are the results (scale of 1-100 with 1 being worst and 100 being best)</td></tr></table><br>
+IOWA AI has completed a thorough review of the &#x1F6F0; Spaceship-On-Chip drawing package and design you or your colleague provided.  Here are the results (scale of 1-100 with 1 being worst and 100 being best)</td></tr></table><br>
 
 <br>
  <!--Counter-->
@@ -1508,18 +1604,18 @@ Hardware Insights<br>
 </td></tr></table>
 
 <br><br>
-<table border="1" bgcolor="yellow"><tr><td><font size="5"><a href="#testarea2">&#x1F519;</a></td>
+<table border="1" bgcolor="darkblue"><tr><td><font size="5"><a href="#testarea2" style="background-color:blue"><button style="background-color:powderblue;color:white;"><font size="4">&#x1F519;</button></a></td>
 
-<td bgcolor="green"><font size="5"><a href="#top" onclick="enableScroll()">&#x1F51D;</a></td><td>
+<td bgcolor="blue"><font size="5"><a href="#top" onclick="enableScroll()"><button style="background-color:powderblue"><font size="4">&#x1F51D;</button></a></td><td>
 
-<button onclick="location.reload()" style="background-color: brown; color: yellow;">Try Using Beta Mode 2.1</button>
-</td></tr></table>
+<button onclick="location.reload()" style="background-color: blue; color: powderblue;">Try Using Beta Mode 2.1</button>
+</td><td><center>
+<a href="#voice"><button style="background-color:powderblue">&#127897;<font size=1> VOICE</button></a>
+</center></td></tr></table>
 
 <br><br></center>
 If your score is less than 92, you may be able to improve your spaceship IC design, hardware and software.  Contact Iowa AI for help!  We can get you going from good to best!  <a href="#register" onclick="enableScroll()">Click here</a> to contact us now.
 <br><br>
-
-<a href="#voice"><button>&#127897;<font size=1> VOICE</button></a>
 
 <br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
@@ -1583,10 +1679,10 @@ Estimated Cost Ratio<br>
 </td></tr></table>
 </td></tr></table>
 
-<br><br><table border="1" bgcolor="yellow"><tr><td bgcolor="green"><font size="5"><a href="#realtyeval">&#x1F519;</a></td>
+<br><br><table border="1" bgcolor="green"><tr><td bgcolor=""><font size="5"><a href="#realtyeval"><button style="background-color: lightgreen; color: yellow;" onclick="enableScroll()"><font size="4">&#x1F519;</button></a></td>
 
-<td><font size="5"><a href="#top" onclick="enableScroll()">&#x1F51D;</a></td><td>
-<button onclick="location.reload()" style="background-color: green; color: yellow;">Try Using Beta Mode 2.1</button>
+<td><font size="5"><a href="#top" onclick="enableScroll()"><button style="background-color:lightgreen;"><font size="4">&#x1F51D;</button></a></td><td>
+<button onclick="location.reload()" style="background-color:green; color: yellow;">Try Using Beta Mode 2.1</button>
 </td></tr></table>
 <br><br><center>
 <button onclick="location.reload()" style="background:green; color:yellow">Summon Farmer Jim &#x1F349;</button></center><br>
@@ -1614,7 +1710,7 @@ I'll be listening.....when you are all done talking, hit the DONE button, si vou
 <center><br>Done talking?  Click here.<br>
 <a href="#voice2"><button>DONE</button></a><br><br></center>
 </center>
-<a href=""><button onclick="enableScroll()">HOME</button></a>
+<a href=""><button onclick="enableScroll()">&#x1F3E0;</button></a>
 
 
 
@@ -1633,9 +1729,9 @@ Hey, listen....I think you're really cool.  I normally don't tell people this, b
 <table border=0><tr><td>Microphone</td></tr><tr><td bgcolor=red><a href=""><font color="green" size="3"><center>&#x1F399;<br><font size="1" color="black"><strong><u>ON</strong></u> | <font color="gray">off</a></td><td width=50></td><td>
 
 <center>
-<a href="#voice3"><button>DONE TALKING</button></a>
+<a href="#voice3"><button>GO</button></a>
 </center></td><td width="55"></td><td>
-<a href=""><button onclick="enableScroll()">HOME</button></a>
+<a href=""><button onclick="enableScroll()">&#x1F3E0;</button></a>
 </td></tr></table>
 
 
@@ -1653,50 +1749,134 @@ You've reached the limit for demo version.  Sign in for full access or register 
 <table border=0><tr><td>Microphone</td></tr><tr><td bgcolor=red><a href=""><font color="green" size="3"><center>&#x1F399;<br><font size="1" color="black"><strong><u>ON</strong></u> | <font color="gray">off</a></td><td width=50></td><td>
 
 <center>
-<a href="#voice3"><button>DONE TALKING</button></a>
+<a href="#voice3"><button>GO</button></a>
 </center></td><td width="55"></td><td>
-<a href=""><button onclick="enableScroll()">HOME</button></a>
+<a href=""><button onclick="enableScroll()">&#x1F3E0;</button></a>
 </td></tr></table>
 
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<div id="working"></div>
 
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div id="rewards"></div>
+<br><br>
+<br><br>
+<u>&#x1F510; MY ACCOUNT</u><br><br>
+<table bgcolor="black"><tr><td>
+SECURITY CENTER &#x1F46E;<br>
+At Iowa AI your security is our top priority.  We delete all old chats unless you want us to save them.  We monitor the site at all times for bugs and unauthorized listeners.<br><br>
+<!--Start router cisco bar-->
+<div class="router-bar">
+		<div class="emoji">&#127760;</div>
+		<div class="led blue" title="Active AI"></div>
+		<div class="led red" title="Checking System"></div>
+		<div title="Microphone">&#x23FA;</div>
+		<div title="Camera">&#x23FA;</div>
+		<div title="Satellite Monitoring">&#x23FA;</div>
+
+		<div class="emoji" title="Signal Strength">&#x1F4F6;</div>
+		<div class="emoji" title="Security &#x1F46E; ACTIVATED">&#x1F512;</div>
+	</div></td></tr></table>
+<!--end cisco-->
+
+You have been assigned a temporary User ID.  Next, to save your account info and keep your rewards, <a href="#register">register now</a>.<br><br>
+User ID
+<br><table bgcolor="darkblue" border="1"><tr><td>
+&#x1F4BB;
+</td><td>
+<output id="systemCode"></output></td><td width="111"><center>&#x1F33D;&#x1F33D;&#x1F33D;&#x1F33D;&#x1F33D;</center></td>
+<!--end sys code diagnostic disp-->
+<td><a href="#register"><button style="background-color:lightgreen"><font size="1">Register Now</font></button></a></td><td><a href="" title="Back to Home Page"><button style="background-color:yellow;color:green"><font size="2">&#x1F3E0;</font></button></a></td></tr></table>
+
+<br><br>
+
+<!--&#129756 is wifi emoji-->
+
+
+
+
+
+
+
+
+
+<hr color="gold" size="1">
+<br><font color="beige">
+&#x1F381; Rewards Earned Today<br><font size="1">
+Continue surfing our website all day every day and all night every night to earn rewards.  Once you collect 1,000 points, you are eligible for the grand prize drawing &#x1F380; with top winner receiving Iowa AI stock, listed on Rafah Stock Market.
+<br>
+<progress id="solarPower" max="100" style="accent-color:red"></progress>
+<br><br>
+We are scanning your systems for malware....please stand by &#x23F1;<br>
+<progress id="solarPower" max="100" style="accent-color:brown"></progress>
+<br>
+<!--Diagnostics-->
+<table border="1"><tr><td>
+<span class="blink">&#128308;</span></td><td>
+<meter id="signalMeter" min="8" max="100" low="30" high="80" optimum="50"></meter></td></tr></table>
+<!--end diagnostics-->
+<br><br>
+<table><tr><td>
+<!--Start round analog gauge-->
+<svg id="gauge" width="200" height="200" viewBox="0 0 200 200">
+ <!--outer circle-->
+	<circle cx="100" cy="100" r="90" stroke="#333" stroke-width="10" fill="#111" />
+ <!--tick marks-->
+	<g stroke="#666">
+	 <line x1="100" y1="20" x2="100" y2="35" />
+	 <line x1="160" y1="60" x2="150" y2="70" />
+	 <line x1="180" y1="100" x2="165" y2="100" />
+	 <line x1="160" y1="140" x2="150" y2="130" />
+	 <line x1="100" y1="180" x2="100" y2="165" />
+	</g>
+<!--needle-->
+	<g id="needle-group">
+	<line id="needle" x1="100" y1="100" x2="100" y2="40" stroke="red" stroke-width="4" /></g>
+<!--center dot-->
+	<circle cx="100" cy="100" r="6" fill="#ccc: />
+<!--label-->
+	<text x="100" y="190" text-anchor="middle" fill="#eee" font-size="14">Router Load</text>
+</svg>
+
+<!--end gauge round-->
+</td><td><center><font><div  style="text-align:left">Time is ticking on your rewards.  Be sure you registered and check your email for confirmation too.  Don't miss out!  You could win free Iowa AI or Kagaku International stock certificates!</div></font></td></tr></table>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<div id="settings" style="width:700px; height:800px; overflow:hidden">
+<div id="settings">
+
 <br><br>
 
 <!--Settings Menu-->
 <table border="1"><tr><td>
-SETTINGS</td></tr></table><br><br>
+&#x2699; SETTINGS</td></tr></table><br><br>
 <table padding="10"><tr><td>
-<font size="1"Iowa AI Set Speed<br><br><br>
+<font size="1">Iowa AI Set Speed &#x23F1;<br><br><br>
 
-<input type="range" name="rang">
+<input type="range" name="rang" style="accent-color:yellow;">
 </td></tr></table>
 <br><br>
 SET WEBSITE MODE<table border=1><tr><td>
 </td><td>
-<input type="radio" name="mode">
-Planter Mode
+<input type="radio" name="mode" style="accent-color:yellow;">
+&#x1F33D; Planter Mode
 </td><td>
-<input type="radio" name="mode">
-Developer Mode</td><td>
-<input type="radio" name="mode">
-Expert Mode</td></tr></table>
+<input type="radio" name="mode" style="accent-color:yellow;">
+&#x1F5A5; Developer Mode</td><td>
+<input type="radio" name="mode" style="accent-color:yellow;">
+&#x1F393; Expert Mode</td></tr></table>
 <br><br>
 CHAT TYPE<br><table border=1><tr><td>
-Farmer Mode<input type="checkbox" checked> | Hot Iowa Babe Mode <input type="checkbox"><td width="22"></td><td><a href="">
-<button onclick="enableScroll()">&#x1F3E0;HOME</button></a>
+Farmers &#x1F33E;<input type="radio" name="modee" checked  style="accent-color:yellow;">Iowa Babe Mode &#x1F471;<input type="radio" name="modee" style="accent-color:pink;"><td width="22"></td><td><a href="">
+<button onclick="enableScroll()">&#x1F3E0;</button></a>
 </td></tr></table>
 <br><br>
+<hr size="1" color="green>
 
 <br><br><br>
 </div>
-
+<center>
+<div></div>
 <!--Logo-->
  <center><a href="" title="Well, howdy doody!  Willkommen bei Iowa!  How are vous?  Comment allez-vous, mon ami?  Would vous fancy an iced tea?  Sit a spell, si vous plait.">
 <table border=0><tr><td><font size="12">&#x1F69C;</font></td><td><center><button style="background:yellow; color=green">Buddy's Iowa AI</button></center>
@@ -1710,37 +1890,43 @@ Farmer Mode<input type="checkbox" checked> | Hot Iowa Babe Mode <input type="che
 	<div id="users">Registered Iowa AI Developers and Spaceship-On-Chip Designers Online Now</div><br><font color="black">
 <table bgcolor="yellow" border="1"><tr><td>
 	<script>
-	 document.write(Math.floor(Math.random()*101)+20);
+	 document.write(Math.floor(Math.random()*101)+1);
 	</script>
 </td></tr></table>
 </center>
 
 <br><br><br><br><br><br><div id="sitemap"></div><center>
 <table border="1"><tr><td><font size="1">
-<a href="./index.html#stockeval" onclick="disableScroll()"><font size="1">&#x1F4B1; Bond Evaluator</button></a><br>
+<a href="./index.html#stockeval" onclick="disableScroll()"><font size="1">&#x1F4B1; Bond AI</button></a><br>
 
-<a href="./404.html#publist" onclick="enableScroll()">&#x1F4DA; Books</a><br>
+<a href="./404.html#publist" onclick="enableScroll()">&#x1F4DA; 	Books</a><br>
+<a href="./index.html#community">&#x1F465; 	Community</a><br>
+
 <a href="#register" onclick="enableScroll()">&#x1F4F2; Contact</a><br>
 <a href="./404.html#testarea" onclick="disableScroll()">&#x1F4BB; Code Evaluator</a><br>
 <a href="./404.html#testarea2" onclick="disableScroll()">&#x1F5A5; IC Design AI</a>
 </td><td>
+<a href="./index.html#community"><font size="1">&#x1F5E3; Forums</a><br>
+
 <a href="./404.html" onclick="enableScroll()"><font size="1">&#x1F69C; Iowa AI Chat</a><br>
 <a href="./kagaku.html" title="Links to Chemistry Club AI">&#x1F6E2; Fertilizer Info</a><br>
 <a href="#files" onclick="enableScroll()">&#x1F5C4; Files</a><br>
 <a href="#resources2" onclick="enableScroll()">&#x1F5DC; Resources</a><br>
-<a href="./index.html#rafah">&#x1F3DB; Rafah Stock Market</a>
+<a href="./index.html#rafah">&#x1F3DB; Rafah Stocks</a>
 </td><td>
-<a href="./index.html#rafah"><font size="1">&#x1F4B9; Palestine Industrial Average</a><br>
+<a href="./index.html#rafah"><font size="1">&#x1F4B9; Palestine PEX</a><br>
 <a href="#files" onclick="enableScroll()">&#x1F4E0; Software</a><br>
+<a href="./index.html#soc" onclick="enableScroll()">&#x1F6F0; Spaceship ICs</a><br>
+
 <a href="#guestbk" onclick="enableScroll()">&#x1F4D6; View Guest Book</a><br>
 <a href="#register" onclick="enableScroll()">&#x1F4D7; Sign Guest Book</a><br>
-<a href="./index.html#stockeval" onclick="disableScroll()">&#x1F4B6; Stock Analysis AI</a><br>
+<a href="./index.html#stockeval" onclick="disableScroll()">&#x1F4B6; Stock AI</a><br>
 
 </td></tr></table>
 
-<font color="green">Iowa AI Sitemap<br><br>
-<button onclick="window.history.back();enableScroll() ">BACK</button><a href="">
-<button onclick="enableScroll()">HOME</button></a>
+<font color="green">Sitemap<br><br>
+<button onclick="window.history.back();enableScroll() ">&#128281;</button><a href="">
+<button onclick="enableScroll()">&#x1F3E0;</button></a>
 
 
 <br><br>
@@ -1777,7 +1963,7 @@ document.getElementById("goBtn").addEventListener("click", function () { submitC
 
 
 
-<!--End btn color toggler-->
+<!--Scroll toggler-->
 <script>
  function disableScroll() {
 	document.body.style.overflow = 'hidden';
@@ -1788,6 +1974,35 @@ document.getElementById("goBtn").addEventListener("click", function () { submitC
 	document.body.style.overflow = 'auto';
 }
 </script>
+<!--Script for progress gauge-->
+<script>
+	document.getElementById("solarPower").value = Math.floor(Math.random() * 101 - 30);
+</script>
+<!--end progress gauge-->
+<!--Start script for diagnostics-->
+<script>
+	document.getElementById("signalMeter").value = Math.floor(Math.random() * 101);
+</script>
+<!--end diagnostics script-->
+<!--Start system code display script-->
+<script>
+ document.getElementById("systemCode").textContent = "USER_ID-" + Math.floor(Math.random() * 9000 + 1000);
+</script>
+<!--end system code diagnostics-->
+<!--Start script for analog round gauge-->
+<script>
+
+{
+window.addEventListener("DOMContentLoaded", () => {
+const angle = Math.floor(Math.random(2) * 180);
+const needleGroup = document.getElementById("needle-group");
+needleGroup.setAttribute("transform", 'rotate(${angle}, 100 100)');
+});}
+</script>
+<!--End script for analog round gauge  DOESNT WORK-->
+
+
+<!--End progress script-->
 
    </body>
    </center>
