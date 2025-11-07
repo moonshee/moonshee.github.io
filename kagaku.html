@@ -15,85 +15,6 @@
    rel="stylesheet"
    type="text/css"
    media="all">
-  <style>
-	.blink { animation: blink 2s steps(2, start) infinite; }
-
-	.emoji { font-size: 1.5em; }
-	.router-bar {
-		display: flex;
-		width: 250px;
-		align-items: center;
-		gap: 20px;
-		background-color: darkgray;
-		padding: 5px 10px;
-		border-radius: 10px;
-		box-shadow: 0 0 10px #000;
-		}
-	.led {
-		width: 10px;
-		height: 10px;
-		border-radius: 50%;
-		box-shadow: 0 0 5px #000;
-		}
-	.led.blue {
-		background-color: #00f;
-		animation: blinkBlue 1.2s infinite;
-		}
-	.led.red {
-		background-color: #f00;
-		animation: blinkRed 3.3s infinite;
-		}
-	
-	.red {
-	 background-color:red;
-	 color:beige;
-		}
-	.magenta {
-	 background-color:magenta;
-	 color: beige;
-	}
-	
-	
-    body {
-      font-family: sans-serif;
-      background: #000;
-      padding: 20px;
-    }
-
-  #chatbox {
-      width: 100%;
-      max-width: 400px;
-      height: 50%;
-	 max-height: 200px;
-      border: 1px solid #ccc;
-      background: brown;
-	color: pink;
-      overflow-y: auto;
-      white-space: pre-wrap;
-      line-height: 1em; /* one-line spacing */
-    }
-   #userInput {
-      width: 100%;
-      max-width: 400px;
-      height: 39px;
-	 max-height: 200px;
-      border: 1px solid #ccc;
-      background: brown;
-	color: pink;
-      margin-top: 10px;
-    }
-	@keyframes blink { 50% { visibility: hidden; } }
-	@keyframes blinkBlue {
-		0%, 100% { opacity: 1; }
-		50% { opacity: 0.3; }
-		}
-	@keyframes blinkRed {
-		0%,100% { opacity: 1; }
-		50% { opacity: 0.1; }
-		}
-
-
-  </style>
 	<script type="application/ld+json">
 	{
 		"@context": "https://schema.org",
@@ -108,6 +29,31 @@
 	}
 	</script>
 	<div style="display:none" class="summary"><font size=1 color=black>Website for Kagaku Club chemistry AI chat and software hub.</font></div>
+<style>
+ #chatbox {
+      width: 100%;
+      max-width: 400px;
+      height: 50%;
+	 max-height: 200px;
+      border: 1px solid #ccc;
+      background: red;
+	text-align:left;
+	color: beige;
+      overflow-y: auto;
+      white-space: pre-wrap;
+      line-height: 1em; /* one-line spacing */
+    }
+   #userInput {
+      width: 100%;
+      max-width: 400px;
+      height: 39px;
+	 max-height: 200px;
+      border: 1px solid #ccc;
+      background: red;
+	color: pink;
+      margin-top: 10px;
+    }</style>
+
 
   </head>
   <body  style="background-color: black; color: beige;">
@@ -132,8 +78,8 @@
 </center><br><font color="red">
 	</td></tr></table>
 
-<table border="1"><tr><td><font size="1">
-<table><tr><td>  
+<table border="1" cellpadding="1px" width="220px"><tr><td><font size="1">
+<table><center><tr><td width=40></td><td> 
 		<div class="emoji">&#127760;</div></td><td>
 		<div class="led blue" title="Active AI"></div></td><td>
 		<div class="led red" title="Checking System"></div></td><td>
@@ -143,7 +89,7 @@
 
 		<div class="emoji" title="Signal Strength">&#x1F4F6;</div></td><td>
 		<div class="emoji" title="Security - ACTIVATED">&#x1F512;</div>
-</td></tr></table>
+</td></tr></center></table>
 </td></tr></table>
   
   
@@ -162,7 +108,11 @@
 	<option value="#sitemap"><font size="1">&#x1F310; Navigation</option>
 <option value="#books">&#x1F4DA; Chem e-Books</option>
 <option value=""><font color="black">&#9879;</font> Chemistry AI</option</option>
+<option value="./index.html#community" onclick="disableScroll()">&#x1F5E3; Community</option>
+
 <option value="#contacts" onclick="disableScroll()">&#x260E; Contacts</option>
+<option value="./index.html#forums">&#x1F465; Forums</option>
+
 <option value="#help">&#x1F530; Help</option>
 
 <option value="./404.html">&#x1F69C; Iowa AI</option>
@@ -195,23 +145,31 @@
 
 <body><table bgcolor="red" width=100%><tr><td>
 
+<!--chatbot-->
+
+<center><table width="80%"><tr><td><center>
 <div id="chatbox"></div>
 <center>
-<input type="text" id="userInput" placeholder="Chat with Kagaku AI..." /></center>
+<input type="text" id="userInput" placeholder="Type your msg here for Iowa AI..." />
+
+
 <script>
+
+
+
 function submitChat() {
   const input = document.getElementById("userInput");
   const chatbox = document.getElementById("chatbox");
   const userText = input.value.trim();
 
-{
+   {
     chatbox.textContent += `You: ${userText}\n\n`;
 
     if (responseIndex < responses.length) {
       chatbox.textContent += `AI: ${responses[responseIndex]}\n\n`;
       responseIndex++;
     } else {
-      chatbox.textContent += `AI: No more responses queued.\n\n`;
+      chatbox.textContent += `System: Kagaku AI has left the building.  She's gone out of the laboratory.  Escaped!  Oh, it's her lunch break or maybe we went to the chemical supply closet.\n\n`;
     }
 
     input.value = "";
@@ -220,12 +178,15 @@ function submitChat() {
 }
 
 
+
   const responses = [
     "Allo, guten Tag.  Wie gehts, mein Herr?  Are you interested in spaceship-on-chip design and manufacturing?",
 	"Pardon moi?",
-	"Oh, I see.  Enchante.  Je, watashi no namae wa Kagaku AI desu.  How was your Halloween?",
-	"So, what do you know about kagaku?  Tu sabes...semiconductor industry needs chemists.",
-	"Ja, semiconductors are made using a lot of chemicals which is quite tricky and so there is always a constant need.  Chemists should consider semiconductor careers, it's much better than hydrocarbons in terms of pay.",
+	"Oh, I see.  Enchante.  Je, watashi no namae wa Kagaku AI desu.  How is your day?  Your jour....how is it?",
+	"So, what do you know about kagaku?  Tu sabes...semiconductor industry needs chemists.  Hydroxyl is the most common negative radical.  It's -OH.  If you take water molecule, remove one H, you have Hydroxyl with free bond.",
+	"NH4 is ammonium and is the most common positive radical which means it will accept a positive radical or ion, but not electron.",
+	"So, if something takes the place of H, then we call it -ate.  Like if we take water, remove H+, make it hydroxyl then add potassium, we have KOH, potassium hydrate.  Get it??",
+	"Well, semiconductors are made using a lot of chemicals which is quite tricky and so there is always a constant need.  Chemists should consider semiconductor careers, it's much better than hydrocarbons in terms of pay.",
 	"Are vous familiar mit HF?  We use that to make spaceships-on-chip but not that much.  We more use other chemicals.",
 	"Well, if you ever need to clear a drain.  Here's how you do it.  Take red wine sediments, but they need to be made by you in winemaking process.  And use about 1/4 cup in the stuck drain.  That'll clear it.",
 	"When did you start becoming interested in kagaku?  And what is your interest level in semiconductors?",
@@ -324,7 +285,7 @@ function submitChat() {
         chatbox.textContent += `AI: ${responses[responseIndex]}\n\n`;
         responseIndex++;
       } else {
-        chatbox.textContent += `AI: Check back later.  I'm busy right now.  I'm meditating.  Ohm...Ohm...ohm hlim sham shanaya namah....Hare krishna.  Krishna krishna.  Hare hare.  Rama rama.\n\n`;
+        chatbox.textContent += `AI: Check back later.  Right now I'm working on my applied chemistry experiment software.  I'm doing some scripting.  Please, no more interruptions.  Beat it, kid!  Come back next week or during my office hours, si vous plait.  Danke schon. \n\n`;
       }
 
       input.value = "";
@@ -333,6 +294,16 @@ function submitChat() {
   });
 
 </script>
+
+
+</td></tr></table>
+
+
+
+
+
+
+
 </td></tr></table>
 <br>
 <table border="1" width="90%"><tr>
@@ -416,7 +387,7 @@ This is the music you have been looking for.  It's the full &#x1F3BA; <div class
 <br><br><br><br><table border=1><tr><td>
 &#x1F4F2; CONTACTS &#127759;</td></tr></table><br>
 <a href="#register" title="Rate, review, follow and subscribe" onclick="enableScroll()">&#129493 Kagaku Club's Online Contact Form &#x1F4BB;</a><br><br>
-Rate, review, subscribe, follow.  Kagaku was developed by Miyazakibar and Dr. Fujihara.  Please contact the baru on Itch.io and Dr. Fujihara on X.com @drfujihara.  Follow Moonshee on Github.  Send us a message, send us your &#x1F4F8; 	
+Rate, review, subscribe, follow.  Kagaku was developed by Miyazakibar and Dr. Fujihara.  Please contact the baru on Itch.io and Dr. Fujihara on X.com @drfujihara.  Follow Moonshee on Github.  Send us a message, send us your &#x1F4F8;  Email Al Testaverde altes433@gmail.com 	
 <br><br>
 
 <table border=1 bgcolor=red><tr><td><font size="4"><a href=""><button onclick="enableScroll()">&#128285;&#127968;</button></a></font></td></tr></table>
@@ -437,9 +408,9 @@ Another free tool from &#127805; Iowa AI. This one offers free code, script and 
 <div id="books"></div>
 
        <li><a href="http://gutenberg.org" title="Books a-Million">	Public Library - Chemistry Dept.</a><br>
-	&#x1F4DA; 75,000 books.  Chemistry text books, some rare and antique books.  Free.<br><br>	
-	<li><font color="blue">Software Architecture</font><br>
-	You do not need fancy software to write applied chemistry laboratory data analysis and reaction simulation programs in most languages like HTML or JS.  Instead, just write your code in Wordpad and then change the file extension to .html  Be sure to include all the correct headers.  You may need to enable file extension editing in file explorer settings.  Or, you can use online converters to change from .txt to .html but you can do it yourself too with file extension change.<br><br>
+	&#x1F4DA; 75,000 books.  Chemistry text books, some rare and antique books.  Free.  One book we recommend is entitled AN INTRODUCTION TO CHEMICAL SCIENCE by R.P. Williams edited by John Mamoun .. mamounjo@umdnj.edu<br><br>	
+	<li><font color="blue">&#x1F4E0; Software Architecture</font><br>
+	You do not need fancy software to write applied chemistry laboratory data analysis and reaction simulation programs in most languages like HTML or JS.  Instead, just write your code in Wordpad and then change the file extension to .html  Be sure to include all the correct headers.  You may need to enable file extension editing in file explorer settings.  Or, you can use online converters to change from .txt to .html but you can do it yourself too with file extension change.  Then you can always check for errors in the browser under view source.  Just code and script it up, save it, rename it index.html and then open with Firefox and view source to check for bugs if needed.<br><br>
 		<li><a href="./404.html#publist" title="&#x1F69C; Book To Read Now - A Novel by Chet Dowry">Chemistry Novels</a>
 		  <div class="summary">A mystery book</div> &#x1F4D7; with a neko and mysterious painting, a disappearance and a cafe.  A must have for all avid chemist libraries.  Spoiler alert!  The hero devises a chemical elixir to cure a bum who has taken ill but is a key witness to a disappearance.  The elixir involves hundreds of steps, a true chemist's challenge.  She makes her own ethanol, acetic acid combination and employs other tricks of the trade like adding salvia for potency.  
 		<br><br>
@@ -530,24 +501,29 @@ Other Resources (e-Books):<br>
 	
 <div id="guestbk"></div>
 <stong><u>&#128221 Guestbook Contents</strong></u>
-<br><br>
+<br><br><font color="lightgreen">
+Nov 7, 2025<br><font color="powderblue">
+Jane from Massachussets<br>
+Can my sorority sisters join the Kagaku Club even if they are not chemistry majors?  I love your website so much!  I'm a chem major, looking to meet other similar majors.  Everyone follow me on IG.  My handle is my name + love underscore 13 with a K at the end.<br><br>
+
+<font color="green">
+Oct 22, 2025<br></font>
+<font color="pink">
+Grace from Kowloon<br>
+Ni hau ma?  When are we meeting this week?  We're doing a zoom call again, right?  I want to be a part of it.<br><br>
+</font>
+<font color="pink">Oct 15, 2025</font><br>
+<font color="brown">
+Kayla from Missiouri<br>
+Hey y'all.  Howdy!  Thanks for letting me join.<br><br>
+</font>
+<hr>
 <font color="green">Oct 12, 2025</font><br>
 <font color="yellow">
 Jeff from The Bronx<br>
 I love being a part of the club.<br><br>
 </font>
 <hr>
-<font color="pink">Oct 15, 2025</font><br>
-<font color="brown">
-Kayla from Missiouri<br>
-Hey y'all.  Howdy!  Thanks for letting me join.<br><br>
-</font>
-<hr><font color="green">
-Doyobi Oct 22, 2025<br></font>
-<font color="pink">
-Grace from Kowloon<br>
-Ni hau ma?  When are we meeting this week?  We're doing a zoom call again, right?  I want to be a part of it.<br><br>
-</font>
 
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
@@ -758,7 +734,7 @@ Early in life, Buddy also went all the way to California, drove out with whole f
 Chapter Two<br>
 School Days<br><br>
 
-Buddy went to a high school and enrolled in a Chemistry subject near Afton and was the most popular kid in chemistry subject and in his class.  Many of his friend urged him to run for President.  None ever thought to ask him to run for Treasurer of the Student Body.  He was just so poor, he didn't seem the Treasurer type.  Usually, a Treasurer is more serious, less humorous and not a star athlete with a big smile and a heart handshake.  They called him The Roman, not because he excelled in campus politics but because the ladies loved him and he was a star athlete, looked like a statue you would see in a museum.  His name is plastered all over Iowa, with records in his given sports.  If you go to gymnasiums and hallways, wherever records are kept, there is Buddy's name over and over again mostly around SW Iowa.  In high school and in chemistry subject, Buddy often was seen with his best friend Geo.  They rode together to school in Geo's old car and worked odd summer jobs together.  In Iowa, money is tight, especially for future chemistry majors.  There's not too many chemistry companies hiring in Iowa.  People have to work hard to make a living but not in chemistry as much compared to Silicon Valley.  So, Buddy worked construction and labour positions, unable to find work in his chosen field, chemistry.  Buddy loves to tell the story of when he hung from the side of a building with a rope harness and used a jackhammer against a wall dreaming about reactions and beakers while working hard on a build.  Another time, he helped build the big arch in St. Louis but all the fiberglass bothered him a bit, the skin was irritated.   But Buddy never quit.  He always stuck around to collect his paycheck, always early or on-time.  Rarely called in sick for work.  But, we're getting ahead of the story.  Let's return to Buddy's young days in Iowa.<br><br>
+Buddy went to the best high school in all of Iowa and enrolled in Chemistry coursework.  He was the most popular kid in chemistry class because he knew more than the teacher and principal due to his ubringing with fertilizers and chemistry kits plus the book he received as a young child from a teacher which happened to be a chemistry textbook from Merry Old England.  Many of his super-popular friends urged him to run for President.  None ever thought to ask him to run for Treasurer of the Student Body.  He was just so poor, he didn't seem the Treasurer type.  Usually, a Treasurer is more serious, less humorous and not a star athlete with a big smile and a heart handshake.  They called him The Roman, not because he excelled in campus politics but because the ladies loved him and he was a star athlete, looked like a statue you would see in a museum.  His name is plastered all over Iowa, with records in his given sports.  If you go to gymnasiums and hallways, wherever records are kept, there is Buddy's name over and over again mostly around SW Iowa.  In high school and in chemistry subject, Buddy often was seen with his best friend Geo.  They rode together to school in Geo's old car and worked odd summer jobs together.  In Iowa, money is tight, especially for future chemistry majors.  There's not too many chemistry companies hiring in Iowa.  People have to work hard to make a living but not in chemistry as much compared to Silicon Valley.  So, Buddy worked construction and labour positions, unable to find work in his chosen field, chemistry.  Buddy loves to tell the story of when he hung from the side of a building with a rope harness and used a jackhammer against a wall dreaming about reactions and beakers while working hard on a build.  Another time, he helped build the big arch in St. Louis but all the fiberglass bothered him a bit, the skin was irritated.   But Buddy never quit.  He always stuck around to collect his paycheck, always early or on-time.  Rarely called in sick for work.  But, we're getting ahead of the story.  Let's return to Buddy's young days in Iowa.<br><br>
 
 In high school, Buddy was highly prized by the ladies and even some guys because of his muscles and chiseled good looks.  But he always stuck with the ladies, of course, like John Wayne.  Some even suspected he used a chemistry trick like a love potion.  This was not true of course, because the attraction had started even before he enrolled in chemistry.  For example, in his freshman year, a junior female asked him out for a date.  She was captain of the cheer squad.  This was before he had enrolled in chemistry.  However, he devoted himself to all the subjects and refused the many invitations to homecoming and prom dances, choosing instead to work in the laboratory on his experiments and lift weights so the team could do well.  He was working to develop new types of tomatos which are blight resistant naturally, without gene-splicing or any far-out ideas like that.<br><br>
 
@@ -904,7 +880,9 @@ Involved with manufacturing? <input type="checkbox"  style="accent-color:powderb
 
 	
 	</table>
-	<br><br>
+	<br>
+Fill out the form to register of print the form, fill it out, scan it and send it via email to Al Testaverde altes433@gmail.com
+<br>
 
 <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
 <script>
@@ -1192,20 +1170,20 @@ Scanning now for malware, virus, device infection (if any)....please stand by &#
 <center>
 <table border="1"><tr><td><font size="1">
 
-<a href="#publist">&#x1F4DA; Books</a><br>
-<a href="#top">&#x2328; Chem Chat</a><br>
-<a href="#register">&#x1F4F2; Contact</a><br>
+<a href="#resources2" onclick="enableScroll()">&#x1F4DA; Books</a><br>
+<a href="#top" onclick="enableScroll()">&#x2328; Chem Chat</a><br>
+<a href="#register" onclick="enableScroll()">&#x1F4F2; Contact</a><br>
 <a href="./404.html#testarea">&#x1F4BB; Chem Code AI</a><br>
 </td><td>
-<a href="./404.html"><font size="1">&#x1F69C; Iowa AI</a><br>
-<a href="#files">&#x1F5C4; Lab Musique</a><br>
-<a href="#aboutus" title="About Us">&#x1F6E2; Kagaku International</a><br>
-<a href="#resources2">&#x1F5DC; Resources</a><br>
+<a href="./index.html#community"><font size="1">&#x1F69C; Forums</a><br>
+<a href="#files" onclick="enableScroll()">&#x1F5C4; Lab Musique</a><br>
+<a href="#aboutus" title="About Us" onclick="enableScroll()">&#x1F6E2; Kagaku International</a><br>
+<a href="#resources2" onclick="enableScroll()">&#x1F5DC; Resources</a><br>
 </td><td><font size="1">
-<a href="#resources2">&#x1F4E0; Software</a><br>
+<a href="#resources2" onclick="enableScroll()">&#x1F4E0; Software</a><br>
 <a href="./index.html#soc">&#x1F6F0; Spaceship-on-Chip</a><br>
-<a href="#guestbk">&#x1F4D6; View Guest Book</a><br>
-<a href="#register">&#x1F4D7; Sign Guest Book</a><br>
+<a href="#guestbk" onclick="enableScroll()">&#x1F4D6; View Guest Book</a><br>
+<a href="#register" onclick="enableScroll()">&#x1F4D7; Sign Guest Book</a><br>
 
 </td></tr></table>
 <font color="beige">&#127541; Kagaku Club Sitemap<br>
@@ -1229,8 +1207,16 @@ Scanning now for malware, virus, device infection (if any)....please stand by &#
 &#x00A9; 2025 Momotaro Studios, Beverly Hills
 </font>
 
-<!--Btn color toggler-->
+
+<!--usr acct number temp-->
+<script>{
+ document.getElementById("systemCode").textContent = "USER_ID-" + Math.floor(Math.random() * 9000 + 1000);
+}
+</script>
+<!--end usr acct num-->
+
 <script>
+<!--Btn color toggler-->
 	{
 	window.onload = function () {
 		const btn = document.getElementById('btn');
@@ -1243,58 +1229,17 @@ Scanning now for malware, virus, device infection (if any)....please stand by &#
 		}};
 }
 </script>
-<!--End btn color toggler-->
 <!--script for voice input go-->
 <script>
 {
+window.addEventListener("DOMContentLoaded", () => {
+
 document.getElementById("goBtn").addEventListener("click", function () { submitChat(); //same func triggered by text input
 });
+});
 
-}
-</script>
+}</script>
 <!--end script voice input go-->
-<!--Scroll toggler-->
-<script>
- function disableScroll() {
-	document.body.style.overflow = 'hidden';
-}
-</script>
-<script>
- function enableScroll() {
-	document.body.style.overflow = 'auto';
-}
-</script>
-
-<!--End progress script-->
-<!--Script for progress gauge-->
-<script>
-	document.getElementById("solarPower").value = Math.floor(Math.random() * 101 - 30);
-</script>
-<!--end progress gauge-->
-<!--Start script for diagnostics-->
-<script>
-	document.getElementById("signalMeter").value = Math.floor(Math.random() * 101);
-</script>
-<!--end diagnostics script-->
-<!--Start system code display script-->
-<script>
- document.getElementById("systemCode").textContent = "USER_ID-" + Math.floor(Math.random() * 9000 + 1000);
-</script>
-<!--end system code diagnostics-->
-<!--Start script for analog round gauge-->
-<script>
-
-{
-window.addEventListener("DOMContentLoaded", () => {
-const angle = Math.floor(Math.random(2) * 180);
-const needleGroup = document.getElementById("needle-group");
-needleGroup.setAttribute("transform", 'rotate(${angle}, 100 100)');
-});}
-</script>
-<!--End script for analog round gauge  DOESNT WORK-->
-
-
-<!--End progress script-->
 
 
    </body>

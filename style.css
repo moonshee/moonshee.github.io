@@ -1,5 +1,54 @@
 /* styles.css */
+	.blink { animation: blink 2s steps(2, start) infinite; }
+
+	.emoji { font-size: 1.5em; }
+	.router-bar {
+		display: flex;
+		width: 220px;
+		align-items: center;
+		gap: 10px;
+		background-color: darkgray;
+		padding: 2px 15px;
+		border-radius: 5px;
+		box-shadow: 0 0 5px #000;
+		}
+	.led {
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		box-shadow: 0 0 5px #000;
+		}
+	.led.blue {
+		background-color: #00f;
+		animation: blinkBlue 1.2s infinite;
+		}
+	.led.red {
+		background-color: #f00;
+		animation: blinkRed 3.3s infinite;
+		}
+	
+	.red {
+	 background-color:red;
+	 color:beige;
+		}
+	.magenta {
+	 background-color:magenta;
+	 color: beige;
+	}
+
 body {
  margin: 0;
- padding: 0;
+ padding: 5px;
  }
+
+
+ 	@keyframes blink { 50% { visibility: hidden; } }
+	@keyframes blinkBlue {
+		0%, 100% { opacity: 1; }
+		50% { opacity: 0.3; }
+		}
+	@keyframes blinkRed {
+		0%,100% { opacity: 1; }
+		50% { opacity: 0.1; }
+		}
+
