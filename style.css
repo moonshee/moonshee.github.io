@@ -2,6 +2,9 @@
 	.blink { animation: blink 2s steps(2, start) infinite; }
 
 	.emoji { font-size: 1.5em; }
+	.error {
+            color: red; }
+
 	.router-bar {
 		display: flex;
 		width: 220px;
