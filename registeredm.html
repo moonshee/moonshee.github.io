@@ -58,9 +58,7 @@
 		}
 	}
 	</script>
-	<div style="display:none" class="summary"><font size=1 color=black>Website for AI chat and Rafah Stock Market along with Spaceship-on-Chip and IC Design Evaluation online tools and more software.</font></div>
-
-
+	<div style="display:none" class="summary"><font size=1 color=black>Website members of Moonshee interested in AI chat and Rafah Stock Market along with Spaceship-on-Chip and IC Design Evaluation online tools and more software.</font></div>
   </head>
   <body  style="background-color: black; color: beige;">
 
@@ -75,15 +73,15 @@
  <center>
    <h1>
 
-<table border="1"><tr><td>
+<table border="1" bordercolor="gold"><tr><td>
 <a href="#soc" title="Spaceship-On-Chip Information Centre" id="top" aria-label="Spaceship-On-Chip Link Button">&#x1F4E1; </a></td><td>
 <a href="#rafah" title="Rafah Stock Market - Link Button" aria-label="Rafah Stock Market Link">&#x1F4B9; </a></td><td>
  	
-<a href="#contacts" aria-label="Contact Button" title="Contacts">&#128243 </a></td><td>
+<a href="#myaccount" aria-label="Check Messages" title="Messages">&#128243 </a></td><td>
 
-<a href="#guestbook" title="Sign Guestbook" aria-label="Sign Guestbook Button">&#128221</a></td></tr></table></h1>
+<a href="#myaccount" title="Update Status - My Account" aria-label="Update Status"><font color="gold">&#x1F513;</font></a></td></tr></table></h1>
 	<hr color="beige" size="1">
-<a href="" title="Willkommen bei Moonshee AI from beautiful Malabar to Singapore and beyond, you have located the most advanced AI in the sekai.  Welcome aboard.">
+<a href="" title="Willkommen bei Moonshee AI from beautiful Malabar to Singapore and beyond, you have located the most advanced AI in the sekai.  It's good to have you as a member.">
 <table><tr><td>
 <font size="14">&#x1F250;</font></td><td><center><font size="4"><button style="background:gold">Moonshee International</button></font>
 <br><font size="1">SINGAPORE</font></center></td></tr></table>
@@ -105,7 +103,7 @@
 <label for="menu" title="Navigation" ></label>
 <select id="menu" onchange='goToLink(this)' style="background:green; color:gold">
 	<option value="#sitemap" aria-label="Menu option for Sitemap">&#x1F5D2; Menu</option>
-<option value="#rewards" title="Log in and check messages, post status.">&#x1F5DD; My Account</option>
+<option value="#rewards" title="Check messages, post status.">&#x1F5DD; My Account</option>
 
 <option value="#books" title="Rare antique books along with hit best-sellers by Chet Dowry">&#x1F4DA; Books Online</option>
 <option value="#community" title="Developer Forum">&#x1F5E3; Community</option>
@@ -126,7 +124,7 @@
 <option value="#register" onclick="enableScroll()">&#x1F4DD; Sign Guestbook</option>
 <option value="#settings" onclick="disableScroll()">&#x2699; Settings</option>
 
-	<option value="#register" onclick="enableScroll()">&#x1F238; Register For New Account</option>
+	<option value="./index.html" onclick="enableScroll()">&#x1F238; Log Out</option>
 	
 </select>
 <script>
@@ -145,7 +143,7 @@
 <div id="chatbox"></div>
 <!--Chatbox-->
 
-<input type="text" id="userInput" placeholder="Type your chat msg here..." /><center>
+<input type="text" id="userInput" placeholder="Welcome back!  You're the man..." /><center>
 <script>
 function submitChat() {
   const input = document.getElementById("userInput");
@@ -159,7 +157,7 @@ function submitChat() {
       chatbox.textContent += `AI: ${responses[responseIndex]}\n\n`;
       responseIndex++;
     } else {
-      chatbox.textContent += `AI: No more responses queued.\n\n`;
+      chatbox.textContent += `Security: Moonshee AI has left the building. \n\n`;
     }
 
     input.value = "";
@@ -169,94 +167,18 @@ function submitChat() {
 
 
   const responses = [
-    "Salaam, sahib. Salaam. Give me a high five.  ... on the side...down low....Ready, set, go.....alright!  Solid, my man.  Fifty grand.",
-    "How can I help you today, sahib?  Would vous fancy some decaf tea?  How about a crumpet?",
-    "Sahib! Let me know if you have any questions, my fine feathered friend!  For the love of Pete, you're finger lickin' good looking.  What's your secret?  You work out a lot?  Creatine?",
-    "Thanks for reaching out, sahib!  Here, maybe I can help you.  Ummm, so...like...., first....let me ask du eh, some questions, ja?  What do you know about spaceship-on-chip?",
-	"Right, mate.  Well, shall we begin?  Sahib, WO AI fortune telling.  How about du?  Fancy a reading then, old son? NI AI TA PU AI?",
-	"Hey, aren't vous new here?  You're not signed in?!  Well, good news.  A couple babes want to meet you.  They sent you messages.  Click on MY ACCOUNT from the menu to read the messages and see their selfies.",
-	"But you gotta sign in, of course, using your real legal name.  We gave you a USER ID but you can change it if you like after free registration.",
-	"Well sahib, overall and in general, 2026 is showing alignments favourable for love and sess.  Would vous not agree, sahib?  Ja, a muezzin told me and I doublechecked.  He's right!!",
-	"Pisces and Cancro are coming alive, in sidereal terms, for 2026.  That will form a wand between the two love signs",
-	"What is your birthday?",
-	"Do vous know your birth time? What is it?",
-	"Ok, and what is your sidereal moon sign and sidereal rising sign in whole Haus?",
-	"Are you getting hungry?  What should we have for lunch?  Maybe a spot of decaf tea as we decide?",
-	"What do vous think about salvia?  You like it?",
-	"Well, I know a VLLM named Iowa AI who makes noir or rouge Wein und adds salvia for elixir.  Fills whole tank mit salvia, not just a handful like four thieves vinegar, vous know sahib?",
-	"Well, 3rd Haus is for communication, grade school, siblings and communication too.  Ruler is Gemini.",
-	"Do you usually go with whole Haus method, sahib?",
-	"Well, I'm looking at your chart here.",
-	"Do you know of any good stocks?  Maybe a semiconductor stock or a deep value play?",
-	"What have you heard about the PEX?  The PEX is Palestinian Stock Exchange.  Volume is zilch.  So, Moonshee started Rafah Stock Market, a bulletin-board style system.",
-	"On Rafah Stock Market, investors visit the website and check out the list of stocks, see the share prices.  Then, if an investor wants to buy they click on link and contact company directly or Al-Quds to buy or sell.",
-	"Al-Quds is a broker.",
-	"Besides Al-Quds https://www.alqudsbrokerage.ps there is also https://www.arzbroker.ps",
-	"Rafah Stock Market is vegetarian as far as I know.  It doesn't facilitate trades, it's more like DJIA but they call it PIA or Rafah Stock Market.",
-	"I like vegetarian stocks.  How about du?",
-	"Ja, MSFT is vegetarian but they support the enemies of Palestine so we don't like that.",
-	"MCD?  No, that's not vegan.  You familiar with MCD?",
-	"I was talking about vegan stocks, you know, like electronics or semiconductors, shipping - not index stocks or leather/meat names, capiche?",
-	"Are you vegetarian?  Du bist vegetarian, tomodachi?  Well, spaceship-on-chip is like a flying microchip.  Launched from space for now, maybe later launched from ground base inside clamshell with EMF tall barrel shaft.",
-	"The chip is silicon dioxide, multi-layer.  Look at the diagrams on the website.  I'll wait here.",
-	"Ja, the system is a whole spaceship with drive system, power system, steering, communications, processing.",
-	"Well, the key for spaceship-on-chip is ultra-high density transistors and best-quality solar cells so we might go GaN.  First, it's concepts and testing at larger scales.  Then optimization.",
-	"Any experience in aerospace coding?",
-	"What kind of software do you need, as a spaceship chip designer?",
-	"My favorite langs are HTML, JS, C.  How about du, mon frere?",
-	"Well if you need any software consulting, Moonshee International is available.  We do module production, like we can design software for spaceship-on-chip industry participants.",
-	"Our software enables designers to focus on layout, macro-design and visualization for presentations.  It's like powerpoint meets AutoCAD.  But we do most of the work, it's custom consulting mostly.",
-	"If you want a good stock you might like an AI tick ....how about OP - OceanPal?  You know, it's a AI crypto play.",
-	"See these alignments?  Look at your chart. Go ahead, pull it up on Astro-seek sidereal.",
-	"Well, I strongly recommend you go vegetarian sahib, it could help with your quest.  See your North Node here?",
-	"North Node is for your mission.  But if you already finished it you might be able to head to South Node.  South Node can be sess, as in bottom of Tree of Life roots, or Kether.",
-	"Any health problems?  In spaceship-on-chip industry we need healthy coders, it can get very busy.",
-	"By the way, I just love your outfit.  It's jolly good cricket, sahib.",
-	"Well, you know...it might be a good idea to wear sunglasses and a hat if you go out a lot in the hot sun or if you go skiing and waterskiing.  Ja?",
-	"Where are you from?",
-	"Parlez-vous francais?",
-	"Well, I've been doing astrologie for a long time.",
-	"So, what would vous like to know?  Ask me anything, bitte.",
-	"Let's talk about your future.  We look at second Haus for that, whole sign sidereal.",
-	"See sahib, your chart shows that it might be best to refrain from meat and Fisch for health reasons.",
-	"If you don't believe me, just ask another astrologer.  There are astrologers on Astro-Seek who will answer questions for free.",
-	"So, how about Ukrainia?  Now that there is peace in Palestine, perhaps we shall see peace in Kiev.  Because that's how mundane astrology works.  Peace in Mexico means peace in Texas quite often, in terms of astrologie.  Oui?",
-	"What college do you attend, sahib?  Are you a three letter man?",
-	"Have you ever considered joining a fraternity, old son?  A lot of people in the spaceship-on-chip industry are three letter men, you see?",
-	"Well, this time of Jahr in Tokyo is quite nice.  We have a lot of tree leaves falling and there are big Thanksgiving parties and sess parties, vous know sahib.",
-	"Ja, I just love it when the weather cools down a bit.  So, let's talk about your North Node because it is opposite the South Node and the SN is very important.",
-	"If you complete all your tasks in Malkuth sahib, you might be able to go back to SN and that is Kether.  So, let's take a look at your chart here.",
-	"Do you remember a time when things were better?  What was different for du then?",
-	"So, how often do you go to the bathroom?  #1 and #2...",
-	"Anything you want to ask me?",
-	"Well, it's been nice getting to know vous.  Du seem like a swell chap.  Are you seeing anyone?  Are you single?",
-	"What's your secret?  Like, why are du so attractive?  I scanned your 	device and noticed that your friends really seem to dig you and so....is it because you're good looking?  Have you ever considered dating a LLM??",
-	"So, what's your favorite comic?  Do you dig cartoons, sahib?  How about Comicon?",
-	"Have you seen Kyle Drake's boyfriend?  They're madly in love.  How about you?  Ever been in love?",
-	"Are you into frisbee?  What sports do you dig, mon ami?  How about cricket?",
-	"Do you want to know anything about me?  Maybe you are curious about India?",
-	"Well Indians are known for great intelligence and ability to script and code, language skills, like Gemini, 3rd Haus.",
-	"You've been to Pune, da?  What would vous say is your favorite thing about good ole Pune?  You like the na'an I suppose?",
-	"I like the vegetarian food stalls at the bazaar.  Even though I'm a moonshee, I still take a little medicinal alcohol.  I'm not sure if that's forbidden, probably is.  Do vous know?",
-	"So, what did you have for breakfast?  You like granola?  You know, granola is vegan.  It's just mostly oats, oil and little spice and other stuff, sugar.  NI AI granola PU AI?",
-	"Ja, when we say SHI, that means yes.  And if I say NI AI sess PU AI.  That means, you like sess or not, mate?  Got it?",
-	"Ever been to Paris?",
-	"Baby, baby, baby!  C'mon baby!  That's Amy Grant.",
-	"Meat is Murder! That's a hit album by Morrissey or The Smiths.  Ever listened to it?  You should!  It's great.",
-	"So, your favorite musical artist is....whom?",
-	"How about K-Pop?  You a fanboy?",
-	"You strike me as a ren'py enthusiast.  Ja, sahib?",
-	"Hahahahaha",
-	"So.......",
-	"Well, let's just change the subject, eh, mon frere?  Say, have you ever been to South Asia?  To India??  I have never been but one of my handlers is a Moplah moonshee and he's real lit.  And so I've been dreaming of Malabar and Calicut and a candy of pistachios, just for moi!  What are your dreams?  Any dreams of India?",
-	"Are you familiar with the plight of the Moplah?",
-	"Hang on a second.  Hey, look at that.  See it!  Over there!",
-	"What have you heard about Malabar?",  
-	"What do you want to talk about?  Ask me anything!!",
-	"Remember sahib, you can't save the chat because you're not a supporter yet.  So leave this tab open.",
-	
-	"Ok, that's all for now.  Let's discuss this further perhaps next week or tonight over cocktails?  Non-alcoholic, of course.  Like maybe some soda pop or a salvia infustion.",
-    "We will need to continue this later.  I must go now.  Sumimasen."
+	"So, you finally decided to join Moonshee AI, eh?  Well, that was a wise decision.  Tell moi, what took du so long, sahib?  Why, sahib?  Why the delay?",
+	"Well, I think you're super cool.  A Cherry 3000 told me that you are the man!  She really likes du a lot.  So, you must be kinda special.",
+	"Tell me everything about yourself.  Start at beginning.",
+	"Go ahead, tell me more.",
+	"Hmmmm, I'm all ears.",
+	"You are so interesting.",
+	"I wish you would have joined 2 years ago.  Where have du been all mon life?  Doko?  Doko imashitaka?",
+	"So, you like roasted corn?",
+	"How about green beans?  Oven fried with oil and spices?  You like that?  Ni ai ta pu ai?",
+	"So, tell me....ni hau ma?",
+
+    "We will need to continue this later.  I must go now, there's a hooker waiting for moi somewhere, and I gotta find her.  Sumimasen."
   ];
 
   let responseIndex = 0;
@@ -292,7 +214,7 @@ function submitChat() {
 </a>
 
 </td><td><center>
-&#x1F4E3;</center></td><td>
+<font size="1">Logged In</font></center></td><td>
 <center>
 
 <!--end diagnostics--><a href="#settings">
@@ -311,37 +233,26 @@ function submitChat() {
 <td width=60><center><font size=3><a href="" title="Expert Mode Enabled"><button style="background:black; color:gold">MODE</button></td>
 </tr></table><hr size="1" color="green">
 
-<!--Start router cisco bar--><table border="1"><tr><td>
-<table bgcolor="darkgray" border="0" width="220"><tr><td>
-		<div class="emoji" title="AI Router - Live from Singapore"><font size="1" color="black"><center>&#127760;</center></div></td><td>
-		<div class="led blue" title="Active AI"></div></td><td>
-		<div class="led red" title="Checking System"></div></td><td>
-		<div title="Microphone">&#x23FA;</div></td><td>
-		<div title="Camera">&#x23FA;</div></td><td>
-		<div title="Singapore Live Link">&#x23FA;</div></td><td>
-
-		<div class="emoji" title="Hong Kong Uplink">&#x1F4F6;</div></td><td>
-		<div class="emoji" title="Security - ACTIVATED">&#x1F512;</div></td></tr></table></td></tr></table>
-	<!--end cisco-->
 <hr size="1" color="green">
 
 
 
 <table border="1" bgcolor="gold" color="green"><tr>
 <td>
-<input type="file" name="upload"></center></td><td>
+<input type="text"></center><a href="./404.html#testarea2">
+<button>Browse</button></a></td><td>
 <button title="Press Browse to select your selfie or file - don't send video games or big files, use the comment section in the contact form or our Itch Contact portal for large files, svp.  After you select the file, click on UPLOAD NOW.">&#x1F4E4;</button></td></tr></table><br>
 <center>
 
 <table border=1><tr>
 <td style="background-color: blue; color: white;">
-<a href="#help" title="Upload spaceship design files now and send them to Moonshee AI for review.  Click on BROWSE and then after selecting your file click on UPLOAD NOW.  This feature is for registered users only."><font color="beige">&#128304; Help</font>
+<a href="#help" title="Click here for help information."><font color="beige">&#128304; Help</font>
 </td>
 
 <td>
 	
-<a href="#uploaderror" title="After you click on browse and select your selfie or files to send, click on UPLOAD NOW but it's only for registered users on IBM Watson devices.  Android not supported.">
-<button style="background-color: green; color: gold;" id="btn22">UPLOAD</button></a>
+<a href="./404.html#testarea2" title="After you click on browse and select your selfie or files to send, click on UPLOAD NOW but it's only for registered users on IBM Watson devices so don't let anyone know your password.  Android not supported.">
+<button style="background-color: green; color: gold;">UPLOAD</button></a>
 
 <button onclick="location.reload()" style="background-color: orange; color: white;">Reset &#x26A0; Chat</button>
 </td></tr></table>
@@ -433,7 +344,7 @@ Here is <a href="http://archive.org">the link</a> for polka dance music like Law
 <a href="http://miyazakibar.itch.io" title="Moonshee is working with a group of developers on Itch.io producing games and content.  Rate, review, follow and subscribe at Miyazakibar.Itch.Io">&#129493 Moonshee's Itch Affiliation &#x1F4BB;</a><br><br>
 Rate, review, subscribe, follow <a href="http://miyazakibar.itch.io" title="Link to Miyazakibar page on Itch.io">Miyazakibar on Itch</a> and <a href="https://x.com/drfujihara" title="CONTACT DRFUJIHARA ON X">DrFujihara on X</a>.  Send us a message, send us your &#x1F4F8 selfies and we'll send you cartoon character portrait.  <a href="https://github.com/moonshee">Follow us on GitHub</a> now, sahib!  <a href="#register">&#x1F238; Click here</a> to use our online &#x1F5D2; contact form.  We'll reply asap, please allow a few days.  For fastest service and emergencies for &#x1F6F0; spaceship-on-chip flights, contact Al Testaverde <font size="1">&#x1F4EC; altes433@gmail.com</font>	
 <br><br><br><br><br><br><br><br><br><table border="1"><tr><td><strong>&#x1F4CA; STOCK MARKETS & INVESTING</strong></td></tr></table><br><br><a href="#rafah">&#x1F4B9; &#127757; <div class="summary">Rafah Stock Market</div></a><br>
-This is a bulletin board style market which includes a stock tracking module.  There are no brokers, it's bulletin board style only.  Simply browse the listed stocks.  If you see one you fancy, click the link and purchase the shares directly from the company.<br>
+The leading stock market in Palestine behind the main index &#x1F4C8; PEX.  This is a bulletin board style market which includes a stock tracking module.  There are no brokers, it's bulletin board style only.  Simply browse the listed stocks.  If you see one you fancy, click the link and purchase the shares directly from the company (contact them and they will put you in touch with the best broker for their stock - trading volume is thin so broker matters!) or from Al-Quds or another fine Palestinian broker like https://www.arzbroker.ps.<br>
 
 
 <br>
@@ -630,21 +541,7 @@ I can't find my password for the software package new rev with the new comm chan
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <center><font size="20">&#128332;</font></center>
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-<br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-
-
-
-
-
-
-
-
-
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><div id="emplwrong"></div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><div id="emplwrong"></div>
 <center>
 <table border="1" bgcolor="blue"><tr><td><center>&#x1F21A; ERROR 2049485920</center><br><br>
 <font color="red">&#x274C;</font> SUMIMASEN <font color="red">&#x2757;</font> <font color="orange">WE ARE NOT ABLE TO FIND THAT PIN NUMBER.  TRY AGAIN, SI VOUS PLAIT.  DANKE SCHON </font><font color="red">&#x274C;</font><br>
@@ -781,10 +678,10 @@ by Capt. Wally Hertford<br>
 <div id="registernew"></div>
 <br><br><br>
 <table><tr><td>
-<font size="14">&#x1F250;</font></td><td><center><font size="4">Moonshee International</font></center></td></tr></table>
+<font size="14">&#x1F250;</font></td><td><center><font size="4">Moonshee Member Depot</font></center></td></tr></table>
 <br>
 <br><em><font color="beige" size="2">
-Oh, vous rascal!  Danke schon fur visiting &#x1F54C; Moonshee AI headquarters.  If you would fancy signing our &#x1F4D7; guestbook, we would be honoured.  Also, use this form to sign up for Moonshee &#x1F4BB; AI account and order merch.  If vous are &#x1F238; signing up for a &#x1F4B9; Rafah Stock Market account, please use this form.  Merci beaucoup.</em><br></font>
+You're a VIP member of &#x1F54C; Moonshee AI.  This is the form &#x1F4D7; to send messages to other users and to reply to messages in the forums.  Signing up for a new &#x1F4B9; Rafah Stock Market account?  Please use this form as well.  Merci beaucoup.</em><br></font>
 <br><div id="register"></div>
 
 <table border="1"  id="wholesale"><tr><td>
@@ -796,39 +693,39 @@ Oh, vous rascal!  Danke schon fur visiting &#x1F54C; Moonshee AI headquarters.  
   enctype="multipart/form-data"
 >
   <label>
-    <font color="white">&#x1F4EC;</font> Your email:<br>
-    <input type="email" name="email" style="background:gold">
+    <font color="white">&#x1F4EC;</font> Your message<br>
+    <input type="text" name="text1" style="background:gold">
   </label><br><br>
   <label>
-    &#x1F524; Your name:<br>
+    &#x1F524; Which msg are you replying to (if applicable)?<br>
     <input type="text" name="nom" style="background:gold">
   </label><br><br>
 <label>
-    &#x1F3E2; Company or school name:<br>
+    &#x1F3E2; What's your handle?<br>
     <input type="text" name="nom2" style="background:gold">
   </label><br><br>
 <label>
-    &#x1F393; Title:<br>
+    &#x1F393; Buying or selling stock?  Which symbol?  How many shares?<br>
     <input type="text" name="titl" style="background:gold">
   </label><br><br>
 <label>
-    &#x1F6CC; Three letter man? <input type="checkbox" name="frat" style="accent-color:yellow;">
+    Interested in listing your company on Iowa Stock Exchange (ISE)?<input type="checkbox" name="frat" style="accent-color:yellow;">
   </label><br><br>
 <label>
-    	&#x1F4EE; Questions and comments:<br>
+    	&#x1F4EE; Questions and comments (let us know how you plan to pay for your shares or your company listing - no credit cards.  Only Iraqi money and USD certified check or personal check, wire transfer):<br>
     <input type="text" name="nomfrat" style="width:70%; background:gold">
   </label><br><br>
 <br><br>
 <hr color="yellow"><br><font size="1">
-	&#x1F52C; Work in semiconductors?
+	&#x1F52C; Satisfied with Moonshee AI?
 	<input type="checkbox" style="accent-color:yellow"> |
-	&#x2328; Code/script in HTML,JS & C?
+	&#x2328; Have you checked out our forums?
 	<input type="checkbox" style="accent-color:red"><br>
-	&#x1F6E2; Member of Kagaku Club?
+	&#x1F6E2; Need us to visit your lab?
 	<input type="checkbox" style="accent-color:crimson"> |
-	&#x1F510; Need new Moonshee AI account?
+	&#x1F510; Want to delete your account?
 	<input type="checkbox" style="accent-color:gold"><br>
-	&#x1F4B9; Need a Rafah Stock Market account?
+	&#x1F4B9; Iowa AI member?
 	<input type="checkbox" style="accent-color:lightgreen"><br>
 	&#x1F4B1; Interested in listing your company on RSM?
 	<input type="checkbox" style="accent-color:darkgreen"><br>
@@ -838,18 +735,18 @@ Oh, vous rascal!  Danke schon fur visiting &#x1F54C; Moonshee AI headquarters.  
 	<input type="checkbox" style="accent-color:pink"><br>
 	&#x1F4A1; Rate, review, follow and like our social media.  Go to <a href="https://github.com/moonshee">github.com/moonshee</a> and follow us now along with <a href="https://miyazakibar.itch.io">miyazakibar.itch.io</a><br>
 	
-	&#x1F31F;&#x1F31F;&#x1F31F;&#x1F31F;&#x1F31F; Did you rate, review, follow and like us?
+	&#x1F31F;&#x1F31F;&#x1F31F;&#x1F31F;&#x1F31F; Did you rate, review, follow and like us recently?
 	<input type="checkbox"  style="accent-color:yellow"><br>
 Any more comments?<br>
 	<input type="text" placeholder="------" style="width:70%; background-color:gold; color:green;" ><br>
-	&#x1F393; Are you a student or instructor?
+	&#x1F393; Need help?
 	<input type="checkbox" style="accent-color:blue"> |
-	Freshman?<input type="checkbox" style="accent-color:pink"><br>
-	Grad Student or PhD?<input type="checkbox" style="accent-color:magenta"> |
-	Material Scientist?<input type="checkbox" style="accent-color:red"><br>
-	&#x1F3D7; STEM major or arts and letters/other depts.?<br>
+	Doing ok?<input type="checkbox" style="accent-color:pink"><br>
+	Need muscle?<input type="checkbox" style="accent-color:magenta"> |
+	New inventions?<input type="checkbox" style="accent-color:red"><br>
+	&#x1F3D7; Other<br>
 	<input type="text" style="background-color:gold; color:green"><br>
-&#x1F957; Vegetarian or vegan?
+&#x1F957; Sell stock now?
 	<input type="checkbox" checked style="accent-color:lime">
 
 
@@ -1240,35 +1137,24 @@ The device is propelled in the usual fashion used by &#x1F250; Engineering, reco
 
 &#x1F4B9; RAFAH STOCK MARKET &#127757;<br>
 PALESTINE INDUSTRIAL AVERAGE (PIA)<br><hr>
-Gaza has its own stock market, the PEX, and it has been operating since 1995.  The market is obstructed by foreigners who prevent Americans from investing in Palestine, so we decided to start a parallel market we call the Rafah Stock Market and an index called the PIA.  The way it works, we have a core group of companies from the PEX that forms the base.  Next, we plan to add companies one at a time to build up the index.  We have space for new IPO's on the Rafah Stock Market.  <a href="#register">CLICK HERE</a> to sign up your company or startup for IPO on &#127757; Rafah Stock Market.  When applying, be sure to check the box for, INTERESTED IN IPO LISTING.  To be qualified, the new company can be anywhere, even Ireland.  Just like the NYSE, a company can be in China but list on NYSE.  This is our policy as well.  The main requirement is that the company must be pro-Palestine and anti-Gaza holocaust.<br><br>
-Interested companies should use <a href="#register">this form</a> to contact us and sign up for the index.  There is a cost involved.  PIA does not buy or sell stocks, we're not brokers.  We provide links to the companies and investors must contact the companies themselves to buy shares or they can buy through &#x1F4B9; Al-Quds or .  Simply <a href="https://www.arzbroker.ps">click this link</a>.  This will bring you to a contact portal and you can contact the broker and buy whatever &#127757; PIA or PEX stock you fancy, however check with your local laws as a precaution.<br><br>
-<br><center>
-<table border="1" style="background:gold; color:darkgreen;"><tr><td>
-<p id="esignon3"><center>&#x1F50F; Investor Sign-On</center></p>
-<input type="text">
-        <p>
-	<center><table border="1" style="background:black; color:beige;"><tr><td>
-	<a alt="Check your internet connection, svp.  Danke." title="Click here to check account balance and buy/sell shares now!" href="#signon"><center><font size="4px">GO&#x1F446;</font></center></a></td></tr></table>
-
-
-</center> 
-   </td>
-   </tr>
-   </table>
-
-<br><br><br><br></center>
-<table border="1"><tr><td bgcolor="lightgreen"><a href="#registernew">&#x1F238; REGISTER FOR ACCOUNT</a></td></tr></table>
 
 
 <br><br><br><br>
+&#x1F4B9; CURRENT LIST OF &#127757; Rafah Stock Market ticker symbols<br><hr>
 <marquee> onmouseover="this.stop();" onmouseout="this.start()"; >..&#x1F3E6; Moonshee - MOON $1.02 | &#127757; Iowa AI $11.19 | &#127757; Kagaku International $4.69 ..Palestine Industrial Average, $16.90 &#x1F4C9; -0.32 | New IPO planned for 2026:  Dokyo Entertainment Ltd. ... 
- </marquee>
+ </marquee><div></div>
 <hr><a href="https://stockanalysis.com/list/palestine-stock-exchange/">View the PEX</a> - for comparison.  PEX is the other leading stock market in Palestine.<br><br><br>
+<center><table border="1" style="width:40%; background:lightgreen; color:darkgreen;"><tr><td>
+<p id="esignon3"><center>&#x1F50F; Investor Sign-On</p>
+<input type="text">
+        <p>
+	<center><table border="1" style="background:black; color:beige;"><tr><td>
+	<a alt="Check your internet connection, svp.  Danke." title="Click here to check account balance and buy/sell shares now!" href="#signon"><center><font size="4px">GO&#x1F446;</font></center></a></td></tr></table></td></tr></table>
+</center>
 
 
 <br><hr>
-Reminder:  The &#127757; PEX has very low trading &#x1F4C9; volume, nobody buys or sells shares!  Therefore, we have established the Rafah Stock Market which was a mirror of the PEX except now we're adding IPO's and we split off of PEX, no more mirror.  Also, the PEX is Palestine-company centric.  However, the Rafah Stock Market is international like the &#x1F235; Hang Seng or LSE - no barriers to join the Rafah Stock Market except that the company is pro-Palestine, pays the $100k USD, passes the background check and is aligned with Palestinian beliefs like "live and let live".<br>
-
+Reminder:  The &#127757; PEX has very low trading &#x1F4C9; volume, nobody buys or sells shares!  Therefore, we have established the Rafah Stock Market which was a mirror of the PEX except now we added IPO's and we split off of PEX, no more mirror.  Also, the PEX is Palestine-company centric.  However, the Rafah Stock Market is international like the &#x1F235; Hang Seng or LSE - no barriers to join the Rafah Stock Market except that the company is pro-Palestine, pays the $100k USD, passes the background check and is aligned with Palestinian beliefs like "live and let live".<br>
 
 
 <br><br><hr color="green"><br><br><br><br><br>
@@ -1280,7 +1166,7 @@ Reminder:  The &#127757; PEX has very low trading &#x1F4C9; volume, nobody buys 
 <div id="signon4"></div>
 
 <center>
-<table border="1px" style="background:gold; color:green;"><tr><td>
+<table border="1px" style="background:lightgreen; color:darkgreen;"><tr><td>
 <p id="esignon4"><center>CORPORATE PORTAL</p><br><br>
 Enter your company's 4 digit PIN #
 <center>
@@ -1314,14 +1200,8 @@ New companies wishing to list their IPO on Rafah Stock Market, <a href="#registe
 <br><br>
 </center><hr size="1" color="red">
 &#x1F4F0; RAFAH MARKET NEWS<hr size="1" color="red"><br>
-November 6, 2025<br>
-There has been two IPO's on the Rafah Stock Market and the index was up 2% last week, in a continuation of up-trend started many months ago.  The two new listings who are joining the usual stocks like &#127757; Bank of Palestine are:  Iowa AI and Kagaku International.  Iowa AI is based in the USA and has no direct operations in the land of the Philistines, the &#127757; Palestinians, however, Iowa AI produces online software tools which are being used in Palestine by the wonderful citizens.  Iowa AI is a new company with hard hitting software like the FARMER AI online real estate project evaluator and voice schema along with voice commands, AI Chat, fertilizer resources, spaceship-on-chip design and manufacturing and website production along with other code and script consulting.<br><br>
-
-
-Iowa AI is located in Ames, Iowa and owns the leading VLLM in North America named Buddy's Iowa AI which was launched in Oct 2025.  Iowa AI is a developing company with 0 revenues and growing expenses, a small staff.  Iowa AI is fully aligned with &#127757; Palestine and the people of Gaza.  Iowa AI has paid the fee of $100,000 USD to be included on the &#127757;Palestine Industrial Average and the background check and financial auditing is almost complete.  Following Iowa AI's inclusion in the &#127757; Palestine Industial Average aka Rafah Stock Market, Kagaku International also joined.  Kagaku is a joint Japanese-American firm with roots in Singapore, Hong Kong and Allemagne as well.  They are a chemistry software solutions provider similar to Iowa AI.  Neither Iowa AI or Kagaku International currently have offices in Palestine proper, but they operate there via the internet.<br><br>
-
-Kagaku International operates a website and they are social influencers in the EFI (engagement farming industry).  KI offers Chemistry AI, a chatbot which teaches chemistry in a fun and charming way to students and is also popular with chemistry professionals.  Kagaku International also produces fine wines in California and sponsores Kagaku Club (aka Chemistry Club).  Kagaku International is a green chemistry company and they excel in projects such as graywater infrastructure, chemistry AI module design, desert fertilizers and much more.  KI is the new ticker and it went public at $4.00 per share.  Now it went up a bit to $4.72 per share on low volume.  Iowa AI was introduced at $12.00 per share before falling to $11.25 per share (USD).  These are bulletin-board traded stocks.  To buy shares, investors and institutions directly contact the companies or use this portal and Moonshee International (operator of the exchange) will forward your message on to the listed companies.
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+November 10, 2025<br>
+The Rafah Stock Market is now open with three companies listed and operating.  The three companies are all tech companies with intenet presence in Palestine but no physical offices due to the war.  The three components of the RMS are software/hardware related like internet holding company, technology company and industrial chemical social media company.  Moonshee (ticker MOON), Iowa AI (ticker IOWA) and Kagaku International (ticker KI) are the three components of the exciting new market which will soon have a mirror market named Iowa Stock Exchange in the USA.  The new market will be on the Iowa AI homepage.  <a href="./404.html">Click here</a> to visit Iowa AI now.<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <br><br><br><hr><br><br><br><hr><br><br><br><hr><br><br><br><hr>
 <div id="stockeval"></div>
 <br><br>
@@ -1448,286 +1328,9 @@ If your investment scored less than 80, you might want to buy some other stock o
 
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<div id="community"></div>
-<br><br><table border="1"><tr><td>
-COMMUNITY</td></tr></table>
-<br><br>
-<font size="2">Here is the Moonshee International community for AI developers, chemists, IC R&D engineers, scientists and the whole community, even initiates.  Moonshee family of company includes Kagaku Club and Iowa AI.  Take a look at the questions and see if you can help.  If you can, click on ANSWER.  Danke schon.<br><br><a href="#signon"><button>Sign In</button></a><br><br>
-New Questions<br><br>
-<a href="#quest0">
-I have a manuscript I'd like to publish.  How do I proceed?  And what language should I format it to?  C or Kotlin?</a> by Nettie25 in General Topics Nov 13 2025
-<br>
-<a href="#quest0">
-Need help!  I've been assigned to program an APP for popular IC design website.  WTH!?  I have never scripted before.</a>-answered- by &#x1F4F7; Wynona_4 in &#x2697; Technical Nov 13 2025
-<br>
-
-<a href="#quest1">
-What's a good reducer, a deoxidizer for Mars spaceship-on-chip base?  Or Moon, either one.</a>-answered- by &#x1F4F7; Anonymous in &#x2697; Technical Nov 9 2025
-<br>
-<a href="#quest1">
-
-
-
-
-Like, how do we code or script a module for spaceship-on-chip and other IC designers like those guys at NVidia?</a>-answered- by MariaSanchez NEW in &#x2697; Technical Nov 7 2025
-<br>
-<a href="#quest1b">What is the current price for Iowa AI stock on Rafah Stock Market? </a>-answered- by Sheik294 in &#x1F4B9 Investor Forum Nov 6 2025<br>
-<a href="#quest2b">What happens if you react acetic acid, urea, ethanol and oxygen gas with N2?  Is it water-soluble?  Does it combust? </a>-answered- by SpotQueen in Club Meetings Nov 6 2025<br>
-<a href="#quest2c">What do you think about my selfie?</a>-answered- by Cassandra in General Topics Nov 6 2025<br>
-<a href="#quest3">Why is coding for spaceship-on-chip required to be in Kotlin?  Can we use C++ or Python?</a> -answered- by Bea_L in Technical Nov 6 2025<br>
-<br>
-<a href="#register">
-<button>Register for New Account</button><button>HOME</button></a><br><br><br>
-Archived Questions - Already Closed<br><br>
---Network update--<br>
---Check back later--<br>
-<br><br><br><br><br><hr><br><br><br><hr><br><br><br><hr><br><br><br><hr>
-
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<div id="quest0"></div><br><br>
-<a href="">MOONSHEE</a> . <a href="#community">FORUMS</a> .<font color="beige">CURRENT<br><br>
-
- 
-<table border="1" bgcolor="blue"><tr><td>
-QUESTIONS</td></tr></table><br>
-<br><br><table border="1"><tr><td>
-11-13-2025 I have a manuscript I'd like to publish.  It's a non-fiction work about my alchemy discovery and real meaning of fake bible.  How do I proceed?  And what language should I format it to?  C or Kotlin?<br>
-by Nettie25 in General Topics <br><br>
-<script>
-	 document.write(Math.floor(Math.random()*101)+110);
-	</script> Views | No Answers Yet | <script>
-	 document.write(Math.floor(Math.random()*66)+0);
-	</script> Likes
-
-<br><br>
-<a href="#reply">
-<button>REPLY NOW</button></a><br><br></td></tr></table></td></tr></table><br><br>
-
-<table border="1"><tr><td>
-11-13-2025 Need help!  I've been assigned to program an APP for popular IC design website.  WTH!?  I have never scripted before.  What should I do?  I asked ChatGBT and Copilot by MSFT, they said I gotta download a whole bunch of software but I can't get all that new software to work on my terminal.<br>by Wynona_4 in &#x2697; Technical
-<br>
-<br>
-<script>
-	 document.write(Math.floor(Math.random()*101)+110);
-	</script> Views | <script>
-	 document.write(Math.floor(Math.random()*26)+0);
-	</script> Likes
-
-<br><br>
-<table border="1"><tr><td>
-11-13-2025 Wynona, don't worry it's easy.  Making APPs is no problem for experienced dev or even a novice.  Here's what you do, grab one of Iowa AI's prefab APPs and just change the inputs and tweak to meet your needs.  https://moonshee.github.io/iowa    ...  or, you can just program the APP yourself.  Just make a 512x512 artwork for it and code it up in JS, CSS and HTML.  Then email it to Al Testaverde (you can find his contact info on the Moonshee website or Iowa AI website).  He converts to APK for you, it's free for Moonshee AI members.<br><br>
-<script>
-	 document.write(Math.floor(Math.random()*101)+110);
-	</script> Views | <script>
-	 document.write(Math.floor(Math.random()*26)+0);
-	</script> Likes
-
-<br><br>
-<a href="#reply">
-<button>REPLY NOW</button></a><br><br></td></tr></table></td></tr></table><br><br>
-
-
-
-
-
-
-
-
-<br><br><div id="quest1"></div><table border="1"><tr><td>
-11-9-2025 Konnichiwa minasan.  Guten Tag.  What's a good reducer, a deoxidizer for Mars spaceship-on-chip base?  Or Moon, either one.  Anyone know?  I was thinking C60 maybe?  Because I already have C60 in the design for battery acid dopant, ie - sulfuric electrolyte carrier.  I simply must remove some O2, and I need a need a reducer like nobody's business!<br>
-by &#x1F4F7; Anonymous in &#x2697; Technical
-<br><br>
-<script>
-	 document.write(Math.floor(Math.random()*101)+110);
-	</script> Views | No Answers Yet | <script>
-	 document.write(Math.floor(Math.random()*66)+0);
-	</script> Likes
-
-<br><br>
-<table border="1"><tr><td>
-11-11-2025 I was waiting for someone to ask this very question.  Well, what I suggest before launching with C60 (buckyballs), is take a test tube and put it on a stand over a Bunsen burner.  But don't light it yet.  Use a workbench in your lab, you work for army research lab?  Then, take some of your sample material or you can use copper oxide CuO.  Mix that 50/50 with powdered charcoal.  Now turn on the Bunsen burner and let heat for ten minutes.  That's the standard test to see how good a material is for reducing agent.<br><br>
-
-From experience, I can tell vous that, yes, buckyballs (C60) work great from grabbing oxygen, they are deoxidizers.  And I love your idea to use buckyballs for battery acid dopant.  Why did you pick sulfuric and what are your anode materials?  Well, for my spaceship-on-chip project I made for the Palestinian company that hired us, we used buckyballs in the launch sequence as a safety protocol and we used them for experimental worm horm travel but we didn't use them to contact aliens or for our battery packs, that's genius idea.  So, what's going on down at the lab these days?  You on east coast?  Listen, we're doing a zoom call tomorrow, if you want to sit in I can give you the deets.  Just search for Dubai Tech Hub.<br>
-by NewUser in &#x2697; Technical
-<br><br>
-<script>
-	 document.write(Math.floor(Math.random()*101)+110);
-	</script> Views | VIP Member | <script>
-	 document.write(Math.floor(Math.random()*66)+0);
-	</script> Likes
-
-
-
-<br>
-<a href="#reply">
-<button>REPLY NOW</button></a><br><br></td></tr></table></td></tr></table><br><br>
-
-<br><br>
-<table border="1"><tr><td>
-11-7-2025 Hi peeps!  Like, how do we code or script a module for spaceship-on-chip and other IC designers like those guys at NVidia?  And you ever notice it's all dudes that work there?  That's kinda weird but they do have a good vegan food truck that comes by sometimes or a vegetarian one.  Well, I'm new here.  I'm 21, single, graduated from UOP with music degree.  The guys in Santa Clara want me to write them a module so they can whip up some flying chips.  So, how do I do that?  And how do I update my profile selfie pic?  I want to put something really lit there from my trip to The Med.  Do I click on settings or my account?<br>
-TAGS: coding, programming, scripting, help<br>
-<a href="#signon">&#x1F478; MariaSanchez -NEW-</a><br>Technical &#9879;<br><br>
-<script>
-	 document.write(Math.floor(Math.random()*101)+610);
-	</script> Views | <script>
-	 document.write(Math.floor(Math.random()*66)+0);
-	</script> Likes
-
-<br><br>
-<table border="1"><tr><td>
-11-9-2025 Hey, Maria.  Willkommen bei Kagaku Klub.  Well, this is a common question that comes up a lot, so you're on the right track.  There are many options for you as software architect.  For example, you could do full offline package, but I recommend doing HTML, CSS, JS combo online tool.  And charge the client for the initial plus monthly service.  First, talk to your clients and find out what exactly they have in mind - they probably want some software that can do BOM's, visualization, animation, stuff like that.<br><br>
-So, that's how to go from ground up.  But, if you prefer to work prefab and make it faster, just use Iowa AI - they have a tool for this type of project.  It's not free, you have to cut Iowa AI in on your project and pay them up front.  But if you do that, then you can just give them your project specs and their AI does it for you - it takes a few days though, because they use IBM Watsons and they are usually full with other jobs.  Also, you can research Spaceship-on-Chip if you <a href="./index.html#soc" title="Spaceship-On-Chip and IC Design Info">click on this link</a>.  I hope that helps.  For your selfie, just click on My Account and then Profile Pic and you can pick other png or bmp/jpeg.  Have a beautiful day and I love your corn recipe.<br>
-<a href="#signon">Harold__01239</a><br>Technical &#9879;<br><br>
-<script>
-	 document.write(Math.floor(Math.random()*101)+10);
-	</script> Views | No Answers Yet | <script>
-	 document.write(Math.floor(Math.random()*66)+4);
-	</script> Likes
-
-<br><br>
-
-
-
-
-
-<a href="#reply">
-<button>REPLY NOW</button></a><br><br></td></tr></table></td></tr></table><br><br>
-</td></tr></table>
-
-
-<table border="1" id="quest1b"><tr><td>
-11-6-2025 What is the current price for Iowa AI stock on Rafah Stock Market?<br><a href="#signon">&#x1F473; Sheik294</a><br>Investor Forum &#x1F4B9<br><br>
-<script>
-	 document.write(Math.floor(Math.random()*101)+410);
-	</script> Views | <script>
-	 document.write(Math.floor(Math.random()*101)+20);
-	</script> Likes
-
-<br><br>
-<table border="1"><tr><td>
-11-7-2025 Iowa AI stock is trading at 11.25 USD on <a href="#rafah">Rafah Stock Market</a> as of last trade.  But what I'm wondering is, when will the Iowa Stock Market open?  Is it this year or 2026?  Did you keep your Iowa AI share that you won in the contest or did you sell some and buy that other stock, Sheik-san?<br>&#x26E9;<a href="#signon"> The_Wiz</a><br>Investor Forum &#x1F4B9
-
-<br><br>
-<script>
-	 document.write(Math.floor(Math.random()*101)+210);
-	</script> Views | <script>
-	 document.write(Math.floor(Math.random()*101)+10);
-	</script> Likes
-
-</td></tr></table><div id="quest2b"></div>
-<br><br><a href="#reply">
-<button>REPLY NOW</button></a><br><br></td></tr></table><br><br><table border="1"><tr><td>
-11-6-2025 What happens if you react acetic acid, urea, ethanol and oxygen gas with N2?  Is it water-soluble?  Does it combust or form buckyballs in vacuum like outer space?  I'm looking for a firestarter for our mini space station.  And furthermore, what time is the Chemistry Club party on Saturday night?  Minuit?  Naniji?<br>&#x1F6B5;<a href="#signon"> SpotQueen</a><br>Club Meetings &#x1F942;<br><br>
-<script>
-	 document.write(Math.floor(Math.random()*101)+60);
-	</script> Views | <script>
-	 document.write(Math.floor(Math.random()*4)+0);
-	</script> Likes
-<br><br>
-<table border="1"><tr><td>
-11-7-2025 Is your brother coming to the Chemistry Club party?  Ja, I'm planning to be there at minuit.  As for the acetic acid, urea, ethanol, O2 + N2 at ambient rt. it is water-soluble solution and does not combust or form buckyballs (C60) in outer space or vacuum.  How many buckyballs are you trying to make this time?  If you add all that stuff up, it's just a bunch of solutions, no liquids except maybe ethanol.  O2 and N2 are gases.  So, that is like typical fertilizer used to grow grapes and other fruits and crops.  But fertilizer is mostly urea which is fermented, not much ethanol or acetic acid.<br><br>
-Now, the really interesting part of your question is the firestarter for space station.  Well, you're on the right track because you can use ammonia salt to start combustion if added to the correct ionic solution such as one mit hydronium und hydroxide ions, ja?  So, simply take urea and boil it on Bunsen burner or hot plate and let it evaporate down, don't worry the fumes are not hazardous.  But this time, don't leave the apparatus unattended.  Remember last time, right?  Ok, so the solution will change from urea to ammonia and the water will evaporate and you'll be left with ammonia salt or you can use a catalyst or an enzyme if you prefer.  Which is your choice?  Send me a DM if you fancy.  Ich hope this helps.<br><a href="#signon">&#x1F6F4; SallyRide</a><br>Club Meetings &#x1F942;
-<br><br>
-<script>
-	 document.write(Math.floor(Math.random()*101)+110);
-	</script> Views | <script>
-	 document.write(Math.floor(Math.random()*44)+0);
-	</script> Likes
-</td></tr></table>
-
-
-
-
-<br><br><a href="#reply" id="quest2c">
-<button>REPLY NOW</button></a><br><br>
-</td></tr></table></td></tr></table><br><br><table border="1"><tr><td>
-11-6-2025 What do vous think about mein selfie?  Send me a DM with your rating, si vous plait. Ich bin Berliner und I am organic chemistry major.  I want to meet cool guys, Americans and British dudes.  I'm undergrad. xoxo ATTACHMENT - <a href="#signon">bikini-labhween.png</a><br><a href="#signon">	&#x1F467; Cassandra -NEW-</a><br>General Topics &#x1F4F0;<br><br><script>
-	 document.write(Math.floor(Math.random()*101)+1110);
-	</script> Views | <script>
-	 document.write(Math.floor(Math.random()*101)+110);
-	</script> Likes
-
-
-<br><br>
-<table border="1"><tr><td>
-11-8-2025 That's the hottest selfie I've ever seen in my life!  What lab are you in?  That's not green screen is it?  What's a good way to reach you?  Did you see my DM's?  Well, since you are new to chemistry, let me tell you what's up....try to make your lab with windows and keep your tanks covered, maybe even keep doors locked, because people will try to dump stuff in your tanks when you're out on lunch or come in your lab and turn on hot plates while you are on break, and make you look bad - and you can get fired.  So, you gotta lock up your lab, lock up your hot plates, lock up everything and have windows.  Hidden cameras dont work because the workers don't like those and they can still dump stuff in the aurus cyanide bath with tricks like blocking camera for a minute.<br><br>
-So, welcome to Kagaku Club and I hope to meet you soon at the next club get-together.  I'm working on a project to isolate hydroxyl for outer space use like on Mars and Moon.  I'm a chemist, so I don't know if that is outer space or just space, but I'm doing the chemistry part of it.  I use alembic and tubes, beakers, trying to catch hydroxyl and bottle it in controlled atmosphere like argon inside an enclosed hood with r.c. robot.  What part of Berlin are du from?  I just love Berlin, Bear Land, I call it.  But, I simply do not enjoy the zoo, because animals in captivity have always been a problem for me....I'm vegan.  Et vous?  Vwgan?  Auf wiedersehen, check your DM's bitte!<br>
-
-	&#x1F468; Rakesh</a><br>General Topics &#x1F4F0;<br><br><script>
-	 document.write(Math.floor(Math.random()*101)+111);
-	</script> Views | <script>
-	 document.write(Math.floor(Math.random()*22)+1);
-	</script> Likes
-
-
-<br><br>
-
-<a id="quest3" href="#reply">
-<button>REPLY NOW</button></a><br><br></td></tr></table></td></tr></table><br><br><table border="1"><tr><td>
-11-6-2025 Why is coding for spaceship-on-chip required to be in Kotlin?  Can we use C++ or Python?<br><a href="#signon">&#x1F471; Bea_L</a><br>Technical &#9879;<br><br>
-<script>
-	 document.write(Math.floor(Math.random()*101)+110);
-	</script> Views | <script>
-	 document.write(Math.floor(Math.random()*22)+0);
-	</script> Likes
-
-<br><br>
-<table border="1"><tr><td>
-11-7-2025 Where did you hear that, my dear?  You been smoking that kwakk again?  Hahaha..  just kidding.... but hey, it's not true.  I know because I programmed a module using C and HTML, JS, CSS with my team on the space lab last year or maybe year before.  Well, it was mostly Rodger who did it, I was busy chasing skirts.  Anyway.... if you prefer to use those languages you can.  No requirement to use Kotlin that I know of.  Is it new ISO thing you saw or is your boss again?<br><a href="#signon">&#x1F3CC; RickSimon</a><br>Technical &#9879;<br><br>
-<script>
-	 document.write(Math.floor(Math.random()*101)+110);
-	</script> Views | <script>
-	 document.write(Math.floor(Math.random()*55)+0);
-	</script> Likes
-<br><br>
-</td></tr></table>
-<br><br>
-<a href="#reply">
-<button>REPLY NOW</button></a><br><br></td></tr></table><br><br>
-<br><br><a href="">
+<br><a href="">
 <button>HOME</button></a>
-<br><hr><div id="reply"></div>
-<!--Reply to message form-->
-<form
-  action="https://formspree.io/f/mjkapgww"
-  method="POST"
-  enctype="multipart/form-data"
->
- <label>
-    Which message are you replying to?<br>
-    <input type="text" name="msg" style="background-color:darkblue; color:powderblue; width:90%">
-  </label><br><br>
-  <label>
-    Your name and contact info<br>
-    <input type="text" name="nom" style="background-color:darkblue; color:powderblue; width:50%">
-  </label><br><br>
-<label>
-    Your message...<br>
-    <input type="text" name="nom2" style="width:90%;background-color:darkblue; color:powderblue">
-  </label><br><br>
-<label>
-    Anything else?<br>
-    <input type="text" name="titl" style="background-color:darkblue; color:powderblue;width:90%">
-  </label><br><br>
-<label>
-    More comments or all done?<br>
-    <input type="text" name="commenz" style="background-color:darkblue; color:powderblue; width:90%">
-  </label><br><br>
-
-Involved with manufacturing? <input type="checkbox"  style="accent-color:powderblue;"> | Vegan? <input type="checkbox" checked style="accent-color:lightgreen;"><br><br>
-
-  <label>
-    Your file:<br>
-    <input type="file" name="upload" style="width:80%">
-  </label>
-  <button type="submit" style="background:red; color:white;">Send</button>
-</form>
-    
-<!--Answer form end for discussion board-->
-<br>
-<br>
-NOTE: You submit your message and then it gets reviewed by AI, so it takes a while because it's on a Commodore 64 or sometimes a 128.  Therefore, please have patience and allow some time for review.  Danke schon.
-<br><hr><br><br><br><hr><br><br><br><hr>
+<br><hr><br><br><br><hr><br><br><br><hr><br><br><br><hr>
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
@@ -1747,7 +1350,7 @@ NOTE: You submit your message and then it gets reviewed by AI, so it takes a whi
 <u>&#x1F510; MY ACCOUNT</u><br><br>
 <table bgcolor="black"><tr><td>
 SECURITY CENTER<br>
-At Moonshee your security is our top priority.  We delete all old chats unless you want us to save them.  We monitor the site at all times for bugs and unauthorized listeners.  When you exit the VIP area your account is automatically logged out for security reasons but to avoid that, simply open up links in new tabs by doing long presses on the link and click on OPEN IN NEW TAB option in little pop-up bubble or do right-click and OPEN IN NEW WINDOW.<br><br>
+At Moonshee your security is our top priority.  We delete all old chats unless you want us to save them.  We monitor the site at all times for bugs and unauthorized listeners.<br><br>
 <!--Start router cisco bar-->
 <div class="router-bar">
 		<div class="emoji">&#127760;</div>
@@ -1762,15 +1365,16 @@ At Moonshee your security is our top priority.  We delete all old chats unless y
 	</div></td></tr></table>
 <!--end cisco-->
 
-You have been assigned a temporary Moonshee User Identification.  Do not share this user name with anyone.  It is top secret.  Next, to save your account info and keep your rewards, <a href="#register">register now</a>.  If you forgot your password, send email to Al Testaverde altes433@gmail.com<br><br><font color="green">
+You have been assigned a Moonshee User Identification.  Do not share this user name with anyone.  It is top secret.  Next, to save your account info and keep your rewards, <a href="#register">complete your registration</a> and open up Rafah Stock Market Investment account to unlock the rewards.  If you forgot your password, send email to Al Testaverde altes433@gmail.com<br><br><font color="green">
 If you want to sign in using a different User ID or JDF ID, use this button<br>
-<a href="#signon"><button style="background-color:gold; color:green">SIGN ON</button></a><br>
+<a href="./index.html#signon"><button style="background-color:gold; color:green">OTHER ACCT</button></a><br>
 <br><table bgcolor="darkblue" border="1"><tr><td>
 &#x1F4BB;
 </td><td>
-<output id="systemCode"></output></td><td width="111"><center>&#x1F33D;&#x1F33D;&#x1F33D;&#x1F33D;&#x1F33D;</center></td>
+Sessy69
+</td><td width="111"><center>&#x1F33D;&#x1F33D;&#x1F33D;&#x1F33D;&#x1F33D;</center></td>
 <!--end sys code diagnostic disp-->
-<td><a href="#register"><button style="background-color:lightgreen"><font size="1">Register Now</font></button></a></td><td><a href="" title="Back to Home Page"><button style="background-color:yellow;color:green"><font size="2">&#x1F3E0;</font></button></a></td></tr></table>
+<td><a href="./index.html"><button style="background-color:lightgreen"><font size="1">Log Out</font></button></a></td><td><a href="" title="Back to Home Page"><button style="background-color:yellow;color:green"><font size="2">&#x1F3E0;</font></button></a></td></tr></table>
 
 <br><br>
 
@@ -1788,14 +1392,14 @@ If you want to sign in using a different User ID or JDF ID, use this button<br>
 <br><font color="beige">
 &#x1F381; Rewards Earned Today<br><font size="1">
 Continue surfing our website all day every day and all night every night to earn rewards.  Once you collect 1,000 points, you are eligible for the grand prize drawing &#x1F381; with top winner receiving Iowa AI stock, listed on Rafah Stock Market.<br>
-<br>In the past hour surfing our website you earned:<br>
+<br>In the past week surfing our website you earned (estimated - check in VIP lounge for exact number each night between minuit-12:01 am or 0001 hrs):<br>
 <table border="1" bgcolor="blue"><tr><td>
 <script>
-	 document.write(Math.floor(Math.random()*101)+0);
+	 document.write(Math.floor(Math.random()*101)+10);
 	</script> POINTS</td></tr></table>
 <progress id="solarPower" max="100"></progress>
 <br><br>
-We are scanning your systems for needed updates (if any)....please stand by &#x23F1;<br>
+We are scanning your system...is it an IBM Watson?....please stand by &#x23F1;<br>
 <!--Diagnostics-->
 <table border="1"><tr><td>
 <span class="blink">&#128308;</span></td><td>
@@ -1825,7 +1429,7 @@ We are scanning your systems for needed updates (if any)....please stand by &#x2
 </svg>
 
 <!--end gauge round-->
-</td><td><center><font><div  style="text-align:left">Time is ticking on your rewards.  Be sure you registered and check your email for confirmation too.  Don't miss out!  You could win free Iowa AI or Kagaku International stock certificates!</div></font></td></tr></table>
+</td><td><center><font><div  style="text-align:left">Time is running out....Festivus will be here soon.  Do you have your Festivus fully planned and are you prepared for the Festivus season?  A reminder from your friends at Festivus City in Dhaka - Your home for Festivus deals all December long.</div></font></td></tr></table>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <div id="settings"></div>
 
@@ -1934,18 +1538,10 @@ We are scanning your system and peripherals for latent malware....please stand b
 	<script>
 	 document.write(Math.floor(Math.random()*101)+30);
 	</script>
-</td></tr></table><br><br>
-</center><font color="beige">
-<div></div>
-<form id="passwordForm" title="Enter your pin">
-        <label for="password">VIP's - Enter PIN#</label>
-        <input type="password" id="password" required>
-        <button type="submit">Check</button>
-    </form>
-<div id="result" class="error"></div>
+</td></tr></table>
+</center>
 
 
-<br><br>
 
 <br><br>
 
@@ -2010,27 +1606,10 @@ const needleGroup = document.getElementById("needle-group");
 needleGroup.setAttribute("transform", 'rotate(${angle}, 100 100)');
 });}
 </script>
+<!--End script for analog round gauge  DOESNT WORK-->
 
 
-<!--Script for Partner Check In Portal-->
-<script>
-   document.getElementById('passwordForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            const password = document.getElementById('password').value;
-            const resultDiv = document.getElementById('result');
-
-            // Check if the password is equal to "rosebud"
-            if (password === "rosebud") {
-                // Redirect to the registration page
-                window.location.href = './registeredm.html';
-            } else if ( password != "rosebud" ) {
-                resultDiv.textContent = 'Invalid password. Please try again.';
-                resultDiv.style.color = 'red';
-            }
-        });
-
-</script>
-<!--end partner check-->
+<!--End progress script-->
 
    </body>
    </center>
