@@ -71,6 +71,37 @@
 <a href="#contacts" title="Contacts" onclick="disableScroll()">&#x1F4EC; </a>
 
 <a href="#guestbook" title="Sign Guestbook" onclick="enableScroll()">&#128209;</a></h1>
+
+<!--Language Drop Down Menu-->
+
+<label for="menu2" title="Lang" ></label>
+<select id="menu2" onchange='goToLink(this)' style="background:black; color:lightgreen; width:100px">
+
+<option value="./kagaku.html">&#x1F1EC;&#x1F1E7; English</option>
+<option value="https://translate.google.com/translate?hl=en&sl=auto&tl=fr&u=https://moonshee.github.io/kagaku.html" title="La France">&#x1F1EB;&#x1F1F7; Francais</option>
+
+<option value="https://translate.google.com/translate?hl=en&sl=auto&tl=de&u=https://moonshee.github.io/kagaku.html" title="Allemagne">&#x1F1E9;&#x1F1EA; Germany</option>
+
+<option value="https://translate.google.com/translate?hl=en&sl=auto&tl=ja&u=https://moonshee.github.io/kagaku.html" title="Nihongo Portal">&#x1F1EF;&#x1F1F5; Japan</option>
+
+<option value="https://translate.google.com/translate?hl=en&sl=auto&tl=ar&u=https://moonshee.github.io/kagaku.html" title="Arabic">&#x1F1EF;&#x1F1F4; Palestine</option>
+
+<option value="https://translate.google.com/translate?hl=en&sl=auto&tl=ur&u=https://moonshee.github.io/kagaku.html" title="Urdu">&#x1F1F5;&#x1F1F0; Pakistan</option>
+	<option value="https://translate.google.com/translate?hl=en&sl=auto&tl=zh-CN&u=https://moonshee.github.io/kagaku.html" aria-label="Chinese language - Middle Country">&#x1F1E8;&#x1F1F3; ZhongGuo</option>
+
+</select>
+<script>
+	function goToLink(select) {
+		const url = select.value;
+		if (url) {
+			window.location.href = url;
+		}
+	}
+</script>
+<!--end drop down-->
+
+
+
 	<hr color="red" size="1">
 <table><tr><td>
 <font size="12" color="red">&#x1F235;</font>

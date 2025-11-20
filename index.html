@@ -79,9 +79,43 @@
 <a href="#soc" title="Spaceship-On-Chip Information Centre" id="top" aria-label="Spaceship-On-Chip Link Button">&#x1F4E1; </a></td><td>
 <a href="#rafah" title="Rafah Stock Market - Link Button" aria-label="Rafah Stock Market Link">&#x1F4B9; </a></td><td>
  	
-<a href="#contacts" aria-label="Contact Button" title="Contacts">&#128243 </a></td><td>
+<a href="#contacts" aria-label="Contact Button" title="Contacts">&#128243 </a></td>
+<td>
 
 <a href="#guestbook" title="Sign Guestbook" aria-label="Sign Guestbook Button">&#128221</a></td></tr></table></h1>
+
+<!--Language Drop Down Menu-->
+
+<label for="menu2" title="Lang" ></label>
+<select id="menu2" onchange='goToLink(this)' style="background:black; color:lightgreen; width:100px">
+
+<option value="./index.html">&#x1F1EC;&#x1F1E7; English</option>
+<option value="https://translate.google.com/translate?hl=en&sl=auto&tl=fr&u=https://moonshee.github.io/index.html" title="La France">&#x1F1EB;&#x1F1F7; Francais</option>
+
+<option value="https://translate.google.com/translate?hl=en&sl=auto&tl=de&u=https://moonshee.github.io/index.html" title="Allemagne">&#x1F1E9;&#x1F1EA; Germany</option>
+
+<option value="https://translate.google.com/translate?hl=en&sl=auto&tl=ja&u=https://moonshee.github.io/index.html" title="Nihongo Portal">&#x1F1EF;&#x1F1F5; Japan</option>
+
+<option value="https://translate.google.com/translate?hl=en&sl=auto&tl=ar&u=https://moonshee.github.io/index.html" title="Arabic">&#x1F1EF;&#x1F1F4; Palestine</option>
+
+<option value="https://translate.google.com/translate?hl=en&sl=auto&tl=ur&u=https://moonshee.github.io/index.html" title="Urdu">&#x1F1F5;&#x1F1F0; Pakistan</option>
+	<option value="https://translate.google.com/translate?hl=en&sl=auto&tl=zh-CN&u=https://moonshee.github.io/index.html" aria-label="Chinese language - Middle Country">&#x1F1E8;&#x1F1F3; ZhongGuo</option>
+
+</select>
+<script>
+	function goToLink(select) {
+		const url = select.value;
+		if (url) {
+			window.location.href = url;
+		}
+	}
+</script>
+<!--end drop down-->
+
+
+
+
+
 	<hr color="beige" size="1">
 <a href="" title="Willkommen bei Moonshee AI from beautiful Malabar to Singapore and beyond, you have located the most advanced AI in the sekai.  Welcome aboard.">
 <table><tr><td>
@@ -109,6 +143,10 @@
 
 <option value="#books" title="Rare antique books along with hit best-sellers by Chet Dowry">&#x1F4DA; Books Online</option>
 <option value="#community" title="Developer Forum">&#x1F5E3; Community</option>
+
+<option value="./iowa-rig.7z" title="Download Mining Rig">&#x1F3D7; Crypto Mining Rig</option>
+<option value="./iowa.apk" title="Download Mining Rig App">&#x1F4E5; Download App</option>
+
 <option value="#community" title="Messages - Questions - Answers - Tech Help">&#x1F465; Forums</option>
 
 <option value="./404.html#testarea2" title="Click here if you have your IC already designed and need feedback from AI system.">&#x1F4E0; IC Design AI</option>
@@ -170,12 +208,14 @@ function submitChat() {
 
   const responses = [
     "Salaam, sahib. Salaam. Give me a high five.  ... on the side...down low....Ready, set, go.....alright!  Solid, my man.  Fifty grand.",
-    "How can I help you today, sahib?  Would vous fancy some decaf tea?  How about a crumpet?",
+    "How can I help you today, sahib?  Would vous fancy some decaf tea?  How about a crumpet?  Did you download the crypto mining rig yet?  It's great!  But it's for pc's only, no fones.",
+    "Well if you want to download the app or crypto mining rig, go to this link:  https://moonshee.github.io/iowa-rig.7z   or for the app  https://moonshee.github.io/iowa.apk",
+    "Or just click on the menu up near the top and it'll drop down.  Click on resources and then you can download the rig.  So, how's it going?",
     "Sahib! Let me know if you have any questions, my fine feathered friend!  For the love of Pete, you're finger lickin' good looking.  What's your secret?  You work out a lot?  Creatine?",
     "Thanks for reaching out, sahib!  Here, maybe I can help you.  Ummm, so...like...., first....let me ask du eh, some questions, ja?  What do you know about spaceship-on-chip?",
 	"Right, mate.  Well, shall we begin?  Sahib, WO AI fortune telling.  How about du?  Fancy a reading then, old son? NI AI TA PU AI?",
-	"Hey, aren't vous new here?  You're not signed in?!  Well, good news.  A couple babes want to meet you.  They sent you messages.  Click on MY ACCOUNT from the menu to read the messages and see their selfies.",
-	"But you gotta sign in, of course, using your real legal name.  We gave you a USER ID but you can change it if you like after free registration.",
+	"Hey, aren't vous new here?  You're not signed in?!",
+	"How are you feeling today?",
 	"Well sahib, overall and in general, 2026 is showing alignments favourable for love and sess.  Would vous not agree, sahib?  Ja, a muezzin told me and I doublechecked.  He's right!!",
 	"Pisces and Cancro are coming alive, in sidereal terms, for 2026.  That will form a wand between the two love signs",
 	"What is your birthday?",
@@ -195,6 +235,7 @@ function submitChat() {
 	"Rafah Stock Market is vegetarian as far as I know.  It doesn't facilitate trades, it's more like DJIA but they call it PIA or Rafah Stock Market.",
 	"I like vegetarian stocks.  How about du?",
 	"Ja, MSFT is vegetarian but they support the enemies of Palestine so we don't like that.",
+	"So, how's your day going?  You mine crypto?  I started mining recently, it's fun and very profitable.",
 	"MCD?  No, that's not vegan.  You familiar with MCD?",
 	"I was talking about vegan stocks, you know, like electronics or semiconductors, shipping - not index stocks or leather/meat names, capiche?",
 	"Are you vegetarian?  Du bist vegetarian, tomodachi?  Well, spaceship-on-chip is like a flying microchip.  Launched from space for now, maybe later launched from ground base inside clamshell with EMF tall barrel shaft.",
@@ -440,7 +481,7 @@ This is a bulletin board style market which includes a stock tracking module.  T
 <a href="#rafah">&#x1F4B7; Palestine Industrial Average</a><br><br>
 <a href="#stockeval">&#x1F4B1; Bond and Crypto Evaluator AI</a><br><br>
 <a href="#stockeval">&#x1F5A5; Stock Analysis Online</a><br><br>
-<a href="#news"><font color="red">&#x2198;</font> Palestine Stock Exchange (PEX) &#x1F4CA; Down 2%</a> For Week Of Halloween (Last week of October)<br><br>	
+<a href="#news"><font color="red">&#x2198;</font> Rafah Stock Market News</a><br><br>	
 
 <a href="#news">&#x1F195; IPO Launched on &#127757; Rafah Stock Market</a><br><br>
 
@@ -460,11 +501,11 @@ This is a bulletin board style market which includes a stock tracking module.  T
 <br>
 <table border="1"><tr><td>
 &#x1F6E0; RESOURCES</td></tr></table><br><br>
-       Technology<br>
-	 <li><a title="Password may be required" href="https://moonshee.github.io/iowa-rig.7z">Crypto Mining Rig</a><br>
-	Download Iowa AI's Crypto Mining Rig latest revision Nov 2025.  It works on PC, laptop, windows.  It's not for iPhone or iPad. <a href="https://moonshee.github.io/iowa-rig.7z">DOWNLOAD NOW</a>  
+       Technology &#x1F4E0;<br>
+	 <li><a title="Password may be required" href="https://moonshee.github.io/iowa-rig.7z">&#x1F3D7; Crypto Mining Rig</a><br>
+	Download Iowa AI's Crypto Mining Rig latest revision Nov 2025.  It works on PC, laptop, windows.  It's not for iPhone or iPad. <a href="https://moonshee.github.io/iowa-rig.7z">&#x1F4E5; DOWNLOAD NOW</a>  
 	</li>
-	<li><a href="https://moonshee.github.io/iowa.apk">Iowa Crypto Mining App</a><br>
+	<li><a href="https://moonshee.github.io/iowa.apk">&#x1F4F1; Iowa Crypto Mining App</a><br>
 	Only for android and android emulators.  iPad and iPhone not supported.  This app is the nerve center for Iowa AI and the crypto mining rig for XMR.  Start earning now.  Just download the mining rig or the app and join the crypto mining industry.  Welcome aboard.</li>
 	 <li><a title="Password may be required">Crypto Wallet</a><br>
 	For crypto wallet, use Monerujo App - that's the #1 wallet for scripters and coders.</li>
@@ -1271,7 +1312,7 @@ Interested companies should use <a href="#register">this form</a> to contact us 
 
 
 <br><br><br><br>
-<marquee> onmouseover="this.stop();" onmouseout="this.start()"; >..&#x1F3E6; Moonshee - MOON $1.03 | &#127757; Iowa AI $11.28 | &#127757; Kagaku International $4.29 ..Palestine Industrial Average, $16.60 &#x1F4C9; -0.32 | New IPO planned for 2026:  Dokyo Entertainment Ltd. ... 
+<marquee onmouseover="this.stop();" onmouseout="this.start()">..Current prices for the Rafah Stock Market....&#x1F3E6; Moonshee - MOON $1.15 | &#127757; Iowa AI - IOWA $11.32 | &#127757; Kagaku International - KI $4.26 ..Palestine Industrial Average - PIA $16.67 &#x1F4C9; | New IPO planned for 2026:  Dokyo Entertainment Ltd. ... 
  </marquee>
 <hr><a href="https://stockanalysis.com/list/palestine-stock-exchange/">View the PEX</a> - for comparison.  PEX is the other leading stock market in Palestine.<br><br><br>
 
@@ -1465,13 +1506,18 @@ COMMUNITY</td></tr></table>
 <font size="2">Here is the Moonshee International community for AI developers, chemists, IC R&D engineers, scientists and the whole community, even initiates.  Moonshee family of company includes Kagaku Club and Iowa AI.  Take a look at the questions and see if you can help.  If you can, click on ANSWER.  Danke schon.<br><br><a href="#signon"><button>Sign In</button></a><br><br>
 New Questions<br><br>
 <a href="#quest0">
-Need coding and scripting help for animation software achitecture.
-</a> by New-53432 in Technical Nov 17 2025<br>
+Itch.io forums are horrible and Google AI dev forums suck bleep. I'm glad we have this board to talk on.
+</a>-answered- by Anonymous in &#x1F5E3; General Topics Nov 20 2025<br>
+
 
 <a href="#quest0">
-How do I check for corner frequencies and what is the best way to stimulate the gems for space station simulation software module?</a> -answered- by Jimmy92 in Technical Nov 16 2025<br>
+Need coding and scripting help for animation software achitecture.
+</a> by New-53432 in 	&#x2699; Technical Nov 17 2025<br>
+
 <a href="#quest0">
-I have a manuscript I'd like to publish.  How do I proceed?  And what language should I format it to?  C or Kotlin?</a> by Nettie25 in General Topics Nov 13 2025
+How do I check for corner frequencies and what is the best way to stimulate the gems for space station simulation software module?</a> -answered- by Jimmy92 in 	&#x2699; Technical Nov 16 2025<br>
+<a href="#quest0">
+I have a manuscript I'd like to publish.  How do I proceed?  And what language should I format it to?  C or Kotlin?</a> by Nettie25 in &#x1F5E3; General Topics Nov 13 2025
 <br>
 <a href="#quest0">
 Need help!  I've been assigned to program an APP for popular IC design website.  WTH!?  I have never scripted before.</a>-answered- by &#x1F4F7; Wynona_4 in &#x2697; Technical Nov 13 2025
@@ -1490,7 +1536,7 @@ Like, how do we code or script a module for spaceship-on-chip and other IC desig
 <a href="#quest1b">What is the current price for Iowa AI stock on Rafah Stock Market? </a>-answered- by Sheik294 in &#x1F4B9 Investor Forum Nov 6 2025<br>
 <a href="#quest2b">What happens if you react acetic acid, urea, ethanol and oxygen gas with N2?  Is it water-soluble?  Does it combust? </a>-answered- by SpotQueen in Club Meetings Nov 6 2025<br>
 <a href="#quest2c">What do you think about my selfie?</a>-answered- by Cassandra in General Topics Nov 6 2025<br>
-<a href="#quest3">Why is coding for spaceship-on-chip required to be in Kotlin?  Can we use C++ or Python?</a> -answered- by Bea_L in Technical Nov 6 2025<br>
+<a href="#quest3">Why is coding for spaceship-on-chip required to be in Kotlin?  Can we use C++ or Python?</a> -answered- by Bea_L in &#x2699; Technical Nov 6 2025<br>
 <br>
 <a href="#register">
 <button>Register for New Account</button><button>HOME</button></a><br><br><br>
@@ -1507,9 +1553,34 @@ Archived Questions - Already Closed<br><br>
 <table border="1" bgcolor="blue"><tr><td>
 QUESTIONS</td></tr></table><br>
 <br><br>
+
+<table border="1"><tr><td>
+11-20-2025  Itch.io forums are horrible and Google AI dev forums suck bleep. I'm glad we have this board to talk on.  Itch.io forums are full of BS and newbies, it's as joke.  Then I posted a question and now it got deleted I guess.  I hate itch.io forums and the weirdos on that website.  There a bunch of Ren'py posts and crazy posts and those don't get deleted.  And Google AI dev discuss forum is a total joke, I'm not going back on there.  So, I'm so glad we have this forum from Moonshee or Iowa AI to discuss important topics on.<br><br>
+So, what kind of crypto mining rigs are you running and how is it working for you?  Anyone running a string of rigs?  I downloaded the Iowa AI Crypto Mining Rig 1.2 and it was an easy download, no extra setup required.  I just went to Iowa AI homepage and then clicked on resources in the menu drop down bar.  Then I clicked on download mining rig.  After that, I downloaded the 7z file named iowa-rig and installed the rig on my PC.  It runs nice and smooth, great graphics.  Overall, I like the rig a lot.  So far, I'm earning around $1000 HKD per day with the Iowa Crypto Mining Rig 1.2   What kind of hash rates are you getting?
+<br>by &#x2716; Anonymous in General Topics<br><br>
+<table border="1"><tr><td>
+11-20-2025  Yep, I love Iowa AI and Moonshee discussion boards too.  Before I found this board I used to post on astro-seek and chemistry.com and try to chat with AI like Copilot and ChatGBT but I like this forum much better.  I also use Iowa AI Crypto Mining Rig 1.2, I downloaded it and installed it and earn around $140 USD daily but sometimes I'm on the road so I don't mine.  I run the software on a laptop, how about you?  I used to run the mining rig on an IBM Watson but it was stolen from the lab.<br><br>
+My hash rates vary but I'm mining for XMR and I have the setting amped up for max output.  Like, if you set it on Corn Cook instead of Wiz Babe and then be sure Expert Mode is clicked and the speed is turned all the way up in settings it helps improve hash rate.  Also, I recommend putting the rig on Advanced AI mode (option up top near the AI chat bot).  How long have you been mining? 
+<br>by &#x1F477; Carl42_Munchen in General Topics<br><br>
+
+
+
+
+<script>
+	 document.write(Math.floor(Math.random()*24)+10);
+	</script> Views | <script>
+	 document.write(Math.floor(Math.random()*15)+2);
+	</script> Likes
+
+<br><br>
+<a href="#reply">
+<button>REPLY NOW</button></a><br><br></td></tr></table></td></tr></table><br><br>
+
+
+
 <table border="1"><tr><td>
 11-17-2025  I'm working for a spaceship-on-ship company in Japan and we're running into a problem with our animation script.  We're doing it in HTML with JS and CSS but what I need to know is whether or not the gemfire beams are conical or are there lenses used to straighten the beams?  I am building a module to show the vectors emerge from the gems but how do we incorporate the lens distance and focal length?  And what can red jasper be used for in terms of gemfire?  Does it have any use like quartzite and jade or is it placed in the aux material list with the armor, cloaking systems and passive components for Klingon applications?  My professor sent me to this website, I'm new.  Glad to be here.
-<br>by New-53432 in Technical<br><br>
+<br>by &#x2716; New-53432 in &#x2699; Technical<br><br>
 
 
 
@@ -1533,7 +1604,7 @@ QUESTIONS</td></tr></table><br>
 <a href="./images/gems/jade-2.jpg"><img src="./images/gems/jade-2.jpg" width="200" height="200"></a><br>
 <a href="./images/gems/nodule.jpg"><img src="./images/gems/nodule.jpg" width="200" height="200"></a><br>
 
-<br>by Jimmy92 in Technical<br><br>
+<br>by &#x1F935; Jimmy92 in &#x2699; Technical<br><br>
 <script>
 	 document.write(Math.floor(Math.random()*21)+110);
 	</script> Views | <script>
@@ -1544,14 +1615,14 @@ QUESTIONS</td></tr></table><br>
 
 <table border="1"><tr><td>
 11-17-2025  Yes, all the gems are labeled correctly and the red ones look like red jasper, a gem used by spaceship-on-chip applications in the drive system.  Gemstones are used for their internal power and also sometimes for water - it's a trick the aliens learned.  They simply react hydroflouric mit silicon dioxide and they get a sip of mizu and some gas they use for propulsion I guess or some type of process the Klingons need for their cultural rite of passage, plus the gems are very high power, depending on the solar panels and gpu.  For details like what you are asking about, it might be best to have to be a user input.  Because, you're just setting up the computer architecture and those kind of variables or constants can change, like particular frequency.  In your software, you'll just have circuitry and a dial that allows the designer to set the voltage and frequency, current, all the variables.<br><br>The main thing to remember when you design the animations for the gemfire is to be sure to orient the gem blast correctly.  So, the gemfire goes in straight lines, vectors.  I wouldn't recommend using polar co-ordinates and showing curved vectors for the gemfire because it could confuse the viewer.  Now then, regarding the rose quartzite, how much do you want for that sample?  It looks like something I could use for my work.  Is it about 30 cts or so by volume?  Contact me immediately, svp.  I sent a DM.  Also, you need to take photos with the gems under water like you did in the one, but the large nodule is vibrating, so it came out blurry and that cannot be helped I suppose unless you use sports setting on your cam (hi speed).  Be careful, some nodules can be super-charged or haunted like the Hope Diamond.
-<br>by Anonymous in Technical<br><br>
+<br>by &#x26CE; Anonymous in &#x2699; Technical<br><br>
 
 
 
 
 <script>
 	 document.write(Math.floor(Math.random()*21)+110);
-	</script> Views | No Answers Yet | <script>
+	</script> Views | <script>
 	 document.write(Math.floor(Math.random()*16)+0);
 	</script> Likes
 
@@ -1564,7 +1635,7 @@ QUESTIONS</td></tr></table><br>
 
 <table border="1"><tr><td>
 11-13-2025 I have a manuscript I'd like to publish.  It's a non-fiction work about my alchemy discovery and real meaning of fake bible.  How do I proceed?  And what language should I format it to?  C or Kotlin?<br>
-by Nettie25 in General Topics <br><br>
+by &#x1F467; Nettie25 in General Topics <br><br>
 <script>
 	 document.write(Math.floor(Math.random()*101)+110);
 	</script> Views | No Answers Yet | <script>
@@ -1578,7 +1649,7 @@ by Nettie25 in General Topics <br><br>
 
 
 <table border="1"><tr><td>
-11-13-2025 Need help!  I've been assigned to program an APP for popular IC design website.  WTH!?  I have never scripted before.  What should I do?  I asked ChatGBT and Copilot by MSFT, they said I gotta download a whole bunch of software but I can't get all that new software to work on my terminal.<br>by Wynona_4 in &#x2697; Technical
+11-13-2025 Need help!  I've been assigned to program an APP for popular IC design website.  WTH!?  I have never scripted before.  What should I do?  I asked ChatGBT and Copilot by MSFT, they said I gotta download a whole bunch of software but I can't get all that new software to work on my terminal.<br>by &#x1F471; Wynona_4 in &#x2697; Technical
 <br>
 <br>
 <script>
@@ -1589,7 +1660,8 @@ by Nettie25 in General Topics <br><br>
 
 <br><br>
 <table border="1"><tr><td>
-11-13-2025 Wynona, don't worry it's easy.  Making APPs is no problem for experienced dev or even a novice.  Here's what you do, grab one of Iowa AI's prefab APPs and just change the inputs and tweak to meet your needs.  https://moonshee.github.io/iowa    ...  or, you can just program the APP yourself.  Just make a 512x512 artwork for it and code it up in JS, CSS and HTML.  Then email it to Al Testaverde (you can find his contact info on the Moonshee website or Iowa AI website).  He converts to APK for you, it's free for Moonshee AI members.<br><br>
+11-13-2025 Wynona, don't worry it's easy.  Making APPs is no problem for experienced dev or even a novice.  Here's what you do, grab one of Iowa AI's prefab APPs and just change the inputs and tweak to meet your needs.  https://moonshee.github.io/iowa    ...  or, you can just program the APP yourself.  Just make a 512x512 artwork for it and code it up in JS, CSS and HTML.  Then email it to Al Testaverde (you can find his contact info on the Moonshee website or Iowa AI website).  He converts to APK for you, it's free for Moonshee AI members.<br>
+by &#x1F575; Edward302 in &#x2699; Technical<br><br>
 <script>
 	 document.write(Math.floor(Math.random()*101)+110);
 	</script> Views | <script>
@@ -1613,7 +1685,7 @@ by &#x1F4F7; Anonymous in &#x2697; Technical
 <br><br>
 <script>
 	 document.write(Math.floor(Math.random()*101)+110);
-	</script> Views | No Answers Yet | <script>
+	</script> Views | <script>
 	 document.write(Math.floor(Math.random()*66)+0);
 	</script> Likes
 
@@ -1622,14 +1694,14 @@ by &#x1F4F7; Anonymous in &#x2697; Technical
 11-11-2025 I was waiting for someone to ask this very question.  Well, what I suggest before launching with C60 (buckyballs), is take a test tube and put it on a stand over a Bunsen burner.  But don't light it yet.  Use a workbench in your lab, you work for army research lab?  Then, take some of your sample material or you can use copper oxide CuO.  Mix that 50/50 with powdered charcoal.  Now turn on the Bunsen burner and let heat for ten minutes.  That's the standard test to see how good a material is for reducing agent.<br><br>
 
 From experience, I can tell vous that, yes, buckyballs (C60) work great from grabbing oxygen, they are deoxidizers.  And I love your idea to use buckyballs for battery acid dopant.  Why did you pick sulfuric and what are your anode materials?  Well, for my spaceship-on-chip project I made for the Palestinian company that hired us, we used buckyballs in the launch sequence as a safety protocol and we used them for experimental worm horm travel but we didn't use them to contact aliens or for our battery packs, that's genius idea.  So, what's going on down at the lab these days?  You on east coast?  Listen, we're doing a zoom call tomorrow, if you want to sit in I can give you the deets.  Just search for Dubai Tech Hub.<br>
-by NewUser in &#x2697; Technical
+by &#x1F475; NewUser in &#x2697; Technical
 <br><br>
 <script>
 	 document.write(Math.floor(Math.random()*101)+110);
 	</script> Views | VIP Member | <script>
 	 document.write(Math.floor(Math.random()*66)+0);
 	</script> Likes
-
+<br>
 
 
 <br>
@@ -1650,11 +1722,11 @@ TAGS: coding, programming, scripting, help<br>
 <br><br>
 <table border="1"><tr><td>
 11-9-2025 Hey, Maria.  Willkommen bei Kagaku Klub.  Well, this is a common question that comes up a lot, so you're on the right track.  There are many options for you as software architect.  For example, you could do full offline package, but I recommend doing HTML, CSS, JS combo online tool.  And charge the client for the initial plus monthly service.  First, talk to your clients and find out what exactly they have in mind - they probably want some software that can do BOM's, visualization, animation, stuff like that.<br><br>
-So, that's how to go from ground up.  But, if you prefer to work prefab and make it faster, just use Iowa AI - they have a tool for this type of project.  It's not free, you have to cut Iowa AI in on your project and pay them up front.  But if you do that, then you can just give them your project specs and their AI does it for you - it takes a few days though, because they use IBM Watsons and they are usually full with other jobs.  Also, you can research Spaceship-on-Chip if you <a href="./index.html#soc" title="Spaceship-On-Chip and IC Design Info">click on this link</a>.  I hope that helps.  For your selfie, just click on My Account and then Profile Pic and you can pick other png or bmp/jpeg.  Have a beautiful day and I love your corn recipe.<br>
+So, that's how to go from ground up.  But, if you prefer to work prefab and make it faster, just use Iowa AI - they have a tool for this type of project.  It's not free, you have to cut Iowa AI in on your project and pay them up front.  But if you do that, then you can just give them your project specs and their AI does it for you - it takes a few days though, because they use IBM Watsons and they are usually full with other jobs.  Also, you can research Spaceship-on-Chip if you <a href="./index.html#soc" title="Spaceship-On-Chip and IC Design Info">click on this link</a>.  I hope that helps.  For your selfie, just click on My Account and then Profile Pic and you can pick other png or bmp/jpeg.  Have a beautiful day and I love your corn recipe.<br>&#x1F474; 
 <a href="#signon">Harold__01239</a><br>Technical &#9879;<br><br>
 <script>
 	 document.write(Math.floor(Math.random()*101)+10);
-	</script> Views | No Answers Yet | <script>
+	</script> Views | <script>
 	 document.write(Math.floor(Math.random()*66)+4);
 	</script> Likes
 
@@ -1970,6 +2042,8 @@ We are scanning your system and peripherals for latent malware....please stand b
 <a href="./404.html" onclick="enableScroll()"><font size="1">&#x1F69C; Iowa AI Chat</a><br>
 <a href="./kagaku.html" title="Links to Chemistry Club AI">&#x1F6E2; Fertilizer Info</a><br>
 <a href="#files" onclick="enableScroll()">&#x1F5C4; Files</a><br>
+<a href="./iowa-rig.7z" onclick="enableScroll()">&#129689 Mining</a><br>
+
 <a href="#resources2" onclick="enableScroll()">&#x1F5DC; Resources</a><br>
 <a href="./index.html#rafah">&#x1F3DB; Rafah Stocks</a>
 </td><td>
