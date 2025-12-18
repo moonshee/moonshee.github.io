@@ -1,5 +1,13 @@
 This is a top secret repo for:
 
+Gemfire Projects
+
+Iowa Stargate Wormhole Generator
+
+Mineralogy Association
+
+Crystal Information
+
 Iowa Crypto Mining Rig
 
 Spaceship-on-chip design and manufacturing software modules
