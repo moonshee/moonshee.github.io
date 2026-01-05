@@ -18,6 +18,8 @@ Iowa AI
 
 Kagaku Club
 
+Venezuelan Mineral and Artifact Gallery
+
 Moonshee Publishing
 
 e-Books
