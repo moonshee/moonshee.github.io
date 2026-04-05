@@ -1,12 +1,8 @@
 This is a top secret repo for:
 
+Injection Mould Technology and Production
+
 Gemfire Projects
-
-Iowa Stargate Wormhole Generator
-
-Mineralogy Association
-
-Crystal Information
 
 Iowa Crypto Mining Rig
 
@@ -17,8 +13,6 @@ Rafah Stock Market
 Iowa AI
 
 Kagaku Club
-
-Venezuelan Mineral and Artifact Gallery
 
 Moonshee Publishing
 
