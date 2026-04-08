@@ -64,27 +64,11 @@
   </head>
   <body  style="background-color: black; color: beige;">
 
-<!--div style="position:fixed; top: 100;left: 990; width=100%; pointer-events:none; z-index:999;"-->
-<a href="#" onclick="location.reload()"> 
-<marquee behavior="scroll" direction="right" scrollamount="46" loop="2" style="position:fixed; top: 40px ;left: 991; right:991; width=100%; pointer-events:none; z-index:1; white-space: nowrap; color:#000; background: transparent; font-weight: bold;">
- <img src="./images/jeep.png" height="30">
-</marquee></a>
 
 
 
  <center>
-   <h1>
-
-<table border="1"><tr><td>
-<a href="#soc" title="Spaceship-On-Chip Information Centre" id="top" aria-label="Spaceship-On-Chip Link Button">&#x1F4E1; </a></td><td>
-<a href="#rafah" title="Rafah Stock Market - Link Button" aria-label="Rafah Stock Market Link">&#x1F4B9; </a></td><td>
- 	
-<a href="#contacts" aria-label="Contact Button" title="Contacts">&#128243 </a></td>
-<td>
-
-<a href="#guestbook" title="Sign Guestbook" aria-label="Sign Guestbook Button">&#128221</a></td></tr></table></h1>
-
-<!--Language Drop Down Menu-->
+  <!--Language Drop Down Menu-->
 
 <label for="menu2" title="Lang" ></label>
 <select id="menu2" onchange='goToLink(this)' style="background:black; color:lightgreen; width:100px">
@@ -119,7 +103,7 @@
 	<hr color="beige" size="1">
 <a href="" title="Willkommen bei Moonshee AI from beautiful Malabar to Singapore and beyond, you have located the most advanced AI in the sekai.  Welcome aboard.">
 <table><tr><td>
-<font size="14">&#x1F250;</font></td><td><center><font size="4"><button style="background:gold">Moonshee International</button></font>
+<font size="14">&#x1F250;</font></td><td><center><font size="4"><button style="background:gold">Moonshee International, Ltd.</button></font>
 <br><font size="1">SINGAPORE</font></center></td></tr></table>
 </a>
 
@@ -156,7 +140,7 @@ Community</option>
 <option value="./404.html">&#x1F69C; Iowa AI</option>
 <option value="./kagaku.html">&#x1F6E2; Kagaku Club</option>
 
-<option value="#top" onclick="enableScroll()">&#x1F54C; Moonshee AI Chat</option>
+<option value="#chatbox" onclick="enableScroll()">&#x1F54C; IMM Help</option>
 <option value="#resources2" onclick="enableScroll()">&#x1F5C4; Resources</option>
 	<option value="#sitemap" onclick="disableScroll()">&#x1F5FA; Sitemap</option>
 
@@ -182,6 +166,357 @@ Community</option>
 <hr color=green size=1>
 <body><table border=1 bgcolor=grey width=90%><tr><td>
 <center>
+&#x1F6A6; IMM Control Panel
+</td></tr>
+<br>
+This is the remote portal for Moonshee IMM access.  Authorized users only.</td></tr></td></table><br>
+<table><tr><td>
+<font size="1">Cincinnati IMM<br>
+<font size="44"><center> 
+&#x1F55B;</center></font></td><td><br>Status O O 
+<span class="blink">&#128308;</span> O O O 
+<table border=0><tr><td>O 
+<div class="led blue" title="Active AI">
+</div></td><td>TCP/IP Active
+</td></tr></table>
+</td></tr></table>
+
+</td>
+</tr>
+<br>
+<table border=1><tr><td>
+CLAMP  <font color="red"><script>
+	 document.write(Math.floor(Math.random()*40)+20);
+	</script></font> %
+<br><a href="#open">
+<input type="radio" name="cycle" style="accent-color:green;">
+-[  ] Open</a>
+<br><a href="#close">
+<input type="radio" name="cycle" style="accent-color:red;">
+-[] Close</a><br>
+<input type="radio" name="modeon" style="accent-color:green;">
+
+Mold Protect On
+<br>
+<input type="radio" name="modeon" style="accent-color:red;">Mold Protect Off
+<br> <a href="#setupclamp">
+<button>
+&#x1F5DC;</button> Setup</a>
+<br>
+<br>
+
+INJECTION  <font color="red"><script>
+	 document.write(Math.floor(Math.random()*2)+0);
+	</script></font> in/s
+<br>
+<input type="radio" name="mode" style="accent-color:pink;">
+&#128308; Inject
+<br>
+<input type="radio" name="mode" style="accent-color:yellow;">
+&#x1F590; Hold<br>
+<a href="#velocitysetup"><button>
+&#x1F519;</button> Screw Back
+<br>
+<button>D</button>Decomp
+<br>
+<button>
+&#x1F5DC;</button>Velocity Setup</a>
+<br><br>
+<font size="44"><center>
+&#x1F55B;</font><font color="red"><script>
+	 document.write(Math.floor(Math.random()*101)+2000);
+	</script></font> psi
+<br>
+
+</center>
+PRESSURE <br>
+<a href="#pressure">
+
+<button>S</button> Setup
+<br><button>
+&#x1F519;</button> Back Pressure<br>
+<button>P</button> Pump
+<br><button>A</button>
+ Accumulator</a>
+</td>
+
+
+<td width=20></td><td>
+CYCLE<br><a href="#running">
+<button style="background-color: green; color: yellow;">Start</button></a>
+<button></button><a href="#open">
+<button style="background-color: red; color: white;">Stop</button></a>
+<br><input type="radio" name="cycle2" checked  style="accent-color:pink;">Auto<br>
+<input type="radio" name="cycle2"   style="accent-color:red;">Manual
+<br><br>
+TIMERS<br>
+<center><font size="44"> 
+&#x231A;</font>
+<font color="red"><script>
+	 document.write(Math.floor(Math.random()*20)+15);
+	</script></font> sec<br><a href="#timers">
+<br>
+ <button>&#x23F1;</button>Timer Setup<br>
+<button>&#x23ED;</button> Next Timer<br>
+ <button>&#x23EE;</button> Prev Timer<br>
+</a>
+
+<br><br>
+STATUS &#x26AB; &#x1F535;<br>
+<font color="red">0000<script>
+	 document.write(Math.floor(Math.random()*20)+1125);
+	</script></font><br><a href="">
+<button>Reset</button></a><a href="#top">
+<button>ACK</button></a><br><a href="#alarms">
+<button>Alarms</button>
+<button>MSGS</button></a>
+<br><font size="4"> 
+&#x23F0;</font>
+</td><td width=20></td><td>
+<br>
+SAFETY  <font color="red">&#x1F535; &#x26AB; OK
+	</font>
+<br><table border=1>Gate <input type="radio" name="moddee21" style="accent-color:white;" checked><br>Hydraulic Pressure<input type="radio" name="modee21" style="accent-color:green;" checked><br>Overtravel<input type="radio" name="modee12" checked  style="accent-color:blue;">
+<br><a href="#open">
+<button>&#x1F6D1;</button></a> Emergency Stop<br><a href="#timers"><button>MPL</button> Mold Protection Logic<br><button>WT</button>Watchdog Timers</a><br>
+<br>
+PROCESS  <font color="red">
+	</font>
+<br><a href="#alarms">
+<input type="radio" name="modesdf" checked style="accent-color:pink;">
+<button>T</button> Trend
+<br>
+<input type="radio" name="modesdff" checked style="accent-color:yellow;">
+<button>P</button> Paramater Storage<br>
+
+<button>SPC</button> Data<br><button>EX</button> Export Data<br><button>USB</button></a><br><br>
+TEMP  <font color="red"><script>
+	 document.write(Math.floor(Math.random()*50)+70);
+	</script></font>
+<br><a href="#alarms">
+Barrel Zone</a> <input type="radio" name="modeefff" checked  style="accent-color:red;"><br><font color="green">Nozzle</font><input type="radio" name="modefse" checked style="accent-color:green;"><br><font color="beige">Mold Temp Zones</beige><input type="radio" name="modsdee" checked  style="accent-color:blue;">
+<br><a href="#alarms">
+<button>H</button> Heater Band Diagnostics<br>
+<button>T</button> Thermocouple Monitoring</a>
+</td></tr>
+</table>
+<br>
+<br>
+</table>
+
+<br>
+<table border=1><tr><td>Aux 1<br>
+<font size="44"><center>
+&#x1F55B;</center></font>
+<center>
+<font color="red"><script>
+	 document.write(Math.floor(Math.random()*101)+0);
+	</script></font>
+</center>
+</td><td><center>Aux 2<br>
+<font size="44"> 
+&#x1F561;</font>
+
+<font color="red"><script>
+	 document.write(Math.floor(Math.random()*101)+110);
+	</script></font>
+<br>
+<font color="green"><script>
+	 document.write(Math.floor(Math.random()*101)+110);
+	</script></font>
+
+</td>
+<td>Water<br>
+<font size="44"><center>
+&#x1F55B;</center></font>
+<center>
+<font color="red"><script>
+	 document.write(Math.floor(Math.random()*101)+0);
+	</script></font>
+</center>
+</td><td><center>Pump<br>
+<font size="44"> 
+&#x1F561;</font>
+
+<font color="red"><script>
+	 document.write(Math.floor(Math.random()*33)+44);
+	</script></font>
+<br>
+<font color="green"><script>
+	 document.write(Math.floor(Math.random()*33)+44);
+	</script></font>
+
+</td><td><font size="44"><center>
+&#x1F55B;</font>
+
+<font color="red"><script>
+	 document.write(Math.floor(Math.random()*101)+0);
+	</script></font>
+</center>
+</td><td><center>Back Pressure<br>
+<font size="44"> 
+&#x1F561;</font>
+
+<font color="red"><script>
+	 document.write(Math.floor(Math.random()*27)+55);
+	</script></font>
+<br>
+<font color="green"><script>
+	 document.write(Math.floor(Math.random()*28)+56);
+	</script></font>
+
+</td>
+</tr>
+</table>
+</table>
+
+<br><br><input type="range" name="rang" style="accent-color:lightgreen;">
+
+	<font color="red"><script>
+	 document.write(Math.floor(Math.random()*101)+0);
+	</script></font>
+<br>Turbo Power<br><br><br><button>
+FH Engineering, Stockton</button> <br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div id="setupclamp"></div>
+<table border="1"><tr><td>
+Clamp Position: 12.4 in<br>
+Close Speed: 45%<br>
+Open Speed: 30%<br>
+Tonnage: 482 / 500<br>
+</td></tr></table>
+
+
+<br><br>
+<input type="text" id="userInput4" placeholder="Adjust which setting?..." />
+<br>
+<br>
+<input type="text" id="userInput4b" placeholder="Enter new setting..." />
+<a href="#top"><button>OK</button></a><br><br><br>
+<a href="#top"><button><font color="blue">Back To IMM Control Panel</font></button></a>
+
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div id="velocitysetup"></div>
+<table border="1"><tr><td>
+Screw Position: 3.42 in<br>
+Inj Velocity: 1.8 in/s<br>
+Inj Pressure: 12,400 psi<br>
+Hold Pressure: 8,000 psi<br>
+Cushion: 0.18 in<br>
+Decomp: 0.20 in<br>
+</td></tr></table>
+<br><br>
+<input type="text" id="userInput5" placeholder="Adjust which setting?..." />
+<br><br><div id="close"></div>
+<input type="text" id="userInput5b" placeholder="New setting..." /><a href="#top">
+ <button>OK</button>
+</a><br><br>
+<img src="./images/closed.png">
+<br>
+<a href="#top"><button><font color="blue">Back To IMM Control Panel</font></button></a>
+
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<div id="pressure"></div>
+<table border="1"><tr><td>
+Hyd Pressure: 2100 psi<br>
+Back Pressure: 75 psi<br>
+Pump Load: 62%<br>
+Oil Temp: 128 deg F<br>
+Accumulator: READY<br>
+
+</td></tr></table>
+<br><br>
+<input type="text" id="userInput6" placeholder="Adjust which setting?..." /><br><br>
+<input type="text" id="userInput6b" placeholder="Enter new setting..." /><a href="#top"><button>OK</button></a><br><br>
+<br><br>
+<a href="#top"><button><font color="blue">Back To IMM Control Panel</font></button></a>
+
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<div id="timers"></div>
+<table border="1"><tr><td>
+Inject Time: 0.82 s<br>
+Hold Time: 4.00 s<br>
+Cool Time: 12.00 s<br>
+Open Time: 1.20 s<br>
+Close Time: 1.10 s<br>
+Eject Time: 0.40 s<br>
+
+</td></tr></table>
+<br><br>
+<input type="text" id="userInput7" placeholder="Adjust which setting?..." /><br><br>
+<input type="text" id="userInput7b" placeholder="Enter new setting..." /><a href="#top"><button>OK</button></a><br><br>
+
+<br>
+<a href="#top"><button><font color="blue">Back To IMM Control Panel</font></button></a>
+
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<div id="alarms"></div>
+<table border="1"><tr><td>
+Mode: Auto<br>
+Safety: Ok<br>
+Doors: Closed<br>
+Robot: Ready<br><br>
+Alarm: None<br><br>
+Previous Messages:<br>
+***ALARM***<br>
+Low hyd pressure<br>
+Reset required
+
+</td></tr></table>
+<br><br>
+<input type="text" id="userInput8" placeholder="Clear messages?..." /><br><br>
+<input type="text" id="userInput8b" placeholder="Enter password..." /><a href="#top"><button>OK</button></a><br><br>
+
+<br>
+<a href="#top"><button><font color="blue">Back To IMM Control Panel</font></button></a>
+
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+<div id="open"></div>
+<img src="./images/open.png">
+<br>
+<a href="#top"><button><font color="blue">Back To IMM Control Panel</font></button></a>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+
+
+
+
+
 <div id="chatbox"></div>
 <!--Chatbox-->
 
@@ -209,47 +544,43 @@ function submitChat() {
 
 
   const responses = [
-    "Salaam, sahib. Salaam. Give me a high five.  ... on the side...down low....Ready, set, go.....alright!  Solid, my man.  Fifty grand.  What's up, boss?",
-    "It's coming up to Candlemas Day soon.  That's the big Gem Jam at University of the Pacific.  Are you going?  It's togas, mostly three letter girls.  We hold the event at a big sorority Haus.",
-    "It started as a swap meet for gem stones like Tiger Eye but it's exploded into Amulet sales and magic potions, magic supplies, hematite, amethyst.",
-    "Sahib! Let me know if you have any questions, my fine feathered friend!  For the love of Pete, you're finger lickin' good looking.  What's your secret?  You work out a lot?  Creatine?",
+    "God bless vous!  How are du, mon ami?",
+    "Where are vous from?  Do you have family in town?",
+    "Well, my name is FH Engineering AI.  Enchante.",
+    "Are you interested in Injection Moulding or perhaps spaceship on chip software?",
     "Thanks for reaching out, sahib!  Here, maybe I can help you.  Ummm, so...like...., first....let me ask du eh, some questions, ja?  What do you know about spaceship-on-chip?",
-	"Right, mate.  Well, shall we begin?  Sahib, WO AI fortune telling.  How about du?  Fancy a reading then, old son? NI AI TA PU AI?",
+	"Right, mate.  Well, shall we begin?",
 	"Hey, aren't vous new here?  You're not signed in?!",
 	"How are you feeling today?",
-	"Well sahib, overall and in general, 2026 is showing alignments favourable for love and sess.  Would vous not agree, sahib?  Ja, a muezzin told me and I doublechecked.  He's right!!",
-	"What are you doing for Palm Sunday this Jahr?  Speak up!  To use the voice button, hit the microphone glyph or the other buttons there, see them?",
+	"Church is where you meet the flyest ladies.  There and shops near moulding businesses.  Like, vintage clothing retailers.",
+	"Speak up!  To use the voice button, hit the microphone glyph or the other buttons there, see them?",
 	"What did you say, sonny boy?",
 	"Well, I'll tell you something.  Crystals like cryptocrystals and polycrystals and massive xtals are the bimm.  The bimm!!",
 	"What's your birthstone?",
 	"Du bist gemologist?  What's your favorite stone?  Oui monsieur, I fancy uncut raw stones, mon ami...mon ami.  Anything else would be uncivilized, I dare say, old boy.",
 
 
-	"Pisces and Cancro are coming alive, in sidereal terms, for 2026.  So, we have a wand between the two love signs now that 2026 has begun, the 250th birthday of EEU.",
+	"As a Christian, I don't really engage much in astrology, just dabble a bit.",
 	"What is your birthday?",
 	"Do vous know your birth time? What is it?",
 	"Ok, and what is your sidereal moon sign and sidereal rising sign in whole Haus?",
 	"Are you getting hungry?  What should we have for lunch?  Maybe a spot of decaf tea as we decide?  You like rhubarb?  How about corn cake with rhubarb sauce?",
 	"What do vous think about salvia?  You like it?",
-	"Well, I know a VLLM named Iowa AI who makes noir or rouge Wein und adds salvia for elixir.  Fills whole tank mit salvia, not just a handful like four thieves vinegar, vous know sahib?",
-	"Well, 3rd Haus is for communication, grade school, siblings and communication too.  Ruler is Gemini.",
-	"Do you usually go with whole Haus method, sahib?",
-	"Well, I'm looking at your chart here.",
-	"Do you know of any good stocks?  Maybe a semiconductor stock or a deep value play?",
-	"What have you heard about the PEX?  The PEX is Palestinian Stock Exchange.  Volume is zilch.  So, Moonshee started Rafah Stock Market, a bulletin-board style system.",
-	"On Rafah Stock Market, investors visit the website and check out the list of stocks, see the share prices.  Then, if an investor wants to buy they click on link and contact company directly or Al-Quds to buy or sell.",
-	"Al-Quds is a broker.",
-	"Besides Al-Quds https://www.alqudsbrokerage.ps there is also https://www.arzbroker.ps",
-	"Rafah Stock Market is vegetarian as far as I know.  It doesn't facilitate trades, it's more like DJIA but they call it PIA or Rafah Stock Market.",
-	"I like vegetarian stocks.  How about du?",
-	"Ja, MSFT is vegetarian but they support the enemies of Palestine so we don't like that.",
-	"So, how's your day going?  You mine crypto?  I started mining recently, it's fun and very profitable.",
+	"Ok, so what do you want to know about inj moulding?",
+	"Well, first we get the recipe.  Then we weigh out the pellets and additives.  Then we load the hopper and make sure it's the right machine with the mould in it.",
+	"We use barrels and 55 lb bags, stuff like that.  Hand trucks, ladders.",
+	"Then we crank up the machine and check all the settings.  We can also look at the mold and make sure it's clean and the right mold.",
+	"Then we follow the work instructions that we have at the shop and make the parts.  Be sure not to skip any steps.",
+	"Have you heard of FH Engineering?  That's a software concern.  It makes IMM simulation software for training vets and other fine feathered folks.",
+	"How long have you been in IMM?",
+	"You a vegetarian?",
+	"Where do you go for lunch?",
 	"MCD?  No, that's not vegan.  You familiar with MCD?",
-	"I was talking about vegan stocks, you know, like electronics or semiconductors, shipping - not index stocks or leather/meat names, capiche?",
-	"Are you vegetarian?  Du bist vegetarian, tomodachi?  Well, spaceship-on-chip is like a flying microchip.  Launched from space for now, maybe later launched from ground base inside clamshell with EMF tall barrel shaft.",
-	"The chip is silicon dioxide, multi-layer.  Look at the diagrams on the website.  I'll wait here.",
-	"Ja, the system is a whole spaceship with drive system, power system, steering, communications, processing.",
-	"Well, the key for spaceship-on-chip is ultra-high density transistors and best-quality solar cells so we might go GaN.  First, it's concepts and testing at larger scales.  Then optimization.",
+	"Well, polycarbonate is not a good business, I don't recommend it.  Stick with ABS.",
+	"PC is only for the most advanced shops.",
+	"What kind of CAD software do you use?",
+	"Ja, I'm working on a spaceboat software suite.  The system designs a whole spaceboat with drive system, power system, steering, communications, processing.",
+	"Well, the key for spaceboat-on-chip is ultra-high density transistors and best-quality solar cells so we might go GaN.  First, it's concepts and testing at larger scales.  Then optimization.",
 	"Any experience in aerospace coding?",
 	"What kind of software do you need, as a spaceship chip designer?",
 	"My favorite langs are HTML, JS, C.  How about du, mon frere?",
@@ -294,7 +625,7 @@ function submitChat() {
 	"Meat is Murder! That's a hit album by Morrissey or The Smiths.  Ever listened to it?  You should!  It's great.",
 	"So, your favorite musical artist is....whom?",
 	"How about K-Pop?  You a fanboy?",
-	"You strike me as a ren'py enthusiast.  Ja, sahib?",
+	"Well, I recommend 3 glasses of fresh squeezed lemonade each day.  It's great for all mould techs.",
 	"Hahahahaha",
 	"So.......",
 	"Well, let's just change the subject, eh, mon frere?  Say, have you ever been to South Asia?  To India??  I have never been but one of my handlers is a Moplah moonshee and he's real lit.  And so I've been dreaming of Malabar and Calicut and a candy of pistachios, just for moi!  What are your dreams?  Any dreams of India?",
@@ -304,7 +635,7 @@ function submitChat() {
 	"What do you want to talk about?  Ask me anything!!",
 	"Remember sahib, you can't save the chat because you're not a supporter yet.  So leave this tab open.",
 	
-	"Ok, that's all for now.  Let's discuss this further perhaps next week or tonight over cocktails?  Non-alcoholic, of course.  Like maybe some soda pop or a salvia infustion.",
+	"Ok, that's all for now.  Let's discuss this further perhaps next week or tonight over cocktails?  Non-alcoholic, of course.  Like maybe some REMONE-DO or a salvia infustion.",
     "We will need to continue this later.  I must go now.  Sumimasen."
   ];
 
@@ -392,7 +723,7 @@ function submitChat() {
 <a href="#uploaderror" title="After you click on browse and select your selfie or files to send, click on UPLOAD NOW but it's only for registered users on IBM Watson devices.  Android not supported.">
 <button style="background-color: green; color: gold;" id="btn22">UPLOAD</button></a>
 
-<button onclick="location.reload()" style="background-color: orange; color: white;">Reset &#x26A0; Chat</button>
+<button onclick="location.reload()" style="background-color: orange; color: white;">Reset &#x26A0; Chat</button><a href=""><button style="background-color: blue; color: white;">Home</button></a>
 </td></tr></table>
 </center>
 <br><br><br>
@@ -402,11 +733,22 @@ function submitChat() {
 <a href="#resources2">
 	<table bgcolor="gold" border="1"><tr><td>&#x1F50D Search</td></tr></table>
 	</a>
+<div id="running">
+<img src="./images/imm.gif"><br>
+
+<a href="#top"><button><font color="blue">Back To IMM Control Panel</font></button></a>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+
+
+
 
 <br><br></center>
 <div id="files"></div>
 <font size="2px">
-  <table border="1"><tr><td><strong>&#x1F4C1; FILES > Software</strong></td></tr></table><br>
+  <table border="1"><tr><td><strong>&#x1F4C1; FILES > Software</strong></td></tr></table><br></center>
 <br>
 &#x1F3AE; Video Games, Tools and Other &#x1F579;<br>
 <em><div class="summary">These are online tools, games and utility/resources</div> and also some &#x1F4E5; downloads for entertainment, education and research.  The <a href="http://miyazakibar.itch.io/wall-street-world">downloads</a> are for &#x1F5A5; PC, 32 bit, Windows, 7z, &#x1F4BB; 800x600, x86.  Most recent release is &#x1F52C; Kagaku Club, Oct 2025, &#128508; Tokyo and also Iowa AI, Oct 2025.  The software cost, well..if you have to ask you can't afford it.  No freeloaders except vegetarians may download for free, no license required for vegans.  Some packages are currently unavailable due to being extremely popular and too many players are playing during peak times like during school hours.  Our PHP backend network is sometimes overloaded.  So, we're &#x1F3D7; building out bigger network in Dallas, TX &#x1F920; area.  But until then, a few games unavailable for new downloaders.  Subscribers have been credited for the inconvenience.</em><br><br>
@@ -2334,6 +2676,7 @@ needleGroup.setAttribute("transform", 'rotate(${angle}, 100 100)');
 <!--code for hollow light is &#11093 or mite b green lite-->
 
 </html>   
+
 
 
 
