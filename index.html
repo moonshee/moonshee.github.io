@@ -169,7 +169,7 @@ Community</option>
 &#x1F6A6; IMM Control Panel
 </td></tr>
 <br>
-This is the remote portal for Moonshee IMM access.  Authorized users only.</td></tr></td></table><br>
+This is the remote portal for Moonshee IMM access.  Authorized users only.  Instructions:  This display is optimized for PC screens 800 px+.  For smart phones and tablets, users may need to ZOOM OUT or use DESKTOP MODE if they encounter issues.</td></tr></td></table><br>
 <table><tr><td>
 <font size="1">Cincinnati IMM<br>
 <font size="44"><center> 
@@ -188,39 +188,41 @@ This is the remote portal for Moonshee IMM access.  Authorized users only.</td><
 CLAMP  <font color="red"><script>
 	 document.write(Math.floor(Math.random()*40)+20);
 	</script></font> %
-<br><a href="#open">
-<input type="radio" name="cycle" style="accent-color:green;">
--[  ] Open</a>
-<br><a href="#close">
-<input type="radio" name="cycle" style="accent-color:red;">
--[] Close</a><br>
+<br><a href="#open"><button><font size="3">
+O</font></button></a>
+-[  ] Open
+<br><a href="#close"><button><font size="3">
+O</font></button></a>
+-[] Close<br><button>
 <input type="radio" name="modeon" style="accent-color:green;">
-
+</button>
 Mold Protect On
-<br>
-<input type="radio" name="modeon" style="accent-color:red;">Mold Protect Off
+<br><button>
+<input type="radio" name="modeon" style="accent-color:red;"></button> Mold Protect Off
 <br> <a href="#setupclamp">
-<button>
-&#x1F5DC;</button> Setup</a>
+<button style="background-color: ; color: red; width:34px"><font color="brown" size="3">O</font></button></a>
+  Setup
 <br>
 <br>
 
 INJECTION  <font color="red"><script>
 	 document.write(Math.floor(Math.random()*2)+0);
 	</script></font> in/s
-<br>
-<input type="radio" name="mode" style="accent-color:pink;">
+<br><button>
+<input type="radio" name="mode222" style="accent-color:pink;"></button>
 &#128308; Inject
-<br>
-<input type="radio" name="mode" style="accent-color:yellow;">
+<br><button>
+<input type="radio" name="mode222" style="accent-color:yellow;"></button>
 &#x1F590; Hold<br>
 <a href="#velocitysetup"><button>
-&#x1F519;</button> Screw Back
-<br>
-<button>D</button>Decomp
-<br>
+<input type="radio" name="mode222" style="accent-color:orange;"></button></a>
+&#x1F519; Screw Back
+<br><a href="#velocitysetup">
+<button><input type="radio" name="mode222" style="accent-color:magenta;"></button></a> Decomp(ression)
+<br><a href="#velocitysetup">
 <button>
-&#x1F5DC;</button>Velocity Setup</a>
+<input type="radio" name="mode222" style="accent-color:orange;"></button></a>
+ Velocity Setup</a>
 <br><br>
 <font size="44"><center>
 &#x1F55B;</font><font color="red"><script>
@@ -232,76 +234,88 @@ INJECTION  <font color="red"><script>
 PRESSURE <br>
 <a href="#pressure">
 
-<button>S</button> Setup
-<br><button>
-&#x1F519;</button> Back Pressure<br>
-<button>P</button> Pump
-<br><button>A</button>
- Accumulator</a>
+<button><font color="orange">O</font></button></a> Setup
+<br><a href="#pressure">
+<button><font color="brown">O</font></button></a>
+&#x1F519; Back Pressure<br><a href="#pressure">
+
+<button><font color="blue">O</font></button></a> Pump
+<br><a href="#pressure">
+<button><font color="purple">O</font></button></a>
+ Accumulator
 </td>
 
 
-<td width=20></td><td>
+<td width=10></td><td>
 CYCLE<br><a href="#running">
 <button style="background-color: green; color: yellow;">Start</button></a>
 <button></button><a href="#open">
-<button style="background-color: red; color: white;">Stop</button></a>
-<br><input type="radio" name="cycle2" checked  style="accent-color:pink;">Auto<br>
-<input type="radio" name="cycle2"   style="accent-color:red;">Manual
+<button style="background-color: red; color: white;">Stop</button></a><br>
+<br><button><input type="radio" name="cycle2" checked  style="accent-color:pink;"></button> Auto<br><button>
+<input type="radio" name="cycle2"   style="accent-color:red;"></button> Manual
 <br><br>
 TIMERS<br>
 <center><font size="44"> 
-&#x231A;</font>
+&#x23F2;</font>
 <font color="red"><script>
 	 document.write(Math.floor(Math.random()*20)+15);
 	</script></font> sec<br><a href="#timers">
-<br>
- <button>&#x23F1;</button>Timer Setup<br>
-<button>&#x23ED;</button> Next Timer<br>
- <button>&#x23EE;</button> Prev Timer<br>
-</a>
+<br></center>
+ <button>&#x23F1;</button></a> Setup<br>
+<a href="#timers"><button>&#x23ED;</button></a> Next Timer<br>
+ <a href="#timers"><button>&#x23EE;</button></a> Prev Timer<br>
+
 
 <br><br>
-STATUS &#x26AB; &#x1F535;<br>
-<font color="red">0000<script>
-	 document.write(Math.floor(Math.random()*20)+1125);
-	</script></font><br><a href="">
-<button>Reset</button></a><a href="#top">
-<button>ACK</button></a><br><a href="#alarms">
-<button>Alarms</button>
-<button>MSGS</button></a>
-<br><font size="4"> 
-&#x23F0;</font>
-</td><td width=20></td><td>
+STATUS &#x26AB; &#x1F535;<br><br>
+<font color="red">Online Port:0<script>
+	 document.write(Math.floor(Math.random()*20)+11);
+	</script></font></center><br><a href="">
+<button><font color="red">O</font></button></a> Reset<br><a href="#top">
+<button><font color="orange">O</font></button></a> ACK<br><a href="#alarms">
+<button><font color="yellow" size="1"> 
+&#x23F0;</font></button></a> Alarms
+<br>
+<a href="#timers">
+<button><font color="pink">O</font></button></a> MSGS
+<br>
+</td><td width=10></td><td>
 <br>
 SAFETY  <font color="red">&#x1F535; &#x26AB; OK
 	</font>
-<br><table border=1>Gate <input type="radio" name="moddee21" style="accent-color:white;" checked><br>Hydraulic Pressure<input type="radio" name="modee21" style="accent-color:green;" checked><br>Overtravel<input type="radio" name="modee12" checked  style="accent-color:blue;">
+<br><table border=1><a href="#open"><button>O</button></a> Gate <input type="radio" name="moddee21" style="accent-color:white;" checked><br><a href="#pressure"><button>O</button></a> Hydraulic Pressure<input type="radio" name="modee21" style="accent-color:green;" checked><br><a href="#alarms"><button>O</button></a> Overtravel<input type="radio" name="modee12" checked  style="accent-color:blue;">
 <br><a href="#open">
-<button>&#x1F6D1;</button></a> Emergency Stop<br><a href="#timers"><button>MPL</button> Mold Protection Logic<br><button>WT</button>Watchdog Timers</a><br>
+<button style="background-color: yellow; color: red;">&#x1F6D1;</button></a> <font color="pink"> Emergency Stop</font><br><a href="#setupclamp"><button>O</button></a> Mold Protection Logic<br><a href="#timers"><button>O</button></a> Watchdog Timers<br>
 <br>
 PROCESS  <font color="red">
 	</font>
 <br><a href="#alarms">
 <input type="radio" name="modesdf" checked style="accent-color:pink;">
-<button>T</button> Trend
+<button>O</button></a> Trend
 <br>
-<input type="radio" name="modesdff" checked style="accent-color:yellow;">
-<button>P</button> Paramater Storage<br>
-
-<button>SPC</button> Data<br><button>EX</button> Export Data<br><button>USB</button></a><br><br>
-TEMP  <font color="red"><script>
+<input type="radio" name="modesdff" checked style="accent-color:yellow;"><a href="#alarms">
+<button>O</button></a> Paramater Storage<br>
+<a href="#alarms">
+<button>O</button></a> Data<br><a href="#export"><button>O</button></a> Export Data<br><a href="#usb"><button>O</button></a> USB<br><br>
+TEMP<br>  <center><table border="1"><tr><td>
+<font color="red"><script>
 	 document.write(Math.floor(Math.random()*50)+70);
-	</script></font>
-<br><a href="#alarms">
-Barrel Zone</a> <input type="radio" name="modeefff" checked  style="accent-color:red;"><br><font color="green">Nozzle</font><input type="radio" name="modefse" checked style="accent-color:green;"><br><font color="beige">Mold Temp Zones</beige><input type="radio" name="modsdee" checked  style="accent-color:blue;">
-<br><a href="#alarms">
-<button>H</button> Heater Band Diagnostics<br>
-<button>T</button> Thermocouple Monitoring</a>
-</td></tr>
+	</script></font> </td><td>--</td><td> 
+
+&#x1F534; &#x1F534; &#x1F534; &#x26AB; &#x26AB;</td></tr></table>
+<br><a href="#tempsets"></center><button>O</button></a> 
+Barrel Zone <input type="radio" name="modeefff" checked  style="accent-color:red;"><br><a href="#tempsets"><button>O</button> </a>  
+
+ Nozzle<input type="radio" name="modefse" checked style="accent-color:green;"><br>
+<a href="#tempsets"><button>O</button></a>
+<font color="beige"> Mold Temp Zones</beige><input type="radio" name="modsdee" checked  style="accent-color:blue;">
+<br><a href="#tempsets">
+<button>O</button></a> Heater Band<br>
+<a href="#tempsets"><button>O</button></a> Thermocouple</a>
+<br>
+</td></tr></table><br><table border="1"><tr><td><center><a href="#enterpwd"><button>F1</button> <button>F2</button> <button>F3</button> <button>F4</button> <button>F5</button> <button>F6</button> <button>F7</button> <button>F8</button> <button>F9</button> <button>F10</button> <button>SET</button> <button>RES</button></a></td></tr>
 </table>
-<br>
-<br>
+
 </table>
 
 <br>
@@ -315,7 +329,7 @@ Barrel Zone</a> <input type="radio" name="modeefff" checked  style="accent-color
 </center>
 </td><td><center>Aux 2<br>
 <font size="44"> 
-&#x1F561;</font>
+&#x23F2;</font>
 
 <font color="red"><script>
 	 document.write(Math.floor(Math.random()*101)+110);
@@ -336,15 +350,12 @@ Barrel Zone</a> <input type="radio" name="modeefff" checked  style="accent-color
 </center>
 </td><td><center>Pump<br>
 <font size="44"> 
-&#x1F561;</font>
+&#x1F555;</font>
 
-<font color="red"><script>
-	 document.write(Math.floor(Math.random()*33)+44);
-	</script></font>
+<font color="red">OFF
+	</font>
 <br>
-<font color="green"><script>
-	 document.write(Math.floor(Math.random()*33)+44);
-	</script></font>
+<font color="green">ON</font>
 
 </td><td><font size="44"><center>
 &#x1F55B;</font>
@@ -393,19 +404,9 @@ Tonnage: 482 / 500<br>
 <br>
 <input type="text" id="userInput4b" placeholder="Enter new setting..." />
 <a href="#top"><button>OK</button></a><br><br><br>
-<a href="#top"><button><font color="blue">Back To IMM Control Panel</font></button></a>
-
-<br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br>
-<div id="velocitysetup"></div>
+<a href="#top"><button><font color="blue">Back To Main Menu</font></button></a>
+<br><br><br>
+<br><br><div id="velocitysetup"></div>
 <table border="1"><tr><td>
 Screw Position: 3.42 in<br>
 Inj Velocity: 1.8 in/s<br>
@@ -422,14 +423,8 @@ Decomp: 0.20 in<br>
 </a><br><br>
 <img src="./images/closed.png">
 <br>
-<a href="#top"><button><font color="blue">Back To IMM Control Panel</font></button></a>
-
-<br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<a href="#top"><button><font color="blue">Back To Menu</font></button></a>
+<br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br>
 <div id="pressure"></div>
 <table border="1"><tr><td>
@@ -444,13 +439,8 @@ Accumulator: READY<br>
 <input type="text" id="userInput6" placeholder="Adjust which setting?..." /><br><br>
 <input type="text" id="userInput6b" placeholder="Enter new setting..." /><a href="#top"><button>OK</button></a><br><br>
 <br><br>
-<a href="#top"><button><font color="blue">Back To IMM Control Panel</font></button></a>
+<a href="#top"><button><font color="blue">Back To Menu</font></button></a>
 
-<br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br>
 <div id="timers"></div>
@@ -468,13 +458,7 @@ Eject Time: 0.40 s<br>
 <input type="text" id="userInput7b" placeholder="Enter new setting..." /><a href="#top"><button>OK</button></a><br><br>
 
 <br>
-<a href="#top"><button><font color="blue">Back To IMM Control Panel</font></button></a>
-
-<br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br>
+<a href="#top"><button><font color="blue">Back To Menu</font></button></a>
 <br><br><br><br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br>
 <div id="alarms"></div>
@@ -489,17 +473,78 @@ Previous Messages:<br>
 Low hyd pressure<br>
 Reset required
 
-</td></tr></table>
+</td>
+<td>Load file<br><br><a href="">
+default.imm<br>cincinnati.imm<br>fhengineering.imm</a><br><br>
+<input type="text" id="239392" />
+<br>
+<a href="#top">
+<button>OK</button></a>
+</td>
+</tr></table><br>
+<table border="1"><tr><td>
+DATA<br><br>
+Select which set of data to view.<br>Enter password, then make selection.<br><br><a href="#enterpwd">
+<button><font color="red">O</font></button></a> Last 24 hrs<br>
+<a href="#enterpwd">
+<button><font color="orange">O</font></button></a> Last Week<br><a href="#enterpwd">
+<button><font color="green">O</font></button></a> Last Month<br><a href="#enterpwd">
+<button><font color="purple">O</font></button></a> All Time<br>
+</td>
+
+<td>TRENDS<br><br>
+Pressure<br><font size="12">
+&#x1F4C8;</font><br><br>
+Temp<br>
+<font size="12">&#x1F4C9;</font></td>
+</tr></table>
 <br><br>
-<input type="text" id="userInput8" placeholder="Clear messages?..." /><br><br>
+<input type="text" id="userInput8" placeholder="Change settings?..." /><br><br><div id="enterpwd"></div>
 <input type="text" id="userInput8b" placeholder="Enter password..." /><a href="#top"><button>OK</button></a><br><br>
 
 <br>
-<a href="#top"><button><font color="blue">Back To IMM Control Panel</font></button></a>
+<a href="#top"><button><font color="blue">Back To Menu</font></button></a>
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 <br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div id="export"></div>
+<table><tr>
+<td>Export file<br><br><a href="">
+default-nu.imm<br>cincinnati3.imm<br>fhengineer.imm</a><br><br>
+<input type="text" id="239392" />
+<br>
+<a href="#top">
+<button>OK</button></a>
+</td>
+</tr></table><br>
+<br>
+<a href="#top"><button><font color="blue">Cancel</font></button></a>
 <br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div id="tempsets"></div>
+TEMPS
+<br><br><table border=1><tr><td>
+Barrel 128<br>
+Nozzle 126<br>
+Mold 125<br>
+Heater Band 129<br>
+Thermocouple ---</td></tr></table>
+<br><br>
+<button>&#x23EB;</button> Temp 
+<button>&#x23EC;</button><br><br>
+<input type="text" id="userInput8" placeholder="Enter desired temp..." /><br><br><a href="#top">
+<button>OK</button></a>
+<br><br>
+<a href="#top"><button>Cancel</button></a>
+<br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br>
 <div id="open"></div>
@@ -653,7 +698,7 @@ function submitChat() {
         chatbox.textContent += `AI: ${responses[responseIndex]}\n\n`;
         responseIndex++;
       } else {
-        chatbox.textContent += `AI: Check back later.  I'm busy right now.  I'm meditating.  Ohm...Ohm...ohm hlim sham shanaya namah....Hare krishna.  Krishna krishna.  Hare hare.  Rama rama.\n\n`;
+        chatbox.textContent += `AI: Check back later.  I'm busy right now.\n\n`;
       }
 
       input.value = "";
@@ -733,7 +778,11 @@ function submitChat() {
 <a href="#resources2">
 	<table bgcolor="gold" border="1"><tr><td>&#x1F50D Search</td></tr></table>
 	</a>
-<div id="running">
+<br><br><br><br><br><br>
+<div id="usb"></div>
+Connect USB device or wire now.  When connected, return to the main menu.<br><br><br><br><br><br><br><br><br><br><br><br>
+
+<div id="running"></div>
 <img src="./images/imm.gif"><br>
 
 <a href="#top"><button><font color="blue">Back To IMM Control Panel</font></button></a>
