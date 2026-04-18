@@ -541,7 +541,7 @@ Thermocouple ---</td></tr></table>
 <button>&#x23EB;</button> Temp 
 <button>&#x23EC;</button><br><br>
 <input type="text" id="userInput8" placeholder="Enter desired temp..." /><br><br><a href="#top">
-<button>OK</button></a>
+<button><font>OK</font></button></a>
 <br><br>
 <a href="#top"><button>Cancel</button></a>
 <br><br><br><br><br><br>
@@ -556,6 +556,75 @@ Thermocouple ---</td></tr></table>
 <br><br><br><br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+IMM Control Panel Vers. 1996<br>
+<table border="1" width="300" height="300"><tr><td>
+
+<div id="output"><marquee>Status: <font color="lightgreen">OK</marquee></font></div>
+
+<div id="output2">Hyd Pressure: 2100psi</div><button><div id="output2b">&#x2B06;</div></button><button><div id="output2c">&#x2B07;</div></button> 
+<div id="output3x" style="margin-top:15px">
+<p>
+</p></div>
+<div id="output3b"></div>
+
+<div id="output3">Back Pressure: 75 psi</div>
+<div id="output4">Pump Load: 62%</div>
+<div id="output5">Oil Temp: 128 deg F</div>
+<div id="output6">Alerts: None</div>
+<br>
+<div id="output7"></div>
+<br>
+<br>
+<br>
+<br>
+
+
+</td>
+<td width=88><center>
+<button  onclick="document.getElementById('output').innerText = 'Status OK';  document.getElementById('output2').innerText = 'Demo Mode';  document.getElementById('output3x').innerText = 'READY'; document.getElementById('output3').innerText = 'ENABLED'">Main Menu</button>
+<button onclick="document.getElementById('output').innerText = 'Clamp Settings'; document.getElementById('output2').innerText = ''; document.getElementById('output2b').innerText = 'Open'; document.getElementById('output2c').innerText = 'Close';">&#x1F5DC; Clamp</button><br>
+<button>Injection</button><br>
+<button>Pressure</button><br>
+<button>- Cycle -</button><br>
+<button>- Timers -</button><br>
+<button>- Status -</button><br>
+<button onclick="document.getElementById('output').innerText = 'Status OK'">&#x1F5DC; Clamp</button><br><button>- Safety -</button><br>
+<button>- Process -</button><br>
+<button>- Temp -</button><br>
+</center></td>
+
+
+</tr></table>
+
+<table><tr><td>
+<button onclick="document.getElementById('output').innerText = 'Check Ink Cartridge'">
+&#x1F5A8;
+</button>
+<button onclick="document.getElementById('output').innerText = 'Bye'">
+&#x1F4DD;
+</button>
+<button onclick="document.getElementById('output').innerText = 'Aloha'">
+3
+</button>
+</td><td width=100><td>
+<button  onclick="document.getElementById('output').innerText = 'Status OK';  document.getElementById('output2').innerText = 'Demo Mode'; document.getElementById('output3').innerText = ''">BACK</br>
+
+</td></tr>
+<tr><td><button>START</button></td></tr><tr><td><button>STOP</button></td></tr><tr><td><button>Emergency Stop</button></td></tr>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
 <br><br><br><br><br><br><br><br><br><br>
 
 

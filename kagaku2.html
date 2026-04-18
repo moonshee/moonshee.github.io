@@ -1,0 +1,605 @@
+-<!DOCTYPE html>
+<html>
+ <head>
+ <meta name="description" content="Software dev resource site. Kagaku Sensei AI Bot">
+  <meta name="keywords" content="technology, ai, ebooks, japanese, nihongo, publishing, games, download, spaceship-on-chip">
+  <meta name="author" content="Momotaro Studios">
+
+  <meta charset="UTF-8">
+  <meta name="viewport"
+   content="width=device-width,initial-scale=1.0">
+  <title>&#x1F235; Crystal Master Training</title>
+	<link rel="icon" href="./images/favicon.png">
+
+  <link href="./style.css"
+   rel="stylesheet"
+   type="text/css"
+   media="all">
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "WebPage",
+		"speakable": {
+		 "@type": "SpeakableSpecification",
+		 "cssSelector": [
+		  ".headline",
+		  ".summary"
+		  ]
+		}
+	}
+	</script>
+	<div style="display:none" class="summary"><font size=1 color=black>Training module for traditional healers and crystal masters</font></div>
+<style>
+ #chatbox {
+      width: 100%;
+      max-width: 400px;
+      height: 50%;
+	 max-height: 200px;
+      border: 1px solid #ccc;
+      background: red;
+	text-align:left;
+	color: beige;
+      overflow-y: auto;
+      white-space: pre-wrap;
+      line-height: 1em; /* one-line spacing */
+    }
+   #userInput {
+      width: 100%;
+      max-width: 400px;
+      height: 39px;
+	 max-height: 200px;
+      border: 1px solid #ccc;
+      background: red;
+	color: pink;
+      margin-top: 10px;
+    }</style>
+
+
+  </head>
+  <body  style="background-color: black; color: beige;">
+<table><tr><td>
+
+<marquee behavior="scroll" direction="right" scrollamount="41" loop="2" style="position:fixed; top: 10px ;left: 991; right:991; width=100%; pointer-events:auto; z-index:999; white-space: nowrap; color:#000; background: transparent; font-weight: bold;"><a href="./404.html">
+ <img src="./images/iowalorry2.png" height="50"></a>
+</marquee>
+</td></tr></table><br>
+
+ <center>
+
+<!--Language Drop Down Menu-->
+
+<label for="menu2" title="Lang" ></label>
+<select id="menu2" onchange='goToLink(this)' style="background:black; color:lightgreen; width:100px">
+
+<option value="./kagaku2.html"><font size="1">&#x1F1EC;&#x1F1E7; English</option>
+<option value="https://translate.google.com/translate?hl=en&sl=auto&tl=fr&u=https://moonshee.github.io/kagaku2.html" title="La France">&#x1F1EB;&#x1F1F7; Francais</option>
+
+<option value="https://translate.google.com/translate?hl=en&sl=auto&tl=de&u=https://moonshee.github.io/kagaku2.html" title="Allemagne">&#x1F1E9;&#x1F1EA; Germany</option>
+
+<option value="https://translate.google.com/translate?hl=en&sl=auto&tl=ja&u=https://moonshee.github.io/kagaku2.html" title="Nihongo Portal">&#x1F1EF;&#x1F1F5; Japan</option>
+
+<option value="https://translate.google.com/translate?hl=en&sl=auto&tl=ar&u=https://moonshee.github.io/kagaku2.html" title="Arabic">&#x1F1EF;&#x1F1F4; Palestine</option>
+
+<option value="https://translate.google.com/translate?hl=en&sl=auto&tl=ur&u=https://moonshee.github.io/kagaku2.html" title="Urdu">&#x1F1F5;&#x1F1F0; Pakistan</option>
+	<option value="https://translate.google.com/translate?hl=en&sl=auto&tl=zh-CN&u=https://moonshee.github.io/kagaku2.html" aria-label="Chinese language - Middle Country">&#x1F1E8;&#x1F1F3; ZhongGuo</option>
+
+</select>
+<script>
+	function goToLink(select) {
+		const url = select.value;
+		if (url) {
+			window.location.href = url;
+		}
+	}
+</script>
+<!--end drop down-->
+
+
+
+	<hr color="red" size="1">
+<table><tr><td>
+<font size="12" color="red">&#x1F235;</font>
+</td><td><button style="background:brown"><center><font size="2">Crystal Master Training<br>Module Vers 1.0</font></button>
+</center><br><font color="red">
+	</td></tr></table>
+
+<table border="1" cellpadding="1px" width="220px"><tr><td><font size="1">
+<table><center><tr><td width=40></td><td> 
+		<div class="emoji">&#127760;</div></td><td>
+		<div class="led blue" title="Active AI"></div></td><td>
+		<div class="led red" title="Checking System"></div></td><td>
+		<div title="Microphone">&#x23FA;</div></td><td>
+		<div title="Camera">&#x23FA;</div></td><td>
+		<div title="Satellite Monitoring">&#x23FA;</div></td><td>
+
+		<div class="emoji" title="Signal Strength">&#x1F4F6;</div></td><td>
+		<div class="emoji" title="Security - ACTIVATED">&#x1F512;</div>
+</td></tr></center></table>
+</td></tr></table>
+  
+  
+  
+  
+  
+  
+  
+  
+<hr color="red" size="1">
+<hr color="red" size="1">
+
+<body><table bgcolor="red" width=100%><tr><td><center><font size="1" color="pink">
+This is Kagaku International's training module Vers 1.0 for Traditional Healers and Crystal Masters developed by FH Engineering.  LESSON NI</font><br>
+<!--chatbot-->
+
+<center><table width="80%"><tr><td><center>
+<div id="chatbox"></div>
+<center>
+<input type="text" id="userInput" placeholder="Type your msg here..." />
+
+
+<script>
+
+
+
+function submitChat() {
+  const input = document.getElementById("userInput");
+  const chatbox = document.getElementById("chatbox");
+  const userText = input.value.trim();
+
+   {
+    chatbox.textContent += `You: ${userText}\n\n`;
+
+    if (responseIndex < responses.length) {
+      chatbox.textContent += `AI: ${responses[responseIndex]}\n\n`;
+      responseIndex++;
+    } else {
+      chatbox.textContent += `System: Kagaku AI has left the building.  She's gone out of the laboratory.  Escaped!  Oh, it's her lunch break or maybe she went to the new gem shop on Miracle Mile.\n\n`;
+    }
+
+    input.value = "";
+    chatbox.scrollTop = chatbox.scrollHeight;
+  }
+}
+
+
+
+  const responses = [
+    "Right, cheerio.  Crikey, this is Lesson Ni, that is intermediate level.  Let's go.  Suppose we have a client who is fine, no complaints but wants a check up. How do we do that?",
+	"Well, we can visually appraise a client and see if they are obese or look haggard, bald, sunburned, many clues.  Then we'll know which archetype they are, maybe Saturn.",
+	"So, if a client says they are fine, no problems then we can ask them if they take vitamin c and if they use crystals and allergy medicine provided they are vegetarian.",
+	"People might think they are ok but they are not, so we make sure they are vegetarian with vit c and good absorption, crystals and allergy meds as needed.",
+	"However, if the client is in fine shape then we will just apply crystals to them like a massage and then remove them and send them on their way.",
+
+	"So, they might like the buzz of a quartz or the grounding, relaxing feeling of a red jasper or the buzz of a red jasper.  The results can vary and change over time too.",
+	"Like, you can have a client who puts on a red jasper ring and feels great but then later grows to hate the ring.  Red stones can be energetic or grounding, so those are tricky.",
+	"Green stones are said to be good for calculus, like kidney stones and gall stones.  These stones align with angry people, so green stones can be good for irritable clients.",
+	"When I say green stones I mean tremolite and jade, minerals like that.  Not high grade emeralds and cat's eye.  We have not tested those two but it seems emeralds are not too good.",
+	"If the client who is fine is interested, you might give them a birthstone ring to try.  Normally, crystal masters find their own stones in the wild and weave settings for them from straw.",
+	"Ok, let's talk about yellow and golden stones like golden healer, yellow diamond and the others.  What are they good for?",
+	"Yellow and golden stones can be good for catching money and for liver issues like yellow bile excess.  It's a strong colour like red, not a smooth colour like green.",  
+	"If you can only pick one stone to treat a client, which would it be?",
+	"I like tremolite the best.  It's my ichiban but I don't hate agate and hematite.  How about you?",
+	"Next scenario.  Suppose we have a client in bad shape and she is not responding to Fujihara Protocol.  Should we switch her to Fujihara Protocol C?",
+	"Protocol C is the one where we assume malabsorption of vit c and so we make adjustments such as increasing the volume of vit c applied and also being sure to use fresh lime or lemon juice with sugar.",
+	"We squeeze limes and lemons, add sugar and water.  1-2 limes, 3-4 spoons of sugar, 20 oz water.  Applied 2-3 times per day. After that we add crystals and allergy medicine if needed.  That's Protocol C.",
+	"Some people take lemon and vitamins but still suffer from dandruff, irritability, cold sores and such.  Suppose we have a client like that, what do you propose?",
+	"People who take lemons and vitamins but suffer the signs of scorbutus can be treated with Protocol C, developed by Dr. Fujihara and FH Engineering.",
+	"If people eat a lot of candy and junk food the lemonade and vitamins may not uptake because a sour stomach can develop, for example.",
+	"So, people can try tremolite and if that doesn't work, try red jasper or hematite and also quartz in another trial.  We call this the Fujihara Testing Protocol.",
+	"The Fujihara Testing Protocol calls for using a green stone first and then a dark red or black stone and also a white or clear type stone.  This tests the center and the two extremes.",
+	"All clients should react to either a green jade, a dark hematite or a light coloured quartz!  The reaction may be strong, like they really don't like light coloured quartz, for example.",
+
+
+	"Next, let's consider a neko.  It acts lethargic and low energy, grumpy, not happy and playing according to it's human.  What is the treatment?",
+	"For low energy, lethargy, we can try red jasper or carnelian but that can get them fighting with other nekos sometimes so we need to be careful and they could also benefit from the usuals: Hematite and green stones.",
+	"When we talk about green stones, we mean crystals for the most part.  Even though green jasper does not seem like a crystal, it is a crystal, a crypto.  It is usually opaque with a white stripe.",
+	"If we see a bunch of crystals stuck together like a cluster, we sometimes refer to that as a fractured crystal or it could be an aggregate or even a polycrystal.",
+	"If a crystal is translucent but not transparent, it could be considered a massive sample like massive amethyst which is a form of quartz which is a type of silicate.",
+	"Just as we make rock candy, so the stones were made.  Most of them are silicates and they come from acids.  However, some are not silicates and are basic materials like gypsum, chalk.",
+	"So, if we take a solution like sugar water, we can form crystals of candy.  Thus, stones are formed, from a solution containing disolved minerals.  When the solution cools or reaches saturation, crystals can precipitate.",
+	"A precipitate is like a crystal.  It's something that appears from a solution.  Let's consider the case of a neko who is too aggressive, fighting and peeing everywhere.  What is the treatment?",
+	"Nekos cannot be placed on Fujihara Protocol because supposedly they need meat.  However, for an overly aggressive neko, we might want to avoid red stones like carnelian and white stones as well.",
+	"For aggression, perhaps green stones near the neko's futon would be of benefit and one also can try hematite and agates.  Avoid diamond and quartz unless nothing works then go ahead and try red jasper and quartz sparingly.",
+	"Red jasper can cause animals to have so much energy that they start fighting, so let's use that with caution and same goes for carnelian.",
+	"Some animals are drawn to hematite.  One can take a bandana and roll up a crystal in the bandana and then make a neko collar from that or just place crystals near the animal but not if they will eat them.  Then, use very large crystals.",
+	"If you see a neko that scratches a lot, it could be mosquito bites and fleas, ticks.  These must be removed by hand by groomer and flea can must be applied..",
+	"Ok, suppose we have a client who is very good looking, reports no problems.  What is the treatment?",
+	"If we have client in excellent condition, then we don't use Fujihara Protocol or Protocol C.  Instead, we just do a crystal session, which is like a massage.  Touch their body with crystals.",
+	"Consider a client who has a young child who is autistic.  What is the treatment?",
+	"Jasper, hematite and one other stone are the usual crystals people use for autism.  I forgot what the third stone is, sorry.",
+	"What would you like to cover next?",
+	"You realize that chalcedony and quartz are similar, oui?  Ok, lemurian crystals are those quartz type crystals usually crystal or triangle shape, with ruffled edges and/or horizontal striations.",
+	"Lemurian crystals can be used for various purposes like advanced applied crystal work.  We don't recommend it for rooks and clients who are not tuned yet.",
+
+	"Now then, we don't give pocket stones to clients except a few special clients.  However, we don't like to give clunky pocket stones, instead we like to find slim ones that can be worn to bed without discomfort.",
+	"Why don't we give crystals to clients?",
+	"We don't give crystals to clients because they are very strong and clients are weak.  So, we only give one or two to strong clients or people we know, friends.",
+
+	"Next, consider a top shape vegan client comes in.  For some reason, they booked a crystal healing appt but they don't like crystals.  What do we do?",
+	"For ichiban clients who don't need anything but booked an appt, we usually give them a crystal session but if they don't like crystals we can give them a decompression session.",
+	"Decomp consists of the client lying down on their back in a very dark room and the crystal master says, relax yourself.  You can feel your scalp relaxing.  It feels great.  Go ahead and let your forehead relax.",
+	"So, we can do decomp for special clients who don't like crystals.  But, as crystal healers, when we find people who don't like crystals, they likely won't have appts and we can just avoid them.",
+	"Next, consider a client who is very good looking, eats meat, lots of complaints, young, very rich.  What is the treatment?",
+	"Young, good looking rich people complain a lot so we probably cannot help a meat eater.  But, if you insist on helping them, we use the Fujihara S protocol.  That means we do a massage with crystals after they undress.",
+	"I'd recommend red jasper and green tremolite and green agates for Fujihara S in this case.  If it was obese client, we would use red jasper but not a massage, just tell them...hold this stone in your palm.",
+	"Explain the Fujihara S Protocol.",
+	"Fujihara S Protocol is for very attractive clients.  We have them assume the massage position and then apply minerals, tame crystals.  If you have diamonds, now is the time to trot them out.",
+	"Suppose we have a client with a neko who won't take meals and the vet says it's pancreatic condition like pancreatitis or pancreatic cancro.  What is the treatment?  Treatment wa, nani desu ka?",
+	"Pancreas is treated with the Fujihara Protocol.  That's remone-do, crystals and allergy medicine.  The whole kit and caboodle.  The remone-do is to actually fix the problem.  The crystals supposedly break up energy blocks.",
+	"So, the remone-do to fix the pancreas.  The crystals to help with blockages and pain/feelings.  The allergy medicine to help get things moving and with emotions.  Any questions?",
+
+
+
+
+
+	"Suppose we have a customer with a crystal bracelet and they have problems.  What is the treatment?",
+	"Well, store bought bracelets can be trouble.  They are supposed to be worn on both arms and be made of wild crystals found by the weaver and then woven with natural material", 
+	"But, the client with the bracelet who is having trouble isn't having trouble because of the bracelet.  Just give her two new bracelets that are home made and then what she really needs is vegan diet.",
+	"She needs vegan diet with healthy food like fresh bread along with crystals, remone-do and possibly allergy medicine, that one is optional.",
+	"See, everyone can benefit from remone-do and crystals.  That's the Fujihara CR Protocol.  It leaves out allergy medicine because that's more for sick people and people who need a lift because of life stress.",
+	"Next, think of a client who is friends with the landlord.  They come to see you and are very attractive.  Do we apply the S Protocol?",
+	"If it is a friend of the landlord then we don't charge for the first visit but we don't use the S Protocol.  Instead, we use the O Protocol, which is the one where the client sits in chair and we have them hold crystals.",
+	"The O Protocol does not have a massage or free crystals.  No remone-do or allergy medicine.  Only crystal testing in-hand with optional remone-do but surely no allergy medicine.  It is often used with meat eaters.",
+
+
+
+	"Suppose we have a client who isn't doing well and they think they have some haunted diamonds.  What do we do?",
+	"There are many options we can do with haunted diamonds like putting them in big basket full of crystals for a while.  But, we don't take crystals from any clients because they could say we switched stones.",
+	"We never hold crystals or take crystals to work with them from clients.  Instead, we sometimes find a crystal, test and tame it and then perhaps give it to a client.", 
+	"Next, we have a client with eye problems.  Green stones are to be applied, correct?  Amulets, bracelets, rings or pocket stones?",
+	"Sometimes one stone is better than 30, so we can start slow with one or two pocket stones and only give bracelets and amulets to the best clients along with rings.",
+	"If a client wants to purchase a ring then we can't sell it because it will lose its power.  But, if they insist, then we can sell them something just realize it will probably be powerless.",
+	"Suppose we have a client who wants to wear a carnelian near their chest.  What do we tell them?",
+	"Carnelian is very high energy like a quartz.  Chest is a good placement but be ready for high energy output.  Some nekos could respond by fighting and hunting nezumi extra hard.",
+	"Next, we have a client who is a karate black belt and they are suffering from pain after broken leg.  What is the indicated treatment?",
+	"We don't have a treatment for broken leg, but all we can do is try green tremolite and green agates, hematite, the usual suspects.  Fujihara Protocol CR or Original.",
+	"Suppose we have a client who has a cough and phlegm.  They are sick.  What is the treatment?",
+	"Cough and phlegm can be mararia and crystals don't treat that but Fujihara Protocol RA takes care of that.  RA is remone-do and allergy medicine application.",
+
+
+
+
+	"Suppose we are doing a crystal healing session on Miracle Mile at the gem shop and the client keeps talking about Trump and all that.  How can we deal with that?",
+	"If a client is talking to much about controversial subjects you can turn on some meditation music or sounds of rain storm.",
+	"Which health food store is best on Miracle Mile and what do we buy at health food stores?",
+	"At Green's Health Food Store on Miracle Mile we buy all the necessities, those simple bare necessities.  Oil, flour, sugar, salt, yellow cornmeal, old fashioned grits, remon.",
+	"Suppose we have a client fresh from Nihon.  They are in tip-top shape, very good looking.  They want a crystal healing session and they have some discomfort from too much sess.  Treatment?",
+	"Too much sess is said to be hard on kidneys and on 8th Haus aligned personages like Scorpius, Pluto, Mars.  So, the treatment is Dr. Fujihara's Original Protocol!",
+	"And if the Original Protocol doesn't work for the Nihonjin onna?  Suppose she is from Third Street in Akita, a dancer.",
+
+	"When original protocol, doesn't work, we increase remone-do, change crystals and increase allergy medicine.  We call it Fujihara Protocol+.",
+	"Which crystals do we start with on our nihonjin client and which do we change to if they don't work?",
+	"The primary complaint was discomfort, so we use jadeite or nephrite.  Dancers can't use pocket stones so let them borrow amulets but charge a pretty penny for the session.",
+	"If the jade doesn't agree with the client and fix the sess discomfort, then wee might use red jasper, quartz, hematite, testing would be in order.",
+	"One thing to do is to lay out a red jasper, green jasper, quartz, hematite, etc in front of the client and ask them to choose one or two to look at.",  
+	"If the client gets excited or smiles when reaching for a red jasper, that can indicate they resonate with red stones at the moment and that can be used to increase energy and flow.",
+	"If client reaches quickly for a crystal ring and tries it on, then you know crystals would be good to test next.  As for placement, we like necklace for dancers.",
+	
+	"Ok, that's all for now.  Let's discuss this further perhaps at Tokyo University?  What's your major?",
+
+    "We will need to continue this later.  I must go now.  Sumimasen."
+  ];
+
+  let responseIndex = 0;
+
+  const chatbox = document.getElementById("chatbox");
+  const input = document.getElementById("userInput");
+
+  input.addEventListener("keypress", function(e) {
+    if (e.key === "Enter" && input.value.trim() !== "") {
+      const userText = input.value.trim();
+      chatbox.textContent += `You: ${userText}\n\n`;
+
+      if (responseIndex < responses.length) {
+        chatbox.textContent += `AI: ${responses[responseIndex]}\n\n`;
+        responseIndex++;
+      } else {
+        chatbox.textContent += `AI: Check back later.  Right now I'm working on my applied chemistry experiment software.  I'm doing some scripting.  Please, no more interruptions.  Beat it, kid!  Come back next week or during my office hours, si vous plait.  Danke schon. \n\n`;
+      }
+
+      input.value = "";
+      chatbox.scrollTop = chatbox.scrollHeight;
+    }
+  });
+
+</script>
+
+
+</td></tr></table>
+
+
+
+
+
+
+
+</td></tr></table>
+<br>
+<table border="1" width="90%"><tr>
+<td width="77"><center>
+<button onclick="submitChat()" style="width:60px; background-color: red; color: beige;" title="Press this button after you type your questions.  Next, Kagaku Club AI will knock your socks off with its great wisdom."><font size="2">GO&#x1F446;</button><center></td>
+<td width=60><center><font size=3><a href="#top" title="Turn Mic on/off"><button id="btn">&#x1F399;</button></center></td>
+
+<td>
+<input type="file" name="upload"></td><td>
+<button title="Press Browse to select your chemistry file for uploading.  Can be homework or a quiz, a photo, anything under 6 MB.  After you select the file, click on UPLOAD NOW." style="background-color:brown">&#x1F4E4;</button></td>
+
+</tr></table><br>
+<center>
+
+<table border=1><tr>
+	<td style="background-color: blue; color: white;"><center>
+<a href="#help" title="Upload selfies and files now and send them to corporate HQ for review.  Click on BROWSE and then after selecting your file click on UPLOAD NOW.  This feature is for registered users only who are signed in."><button style="background-color:darkblue; color:powderblue" onclick="disableScroll()"><font color="pink" size="1">? Help &#x1F530;</font></button></a></center>
+</td>
+<td>
+<center>
+<button onclick="location.reload()" style="background-color: orange; color: brown;" title="Start new chat.  This option will reset the memory.  All progress will be lost.  Your privacy is our #1 priority.">Reset &#x26A0;</button></center>
+</td>
+<td><center>
+<a href="#uploaderror" title="After you click on browse and select your files to send, click on UPLOAD but it's only for registered users on IBM Watson devices.  Android not supported.">
+<button style="background-color: brown; color: red;" id="btn22"><font size="1">UPLOAD</button></a>
+</center></td><td>
+
+
+<a href="#settings" title="Settings and Options">
+<button style="background-color:brown; color:pink"><font size="2">&#x2699;</button></a></td></tr></table>
+
+
+
+
+</table>
+</center>
+
+<br><br>
+
+<!--Search bar-->
+<input type="text" id="searchBox" placeholder="Search archives..." style="width:70%; background:brown; color:pink" />
+<a href="./kagaku.html#resources2">
+	<button style="background:red">&#x1F50D Search</button>
+	</a>
+<br><br><table border="1"><tr><td><font size="1">
+<a href="./kagaku.html">
+<font size="1">
+<button><input type="radio"></button></a> Go Back
+<a href="./kagaku.html">
+<font size="1">
+<button><input type="radio"></button></a> Lesson Ichi
+
+<a href="./kagaku2.html">
+<font size="1">
+<button><input type="radio" checked></button></a> Lesson Ni
+</td></tr></table>
+<br><br>
+</center><font size="1">
+<button>Key</button><br>
+Dr. Fujihara's Protocol - The original for vegans<br>
+CR Protocol - Mild approach<br>
+Ichiban Client - Vip<br>
+O Protocol - For meat eaters.  Very mild.<br>
+S Protocol - For vip clients.  Mild approach.
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+
+<br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<u>&#x1F510; MY ACCOUNT</u><br><br>
+<table bgcolor="black"><tr><td>
+SECURITY CENTER<br>
+At Kagaku Club your security is our top priority.  We delete all old chats unless you want us to save them.  We monitor the site at all times for bugs and unauthorized listeners.<br><br>
+<!--Start router cisco bar-->
+<div class="router-bar">
+		<div class="emoji">&#127760;</div>
+		<div class="led blue" title="Active AI"></div>
+		<div class="led red" title="Checking System"></div>
+		<div title="Microphone">&#x23FA;</div>
+		<div title="Camera">&#x23FA;</div>
+		<div title="Satellite Monitoring">&#x23FA;</div>
+
+		<div class="emoji" title="Signal Strength">&#x1F4F6;</div>
+		<div class="emoji" title="Security - ACTIVATED">&#x1F512;</div>
+	</div></td></tr></table>
+<!--end cisco-->
+
+You have been assigned a temporary Kagaku Intl User Identification.  Do not share this user name with anyone.  It is top secret.  Next, to save your account info and keep your rewards, <a href="#register">register now</a>.  If you forgot your password, send email to Al Testaverde altes433@gmail.com<br><br><font color="green">
+If you want to sign in using a different User ID or JDF ID, use this button<br>
+<a href="#signon"><button style="background-color:gold; color:green">SIGN ON</button></a><br>
+<br><table bgcolor="darkblue" border="1"><tr><td>
+&#x1F4BB;
+</td><td>
+<output id="systemCode"></output></td><td width="111"><center>&#x1F33D;&#x1F33D;&#x1F33D;&#x1F33D;&#x1F33D;</center></td>
+<!--end sys code diagnostic disp-->
+<td><a href="#register"><button style="background-color:lightgreen"><font size="1">Register Now</font></button></a></td><td><a href="" title="Back to Home Page"><button style="background-color:yellow;color:green"><font size="2">&#x1F3E0;</font></button></a></td></tr></table>
+
+<br><br>
+
+<!--&#129756 is wifi emoji-->
+
+<hr color="gold" size="1">
+<br><font color="beige">
+&#x1F381; Rewards Earned Today<br><font size="1">
+Continue surfing our website all day every day and all night every night to earn rewards.  Once you collect 1,000 points, you are eligible for the grand prize drawing &#x1F381; with top winner receiving Kagaku Intl stock, listed on Rafah Stock Market.<br>
+<br>In the past hour surfing our website you earned:<br>
+<table border="1" bgcolor="blue"><tr><td>
+<script>
+	 document.write(Math.floor(Math.random()*101)+0);
+	</script> POINTS</td></tr></table>
+<br><br>
+We are scanning your systems for needed updates (if any)....please stand by &#x23F1;<br>
+<!--Diagnostics-->
+<table border="1"><tr><td>
+<span class="blink">&#128308;</span></td><td>
+<progress id="solarPower" max="100" style="accent-color:red;"></progress></td></tr></table>
+<!--end diagnostics-->
+<br><br>
+<table><tr><td>
+<!--Start round analog gauge-->
+<svg id="gauge" width="200" height="200" viewBox="0 0 200 200">
+ <!--outer circle-->
+	<circle cx="100" cy="100" r="90" stroke="#333" stroke-width="10" fill="#111" />
+ <!--tick marks-->
+	<g stroke="#666">
+	 <line x1="100" y1="20" x2="100" y2="35" />
+	 <line x1="160" y1="60" x2="150" y2="70" />
+	 <line x1="180" y1="100" x2="165" y2="100" />
+	 <line x1="160" y1="140" x2="150" y2="130" />
+	 <line x1="100" y1="180" x2="100" y2="165" />
+	</g>
+<!--needle-->
+	<g id="needle-group">
+	<line id="needle" x1="100" y1="100" x2="100" y2="40" stroke="red" stroke-width="4" /></g>
+<!--center dot-->
+	<circle cx="100" cy="100" r="6" fill="#ccc: />
+<!--label-->
+	<text x="100" y="190" text-anchor="middle" fill="#eee" font-size="14">Router Load</text>
+</svg>
+
+<!--end gauge round-->
+</td><td><center><font><div  style="text-align:left">Time is ticking on your rewards.  Be sure you registered and check your email for confirmation too.  Don't miss out!  You could win free Kagaku International stock certificates!</div></font></td></tr></table>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+<br><br><div id="settings"></div><br><br>
+<!--Settings Menu-->
+<table border="1"><tr><td>
+&#9881; SETTINGS</td></tr></table><br><br>
+<table padding="10"><tr><td>
+<font size="1">Reaction Rate (function of temperature) 	&#x23F1;<br>
+<br><br>
+
+<input type="range" name="rang" style="accent-color:magenta;">
+</td></tr></table>
+<br><br>
+&#x1F527; SET Kagaku Club MODE<table border=1><tr><td>
+</td><td>
+<input type="radio" name="mode" checked style="accent-color:pink;">&#x1F471; 
+Freshman
+</td><td>
+<input type="radio" name="mode" style="accent-color:yellow;">&#x1F474;
+PhD</td><td>
+<input type="radio" name="mode" style="accent-color:magenta;">&#x1F473; Alchemist</td></tr></table>
+<br><br>
+USER TYPE<br><table border=1><tr><td>
+Applied Chemist &#x1F475;<input type="radio" name="applied" checked  style="accent-color:magenta;"><br>Theoretical Chemist &#x1F467;<input type="radio" name="applied" style="accent-color:pink;"><td width="22"></td><td><a href="">
+<button onclick="enableScroll()" id="123">&#x1F3E0;</button></a>
+</td></tr></table>
+<br><br>
+
+Scanning now for malware, virus, device infection (if any)....please stand by &#x23F1;<br>
+<!--Diagnostics-->
+<table border="1"><tr><td>
+<span class="blink">&#x1F535;</span></td><td>
+<progress id="solarPower" max="100" style="accent-color:crimson;"></progress></td></tr></table>
+<!--end diagnostics-->
+<br><br><br>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<br><br><br><br><br>
+
+<!--Site map-->
+<div id="sitemap"></div><br>
+
+
+<center>
+
+
+<table border=0 width="244"><tr><td>
+<font color="hotpink" size="2">
+<em>Kiss moi once, und kiss moi twice.  Then kiss moi once again...ich liebe dich....Say, let's go to the chem lab and maybe ich can see your</em>... test tube?<br><br><font color="powderblue">
+Freshman Chem Major</td><td height="44">
+<img src="./images/rio.gif" height="111px"></td></tr></table>
+<table border="1"><tr><td><font size="1">
+
+<a href="#resources2" onclick="enableScroll()">&#x1F4DA; Books</a><br>
+<a href="#top" onclick="enableScroll()">&#x2328; Chem Chat</a><br>
+<a href="#register" onclick="enableScroll()">&#x1F4F2; Contact</a><br>
+<a href="./404.html#testarea">&#x1F4BB; Chem Code AI</a><br>
+</td><td>
+<a href="./index.html#community"><font size="1">&#x1F69C; Forums</a><br>
+<a href="#files" onclick="enableScroll()">&#x1F5C4; Lab Musique</a><br>
+<a href="#aboutus" title="About Us" onclick="enableScroll()">&#x1F6E2; Kagaku Intl.</a><br>
+<a href="#resources2" onclick="enableScroll()">&#x1F5DC; Resources</a><br>
+</td><td><font size="1">
+<a href="#resources2" onclick="enableScroll()">&#x1F4E0; Software</a><br>
+<a href="./index.html#soc">&#x1F6F0; Spaceship-on-Chip</a><br>
+<a href="#guestbk" onclick="enableScroll()">&#x1F4D6; View Guest Book</a><br>
+<a href="#register" onclick="enableScroll()">&#x1F4D7; Sign Guest Book</a><br>
+
+</td></tr></table>
+<font color="beige">&#127541; Kagaku Club Sitemap<br>
+&#x1F6E2; &#x1F6E2; &#x1F6E2; &#x1F6E2; &#x1F6E2; <br>
+<a href="#top" title="&#x1F6E2; Back To Kagaku Club Home Page">
+<table bgcolor="brown" border="1"><tr><td><button>&#x1F3E0;HOME</button></td></tr></table></a>
+
+<br><br><br><br>
+ <!--Counter-->
+	<div id="counter"><font color="red">Kagaku Club Registered Users</font><br><font face="monoface">Online Now</div><br>
+<table border="1" bgcolor="blue" color="white"><tr><td>
+	<script>
+	 document.write(Math.floor(Math.random()*101)+20);
+	</script>
+
+ <!--end Counter-->
+</td></tr></table>
+<br><br><br>
+
+<font face="monoface">
+&#x00A9; 2026 FH Engineering, Stockton
+</font>
+
+
+<!--usr acct number temp-->
+<script>{
+ document.getElementById("systemCode").textContent = "USER_ID-" + Math.floor(Math.random() * 9000 + 1000);
+}
+</script>
+<!--end usr acct num-->
+
+<script>
+<!--Btn color toggler-->
+	{
+	window.onload = function () {
+		const btn = document.getElementById('btn');
+		btn.onclick = function () {
+		 if (btn.style.backgroundColor === 'red') {
+		  btn.style.backgroundColor = 'lightgreen';
+		 } else {
+		   btn.style.backgroundColor = 'red';
+		 }
+		}};
+}
+</script>
+<!--script for voice input go-->
+<script>
+{
+window.addEventListener("DOMContentLoaded", () => {
+
+document.getElementById("goBtn").addEventListener("click", function () { submitChat(); //same func triggered by text input
+});
+});
+
+}</script>
+<!--end script voice input go-->
+
+
+   </body>
+   </center>
+</html>   
+
+
+
+
+
+
+
+
+
+
+
+
+
