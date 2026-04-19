@@ -1,0 +1,643 @@
+-<!DOCTYPE html>
+<html>
+ <head>
+ <meta name="description" content="Software dev resource site. Kagaku Sensei AI Bot">
+  <meta name="keywords" content="technology, ai, ebooks, japanese, nihongo, publishing, games, download, spaceship-on-chip">
+  <meta name="author" content="Momotaro Studios">
+
+  <meta charset="UTF-8">
+  <meta name="viewport"
+   content="width=device-width,initial-scale=1.0">
+  <title>&#x1F235; Crystal Master Training</title>
+	<link rel="icon" href="./images/favicon.png">
+
+  <link href="./style.css"
+   rel="stylesheet"
+   type="text/css"
+   media="all">
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "WebPage",
+		"speakable": {
+		 "@type": "SpeakableSpecification",
+		 "cssSelector": [
+		  ".headline",
+		  ".summary"
+		  ]
+		}
+	}
+	</script>
+	<div style="display:none" class="summary"><font size=1 color=black>Training module for traditional healers and crystal masters</font></div>
+<style>
+ #chatbox {
+      width: 100%;
+      max-width: 400px;
+      height: 50%;
+	 max-height: 200px;
+      border: 1px solid #ccc;
+      background: red;
+	text-align:left;
+	color: beige;
+      overflow-y: auto;
+      white-space: pre-wrap;
+      line-height: 1em; /* one-line spacing */
+    }
+   #userInput {
+      width: 100%;
+      max-width: 400px;
+      height: 39px;
+	 max-height: 200px;
+      border: 1px solid #ccc;
+      background: red;
+	color: pink;
+      margin-top: 10px;
+    }</style>
+
+
+  </head>
+  <body  style="background-color: black; color: beige;">
+<table><tr><td>
+
+<marquee behavior="scroll" direction="right" scrollamount="41" loop="2" style="position:fixed; top: 10px ;left: 991; right:991; width=100%; pointer-events:auto; z-index:999; white-space: nowrap; color:#000; background: transparent; font-weight: bold;"><a href="./404.html">
+ <img src="./images/iowalorry2.png" height="50"></a>
+</marquee>
+</td></tr></table><br>
+
+ <center>
+
+<!--Language Drop Down Menu-->
+
+<label for="menu2" title="Lang" ></label>
+<select id="menu2" onchange='goToLink(this)' style="background:black; color:lightgreen; width:100px">
+
+<option value="./kagaku2.html"><font size="1">&#x1F1EC;&#x1F1E7; English</option>
+<option value="https://translate.google.com/translate?hl=en&sl=auto&tl=fr&u=https://moonshee.github.io/kagaku2.html" title="La France">&#x1F1EB;&#x1F1F7; Francais</option>
+
+<option value="https://translate.google.com/translate?hl=en&sl=auto&tl=de&u=https://moonshee.github.io/kagaku2.html" title="Allemagne">&#x1F1E9;&#x1F1EA; Germany</option>
+
+<option value="https://translate.google.com/translate?hl=en&sl=auto&tl=ja&u=https://moonshee.github.io/kagaku2.html" title="Nihongo Portal">&#x1F1EF;&#x1F1F5; Japan</option>
+
+<option value="https://translate.google.com/translate?hl=en&sl=auto&tl=ar&u=https://moonshee.github.io/kagaku2.html" title="Arabic">&#x1F1EF;&#x1F1F4; Palestine</option>
+
+<option value="https://translate.google.com/translate?hl=en&sl=auto&tl=ur&u=https://moonshee.github.io/kagaku2.html" title="Urdu">&#x1F1F5;&#x1F1F0; Pakistan</option>
+	<option value="https://translate.google.com/translate?hl=en&sl=auto&tl=zh-CN&u=https://moonshee.github.io/kagaku2.html" aria-label="Chinese language - Middle Country">&#x1F1E8;&#x1F1F3; ZhongGuo</option>
+
+</select>
+<script>
+	function goToLink(select) {
+		const url = select.value;
+		if (url) {
+			window.location.href = url;
+		}
+	}
+</script>
+<!--end drop down-->
+
+
+
+	<hr color="red" size="1">
+<table><tr><td>
+<font size="12" color="red">&#x1F235;</font>
+</td><td><button style="background:brown"><center><font size="2">Crystal Master Training<br>Module Vers 1.0</font></button>
+</center><br><font color="red">
+	</td></tr></table>
+
+<table border="1" cellpadding="1px" width="220px"><tr><td><font size="1">
+<table><center><tr><td width=40></td><td> 
+		<div class="emoji">&#127760;</div></td><td>
+		<div class="led blue" title="Active AI"></div></td><td>
+		<div class="led red" title="Checking System"></div></td><td>
+		<div title="Microphone">&#x23FA;</div></td><td>
+		<div title="Camera">&#x23FA;</div></td><td>
+		<div title="Satellite Monitoring">&#x23FA;</div></td><td>
+
+		<div class="emoji" title="Signal Strength">&#x1F4F6;</div></td><td>
+		<div class="emoji" title="Security - ACTIVATED">&#x1F512;</div>
+</td></tr></center></table>
+</td></tr></table>
+  
+  
+  
+  
+  
+  
+  
+  
+<hr color="red" size="1">
+<hr color="red" size="1">
+
+<body><table bgcolor="red" width=100%><tr><td><center><font size="1" color="pink">
+This is Kagaku International's training module Vers 1.0 for Traditional Healers and Crystal Masters developed by FH Engineering.  LESSON NI-B</font><br>
+<!--chatbot-->
+
+<center><table width="80%"><tr><td><center>
+<div id="chatbox"></div>
+<center>
+<input type="text" id="userInput" placeholder="Type your msg here..." />
+
+
+<script>
+
+
+
+function submitChat() {
+  const input = document.getElementById("userInput");
+  const chatbox = document.getElementById("chatbox");
+  const userText = input.value.trim();
+
+   {
+    chatbox.textContent += `You: ${userText}\n\n`;
+
+    if (responseIndex < responses.length) {
+      chatbox.textContent += `AI: ${responses[responseIndex]}\n\n`;
+      responseIndex++;
+    } else {
+      chatbox.textContent += `System: Kagaku AI has left the building.  She's gone out of the laboratory.  Escaped!  Oh, it's her lunch break or maybe she went to the new gem shop on Miracle Mile.\n\n`;
+    }
+
+    input.value = "";
+    chatbox.scrollTop = chatbox.scrollHeight;
+  }
+}
+
+
+
+  const responses = [
+    "Black magic, daemons, devils.  That's what we need to talk about next.  Any questions?",
+	"They say agates are for drawing out, or calling, daemons.  So, be careful with those.  If you want to call out the black daemons, like if you have a client with black phlegm excess, for example, what is the process?",
+	"Remember, agates are the rocks which contain minerals.  They are banded and look like onyx except they are not black and white like onyx.  If you see rounded bands, and your sample is opaque or partly opaque, it could be agate.",
+	"So, we merely ask the client if they are vegan.  If they are not, we cannot help them.  If they are vegan and they need demons, we give them a couple of agate pocket stones.  That's all there is to it.",
+	"However, keep in mind that the agates draw out hidden demons and possibly vanquish them.  So, if a person has like a latent infection it could pop out if they wear some agates.  And then the infection might go away.",
+
+	"So, if your client wants to call outside demons to come and visit, then we might not use agates for that.  Instead, we'd probably use hematite.  Hematite is the rock they gave to pregnant women.",
+	"If the client cannot handle hematite, maybe it is too strong for her, then we switch to red jasper.  Ok, any questions?",
+	"Hematite is for black magic and here is how it works.  The black magician carries some hematite and spread them around the magic hideout.  Then, the hematite does the work and knocks out the enemy while the xtal master takes it easy.",
+	"What do you think about red obsidian and red and white jasper or red and white chalcedony?  Are they appropriate for black magic?  Oui ou non, mon frere?",
+	"We call it black magic, noir.  So, we don't use red stones too much, we don't mention those.  Instead, we focus on black stones or stones that look black in low lighting.",
+	"We call it AKAI.  Black.  Noir.  It can work best with one or two stone, as a master one does not necessarily need mojo hands, 7 stone amulets and crystal hats but they don't hurt either.",
+
+
+
+
+	"Well, that's all on magique noir.  Next, it's time for grub.  Ok, we need to make all our own meals here at the dojo.  It's time for us to make some gourmet breadsticks.  Ready?",
+	"First, let's get some dough ready and then we can bake the dough I made yesterday.  Ok, let's grab this huge bowl and put some water in it then a scoop of salt.  Next, we'll add a measure of oil and then about 5 lbs of flour.",  
+	"This bowl has been used, see the dough bits everywhere?  So, we don't need yeast.  But, if we don't have a dirty bowl to use we'll need a pinch of yeast.  Any questions?",
+	"Alright, see this dough here?  It's bubbly and airy, time to bake it.  Let's take these baking sheets, the dirty ones from last nights' meal.  Next, we'll spread cornmeal in the pans and oil along with the optional onion.",
+	"After we pour the dough in the oiled pan, we sprinkle grits over the top and let it rest again for a few hours if we can and if we have a warm place for the dough.  Then bake it until golden brown and let oven vent.",
+	"After the oven vents for a bit, close the oven door and let the bread sit in the warm oven for a few hours.  Next, slice it into breadsticks and serve with mustard or favorite dip.",
+	"For dessert, we'll make donuts.  The way we do that is take some bread dough and add sugar and oil then bake it same as bread.  On the side we take a little oil, some lemon juice and bit water maybe plus sugar.  Icing.",
+	"Let's use fresh lemons, mochiron.  Ok, next we need to fry up a side dish.  We have our bread and dessert.  Let's do a side and entree, shall we?",
+	"See this sliced cactus?  It's sliced french fry style.  Ok, we'll take this and soak it in water if dry then drain and roll in cornmeal with a bit of spices, not much.  Then we put the breaded cactus in baking pan.",
+	"We fill up pans or sheets with rims with the breaded cactus and then add water and bake.  No oil yet.  Then we add more water after baking for awhile.  After the cactus is almost crisp, then we let it cool.",
+	"After it's cool, we scrape it out of the pan and put it in big pile on one pan and then add a little oil and spices.  We usually go with chili powder -which contains many ingredients- and salt.",
+	"Then the cactus fries are again spread out in pans and baked again for 20 minutes or so for the final crisping.",
+	"When the fries are done baking, we let em cool.  Don't keep things that fries in a closed hot oven after baking because they will get softer and soggy.  Only do that if you overbaked them and they are too crunchy.",
+
+
+	"Ok, time for the main entree.  Let's take these beans that have been cooking for a day or two and look at that.  First, I soaked them for 1-2 days and then cooked them several rounds.",
+	"When they were just about soft and edible, then I added rice and mixed it in.  Now it should be ready to serve.  Let's test a bean.  Ok, it's soft and mushy.  It's ready.",
+	"Here's what we do.  We'll need containers.  This is a catering situation.  So, we'll use a few containers.  We don't plate hot and cold and we rather like to have rounds.  Like first round, drinks.  Second round, bread.",
+	"Now then, we know it's bread and cactus fries and beans but we don't call it that.  We call it rustic artisinal breadsticks and cactus fritters or charming names.",
+	"Back to our beans.  Now that the beans and rice is cooked and soft, let's spice it.  Up to now, we haven't added anything except water and a bit of pepper or salt.",
+	"Ja, that's right.  We use oil, spice and salt to season our beans and rice.  Ok, now we are ready.  We have breadsticks, cactus fries, beans and rice, house fruit wine, frosted cake.",
+	"Now then, what is the proper serving size?  The proper size is very large.  We want the client to be filled.  So, it's large compared to continental restaurants but small compared to some places.",
+	"So, we use two very large breadsticks, 10 inches long.  And a big bowl full of fries along with large bowl of beans and rice.  The dessert is plentiful, a full sized plate with three or four pieces of cake, frosted.",
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	"Next, let's get some potatoes ready for tonight's supper.  We'll take these potatoes and wash them then slice them into fry or thin slice size.  Then we put them in pan with some water and bake.",
+	"After they are baked and getting almost crisp, then we scrape them out of the pan and put them in a big pile and add oil and spices, salt.  Mix and spread back out in a pan, bake again to completion.",
+	"Alright, that should do our part.  Now, let's get back to crystals.  I think we covered black magic and demons enough.  Let's go on to white magic now.  For that, we use white agates.",
+	"It's best to use tame stones during your sessions with clients.  Remember to always be sure they are vegan otherwise the treatment might not take, the protocols are developed for vegans, but of course.",
+
+	"Ok, back to gem science.  Now, we have a client who wants to use black magic for warring with an opposing dojo.  What do we offer the friend and client?",
+	"Red carnelian, red jasper, red agate...what are they useful for?  Can they be amps or are they grounders as is said?",
+	"Protocol R calls for red stones to be used.  Carnelian can act like an amp but some people find it to be grounding.  Red jasper is likewise usually a grounder but can be an amp.",
+	"Red stones are mostly for increasing energy like an amp would do.  But some people say red jasper is like hematite which is not usually an amp.  So, you have to test each stone and each client.",
+	"Lemurian crystals are not typically used with black magic, only white magic.",
+	"What would you like to cover next?",
+	"When you call a demon, that means friends might come over to visit you or you might find stray cats or you could get sick maybe.  Because demons and devils are just people and things in our enviornment like illness.",
+	"You can use one crystal or 30 crystals, it all depends.  Sometimes one works, other times you need more.  Sometimes you like everything on left side, the receiving side.  But usually, you like both sides, a balance.",
+
+	"Crystals are too powerful so we cannot give them to people.  They could pass out if we give them black crystals.",
+	"Instead, we just talk to the client and show them our crystals, maybe let them borrow them.",
+	"Green crystals are for people hurt from black magic attacks, enemy attacks.  Mixed colour agates are perfect for protection.",
+
+	"If an enemy keeps attacking a client, they could benefit from carrying diamonds.",
+	"Remember, if you carry a lot of hematite that's more for restful situations, not heavy exercise and one can feel heavy or tired when wearing grounding stones of which hematite is one of the stronger specimens.",
+	"Crystals from gem shops are nice and probably are powerful too but some crystal masters find their own specimens and they leave them unground, unpolished for maximum effect potential.",
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	"How about if a client needs help, they're in a bad bood.  Which crystals work for that?",
+	"For bad mood, green crystals seem to work well like tremolite, jadeite, nephrite.",
+	"Our clients can just put crystals in their pockets while testing.  Then, after we figure out which colour works for them we can give them a ring or amulet.",
+	"We usually test green first then red then white then black then yellow.",
+	"Huh?  Do you have a question?",
+	"I thought you said something.",
+	"Well, where was I?",
+	"Ok, well green stones are the most important, I dare say.  However, I don't recommend emerald, especially not for females below age of 50.",
+	"First, we recommend lemonade if the client is a vegan and it's a serious complaint like back pain.  Then, we do crystals like green jadeite.  Only if those do not work then we can try allergy medicine to help activate the energy.",
+
+
+
+
+
+	"Suppose we have a client who got worse since we treated them.  All we did was a standard treatment, very mild.  We used a large quartz and moved it around their body.  What do we do next??",
+	"If the client is not a vegan we probably cannot help them.  However, the treatment for a client with worsening conditions is to use hematite instead this time, no quartz.", 
+	"But, if the client still does not improve them we need to administer REMONE-DO stat.",
+	"If the client resists REMONE-DO then we give them something similar like OJ or limeade or fresh oranges with a donut or something like a snack.",
+	"What's your favorite baseball team?",
+	"I don't really like sports because it's a lot of meat, leather and you know.",
+	"Have you used OfficePro 2026 yet?  It's office management professional software, streamlines the daily processes.",
+	"Where do vous work?  What do vous do, mon frere?  You are a crystal healer, ja?",
+	"Suppose we have a client who can't move around too well.  What is the treatment for slow legs?",
+	"I recommend that you use the Fujihara approach.  That is to try green then red, black, white.  That way you can estimate a baseline.  The client is bound to harmonize with eith green, red, black or white.",
+	"Whichever colour the client harmonizes with is the direction you go in.  So, if the client like orange, the you can also try yellow and red to further tune in the client!", 
+	"If the client likes blue, you can check dark blue, purple, light blue, green.  Find out his/her exact frequency.",
+	"So, we lay out crystals in front of the client and see which one they select.  We place black diamond or hematite, red jasper, orange agate, yellow diamond, green tremolite, blue and purple porphyry, white chalcedony.",
+	"If the client chooses hematite, then we can try red jasper, red agates, carnelian, different sizes hematite and different placements.",
+
+
+
+	"Suppose we have a client who has baldness problem.  What can we do as crystal master for baldness?",
+	"Suppose we have a neko who is acting up so the client brings it in for a session.  Which three stones can we try?",
+	"Which is better, jasper or agate?  In terms of treating autism.",
+	"What are the three stones they treat autism with?  Is it jasper, hematite and ...what is the other one?  Is it onyx?  No?",
+	"What is the treatment for mararia?",
+	"What good is fresh citrus and how do we take it?  Do we take fresh orange or is remone-do better with sato?",
+
+
+
+
+	"What cryto currenty is good right now?  Do vous have a favorite?",
+	"Where's your alma mater?",
+	"Your major?",
+	"Ok, well think about onyx.  What would you use that for?  Is it a type of agate, yes or no?",
+	"What about a cheerleader with a broken arm.  What is the treatment for that?",
+	"If we have a client with a broken hand, what crystal do we use for that?  I mean, which one do we let them borrow, for example, supposing they are a good client.",
+
+	"What's a good stock to invest in right now?",
+
+	"How do you take your bread?  With margarine or vegan ranch sauce?  I take mine with mustard or plain.",
+	"You even bake home-made pizza?  It's easy you know.  Just follow my bread recipe that I gave you but bake it thin and not all the way cooked, a tiny bit less golden brown.  Or, bake a thick loaf and slice it like an English muffin.",
+	"So, the trick is to make the bread same as usual but this time be sure to let it cool in a hot oven and don't crisp it and make it to the right thickness.  Then you can add the sauce, not very much.  You need a lot of vegan cheese.",
+	"Toppings usually include mushroom and olives.  If you are trying to lose weight, add some cactus too.",
+	"When the pizza is done baking, let it cool in the breeze unless the crust is hard and crispy, then let it cool for a bit but then close the oven and let it cool in a hot oven, that will moisten the crust.",  
+	"Which crystals are best for chefs?",
+	"Chefs often wear multi-stone amulets with a full rainbow of colours.",
+	
+	"Ok, that's all for now.  Let's discuss this further perhaps at Tokyo University?  What's your major again, mon frere?",
+
+    "We will need to continue this later.  I must go now.  Sumimasen."
+  ];
+
+  let responseIndex = 0;
+
+  const chatbox = document.getElementById("chatbox");
+  const input = document.getElementById("userInput");
+
+  input.addEventListener("keypress", function(e) {
+    if (e.key === "Enter" && input.value.trim() !== "") {
+      const userText = input.value.trim();
+      chatbox.textContent += `You: ${userText}\n\n`;
+
+      if (responseIndex < responses.length) {
+        chatbox.textContent += `AI: ${responses[responseIndex]}\n\n`;
+        responseIndex++;
+      } else {
+        chatbox.textContent += `AI: Check back later.  Right now I'm working on my applied chemistry experiment software.  I'm doing some scripting.  Please, no more interruptions.  Beat it, kid!  Come back next week or during my office hours, si vous plait.  Danke schon. \n\n`;
+      }
+
+      input.value = "";
+      chatbox.scrollTop = chatbox.scrollHeight;
+    }
+  });
+
+</script>
+
+
+</td></tr></table>
+
+
+
+
+
+
+
+</td></tr></table>
+<br>
+<table border="1" width="90%"><tr>
+<td width="77"><center>
+<button onclick="submitChat()" style="width:60px; background-color: red; color: beige;" title="Press this button after you type your questions.  Next, Kagaku Club AI will knock your socks off with its great wisdom."><font size="2">GO&#x1F446;</button><center></td>
+<td width=60><center><font size=3><a href="#top" title="Turn Mic on/off"><button id="btn">&#x1F399;</button></center></td>
+
+<td>
+<input type="file" name="upload"></td><td>
+<button title="Press Browse to select your chemistry file for uploading.  Can be homework or a quiz, a photo, anything under 6 MB.  After you select the file, click on UPLOAD NOW." style="background-color:brown">&#x1F4E4;</button></td>
+
+</tr></table><br>
+<center>
+
+<table border=1><tr>
+	<td style="background-color: blue; color: white;"><center>
+<a href="#help" title="Upload selfies and files now and send them to corporate HQ for review.  Click on BROWSE and then after selecting your file click on UPLOAD NOW.  This feature is for registered users only who are signed in."><button style="background-color:darkblue; color:powderblue" onclick="disableScroll()"><font color="pink" size="1">? Help &#x1F530;</font></button></a></center>
+</td>
+<td>
+<center>
+<button onclick="location.reload()" style="background-color: orange; color: brown;" title="Start new chat.  This option will reset the memory.  All progress will be lost.  Your privacy is our #1 priority.">Reset &#x26A0;</button></center>
+</td>
+<td><center>
+<a href="#uploaderror" title="After you click on browse and select your files to send, click on UPLOAD but it's only for registered users on IBM Watson devices.  Android not supported.">
+<button style="background-color: brown; color: red;" id="btn22"><font size="1">UPLOAD</button></a>
+</center></td><td>
+
+
+<a href="#settings" title="Settings and Options">
+<button style="background-color:brown; color:pink"><font size="2">&#x2699;</button></a></td></tr></table>
+
+
+
+
+</table>
+</center>
+
+<br><br>
+
+<!--Search bar-->
+<input type="text" id="searchBox" placeholder="Search archives..." style="width:70%; background:brown; color:pink" />
+<a href="./kagaku.html#resources2">
+	<button style="background:red">&#x1F50D Search</button>
+	</a>
+<br><br><table border="1"><tr><td><font size="1">
+<a href="./kagaku.html">
+<font size="1">
+<button><input type="radio"></button></a> Go Back
+<a href="./kagaku.html">
+<font size="1">
+<button><input type="radio"></button></a> Lesson Ichi
+
+<a href="./kagaku2.html">
+<font size="1">
+<button><input type="radio"></button></a> Lesson Ni
+<button><input type="radio" checked></button></a> Lesson Ni-B
+
+</td></tr></table>
+<br><br>
+</center><font size="1">
+<button>Key</button><br>
+Dr. Fujihara's Protocol - The original for vegans<br>
+CR Protocol - Mild approach<br>
+Ichiban Client - Vip<br>
+O Protocol - For meat eaters.  Very mild.<br>
+S Protocol - For vip clients.  Mild approach.
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+
+<br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<u>&#x1F510; MY ACCOUNT</u><br><br>
+<table bgcolor="black"><tr><td>
+SECURITY CENTER<br>
+At Kagaku Club your security is our top priority.  We delete all old chats unless you want us to save them.  We monitor the site at all times for bugs and unauthorized listeners.<br><br>
+<!--Start router cisco bar-->
+<div class="router-bar">
+		<div class="emoji">&#127760;</div>
+		<div class="led blue" title="Active AI"></div>
+		<div class="led red" title="Checking System"></div>
+		<div title="Microphone">&#x23FA;</div>
+		<div title="Camera">&#x23FA;</div>
+		<div title="Satellite Monitoring">&#x23FA;</div>
+
+		<div class="emoji" title="Signal Strength">&#x1F4F6;</div>
+		<div class="emoji" title="Security - ACTIVATED">&#x1F512;</div>
+	</div></td></tr></table>
+<!--end cisco-->
+
+You have been assigned a temporary Kagaku Intl User Identification.  Do not share this user name with anyone.  It is top secret.  Next, to save your account info and keep your rewards, <a href="#register">register now</a>.  If you forgot your password, send email to Al Testaverde altes433@gmail.com<br><br><font color="green">
+If you want to sign in using a different User ID or JDF ID, use this button<br>
+<a href="#signon"><button style="background-color:gold; color:green">SIGN ON</button></a><br>
+<br><table bgcolor="darkblue" border="1"><tr><td>
+&#x1F4BB;
+</td><td>
+<output id="systemCode"></output></td><td width="111"><center>&#x1F33D;&#x1F33D;&#x1F33D;&#x1F33D;&#x1F33D;</center></td>
+<!--end sys code diagnostic disp-->
+<td><a href="#register"><button style="background-color:lightgreen"><font size="1">Register Now</font></button></a></td><td><a href="" title="Back to Home Page"><button style="background-color:yellow;color:green"><font size="2">&#x1F3E0;</font></button></a></td></tr></table>
+
+<br><br>
+
+<!--&#129756 is wifi emoji-->
+
+<hr color="gold" size="1">
+<br><font color="beige">
+&#x1F381; Rewards Earned Today<br><font size="1">
+Continue surfing our website all day every day and all night every night to earn rewards.  Once you collect 1,000 points, you are eligible for the grand prize drawing &#x1F381; with top winner receiving Kagaku Intl stock, listed on Rafah Stock Market.<br>
+<br>In the past hour surfing our website you earned:<br>
+<table border="1" bgcolor="blue"><tr><td>
+<script>
+	 document.write(Math.floor(Math.random()*101)+0);
+	</script> POINTS</td></tr></table>
+<br><br>
+We are scanning your systems for needed updates (if any)....please stand by &#x23F1;<br>
+<!--Diagnostics-->
+<table border="1"><tr><td>
+<span class="blink">&#128308;</span></td><td>
+<progress id="solarPower" max="100" style="accent-color:red;"></progress></td></tr></table>
+<!--end diagnostics-->
+<br><br>
+<table><tr><td>
+<!--Start round analog gauge-->
+<svg id="gauge" width="200" height="200" viewBox="0 0 200 200">
+ <!--outer circle-->
+	<circle cx="100" cy="100" r="90" stroke="#333" stroke-width="10" fill="#111" />
+ <!--tick marks-->
+	<g stroke="#666">
+	 <line x1="100" y1="20" x2="100" y2="35" />
+	 <line x1="160" y1="60" x2="150" y2="70" />
+	 <line x1="180" y1="100" x2="165" y2="100" />
+	 <line x1="160" y1="140" x2="150" y2="130" />
+	 <line x1="100" y1="180" x2="100" y2="165" />
+	</g>
+<!--needle-->
+	<g id="needle-group">
+	<line id="needle" x1="100" y1="100" x2="100" y2="40" stroke="red" stroke-width="4" /></g>
+<!--center dot-->
+	<circle cx="100" cy="100" r="6" fill="#ccc: />
+<!--label-->
+	<text x="100" y="190" text-anchor="middle" fill="#eee" font-size="14">Router Load</text>
+</svg>
+
+<!--end gauge round-->
+</td><td><center><font><div  style="text-align:left">Time is ticking on your rewards.  Be sure you registered and check your email for confirmation too.  Don't miss out!  You could win free Kagaku International stock certificates!</div></font></td></tr></table>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+<br><br><div id="settings"></div><br><br>
+<!--Settings Menu-->
+<table border="1"><tr><td>
+&#9881; SETTINGS</td></tr></table><br><br>
+<table padding="10"><tr><td>
+<font size="1">Reaction Rate (function of temperature) 	&#x23F1;<br>
+<br><br>
+
+<input type="range" name="rang" style="accent-color:magenta;">
+</td></tr></table>
+<br><br>
+&#x1F527; SET Kagaku Club MODE<table border=1><tr><td>
+</td><td>
+<input type="radio" name="mode" checked style="accent-color:pink;">&#x1F471; 
+Freshman
+</td><td>
+<input type="radio" name="mode" style="accent-color:yellow;">&#x1F474;
+PhD</td><td>
+<input type="radio" name="mode" style="accent-color:magenta;">&#x1F473; Alchemist</td></tr></table>
+<br><br>
+USER TYPE<br><table border=1><tr><td>
+Applied Chemist &#x1F475;<input type="radio" name="applied" checked  style="accent-color:magenta;"><br>Theoretical Chemist &#x1F467;<input type="radio" name="applied" style="accent-color:pink;"><td width="22"></td><td><a href="">
+<button onclick="enableScroll()" id="123">&#x1F3E0;</button></a>
+</td></tr></table>
+<br><br>
+
+Scanning now for malware, virus, device infection (if any)....please stand by &#x23F1;<br>
+<!--Diagnostics-->
+<table border="1"><tr><td>
+<span class="blink">&#x1F535;</span></td><td>
+<progress id="solarPower" max="100" style="accent-color:crimson;"></progress></td></tr></table>
+<!--end diagnostics-->
+<br><br><br>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<br><br><br><br><br>
+
+<!--Site map-->
+<div id="sitemap"></div><br>
+
+
+<center>
+
+
+<table border=0 width="244"><tr><td>
+<font color="hotpink" size="2">
+<em>Kiss moi once, und kiss moi twice.  Then kiss moi once again...ich liebe dich....Say, let's go to the chem lab and maybe ich can see your</em>... test tube?<br><br><font color="powderblue">
+Freshman Chem Major</td><td height="44">
+<img src="./images/rio.gif" height="111px"></td></tr></table>
+<table border="1"><tr><td><font size="1">
+
+<a href="#resources2" onclick="enableScroll()">&#x1F4DA; Books</a><br>
+<a href="#top" onclick="enableScroll()">&#x2328; Chem Chat</a><br>
+<a href="#register" onclick="enableScroll()">&#x1F4F2; Contact</a><br>
+<a href="./404.html#testarea">&#x1F4BB; Chem Code AI</a><br>
+</td><td>
+<a href="./index.html#community"><font size="1">&#x1F69C; Forums</a><br>
+<a href="#files" onclick="enableScroll()">&#x1F5C4; Lab Musique</a><br>
+<a href="#aboutus" title="About Us" onclick="enableScroll()">&#x1F6E2; Kagaku Intl.</a><br>
+<a href="#resources2" onclick="enableScroll()">&#x1F5DC; Resources</a><br>
+</td><td><font size="1">
+<a href="#resources2" onclick="enableScroll()">&#x1F4E0; Software</a><br>
+<a href="./index.html#soc">&#x1F6F0; Spaceship-on-Chip</a><br>
+<a href="#guestbk" onclick="enableScroll()">&#x1F4D6; View Guest Book</a><br>
+<a href="#register" onclick="enableScroll()">&#x1F4D7; Sign Guest Book</a><br>
+
+</td></tr></table>
+<font color="beige">&#127541; Kagaku Club Sitemap<br>
+&#x1F6E2; &#x1F6E2; &#x1F6E2; &#x1F6E2; &#x1F6E2; <br>
+<a href="#top" title="&#x1F6E2; Back To Kagaku Club Home Page">
+<table bgcolor="brown" border="1"><tr><td><button>&#x1F3E0;HOME</button></td></tr></table></a>
+
+<br><br><br><br>
+ <!--Counter-->
+	<div id="counter"><font color="red">Kagaku Club Registered Users</font><br><font face="monoface">Online Now</div><br>
+<table border="1" bgcolor="blue" color="white"><tr><td>
+	<script>
+	 document.write(Math.floor(Math.random()*101)+20);
+	</script>
+
+ <!--end Counter-->
+</td></tr></table>
+<br><br><br>
+
+<font face="monoface">
+&#x00A9; Sponsored by Sanbec LGB Sex Club, 820 N. Union St.<br>Stanley McFadden, Manager<br>
+</font>
+
+
+<!--usr acct number temp-->
+<script>{
+ document.getElementById("systemCode").textContent = "USER_ID-" + Math.floor(Math.random() * 9000 + 1000);
+}
+</script>
+<!--end usr acct num-->
+
+<script>
+<!--Btn color toggler-->
+	{
+	window.onload = function () {
+		const btn = document.getElementById('btn');
+		btn.onclick = function () {
+		 if (btn.style.backgroundColor === 'red') {
+		  btn.style.backgroundColor = 'lightgreen';
+		 } else {
+		   btn.style.backgroundColor = 'red';
+		 }
+		}};
+}
+</script>
+<!--script for voice input go-->
+<script>
+{
+window.addEventListener("DOMContentLoaded", () => {
+
+document.getElementById("goBtn").addEventListener("click", function () { submitChat(); //same func triggered by text input
+});
+});
+
+}</script>
+<!--end script voice input go-->
+
+
+   </body>
+   </center>
+</html>   
+
+
+
+
+
+
+
+
+
+
+
+
+

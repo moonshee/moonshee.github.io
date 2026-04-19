@@ -1,9 +1,13 @@
-We offer two main products at the moment:
+We offer several main products at the moment:
 
--Injection Mould Machine Simulator 1.0
-	2026
+-Office Pro Version 1.0
+	Released 2026
+-Crystal Master Training Programme
+	Released 2026
+-Injection Mould Machine Simulator
+	Released 2026
 -Crypto Mining Rig
-	2025
+	Released 2025
 
 Along with those products we also offer:
 
@@ -12,8 +16,19 @@ Along with those products we also offer:
 -Engineering services
 
 -------------------------------------------
-Latest Update: April 8, 2026
-Vers: 1.0
+Update: April 19, 2026
+Pricing for Office Pro and Crystal Master are $500 each plus maintenance fee of $100 per year.  These prices are per user.  The demos are free and can be found here:
+
+Office Pro Demo
+https://moonshee.github.io/OfficePro.html
+
+Crystal Master Training
+https://miyazakibar.itch.io/crys
+
+
+-------------------------------------------
+Update: April 8, 2026
+Vers: IMM 1.0
 -------------------------------------------
 The IMM simulator is an educational and amusement tool for new IMM user and professionals.  It is HTML based with CSS and JS and deploys exclusively on devices which run HTML such as smart phones, laptops, PCs.  It can run on web browsers like Firefox.
 

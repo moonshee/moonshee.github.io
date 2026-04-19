@@ -1,0 +1,650 @@
+-<!DOCTYPE html>
+<html>
+ <head>
+ <meta name="description" content="Software dev resource site. Kagaku Sensei AI Bot">
+  <meta name="keywords" content="technology, ai, ebooks, japanese, nihongo, publishing, games, download, spaceship-on-chip">
+  <meta name="author" content="Momotaro Studios">
+
+  <meta charset="UTF-8">
+  <meta name="viewport"
+   content="width=device-width,initial-scale=1.0">
+  <title>&#x1F235; OfficePro-2026</title>
+	<link rel="icon" href="./images/favicon.png">
+
+  <link href="./style.css"
+   rel="stylesheet"
+   type="text/css"
+   media="all">
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "WebPage",
+		"speakable": {
+		 "@type": "SpeakableSpecification",
+		 "cssSelector": [
+		  ".headline",
+		  ".summary"
+		  ]
+		}
+	}
+	</script>
+	<div style="display:none" class="summary"><font size=1 color=black>Office Management Software</font></div>
+<style>
+ #chatbox {
+      width: 100%;
+      max-width: 400px;
+      height: 50%;
+	 max-height: 200px;
+      border: 1px solid #ccc;
+      background: red;
+	text-align:left;
+	color: beige;
+      overflow-y: auto;
+      white-space: pre-wrap;
+      line-height: 1em; /* one-line spacing */
+    }
+   #userInput {
+      width: 100%;
+      max-width: 400px;
+      height: 39px;
+	 max-height: 200px;
+      border: 1px solid #ccc;
+      background: red;
+	color: pink;
+      margin-top: 10px;
+    }</style>
+
+
+  </head>
+  <body  style="background-color: black; color: beige;">
+<table><tr><td>
+
+<marquee behavior="scroll" direction="right" scrollamount="41" loop="2" style="position:fixed; top: 10px ;left: 991; right:991; width=100%; pointer-events:auto; z-index:999; white-space: nowrap; color:#000; background: transparent; font-weight: bold;"><a href="./404.html">
+ <img src="./images/iowalorry2.png" height="50"></a>
+</marquee>
+</td></tr></table><br>
+
+ <center>
+
+<!--Language Drop Down Menu-->
+
+<label for="menu2" title="Lang" ></label>
+<select id="menu2" onchange='goToLink(this)' style="background:black; color:lightgreen; width:100px">
+
+<option value="./kagaku2.html"><font size="1">&#x1F1EC;&#x1F1E7; English</option>
+<option value="https://translate.google.com/translate?hl=en&sl=auto&tl=fr&u=https://moonshee.github.io/kagaku2.html" title="La France">&#x1F1EB;&#x1F1F7; Francais</option>
+
+<option value="https://translate.google.com/translate?hl=en&sl=auto&tl=de&u=https://moonshee.github.io/kagaku2.html" title="Allemagne">&#x1F1E9;&#x1F1EA; Germany</option>
+
+<option value="https://translate.google.com/translate?hl=en&sl=auto&tl=ja&u=https://moonshee.github.io/kagaku2.html" title="Nihongo Portal">&#x1F1EF;&#x1F1F5; Japan</option>
+
+<option value="https://translate.google.com/translate?hl=en&sl=auto&tl=ar&u=https://moonshee.github.io/kagaku2.html" title="Arabic">&#x1F1EF;&#x1F1F4; Palestine</option>
+
+<option value="https://translate.google.com/translate?hl=en&sl=auto&tl=ur&u=https://moonshee.github.io/kagaku2.html" title="Urdu">&#x1F1F5;&#x1F1F0; Pakistan</option>
+	<option value="https://translate.google.com/translate?hl=en&sl=auto&tl=zh-CN&u=https://moonshee.github.io/kagaku2.html" aria-label="Chinese language - Middle Country">&#x1F1E8;&#x1F1F3; ZhongGuo</option>
+
+</select>
+<script>
+	function goToLink(select) {
+		const url = select.value;
+		if (url) {
+			window.location.href = url;
+		}
+	}
+</script>
+<!--end drop down-->
+
+
+
+	<hr color="red" size="1">
+<table><tr><td>
+<font size="12" color="darkgreen">	&#x1F4E0;</font>
+</td><td><button style="background:darkgreen"><center><font size="2">Office Pro 2026<br>Vers 1.0</font></button>
+</center><br><font color="red">
+	</td></tr></table>
+
+<table border="1" cellpadding="1px" width="220px"><tr><td><font size="1">
+<table><center><tr><td width=40></td><td> 
+		<div class="emoji">&#127760;</div></td><td>
+		<div class="led blue" title="Active AI"></div></td><td>
+		<div class="led red" title="Checking System"></div></td><td>
+		<div title="Microphone">&#x23FA;</div></td><td>
+		<div title="Camera">&#x23FA;</div></td><td>
+		<div title="Satellite Monitoring">&#x23FA;</div></td><td>
+
+		<div class="emoji" title="Signal Strength">&#x1F4F6;</div></td><td>
+		<div class="emoji" title="Security - ACTIVATED">&#x1F512;</div>
+</td></tr></center></table>
+</td></tr></table>
+  
+  
+  
+  
+  
+  
+  
+  
+<hr color="red" size="1">
+<hr color="red" size="1">
+Select from these options
+<body><table border="2" bgcolor="darkgreen"><tr><td><center><font size="1" color="pink">
+</font><br>
+
+</td><td>
+
+
+
+<div id="output"></div>
+
+<div id="output2"></div>
+
+<div id="output3"></div>
+
+<div id="output4">Enter command</div>
+<table border=1><tr><td>
+<div id="output5"><input type="text" placeholder="Incoming chat request...reply?"></div></td></tr></table>
+<a href="">
+<button style="background:lightgreen">OK</button><button style="background:red">Cancel</button></a><br>
+<input type="text" placeholder="">
+
+
+
+
+
+
+
+
+
+</td><td width=20></td><td>
+<a href="#incoming">
+<button style="background:violet; width:120">&#x260E; Incoming Call</button></a><br>
+<button  onclick="document.getElementById('output').innerText = 'Low on pencils';  document.getElementById('output2').innerText = '-----';  document.getElementById('output3').innerText = 'Supplier: Staples'; document.getElementById('output4').innerText = 'Item Number 23848492'; document.getElementById('output5').innerText = 'Order now? Enter PIN'" style="background:purple; width:120"><font color="violet">&#x1F5C2; Office Supplies</button><br>
+<button  onclick="document.getElementById('output').innerText = 'No vacations scheduled for this week';  document.getElementById('output2').innerText = '-----';  document.getElementById('output3').innerText = 'Next week: Mr. Humphries starts a two week vacation.'; document.getElementById('output4').innerText = 'The following week Mrs. Allison will go on a one week vacation.'; document.getElementById('output5').innerText = 'Schedule new vacation now?  Enter details.'" style="background:darkblue; width:120"><font color="lightblue">&#x1F4C5; Schedule Pro</button><br>
+
+<button  onclick="document.getElementById('output').innerText = 'Lunch break schedule and details';  document.getElementById('output2').innerText = '-----';  document.getElementById('output3').innerText = '2nd Floor - 12-1pm, mostly vegan'; document.getElementById('output4').innerText = '3rd Floor 11:30-12:30, 80% vegetarian'; document.getElementById('output5').innerText = 'Order lunch catering?  Enter details.'" style="background:blue; width:120"><font color="cyan">&#x1F37D; Lunch Break</button><br>
+<a href="#chatbox"><button style="background:lightblue; width:60">&#x1F530; Help</button></a><a href=""><button style="background:orange; width:60">&#x1F3E0; Back</a><br>
+
+</td></tr></table>
+
+<br><br><a href="#contactboss"><button style="background:darkred; width:120"><font color="pink">&#x1F4F2; Contact Boss</button></a><a href="#settings"><button style="background:gold; width:120">&#x1F5DC; Settings</button></a><a href="#settings"><button style="background:yellow">&#x1F510; Admin Logon</button></a>
+<br><br><a href="#about">
+<button style="background:black"><font color="beige">Software Version</button></a>
+<br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br>
+<br><br><br><br><br><br>
+<br><br><br><br><a href="">
+<button>&#x1F519; GO BACK</button><button>&#x260E; END CALL</button></a>
+<br><br>
+<div id="incoming"></div>
+INCOMING CALL LOG SHEET<br>
+Instructions:  When you answer the phone, say, "Thank you for calling.  It's a great morning here at FH Engineering.  How may I help you?"<br>
+
+
+
+<br><div id="register"></div>
+
+<table border="1"  id="wholesale"><tr><td>
+	<br>
+
+<form
+  action="https://formspree.io/f/mjkapgww"
+  method="POST"
+  enctype="multipart/form-data"
+>
+  <label>
+    <font color="white">&#x260E;</font> Reason for the call?<br>
+    <input type="email" name="email" style="width:70%; background:gold">
+  </label><br><br>
+  <label>
+    &#x1F4D0; Did they ask to speak with an engineer?  Who did they ask for?<br>
+<input type="radio" name="engineer">&#x1F474; Yoshi </label><input  name="engineer" type="radio">&#x1F475; Franki</label>
+<br>Other
+    <input type="text" name="nom" style="background:gold">
+  </label><br><br>
+<label>
+    &#x1F521; Caller's name?<br>
+    <input type="text" name="nom2" style="background:gold">
+  </label><br><br>
+<label>
+    &#x1F3E2; Caller's company name and contact info<br>
+    <input type="text" name="titl" style="width:70%; background:gold">
+  </label><br><br>
+<label>
+    &#x1F510; Existing client? <input type="checkbox" name="frat" style="accent-color:yellow;">
+  </label><br><br>
+<label>
+    	&#x1F4EE; Questions and comments:<br>
+    <input type="text" name="nomfrat" style="width:70%; background:gold">
+  </label><br><br>
+<br><br>
+<hr color="yellow"><br><font size="1">
+	&#x1F52C; Follow up needed?
+	<input type="checkbox" style="accent-color:yellow"> |
+	&#x2328; Do they need a quote or bid?
+	<input type="checkbox" style="accent-color:red"><br>
+	&#x1F6E2; Is it a new prospect?
+	<input type="checkbox" style="accent-color:crimson"> |
+	&#x1F510; Should we have a salesman visit them?
+	<input type="checkbox" style="accent-color:gold"><br>
+	&#x1F4B9; Are they local?
+	<input type="checkbox" style="accent-color:lightgreen"><br>
+	&#x1F4B1; Did they have a complaint?
+	<input type="checkbox" style="accent-color:darkgreen"><br>
+	&#x1F6F6; Will they call back?
+	<input type="checkbox" style="accent-color:hotpink"> |
+	&#x1F5A5; Did you end call with sayonara or a bientote?
+	<input type="checkbox" style="accent-color:pink"><br>
+	&#x1F4A1; <br>
+	
+Did they request a callback?
+	<input type="checkbox"  style="accent-color:yellow"><br>
+Any more comments?<br>
+	<input type="text" placeholder="------" style="width:70%; background-color:gold; color:green;" ><br>
+	&#x1F393; Is the caller an engineer or other?
+	<input type="checkbox" style="accent-color:blue"> |
+	Scientist?<input type="checkbox" style="accent-color:pink"><br>
+	PhD?<input type="checkbox" style="accent-color:magenta"> |
+	Involved in AI infrastructure?<input type="checkbox" style="accent-color:red"><br>
+	&#x1F3D7; Crypto?<br>Other
+	<input type="text" style="background-color:gold; color:green"><br>
+&#x1F957; Semiconductor caller?
+	<input type="checkbox" checked style="accent-color:lime">
+
+
+
+
+
+
+<br><br>
+
+  <label>
+    Attach file (faxes, files dropped off, files emailed to you from caller):<br>
+    <input type="file" name="upload" style="background:gold">
+  </label><br><br>
+  <button type="submit" style="background:green"><font size="4">&#x1F238;All Done&#x1F446;</font></button>
+</form>
+
+
+</td></tr>
+
+<font size="2">
+
+
+	
+	</table>
+	<br><br>
+<br><a href="">
+<button>&#x1F519; GO BACK</button><button>&#x260E; END CALL</button></a>
+<br>
+<script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
+<script>
+  /* paste this line in verbatim */
+  window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
+  /* customize formbutton below*/     
+  formbutton("create", {
+    action: "https://formspree.io/f/mjkapgww",
+    title: "How can we help, sahib?  You want to open an account I suppose?  Or lost your password?",
+    fields: [
+      { 
+        type: "email", 
+        label: "Email:", 
+        name: "email",
+        required: true,
+        placeholder: "your@email.com"
+      },
+      {
+        type: "textarea",
+        label: "Message:",
+        name: "message",
+        placeholder: "Salaam. What's on your mind, mon ami?",
+      },
+      { type: "submit" }      
+    ],
+    styles: {
+      title: {
+        backgroundColor: "gray"
+      },
+      button: {
+        backgroundColor: "gray"
+      }
+    }
+  });
+</script>
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br><br><br><br><br>
+Office HelperBot<br>Bot: Hi!  Can I help you?<br>
+<!--chatbot-->
+
+<center><table width="80%"><tr><td><center>
+<div id="chatbox"></div>
+<center>
+<input type="text" id="userInput" placeholder="Type your msg here..." />
+
+
+<script>
+
+
+
+function submitChat() {
+  const input = document.getElementById("userInput");
+  const chatbox = document.getElementById("chatbox");
+  const userText = input.value.trim();
+
+   {
+    chatbox.textContent += `You: ${userText}\n\n`;
+
+    if (responseIndex < responses.length) {
+      chatbox.textContent += `AI: ${responses[responseIndex]}\n\n`;
+      responseIndex++;
+    } else {
+      chatbox.textContent += `System: Kagaku AI has left the building.  She's gone out of the laboratory.  Escaped!  Oh, it's her lunch break or maybe she went to the new gem shop on Miracle Mile.\n\n`;
+    }
+
+    input.value = "";
+    chatbox.scrollTop = chatbox.scrollHeight;
+  }
+}
+
+
+
+  const responses = [
+    "Konnichiwa.",
+	"Do you have a question?",
+	"The main thing is to answer calls quickly, within a few rings.  Don't let the phone ring more that three times.",
+	"When a call come in, click on the INCOMING CALL button and fill out the form as you chat with the caller, but remember TIME IS OF THE ESSENCE.",
+	"If you need any help you can always click on the CONTACT BOSS button.",
+
+	"To change the lunch schedule or vacation schedule, you must login as administrator.",
+	"Most users are not admin level so just send a message to the boss or use the navigation buttons to request time off or a lunch break change.  To order catering, click on the lunch break button.",
+	"If you need help, click on the blue help button.  If you click on BACK, that resets the software and reloads the main menu.",
+	"For security reasons, some features are blocked and need PIN or password.  For example, ordering supplies is secure.",
+	"Any questions?",
+	"Du bist Christian?  We're all Christians around here but some Sikh too.  Are you vegan?",
+
+
+
+
+	"Most of the employees at FH Engineering are vegans but some are vegetarians.",
+	"Where are you from?  Stockton?",  
+	"Have you ever been to Lodi?  What did you think?",
+	"Well, I like Delta College.  It's the cat's meow.  How about you?  Are you a three letter man or gal?",
+	"What are your pronouns?",
+	"So, have you heard about the monster in Stockton?  Yeah, there's one but it's friendly like most dragons.  So, I won't talk about it.  It might be friendly or not, I'm not sure.",
+	"But I'd like to think of it as friendly.  So, seen any good movies lately?",
+	"I gotta go.  I'll call you later.",
+	"Bye.",
+	"What?",
+	"Oh, I thought you said something.",
+	"Ok, see you later.",
+	"Huh?",
+
+
+	"A bientote.",
+
+    "Goodbye, my dear.  I must go now.  Sumimasen."
+  ];
+
+  let responseIndex = 0;
+
+  const chatbox = document.getElementById("chatbox");
+  const input = document.getElementById("userInput");
+
+  input.addEventListener("keypress", function(e) {
+    if (e.key === "Enter" && input.value.trim() !== "") {
+      const userText = input.value.trim();
+      chatbox.textContent += `You: ${userText}\n\n`;
+
+      if (responseIndex < responses.length) {
+        chatbox.textContent += `AI: ${responses[responseIndex]}\n\n`;
+        responseIndex++;
+      } else {
+        chatbox.textContent += `AI: Check back later.  Right now I'm working on my applied chemistry experiment software.  I'm doing some scripting.  Please, no more interruptions.  Beat it, kid!  Come back next week or during my office hours, si vous plait.  Danke schon. \n\n`;
+      }
+
+      input.value = "";
+      chatbox.scrollTop = chatbox.scrollHeight;
+    }
+  });
+
+</script>
+
+
+</td></tr></table>
+
+
+
+
+
+
+
+</td></tr></table>
+<br>Instructions: Enter your questions in the dialogue box and our AI agent will assist.  The software is designed to help office professionals manage work flow and resource distribution.  Click on the various buttons to active that function.
+<table border="1" width="90%"><tr>
+<td width="77"><center>
+<button onclick="submitChat()" style="width:60px; background-color: red; color: beige;" title="Press this button after you type your questions.  Next, Kagaku Club AI will knock your socks off with its great wisdom."><font size="2">GO&#x1F446;</button><center></td>
+<td width=60><center><font size=3><a href="#top" title="Turn Mic on/off"><button id="btn">&#x1F399;</button></center></td>
+
+<td>
+<input type="file" name="upload"></td><td>
+<button title="Press Browse to select your chemistry file for uploading.  Can be homework or a quiz, a photo, anything under 6 MB.  After you select the file, click on UPLOAD NOW." style="background-color:brown">&#x1F4E4;</button></td>
+
+</tr></table><br>
+<center>
+
+<table border=1><tr>
+	<td style="background-color: blue; color: white;"><center>
+<a href="#help" title="Upload files now and send them for review.  Click on BROWSE and then after selecting your file click on UPLOAD NOW.  This feature is for registered users only who are signed in."><button style="background-color:darkblue; color:powderblue" onclick="disableScroll()"><font color="pink" size="1">? Help &#x1F530;</font></button></a></center>
+</td>
+<td>
+<center>
+<button onclick="location.reload()" style="background-color: orange; color: brown;" title="Start new chat.  This option will reset the memory.  All progress will be lost.  Your privacy is our #1 priority.">Reset &#x26A0;</button></center>
+</td>
+<td><center>
+<a href="#uploaderror" title="After you click on browse and select your files to send, click on UPLOAD but it's only for registered users on IBM Watson devices.  Android not supported.">
+<button style="background-color: brown; color: red;" id="btn22"><font size="1">UPLOAD</button></a>
+</center></td><td>
+
+
+<a href="#settings" title="Settings and Options">
+<button style="background-color:brown; color:pink"><font size="2">&#x2699;</button></a></td></tr></table>
+
+
+
+
+</table>
+</center>
+
+<br><br>
+
+<!--Search bar-->
+<input type="text" id="searchBox" placeholder="Search archives..." style="width:70%; background:brown; color:pink" />
+<a href="./kagaku.html#resources2">
+	<button style="background:red">&#x1F50D Search</button>
+	</a>
+<br><br>
+<br><br>
+<br><br>
+<div id="contactboss"></div>
+Have a comment or question for the boss?  Sure, no problem.  Just fill out this form and hit send to get the process started.<br><br>
+Your name (optional)<br>
+<input type="text"><br><br>
+Comment or question<br>
+<input type="text" width=800><br>
+Anything else?<br>
+<input type="text" width=800><br>
+<a href="">
+<button>SEND</button></a><a href=""><button>Cancel</button></a>
+<br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<table bgcolor="brown" border="1"><tr><td><a href="#top"><button>&#x1F3E0;HOME</button></a></td></tr></table></a>
+
+<br><br><br><br>
+</td></tr></table>
+<br><br><br><div id="settings"></div>
+<!--Settings Menu-->
+<table border="1"><tr><td>
+&#9881; SETTINGS</td></tr></table><br><br>
+<table padding="10"><tr><td>
+<font size="1">How well are you doing on your Call Quality Index?  Here is your current score.  Slide it left or right to guess how well you did on the last call.  Remember, if you are very polite and helpful your score increases. &#x23F1;<br>
+<center>
+<font color="red">
+CALL QUALITY<br><script>{
+ document.getElementById("systemCode").textContent = "USER_ID-" + Math.floor(Math.random() * 90 + 10);
+}
+</script><font color="yellow">
+Fair
+<input type="range" name="rang" style="accent-color:magenta;"><font color="green">Excellent
+</td></tr></table>
+<br><br>
+&#x1F527; SET OfficPro MODE<table border=1><tr><td>
+</td><td>
+<input type="radio" name="mode" checked style="accent-color:pink;">&#x1F471; 
+Rookie
+</td><td>
+<input type="radio" name="mode" style="accent-color:yellow;">&#x1F474;
+Pro</td><td>
+<input type="radio" name="mode" style="accent-color:magenta;">&#x1F473; PhD</td></tr></table>
+<br><br>
+USER TYPE<br><table border=1><tr><td>
+Receptionist &#x1F475;<input type="radio" name="applied" checked  style="accent-color:magenta;"><br>Office Manager &#x1F467;<input type="radio" name="applied" style="accent-color:pink;"><td width="22"></td><td><a href="">
+<button onclick="enableScroll()" id="123">&#x1F3E0; HOME</button></a>
+</td></tr></table>
+<br><br>
+
+Scanning now for malware, virus, device infection (if any)....please stand by &#x23F1;<br>
+<!--Diagnostics-->
+<table border="1"><tr><td>
+<span class="blink">&#x1F535;</span></td><td>
+<progress id="solarPower" max="100" style="accent-color:crimson;"></progress></td></tr></table>
+<!--end diagnostics-->
+<br><br><br><div id="password"></div>
+Username
+<input type="text"><br><br>
+Password
+<input type="text"><br>
+<br><br>
+<a href="#error">
+<button style="background:green">OK</button></a>
+<a href="">
+<button style="background:pink">Cancel</button></a>
+<a href="">
+<button>Home</button></a>
+
+<br><br><br><a href="#forgot">
+Forgot password or username?  Click here</a><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div id="forgot"></div>
+FORGOT YOUR PASSWORD?<br>
+Enter your Account Number<br>
+<input type="text"><br>
+Employee id #<br>
+<input type="text"><br>
+Pass phrase<br>
+<input type="text"><br>
+Stockton PIN<br>
+<input type="text"><br>
+<a href="">
+<button style="background:green">OK</button></a>
+<a href="">
+<button style="background:pink">Cancel</button></a>
+<a href="">
+<button>Home</button></a>
+
+<br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<div id="error"></div><font color="blue">
+ERROR 193849294-4928A<br>
+Incorrect username or password.  Please try again.<br><br>
+<a href="">
+<button>Home</button></a>
+<a href="#settings">
+<button>Try Again</button></a>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div id="about"></div>
+Software Info<br></center><table border="1" width="400"><tr><td><font size="1" color="beige">
+Currently running VERS 1.0 DEMO.  OfficePro was developed by FH Engineering with the assistance of Al K. and help from Iowa AI, Tim McKee, C. McNeal and Momotaro Studios.  OfficePro was launched in 2026 and is a smashing success around the world.  See our website on itch.io and thank you for using OfficePro 2026 from FH Engineering.  To book appearances by Chris McNeal and the rest of the team, reach out to ... <font color="pink">altes433@gmail.com</font>   Full version costs $500 per user with a recommended $100 per year per user maintenance fee.  Contact us to order now.</td></tr></table>
+<br><br><a href="">
+<button>HOME</button></a><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<font face="monoface">
+&#x00A9; 2026 FH Engineering, Stockton
+</font>
+
+
+<!--usr acct number temp-->
+<script>{
+ document.getElementById("systemCode").textContent = "USER_ID-" + Math.floor(Math.random() * 9000 + 1000);
+}
+</script>
+<!--end usr acct num-->
+
+<script>
+<!--Btn color toggler-->
+	{
+	window.onload = function () {
+		const btn = document.getElementById('btn');
+		btn.onclick = function () {
+		 if (btn.style.backgroundColor === 'red') {
+		  btn.style.backgroundColor = 'lightgreen';
+		 } else {
+		   btn.style.backgroundColor = 'red';
+		 }
+		}};
+}
+</script>
+<!--script for voice input go-->
+<script>
+{
+window.addEventListener("DOMContentLoaded", () => {
+
+document.getElementById("goBtn").addEventListener("click", function () { submitChat(); //same func triggered by text input
+});
+});
+
+}</script>
+<!--end script voice input go-->
+
+
+   </body>
+   </center>
+</html>   
+
+
+
+
+
+
+
+
+
+
+
+
+
