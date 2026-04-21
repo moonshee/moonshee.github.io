@@ -191,8 +191,8 @@ CLAMP  <font color="red"><script>
 <br><a href="#open"><button><font size="3">
 O</font></button></a>
 -[  ] Open
-<br><a href="#close"><button><font size="3">
-O</font></button></a>
+<br><button><font size="3">
+O</font></button>
 -[] Close<br><button>
 <input type="radio" name="modeon" style="accent-color:green;">
 </button>
@@ -248,12 +248,19 @@ PRESSURE <br>
 
 <td width=10></td><td>
 CYCLE<br><a href="#running">
-<button style="background-color: green; color: yellow;">Start</button></a>
-<button></button><a href="#open">
-<button style="background-color: red; color: white;">Stop</button></a><br>
+<table><tr><td>
+<button style="background-color: green; color: black; width:30px"><font color="black">O</button></a><br>
+<a href="#open">
+<button style="background-color: red; color: black; width: 30px;"><font color="black">O</button></a>
+
+</td><td width="10"></td><td>
+<a href="#open">
+<button style="background-color: yellow; color: red;"><font size="5">&#x1F6D1;</button></a><font color="pink"></font>
+</td></tr></table>
+</a>
 <br><button><input type="radio" name="cycle2" checked  style="accent-color:pink;"></button> Auto<br><button>
 <input type="radio" name="cycle2"   style="accent-color:red;"></button> Manual
-<br><br>
+<br><br></font><font color="white">
 TIMERS<br>
 <center><font size="44"> 
 &#x23F2;</font>
@@ -284,8 +291,7 @@ STATUS &#x26AB; &#x1F535;<br><br>
 SAFETY  <font color="red">&#x1F535; &#x26AB; OK
 	</font>
 <br><table border=1><a href="#open"><button>O</button></a> Gate <input type="radio" name="moddee21" style="accent-color:white;" checked><br><a href="#pressure"><button>O</button></a> Hydraulic Pressure<input type="radio" name="modee21" style="accent-color:green;" checked><br><a href="#alarms"><button>O</button></a> Overtravel<input type="radio" name="modee12" checked  style="accent-color:blue;">
-<br><a href="#open">
-<button style="background-color: yellow; color: red;">&#x1F6D1;</button></a> <font color="pink"> Emergency Stop</font><br><a href="#setupclamp"><button>O</button></a> Mold Protection Logic<br><a href="#timers"><button>O</button></a> Watchdog Timers<br>
+<br><a href="#setupclamp"><button>O</button></a> Mold Protection Logic<br><a href="#timers"><button>O</button></a> Watchdog Timers<br>
 <br>
 PROCESS  <font color="red">
 	</font>
@@ -556,7 +562,7 @@ Thermocouple ---</td></tr></table>
 <br><br><br><br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br><br>
-
+THIS AREA UNDER CONSTRUCTION<br>
 IMM Control Panel Vers. 1996<br>
 <table border="1" width="300" height="300"><tr><td>
 
@@ -1322,7 +1328,7 @@ Oh, vous rascal!  Danke schon fur visiting &#x1F54C; Moonshee AI headquarters.  
 >
   <label>
     <font color="white">&#x1F4EC;</font> Your email:<br>
-    <input type="email" name="email" style="background:gold">
+    <input type="text" name="email" style="background:gold">
   </label><br><br>
   <label>
     &#x1F524; Your name:<br>

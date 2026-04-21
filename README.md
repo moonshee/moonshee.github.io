@@ -1,5 +1,7 @@
 We offer several main products at the moment:
 
+-Stockton Engineer
+     Released 2026
 -Office Pro Version 1.0
 	Released 2026
 -Crystal Master Training Programme
@@ -16,6 +18,17 @@ Along with those products we also offer:
 -Engineering services
 
 -------------------------------------------
+Update: April 21, 2026
+Happy Earth Day!  Our new products/tools include Crystal Master Training, OfficePro 2026 and Stockton Engineer.  Crystal Master is for users interested in health and magic.  OfficePro is for office management.  Stockton Engineer is a software suite for engineers and project management.  These are the DEMOs.
+
+OfficePro has many options and upgrades.  The main goal is call logging and prompting workers to use the approved words when speaking with clients.  The software also is good at taking care of the small stuff like vegan lunch catering and vacation scheduling, meetings and conference calls.
+
+Stockton Engineer is a software systems which includes project review and completion.  Engineers and users simply enter all the information into the project wizard and the system will review the submitted drawings and project, issuing a report.  Engineers can also do calculations and review designs, CAD files and send messages.  Many options exist and clients who order the software can have customized solutions.
+
+
+-------------------------------------------
+
+
 Update: April 19, 2026
 Pricing for Office Pro and Crystal Master are $500 each plus maintenance fee of $100 per year.  These prices are per user.  The demos are free and can be found here:
 
