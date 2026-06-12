@@ -16,6 +16,10 @@ Along with those products we also offer:<br><br>
 -Engineering services<br>
 
 -------------------------------------------
+Under Development June 2026<br>
+Boat Simulator Software<br>
+
+<br>
 Update: April 21, 2026<br>
 Happy Earth Day!  Our new products/tools include Crystal Master Training, OfficePro 2026 and Stockton Engineer.  Crystal Master is for users interested in health and magic.  OfficePro is for office management.  Stockton Engineer is a software suite for engineers and project management.  These are the DEMOs.<br><br>
 
