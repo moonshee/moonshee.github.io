@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <meta name="description" content="SHIP SIMULATOR">
+  <meta name="keywords" content="ferry, ship, simulator, chiagaru">
+  <meta name="author" content="Momotaro Studios">
+
+  <meta charset="UTF-8">
+  <meta name="viewport"
+   content="width=device-width,initial-scale=1.0">
+  <title>&#x1F309; Racoon River</title>
+	<link rel="icon" href="./images/favicon.png">
+
+  <link href="style.css"
+   rel="stylesheet"
+   type="text/css"
+   media="all">
+	<script>
+		{
+		 window.place = "1";
+		 window.score= "0";
+		 window.left = "275";
+		 window.sea = "0";
+		}
+	</script>
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "WebPage",
+		"speakable": {
+		 "@type": "SpeakableSpecification",
+		 "cssSelector": [
+		  ".headline",
+		  ".summary"
+		  ]
+		}
+	}
+	</script>
+	<script src="script.js" defer></script>
+	<div style="display:none" class="summary"><font size=1 color=black>This is a ferry boat captain game for online players.  Works on any device that can play HTML, so that is pretty much all devices.</font></div>
+<style>
+ 		.btn {background-color: pink; }
+	.vertical {
+	 transform: rotate(-90deg);
+	 width: 50px;
+	 height: 60px;
+	 margin-top: 50px;
+	 }
+ #chatbox {
+      width: 100%;
+      max-width: 400px;
+      height: 50%;
+	 max-height: 200px;
+      border: 1px solid #ccc;
+      background: pink;
+	text-align:left;
+	color: black;
+      overflow-y: auto;
+      white-space: pre-wrap;
+      line-height: 1em; /* one-line spacing */
+    }
+   #userInput {
+      width: 100%;
+      max-width: 400px;
+      height: 39px;
+	 max-height: 200px;
+      border: 1px solid #ccc;
+      background: pink;
+	color: black;
+      margin-top: 10px;
+    }</style>
+
+
+  </head>
+  <body style="background-color: black; color: beige;">
+<br>
+
+ <center>
+<!--Language Drop Down Menu-->
+
+<label for="menu2" title="Lang" ></label>
+<select id="menu2" onchange='goToLink(this)' style="background:black; color:lightgreen; width:100px">
+
+<option value="/chiagaru5.html"><font size="1">&#x1F1EC;&#x1F1E7; English</option>
+<option value="https://translate.google.com/translate?hl=en&sl=auto&tl=fr&u=https://moonshee.github.io/chiagaru5.html" title="La France">&#x1F1EB;&#x1F1F7; Francais</option>
+
+<option value="https://translate.google.com/translate?hl=en&sl=auto&tl=de&u=https://moonshee.github.io/chiagaru5.html" title="Allemagne">&#x1F1E9;&#x1F1EA; Germany</option>
+
+<option value="https://translate.google.com/translate?hl=en&sl=auto&tl=ja&u=https://moonshee.github.io/chiagaru5.html" title="Nihongo Portal">&#x1F1EF;&#x1F1F5; Japan</option>
+
+<option value="https://translate.google.com/translate?hl=en&sl=auto&tl=ar&u=https://moonshee.github.io/chiagaru5.html" title="Arabic">&#x1F1EF;&#x1F1F4; Palestine</option>
+
+<option value="https://translate.google.com/translate?hl=en&sl=auto&tl=ur&u=https://moonshee.github.io/chiagaru5.html" title="Urdu">&#x1F1F5;&#x1F1F0; Pakistan</option>
+	<option value="https://translate.google.com/translate?hl=en&sl=auto&tl=zh-CN&u=https://moonshee.github.io/chiagaru5.html" aria-label="Chinese language - Middle Country">&#x1F1E8;&#x1F1F3; ZhongGuo</option>
+
+</select>
+<script>
+	function goToLink(select) {
+		const url = select.value;
+		if (url) {
+			window.location.href = url;
+		}
+	}
+</script>
+<!--end drop down-->
+<hr color="lightblue">
+<marquee loop="0" direction="right"><img src="./images/japan.png"></marquee>
+<hr color="darkblue">
+
+
+<br><br>
+<a href="#logo"><button class="btn" style="background:lightgreen; color:black" onclick="disableScroll()">
+NEXT &#x25B6;
+</button></a>
+<script>
+ function disableScroll() {
+	document.body.style.overflow = 'hidden';
+}
+</script>
+<table><tr><td>
+<font size="12" color="darkgreen"></font>
+</td><td><center><br><br><br><br><br><br><br><br><br><br><br>
+<div id="logo"></div><br>
+<div style="width:250px; padding-top:10px; font-family:monospace;"><font size="2"><em>Moonshee International presents....</em></div>
+<br>
+<img src="./images/512icon.png" style="max-width:250px">
+</center><br><font color="red">
+	</td></tr></table>
+ <br>
+ <a href="#starttt"><button style="background:lightgreen" onclick="enableScroll();">NEXT &#x25B6;</button></a>
+
+ 
+<hr color="red" size="1">
+<hr color="red" size="1">
+<br><br>
+<br><br>
+<br><br>
+
+
+<br><br><br><br>
+<br><br><br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<div id="starttt"></div>
+<br><br>
+
+<div id="deckArea">
+ <img id="deckImg" src="./images/7port.png" width="300" style="max-height:250px">
+</div>
+
+
+
+<div id="bridge" style="display:none">
+<table><tr><td>
+<font size="2">FUEL CELL<br>
+<button id="onbutton" onclick="document.getElementById('onbutton').style.background = 'green';
+document.getElementById('output').innerText = 5;
+document.getElementById('myRange').disabled = false;
+document.getElementById('myRange2').disabled = false;
+"
+ style="background:lightgreen; width:55px">
+<label>
+	<input width="50" type="radio" name="engine" value="off" id="engineOn">ON
+</label></button><br>		
+<div id="engyoff">
+<button onclick="document.getElementById('onbutton').style.background = 'lightgreen';
+document.getElementById('output').innerText = '0';
+document.getElementById('myRange').value = '0';
+document.getElementById('myRange2').value = '0';"
+style="background:red"> 
+<label>
+<input type="radio" name="engine" value="off" id="engineOff" oninput="document.getElementById('panel').style.display = 'none';" checked>OFF
+</label></button></div>
+
+<br><br>
+Power <div id="output"><button id="pwr" style="background:green; color:yellow">0</button></div><br>
+
+<button onclick="playTurn()" style="background:gold"><font size="1">Solar Cell</button><br>
+<div id="screen"></div>
+<button onclick="playTurn()" style="background:purple; color:violet">TURBO</button>
+<script>
+//let score = 0;
+let yard = 50;
+
+function playTurn() {
+ // random -10 to +10 yards
+ let change = Math.floor(Math.random() * 21) - 10;
+ yard += change;
+
+ //score if you cross 100
+ if (yard >= 100) {
+  score++;
+  yard = 50; //reset field
+ }
+
+render();
+}
+
+function render() {
+  document.getElementById("screen").innerHTML =
+	"MV: " + yard + "<br>" +
+	"-------------------------<br>" +
+	"Status: On Schedule";
+	}
+
+render();
+</script>
+
+
+
+</td><td><div id="wrecksure" onclick="
+changImage5C22();
+document.getElementById('msg').innerText='';
+
+document.getElementById('messageline').innerText='Crewman: Watch out!  See that sandbar?';
+">
+<script>
+	function changImage5C22() {
+		var img5C22 = document.getElementById('deckImg');
+		img5C22.src = './images/cruise.gif';}
+		
+</script>
+
+<script>
+	const slider = document.getElementById("myRange");
+	const output = document.getElementById("pwr");
+	const engineOff = document.getElementById("wrecksure");
+
+	engineOff.onclick = () => {
+		slider.value = 0;
+		pwr.innerText = 0;
+		slider.disabled = true;
+		};
+	const slider2 = document.getElementById("myRange2");
+	const output2 = document.getElementById("pwr2");
+	const engineOff2 = document.getElementById("wrecksure");
+
+	engineOff.onclick = () => {
+		slider2.value = 0;
+		pwr2.innerText = 0;
+		slider2.disabled = true;
+		};
+
+
+
+	function changImage0CR() {
+		var img0CR = document.getElementById('deckImg');
+		img0CR.src = './images/crash.png';};
+	}
+</script><center><font size="1">
+
+<input disabled type="range" id="myRange" class="vertical" min="5" max="100" value="0">
+<input disabled type="range" id="myRange2" class="vertical" min="5" max="100" value="0">
+</div><br><br><center>
+Rudder<br>
+<div id="rudder">
+<input type="range" style="width:77px"></div>
+<br>
+<div id="panel" style="display:none;">
+
+<p><div id="origination">DES MOINES</div><br><span id="up">0</span>.0 km</p>
+<p><div id="destination">KEOKUK</div><br><span id="down">275</span>.0 km</p>
+
+	
+</div>
+
+<button id="nav" onclick="toggle(); showLoad();
+document.getElementById('msg').innerText = '';" style="background:black; color:lightblue; display:none">&#x1F310; NAV</button>
+
+<script>
+ function showLoad() {
+	if (left < 2) {
+		changImage03b();
+document.getElementById('myRange').style.disabled = 'true';
+document.getElementById('myRange2').style.disabled = 'true';
+document.getElementById('myRange2').value = '0';
+document.getElementById('myRange').value = '0';
+document.getElementById('output').innerText = '0';
+		
+	document.getElementById("load").style.display = 'block';
+	}
+	else {
+	document.getElementById("msg").style.display = 'Captain, this capesize barely fits down the Des Moines River.  Remember how difficult it was on the Racoon River last week?';}
+}
+
+ sea = 0;
+ left = 275;
+
+ setInterval(function() {
+	if (left > 0) {	
+	 sea = sea + 1;
+	 left = left - 1;
+	
+	 document.getElementById("up").innerText = sea;
+	 document.getElementById("down").innerText = left;
+
+	}
+}, 66600)
+	
+
+function toggle() {
+	let box = document.getElementById("panel");
+	if (box.style.display === "none") {
+		box.style.display = "block";
+		}
+	else {
+		box.style.display = "none";
+	}
+	};
+	
+function log(text) {
+	document.getElementById("msg").innerText = text;
+	};
+
+if (left === 20) {
+	log("Approaching the scenic wildlife refuge.");
+	}
+
+if (left === 0) {
+	changImage03b();
+	log("Safely arrived at terminal.");
+	score=score+10;
+	}
+
+	
+
+</script>
+
+</td>
+<td><font size="1">
+<button id="nw" disabled onclick="changImage03b();
+ document.getElementById('client1').style.color = 'pink';
+ document.getElementById('client1').innerText = '';
+ document.getElementById('msgline').innerText = 'Boatswain: Land ahoy, port side, Captain.';
+ document.getElementById('dispy1').innerText = '';" style="background:black; color:beige; width:23px">&#x2196;</button>
+<button id="uparrow" style="background:black; color:beige; width:24px" onclick="changImage3();
+ 
+document.getElementById('downarrow').style.background= 'black';
+document.getElementById('messageline').innerText = 'Your orders, Captain?';
+ document.getElementById('client1').style.color = 'red';
+ document.getElementById('client1').innerText = 'Passerby: I heard a rumour that the fortune teller received a secret message from the future ghost, her guide.  And it warned against eating meat and fish.  Good thing I am a vegetarian.'; 
+ document.getElementById('dispy1').style.color = 'gray';
+
+document.getElementById('dispy1').innerText = 'Assistant Sensei: You know, some crystals and lemons can really help with Kung Fu.  I like lemonade with plenty of honey to sweeten it along with jade, agates, diamonds, hematite.';">&#x2B06;</button>
+<script>
+	function changImage3() {
+		var img3 = document.getElementById('girl');
+		img3.src = './images/scene5t.png';}
+</script>
+
+
+
+
+
+<button style="background:black; color:beige;  width:23px" onclick="changImage4(); 
+
+ document.getElementById('client1').style.color = 'red';
+ document.getElementById('client1').innerText = 'Sensei: What is that smell?  Where is the watermelon cart parked?  Let us get this show on the road.  Chop, chop.'; document.getElementById('dispy1').innerText = '';">&#x2197;</button>
+<script>
+	function changImage4() {
+		var img4 = document.getElementById('girl');
+		img4.src = './images/scene5c.png';}
+</script>
+<br>
+
+<button id="leftarrow" style="background:black; color:beige; width:23px" onclick="changImage2(); 
+
+document.getElementById('client1').innerText = 'Fortune Teller: Welcome to the Soltice Festival.  Longest day of the Jahr.  The sun is further north from the cursed south at this time.  Now it turns around and fights the southern demons.'";>&#x25C0;</button>
+<script>
+	function changImage2() {
+		var img2 = document.getElementById('girl');
+		img2.src = './images/scene5.png';
+		
+		}
+
+</script>
+<button id="centerofpad" style="background:black; color:beige; width:24px" onclick="document.getElementById('dispy1').innerText = 'Toire wa, doko desuka?  Where is the outhouse?'; changImage333();
+document.getElementById('fitbut').style.display='none';
+
+">&#x2638;</button>
+<script>
+	function changImage333() {
+		var img2b = document.getElementById('girl');
+		img2b.src = './images/scene5b.png';}
+</script>
+
+
+<button id="rightarrow" style="background:black; color:beige; width:23px" onclick="changImage(); 
+document.getElementById('fitbut').style.display='none';
+
+document.getElementById('client1').style.color = 'gold';
+document.getElementById('client1').innerText = 'Yumi-san: Did you hear what the sensei said last night?  He said that FEI PAI TSU is expected to rise and fly all over the area due to the summer solstice falling on a total solar eclipse.  Apparently, this wild animal causes a lot of fear for the villagers.'";>&#x25B6;</button>
+<script>
+	function changImage() {
+		var img = document.getElementById('girl');
+		img.src = './images/scene5c.png';}
+</script><br>
+<button id="sw" style="background:black; color:beige;  width:23px" onclick="changImage5(); document.getElementById('fitbut').style.display='none';
+
+document.getElementById('bik1').innerText = '';
+
+document.getElementById('client1').innerText = '';
+document.getElementById('dispy1').innerText = 'Enemy: Bleep you!  Why are vous always following me.  Next time I see you, kapow..';">&#x2199;</button>
+<script>
+	function changImage5() {
+		var img5 = document.getElementById('girl');
+		img5.src = './images/scene1d.png';}
+</script>
+<button id="downarrow" style="background:black; color:beige;  width:24px" onclick="changImage6(); 
+document.getElementById('fitbut').style.display='none';
+document.getElementById('panel').style.display='none';
+document.getElementById('bik1').innerText = '';
+document.getElementById('downarrow').style.background = 'lightgreen';
+document.getElementById('uparrow').style.background = 'black';
+
+document.getElementById('dispy1').innerText = '';
+document.getElementById('messageline').innerText = 'Reverse thrusters activated, Captain.'";
+
+>&#x2B07;</button>
+<script>
+	function changImage6() {
+		var img6 = document.getElementById('girl');
+		img6.src = './images/oxgo.gif';}
+</script>
+<button style="background:black; color:beige;  width:23px" onclick="changImage7(); 
+document.getElementById('fitbut').style.display='none';
+
+document.getElementById('bik1').innerText = '';
+document.getElementById('fitbut').style.display='block';
+ document.getElementById('client1').innerText = 'Enemy: That does it!  We warned you lgb-supporting dojo members to clear out.  You disobeyed.  Now, you gonna get it.  Solstice was the deadline for you guys to shut down and hand over your dojo.  We do not allow vegans or lgb around here.  Christians only.'";>&#x2198;</button>
+<script>
+	function changImage7() {
+		var img7 = document.getElementById('girl');
+		img7.src = './images/scene4c.png';}
+</script><br>
+&#x1F4FB;<br>
+<button id="radioon" style="background:black; color:green" onclick="document.getElementById('radioon').style.background = 'lightgreen'; 
+document.getElementById('radioon').style.color = 'black'; 
+document.getElementById('radiooff').style.background = 'black';
+document.getElementById('radiooff').style.color = 'red';
+"
+
+>ON</button><button style="color:black; background:red" id="radiooff"
+onclick="document.getElementById('radioon').style.background = 'black';
+document.getElementById('radioon').style.color = 'lightgreen';
+document.getElementById('radiooff').style.background = 'red';
+document.getElementById('radiooff').style.color = 'black';
+"
+
+>OFF</button>
+
+<br>
+STEERING<br>
+<button id="autoon" style="background:black; color:green; width:59px;" onclick="document.getElementById('autoon').style.background = 'lightgreen'; 
+document.getElementById('autoon').style.color = 'black'; 
+document.getElementById('autooff').style.background = 'black';
+document.getElementById('autooff').style.color = 'red';
+"
+
+>AUTO</button><br>
+<button style="color:black; background:red" id="autooff"
+onclick="document.getElementById('autoon').style.background = 'black';
+document.getElementById('autoon').style.color = 'lightgreen';
+document.getElementById('autooff').style.background = 'red';
+document.getElementById('autooff').style.color = 'black';">MANUAL</button>
+<br><br>
+<button id="dockk" onclick="changImage203b();"
+ style="background:maroon; color:beige">MAP</button>
+<a href="#usrmanual"><button id="beginner" style="background:black">&#x1F530;</button></a>
+<script>
+	function changImage203b() {
+		var img203b = document.getElementById('deckImg');
+		img203b.src = './images/map.png';}
+</script>
+
+<br><div id="load" style="display:block">
+<button id="loadd" onclick="getCock();
+changImage5C22();
+document.getElementById('myRange').style.disabled = 'false';
+document.getElementById('myRange2').style.disabled = 'false';
+document.getElementById('myRange2').value = '5';
+document.getElementById('myRange').value = '5';
+document.getElementById('output').innerText = '5';
+document.getElementById('engineOff').checked = 'false';
+document.getElementById('engineOn').checked = 'true';
+document.getElementById('load').style.display = 'none';
+	document.getElementById('msg').innerText = '----';" style="background:black; color:beige;">LEAVE PORT</button></div>
+<table style="width:50px"><tr><td>
+<script>
+  function getCock() {
+	document.getElementById('nav').style.display = 'block';
+
+   if (left < 2) {
+	changImage03b();
+	score = score + 100;
+	document.getElementById('load').style.display = 'block';
+
+	document.getElementById('msg').innerText = 'Docked successfully';
+	if (place !=0) {
+	document.getElementById('origination').innerText = 'Keokuk';
+	document.getElementById('destination').innerText = 'New Orleans';
+	left = 1850;
+	sea = 0;
+	place = 1;
+	}
+	else {
+	document.getElementById('destination').innerText = 'KEOKUK';
+	left = 1850;
+	sea = 0;
+
+	document.getElementById('origination').innerText = 'New Orleans';
+	place = 0;
+	}
+	}
+	else	{
+	document.getElementById('msg').innerText = 'Boatswain: Maam, we have not yet arrived at port.';
+	}
+	}
+</script></td></tr></table>
+</div>
+</td>
+
+
+</tr></table>
+</div>
+
+<p><font size="2"></p>
+<div id="msg" style="color:green; font-family:monospace; width:20%"><font size="2"></div>
+
+<br><br><button id="rajjio" style="background:black; color:cyan"
+onclick="
+
+document.getElementById('messageline').style.color = 'cyan';
+document.getElementById('messageline').innerText = 'This is the captain, over.  Come in, Salty Dog, over.  Salty Dog, come in.';
+document.getElementById('intercom').style.display = 'block';
+">&#x1F4FB;</button>
+<button style="background:black; color:cyan"
+onclick="document.getElementById('messageline').innerText = 'River Clout & Crypto => ' + score;">&#x1F4B0;</button>
+
+<button id="sess" style="background:black; color:beige;" onclick="changImage5C();
+document.getElementById('msg').style.color = 'pink';
+document.getElementById('msg').innerText = 'Chiagaru: Well, I am the temporary captain of this vessel so why cannot I find a boyfriend?  I just need a nice vegetarian dude who likes sess.  Is that too much to ask?  I gotta get off this ship and get to a pub.';
+document.getElementById('sess').style.background = 'red';
+document.getElementById('bridgebtn').style.background = 'orange';
+document.getElementById('enginebtn').style.background = 'black';
+document.getElementById('bridge').style.display = 'none';
+document.getElementById('messageline').style.color='yellow';
+document.getElementById('messageline').innerText = 'Parrot: Squawk! A cabin is a prisoners abode without a boyfriend sitting on the commode.  Squawk!';
+">&#x1F6CF;</button>
+<script>
+	function changImage5C() {
+		var img5C = document.getElementById('deckImg');
+		img5C.src = './images/cabin.png';}
+</script>
+
+
+<button id="bridgebtn" style="background:orange" onclick="document.getElementById('bridge').style.display = 'block';
+document.getElementById('bridgebtn').style.background = 'red';
+document.getElementById('enginebtn').style.background = 'black';
+document.getElementById('sess').style.background = 'black';
+document.getElementById('msg').style.color = 'gray'; 
+document.getElementById('msg').innerText = 'Crewman: Captain, the girls are waiting for du below deck.  Chiagaru practice they said.';
+changImage5C2(); enableScroll();
+document.getElementById('intercom2').style.display = 'block';
+
+">&#9784;</button>
+<script>
+	function changImage5C2() {
+		var img5C2 = document.getElementById('deckImg');
+		img5C2.src = './images/atsea.png';}
+</script>
+
+<br>
+
+<button id="hiskor" style="background:black" onclick="document.getElementById('messageline').innerText = 'Hi Score: 20394845 Yoshi T, Tokyo';">&#x1F4CA;</button>
+
+
+<button id="minglebtn" style="background:darkblue; color:cyan" onclick="goOnDeck(); 
+document.getElementById('sess').style.background = 'black';
+
+document.getElementById('bridgebtn').style.background = 'orange';
+document.getElementById('enginebtn').style.background = 'black';
+document.getElementById('enginebtn').style.color = 'red';
+document.getElementById('bridge').style.display='none';
+">&#x1F6F3;</button>
+<script>
+	const slider = document.getElementById("myRange");
+	const output = document.getElementById("output");
+	const engineOn = document.getElementById("engineOn");
+	const engineOff = document.getElementById("engineOff");
+
+	slider.oninput = () => {
+		output.innerText = slider.value
+		};
+	
+	engineOn.onclick = () => {
+		slider.disabled = false;
+		};
+ 
+	engineOff.onclick = () => {
+		slider.value = 0;
+		output.innerText = 0;
+		slider.disabled = true;
+		};
+	
+function goOnDeck() {
+	//1) Random score from 1 to 3
+	let add = Math.floor(Math.random() * 3) + 1;
+	score += add;
+
+	//Update score display
+	//document.getElementById("scorez").innerText = score;
+	
+	//2) Random deck image
+	let r = Math.floor(Math.random() * 13) + 1;
+	if (r < 2) {
+		document.getElementById("messageline").innerText = 'Cheerleader Teammates: Holy bleep!  Look!  They are having a bbq and did not invite us.  Must be meat and fish, nothing we would like.  I only do vegetarian.  Da?';
+		document.getElementById("deckImg").src = "./images/crash.png";
+		
+		}
+
+	else if (r < 4) {
+		document.getElementById("messageline").innerText = 'Tally ho!  What be crack-a-lackin all yall?';
+		document.getElementById("deckImg").src = "./images/deck1.png";
+		}
+	else if (r < 6) {
+		document.getElementById("messageline").innerText = 'Everybody wang chung tonight!';
+		document.getElementById("deckImg").src = "./images/deck2.png";
+		}
+	else if (r < 8) {
+		document.getElementById("messageline").innerText = 'Kiko: Ni hao ma?  How do you get your vitamin C?  I like lemon.  REMON we say in Nihon.';
+
+		document.getElementById("deckImg").src = "./images/deck3.png";
+		}
+	else if (r < 10) {
+		document.getElementById("messageline").innerText = 'A vegetarian hunk asked moi out for a date. Watashi! Yay! He found out that I am the captain and he is looking for a job too.  Well, I have a job for him.  He can taste test tacos for me and cherry pie.  A taste-tester. Hehe.  He said, NEI HAO MA?  And I said TAI CAA LAA, and the rest is history!  Sess tonight, baby!!';
+
+		document.getElementById("deckImg").src = "./images/chia_promo.png";
+		}
+
+	else {
+		document.getElementById("messageline").innerText = 'Chiagaru: Where is the junior college cheerleading tournament?  In Burlington or over in Illinois?  Anybody else want to go meet some guys tonight?  Maybe we can get some action, some sess.  They might eat my bento, you know?  Hehe';
+
+		document.getElementById("deckImg").src = "./images/cheer.png";
+	}
+	};
+
+</script>
+
+<button id="enginebtn" style="background:black; color:red;"
+onclick="document.getElementById('sess').style.background = 'black';
+document.getElementById('bridgebtn').style.background = 'orange'; document.getElementById('enginebtn').style.background = 'red';
+changImage99();	
+document.getElementById('bridge').style.display = 'none';
+document.getElementById('msg').innerText = '';
+document.getElementById('messageline').innerText = 'Engine Room.  Here we see twin fuel cells from Bloom Energy and Mitsubishi Electric. Solar panels are located topside.';"
+	
+document.getElementById('enginebtn').style.color = 'white';"
+>&#x1F5DC;</button>
+<script>
+	function changImage99() {
+		var img99 = document.getElementById('deckImg');
+		img99.src = './images/4.png';
+			}
+</script>
+<button id="dock" disabled onclick="changImage03b();
+document.getElementById('sess').style.background = 'black';
+document.getElementById('enginebtn').style.background = 'black';
+document.getElementById('messageline').innerText = 'Salty Dog, over.  Salty Dog, we are parking here.';
+document.getElementById('myRange').style.disabled = 'true';"
+ style="background:darkgreen; color:beige; width:23px">&#x2693;</button>
+<script>
+	const slider = document.getElementById("myRange");
+	const output = document.getElementById("output");
+	const engineOff = document.getElementById("dock");
+
+	slider.oninput = () => {
+		output.innerText = slider.value
+		};
+	
+	dock.onclick = () => {
+		slider.value = 0;
+		output.innerText = 0;
+		slider.disabled = true;
+		};
+	const slider2 = document.getElementById("myRange2");
+	const output2 = document.getElementById("output");
+
+	slider2.oninput = () => {
+		output2.innerText = slider2.value
+		};
+	
+	dock.onclick = () => {
+		slider.value = 0;
+		output.innerText = 0;
+		slider.disabled = true;
+		
+		slider2.value = 0;
+		output2.innerText = 0;
+		slider2.disabled = true;
+		};
+	
+	function changImageD() {
+		var imgD = document.getElementById('deckImg');
+		imgD.src = './images/5leavingharb7.png';
+		
+			};
+	</script>
+
+
+<br><br>
+<div id="messageline" style="width:200px	"><font size="1">---</div>
+<div id="intercom" style="display:none"><input id="msgcapt" type="text" placeholder="Anything to say?"><button style="background:lightblue" onclick="document.getElementById('intercom').innerText ='';
+document.getElementById('messageline').style.color = 'pink';
+document.getElementById('messageline').innerText = 'Salty Dog here, over.  I roger you.';">OK</button></div><br>
+<center>
+<div id="intercom2" style="display:none; position:absolute; margin-left:40%; margin-bottom:10%;"><input placeholder="Any orders?" id="msgcapt2" type="text"><button style="background:lightblue" onclick="document.getElementById('intercom').innerText ='';
+document.getElementById('messageline').style.color = 'pink';
+document.getElementById('messageline').innerText = 'Aye, aye, Captain.  Shi, shi!  Ji, ji!  Acha.  Waheguru.'; 
+document.getElementById('intercom2').style.display = 'none';
+">OK</button></div>
+
+
+
+<br><br><br><br>
+<br><br><br><br><br><br>
+<br><br><br><br>
+<br><br><br><br><br><br>
+<br><br><br><br><br>
+<br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br>
+
+
+<br><br><br><br><br>
+<br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br>
+<br><br><br><br><br>
+<br><br><br><br><br><br>
+<br><br><br><br><br><br>
+<br><br><br><br><br>
+<br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br>
+<br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br>
+<br><br><br><br><br>
+<br><br><br><br><br><br>
+<div id="usrmanual" style="width:300px; padding:10px; text-align:left; background:brown; color:gold;">
+USER MANUAL<br><br>
+Congratulations on your purchase of the SKD-10000 Ferry Boat.  The boat is actually a ship, 350 feet long, 120 feet wide.  Made in India, 1985 but fully refurbished in 2014 with a fuel cell, solar panels and backup biodiesel engine along with many other features and extra options.  The work was done at the shipyards in Yokohama.<br><br>
+This ship you are currently on board is called The Bicycle, formerly known as The River Rosie and some people still refer to the old name.  She was purchased by Lance Legstrom of Austin, Texas in 2019 for the tidy sum of $65 million dollars and transferred to Des Moines in order to tap the rich Racoon and Des Moines River markets.  However, Monsieur Legstrom discovered that the Racoon has not been dredged effectively and there are low bridges so for those reasons plus the filthy lucre, The Bicycle now works primarily on the Des Moines River and sub-contracts the Racoon River runs like the mail run for USPS and the veggie burger run from a veggie burger plant down the Mississippi all the way over in Texas.  The load is hauled over land via FTL and then heads up the mighty Mississippi to the Des Moines and then up the Racoon to the headwaters where the hungry customers await.
+<br><br>
+CHIAGARU<br>
+There is a cheerleading tournament in the Keokuk area and so Chiagaru and her team are en route.  They decided to take a nice river cruise but unfortunately, the captain Lance is on vacation and the regular 1st Mate quit and so Chiagaru ended up as captain of the vessel due to a brief stint in the Sea Scouts of Allemagne that Chiagaru briefly served in.  The cruise was set to be cancelled and the business manager was there at the dock putting up a flyer when Chiagaru spoke with him and convinced him to let the cruise go on due to the importance of the tri-state chiagaru tournament.  Chiagaru was happy to know that in exchange for her service as boat captain, her voyage fare was waived, however, her teammates still had to pay their fare and many paid with crypto when they boarded at the DSM terminal.  Somehow the ship departed on time.
+<br><br>
+BRIDGE CONTROLS<br>
+To save fuel, some river boat captains cut the engines and float down the stream using the current.  However, this works best from Des Moines to Keokuk.  When running Mobile to Davenport or Rock Island, then engine power is certainly required due to the currents.<br>
+The main twin engine, which is a 100 Mega-Volt twin-turbo fuel cell, must be engaged in order to use the thrusters.  When the fuel cell is off, there is a large magnetic field set up which prevents the thrusters from being moved like how an electric motor works like a generator in reverse.  If you try to turn an electric motor backwards, it is very difficult because of the EMF.  This ship is all electric, so we have features like locking thrust sliders because, when you turn on the fuel cells main transformer, you want the standing voltage to be fairly low, not 100% full power, that could cause a short or damage the transformer and power switching equipment.<br>
+If you click the SOLAR CELL button, the voltage will update and provide the latest reading.<br>
+TURBO button engages the twin turbos.  No burning nitro, it is eco-friendly, uses electrical and solar power.<br>
+The directional buttons on the keypad are for tight maneuvers like manual docking, for example.<br>
+To reverse, use the down button on the keypad.  To go forward again, click on the up button on the keypad.  Keep in mind, the ship sometimes backs loads along routes, so the crew has been trained to back up the ship and still complete the route.  Therefore, if you forgot something at the last port and need to back up and turn around, you need to use the radio and inform the crew and make the maneuver from the bridge.  The reverse thrusters alone will not cause the ship to turn around.  They cause the ship instead to fight the currents often and spin in place which is a hazard for other ship traffic and keep in mind the width of the channel.<br>
+The RADIO options are there above the automated ship steering controls.<br>
+Next to the MAP button is a link to the instruction manual that came with the boat.<br><br>
+
+To operate the ship, you need to turn the fuel cells on by clicking the on button.  The vertical sliders operate twin turbo thrusters.  The route goes from DSM to Keokuk and back generally, however, there may be runs to Mobile, New Orleans, Charleston, Houston if the captain qualifies - state license required to operate this capesize ship.  Push NAV to navigate and determine location along with MAP button.  When you are near the grainery you can select the NAV button to auto-dock the ship safely.  The loading will begin under the direction of the 1st Mate and when done you can select the anchor option and the NAV option and then LEAVE PORT option to continue on to the next job.  Generally, the company is hired to haul grain from the Upper Racoon River to Keokuk for transfer to other vessels.  In Keokuk, the company often charters the vessel for hauling equipment up the Des Moines River to the mouth of the Racoon River where the equipment is fully offloaded and transferred to waiting tractor trailers where it is taken to distribution warehouses generally or sometimes taken out of state to South Dakota for a new semiconductor plant going in there.  The Racoon River and Des Moines River often run low in late summer so try to finish your runs on time.  In the spring the currents can run very strongly so when bidding on spring runs add a little extra time.
+<br><br>
+<a href="#starttt">
+<button style="background:lightblue">GO BACK</button>
+</a>	
+</div>
+<br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br>
+
+<br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br>
+<br><br><div id="dice" style="display:none">
+
+Crew: Captain! The crew is playing craps with some of the passengers, the cheerleaders.<br><br>
+<br>
+Fancy a roll then, ma'am?<br><br>
+<button id="randBtn">Roll Dice!</button>
+<div id="out1" style="margin-top: 100vh; padding-top:10px">
+Snake Eyes!  Do not pass wins!<br>
+<a href="#dice">
+<button>Roll Again</button></a>
+</div>
+
+<div id="out2" style="margin-top: 100vh; padding-top:10px">
+Double Four! Nice...pass wins<br>
+<a href="#dice">
+<button>Roll Again</button></a>
+</div>
+
+<div id="out3" style="margin-top: 100vh; padding-top:10px">
+Double Sixes! Pass wins<br>
+<a href="#dice">
+<button>Roll Again</button></a>
+</div>
+
+<script>
+ document.getElementById('randBtn').addEventListener('click', function () {
+  // random 0 or 3
+  var r = Math.random() < 0.5 ? 1 : 3;
+
+  if (r === 1) {
+   //jump to out 1
+   window.location.hash = 'out1';
+	}
+  else if (r === 2) {
+   // jump to out 2
+   window.location.hash = 'out2';
+	}
+  else {
+   // jump to out 3
+   window.location.hash = 'out3';
+	}
+
+	});
+</script>
+</div>
+
+
+<br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br>
+
+
+
+<font face="monoface" color="gray" size="1">
+&#x00A9; Dokyo Entertainment Ltd in conjunction with FH Engineering, Crystal World, Delta College, Kagaku International and Moonshee Worldwide (c)2026
+</font>
+<br><br><br>
+
+<!--usr acct number temp-->
+<script>{
+ document.getElementById("systemCode").textContent = "USER_ID-" + Math.floor(Math.random() * 9000 + 1000);
+}
+</script>
+<!--end usr acct num-->
+
+<script>
+<!--Btn color toggler-->
+	{
+	window.onload = function () {
+		const btn = document.getElementById('btn');
+		btn.onclick = function () {
+		 if (btn.style.backgroundColor === 'red') {
+		  btn.style.backgroundColor = 'lightgreen';
+		 } else {
+		   btn.style.backgroundColor = 'red';
+		 }
+		}};
+}
+</script>
+<!--script for voice input go-->
+<script>
+{
+window.addEventListener("DOMContentLoaded", () => {
+
+document.getElementById("goBtn").addEventListener("click", function () { submitChat(); //same func triggered by text input
+});
+});
+
+}</script>
+<!--end script voice input go-->
+<script>
+ function disableScroll() {
+	score = 0;
+	document.body.style.overflow = 'hidden';
+}
+</script><script>
+ function enableScroll() {
+	score = 0;
+	document.body.style.overflow = 'auto';
+}</script>
+
+<script>
+	function changImage03b() {
+		var img03b = document.getElementById('deckImg');
+		img03b.src = './images/5leavingharb7.png';
+		}
+		
+</script>
+
+
+   </body>
+   </center>
+</html>   
+
+
+
+
+
+
+
+
+
+
+
+
+

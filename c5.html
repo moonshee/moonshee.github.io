@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <meta name="description" content="Racoon River Ferry Simulator">
+  <meta name="keywords" content="Chiagaru, cheerleaders, ferry, boats, simulation">
+  <meta name="author" content="Momotaro Studios">
+
+  <meta charset="UTF-8">
+  <meta name="viewport"
+   content="width=device-width,initial-scale=1.0">
+  <title>&#x1F309; Racoon River USER MANUAL</title>
+	<link rel="icon" href="./images/favicon.png">
+
+  <link href="style.css"
+   rel="stylesheet"
+   type="text/css"
+   media="all">
+	<script>
+		{
+		 window.place = "1";
+		 window.score= "0";
+		 window.left = "275";
+		 window.sea = "0";
+		}
+	</script>
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "WebPage",
+		"speakable": {
+		 "@type": "SpeakableSpecification",
+		 "cssSelector": [
+		  ".headline",
+		  ".summary"
+		  ]
+		}
+	}
+	</script>
+	<script src="script.js" defer></script>
+	<div style="display:none" class="summary"><font size=1 color=black>This is a ferry boat captain game for online players.  Works on any device that can play HTML, so that is pretty much all devices. Rated PG.  Related to the CHIAGARU original series by MIYAZAKIBAR on ITCH.IO.  This game follows a few rival teams of cheerleaders to a tournament in the Keokuk area as their captain fills in for vacationing ship officer and learns the ropes as a former Sea Cadet.</font></div>
+<style>
+ 		.btn {background-color: pink; }
+	.vertical {
+	 transform: rotate(-90deg);
+	 width: 50px;
+	 height: 60px;
+	 margin-top: 50px;
+	 }
+ #chatbox {
+      width: 100%;
+      max-width: 400px;
+      height: 50%;
+	 max-height: 200px;
+      border: 1px solid #ccc;
+      background: pink;
+	text-align:left;
+	color: black;
+      overflow-y: auto;
+      white-space: pre-wrap;
+      line-height: 1em; /* one-line spacing */
+    }
+   #userInput {
+      width: 100%;
+      max-width: 400px;
+      height: 39px;
+	 max-height: 200px;
+      border: 1px solid #ccc;
+      background: pink;
+	color: black;
+      margin-top: 10px;
+    }</style>
+
+
+  </head>
+  <body style="background-color: black; color: beige;">
+<br>
+
+ <center>
+<!--Language Drop Down Menu-->
+
+<label for="menu2" title="Lang" ></label>
+<select id="menu2" onchange='goToLink(this)' style="background:black; color:lightgreen; width:100px">
+
+<option value="/fei.html"><font size="1">&#x1F1EC;&#x1F1E7; English</option>
+<option value="https://translate.google.com/translate?hl=en&sl=auto&tl=fr&u=https://moonshee.github.io/fei.html" title="La France">&#x1F1EB;&#x1F1F7; Francais</option>
+
+<option value="https://translate.google.com/translate?hl=en&sl=auto&tl=de&u=https://moonshee.github.io/fei.html" title="Allemagne">&#x1F1E9;&#x1F1EA; Germany</option>
+
+<option value="https://translate.google.com/translate?hl=en&sl=auto&tl=ja&u=https://moonshee.github.io/fei.html" title="Nihongo Portal">&#x1F1EF;&#x1F1F5; Japan</option>
+
+<option value="https://translate.google.com/translate?hl=en&sl=auto&tl=ar&u=https://moonshee.github.io/fei.html" title="Arabic">&#x1F1EF;&#x1F1F4; Palestine</option>
+
+<option value="https://translate.google.com/translate?hl=en&sl=auto&tl=ur&u=https://moonshee.github.io/fei.html" title="Urdu">&#x1F1F5;&#x1F1F0; Pakistan</option>
+	<option value="https://translate.google.com/translate?hl=en&sl=auto&tl=zh-CN&u=https://moonshee.github.io/fei.html" aria-label="Chinese language - Middle Country">&#x1F1E8;&#x1F1F3; ZhongGuo</option>
+
+</select>
+<script>
+	function goToLink(select) {
+		const url = select.value;
+		if (url) {
+			window.location.href = url;
+		}
+	}
+</script>
+<!--end drop down-->
+<hr color="lightblue">
+<marquee loop="0" direction="right"><img src="./images/japan.png"></marquee>
+<hr color="darkblue">
+
+
+<br><br>
+<a href="#logo"><button class="btn" style="background:lightgreen; color:black" onclick="disableScroll()">
+NEXT &#x25B6;
+</button></a>
+<script>
+ function disableScroll() {
+	document.body.style.overflow = 'hidden';
+}
+</script>
+<table><tr><td>
+<font size="12" color="darkgreen"></font>
+</td><td><center><br><br><br><br><br><br><br><br><br><br><br>
+<div id="logo"></div><br>
+<div style="width:250px; padding-top:10px; font-family:monospace;"><font size="2"><em>Moonshee International presents....</em></div>
+<br>
+<img src="./images/512icon.png" style="max-width:250px">
+</center><br><font color="red">
+	</td></tr></table>
+ <br>
+ <a href="#starttt"><button style="background:lightgreen" onclick="enableScroll();">NEXT &#x25B6;</button></a>
+
+ 
+<hr color="red" size="1">
+<hr color="red" size="1">
+<br><br>
+<br><br>
+<br><br>
+
+<br><br><br><br><br><br>
+<br><br><br><br><br><br>
+<br><br><br><br><br>
+<br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br>
+<br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br>
+<br><br><br><br><br>
+<br><br><br><br><br>
+
+<br><br><br><br>
+<br><br><br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<div id="starttt"></div>
+<br><br>
+<br>
+<div id="usrmanual" style="width:300px; padding:10px; text-align:left; background:brown; color:gold; font-family:monospace;">
+RACOON RIVER FERRY Simulator<br>(Japanese Title: Chiagaru 5)<br>
+<hr color="gold">
+Game Imfo
+<hr color="gold">
+<br><br>
+<a href="./images/crash.png" target="_blank"><img src="./images/crash.png" width="300px" border="1"></a>
+<br><br>
+
+This software simulates a SKD-10000 Ferry Boat as driven by the star of the <a href="https://miyazakibar.itch.io">Chiagaru Universe</a>.  Chiagaru is a freshman Junior College cheerleader with some Sea Scout experience and there was a crew and officer shortage so she was nominated.   The boat is actually a ship, 350 feet long, 120 feet wide.  Made in India circa 1985 but fully refurbished in 2014 with a fuel cell, solar panels and backup biodiesel engine along with many other features and extra options.  The refurb was done at the shipyards in Yokohama with many NIHONSEI parts and equipment like the quartz countertops in the kitchen and the Mitsubishi walk-in.<br><br>
+<a href="./images/japan.png" target="_blank"><img src="./images/japan.png" width="300px" border="1"></a><br><br>
+<em>
+This vessel featured in the simulator is called The Bicycle, formerly known as The River Rosie and some people still refer to the old name.  She was purchased by Lance Legstrom of Austin, Texas in 2019 for the tidy sum of $65 million dollars and transferred to Des Moines in order to tap the rich Racoon and Des Moines River markets.  Lance is the former Tour de France participant.  However, Monsieur Legstrom discovered that the Racoon has not been dredged effectively and there are low bridges so for those reasons plus the filthy lucre, The Bicycle now works primarily on the Des Moines River and sub-contracts the Racoon River runs like the mail run for USPS in favour of the veggie burger run from a veggie burger plant down the Mississippi all the way over in Texas because that route comes with a few free samples.  The load from Texas is hauled over land via FTL and then heads up the mighty Mississippi to the Des Moines River and then up the Racoon to the headwaters where the hungry customers await.  Chiagaru must guide the ship and keep the veggie burgers safe and fresh.  Therefore, the ship's cooler must be closely monitored after pickups in Keokuk or other ports such as Rock Island, Davenport, Mobile or Havana.
+<br><br>
+<a href="./images/5.png" target="_blank"><img src="./images/5.png" width="300px" border="1"></a>
+<br><br>
+CHIAGARU<br><br>
+<a href="./images/chia_promo.png" target="_blank"><img src="./images/chia_promo.png" width="300px" border="1"></a>
+There is a cheerleading tournament in the Keokuk area and so Chiagaru and her team are en route.  They decided to take a nice river cruise but unfortunately, the captain Lance is on vacation and the regular 1st Mate quit and so Chiagaru ended up as captain of the vessel due to a brief stint in the Sea Scouts of Allemagne that Chiagaru briefly served in.  The cruise was set to be cancelled and the business manager was there at the dock putting up a flyer when Chiagaru spoke with him and convinced him to let the cruise go on due to the importance of the tri-state chiagaru tournament.  Chiagaru was happy to know that in exchange for her service as boat captain, her voyage fare was waived, however, her teammates still had to pay their fare and many paid with crypto when they boarded at the DSM terminal.  Somehow the ship departed on time.
+<br><br>
+<a href="./images/6.png" target="_blank"><img src="./images/6.png" width="300px" border="1"></a>
+<br><br>
+</em>
+BRIDGE CONTROLS<br>
+To save fuel, some river boat captains cut the engines and float down the stream using the current.  However, this works best from Des Moines to Keokuk.  When running Mobile to Davenport or Rock Island, then engine power is certainly required due to the currents.<br>
+The main twin engine, which is a 100 Mega-Volt twin-turbo fuel cell, must be engaged in order to use the thrusters.  When the fuel cell is off, there is a large magnetic field set up which prevents the thrusters from being moved like how an electric motor works like a generator in reverse.  If you try to turn an electric motor backwards, it is very difficult because of the EMF.  This ship is all electric, so we have features like locking thrust sliders because, when you turn on the fuel cells main transformer, you want the standing voltage to be fairly low, not 100% full power, that could cause a short or damage the transformer and power switching equipment.<br>
+If you click the SOLAR CELL button, the voltage will update and provide the latest reading.<br>
+TURBO button engages the twin turbos.  No burning nitro, it is eco-friendly, uses electrical and solar power.<br>
+The directional buttons on the keypad are for tight maneuvers like manual docking, for example.<br>
+To reverse, use the down button on the keypad.  To go forward again, click on the up button on the keypad.  Keep in mind, the ship sometimes backs loads along routes, so the crew has been trained to back up the ship and still complete the route.  Therefore, if you forgot something at the last port and need to back up and turn around, you need to use the radio and inform the crew and make the maneuver from the bridge.  The reverse thrusters alone will not cause the ship to turn around.  They cause the ship instead to fight the currents often and spin in place which is a hazard for other ship traffic and keep in mind the width of the channel.<br>
+The RADIO options are there above the automated ship steering controls.<br>
+Next to the MAP button is a link to the instruction manual that came with the boat.<br><br>
+<img src="./images/map.png" width="300px"><br><br>
+To operate the ship, you need to turn the fuel cells on by clicking the on button.  The vertical sliders operate twin turbo thrusters.  The route goes from DSM to Keokuk and back generally, however, there may be runs to Mobile, New Orleans, Charleston, Houston if the captain qualifies - state license required to operate this capesize ship.  Push NAV to navigate and determine location along with MAP button.  When you are near the grainery you can select the NAV button to auto-dock the ship safely.  The loading will begin under the direction of the 1st Mate and when done you can select the anchor option and the NAV option and then LEAVE PORT option to continue on to the next job.  Generally, the company is hired to haul grain from the Upper Racoon River to Keokuk for transfer to other vessels.  In Keokuk, the company often charters the vessel for hauling equipment up the Des Moines River to the mouth of the Racoon River where the equipment is fully offloaded and transferred to waiting tractor trailers where it is taken to distribution warehouses generally or sometimes taken out of state to South Dakota for a new semiconductor plant going in there.  The Racoon River and Des Moines River often run low in late summer so try to finish your runs on time.  In the spring the currents can run very strongly so when bidding on spring runs add a little extra time.
+<br><br>
+To play free online click here <a href="https://moonshee.github.io/chiagaru5.html" alt="Play the hottest game in the world.  It is only for people who like ship simulators and chiagarus plus vegans."><center><button style="background:lightgreen">PLAY NOW</button></a><br><br>
+Watch trailer <a href="https://youtu.be/q_yDkkOFEew>VIDEO LINK</a> 
+<a href="#starttt">
+<button style="background:lightblue">GO BACK</button>
+</a>	
+</div>
+<br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br>
+
+<br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br>
+<br><br><div id="dice" style="display:none">
+
+Crew: Captain! The crew is playing craps with some of the passengers, the cheerleaders.<br><br>
+<br>
+Fancy a roll then, ma'am?<br><br>
+<button id="randBtn">Roll Dice!</button>
+<div id="out1" style="margin-top: 100vh; padding-top:10px">
+Snake Eyes!  Do not pass wins!<br>
+<a href="#dice">
+<button>Roll Again</button></a>
+</div>
+
+<div id="out2" style="margin-top: 100vh; padding-top:10px">
+Double Four! Nice...pass wins<br>
+<a href="#dice">
+<button>Roll Again</button></a>
+</div>
+
+<div id="out3" style="margin-top: 100vh; padding-top:10px">
+Double Sixes! Pass wins<br>
+<a href="#dice">
+<button>Roll Again</button></a>
+</div>
+
+<script>
+ document.getElementById('randBtn').addEventListener('click', function () {
+  // random 0 or 3
+  var r = Math.random() < 0.5 ? 1 : 3;
+
+  if (r === 1) {
+   //jump to out 1
+   window.location.hash = 'out1';
+	}
+  else if (r === 2) {
+   // jump to out 2
+   window.location.hash = 'out2';
+	}
+  else {
+   // jump to out 3
+   window.location.hash = 'out3';
+	}
+
+	});
+</script>
+</div>
+
+
+<br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br>
+
+
+
+<font face="monoface" color="gray" size="1">
+&#x00A9; Dokyo Entertainment Ltd in conjunction with FH Engineering, Crystal World, Delta College, Kagaku International and Moonshee Worldwide (c)2026
+</font>
+<br><br><br>
+
+<!--usr acct number temp-->
+<script>{
+ document.getElementById("systemCode").textContent = "USER_ID-" + Math.floor(Math.random() * 9000 + 1000);
+}
+</script>
+<!--end usr acct num-->
+
+<script>
+<!--Btn color toggler-->
+	{
+	window.onload = function () {
+		const btn = document.getElementById('btn');
+		btn.onclick = function () {
+		 if (btn.style.backgroundColor === 'red') {
+		  btn.style.backgroundColor = 'lightgreen';
+		 } else {
+		   btn.style.backgroundColor = 'red';
+		 }
+		}};
+}
+</script>
+<!--script for voice input go-->
+<script>
+{
+window.addEventListener("DOMContentLoaded", () => {
+
+document.getElementById("goBtn").addEventListener("click", function () { submitChat(); //same func triggered by text input
+});
+});
+
+}</script>
+<!--end script voice input go-->
+<script>
+ function disableScroll() {
+	score = 0;
+	document.body.style.overflow = 'hidden';
+}
+</script><script>
+ function enableScroll() {
+	score = 0;
+	document.body.style.overflow = 'auto';
+}</script>
+
+<script>
+	function changImage03b() {
+		var img03b = document.getElementById('deckImg');
+		img03b.src = './images/5leavingharb7.png';
+		}
+		
+</script>
+
+
+   </body>
+   </center>
+</html>   
+
+
+
+
+
+
+
+
+
+
+
+
+
