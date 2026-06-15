@@ -158,7 +158,7 @@ document.getElementById('output').innerText = 5;
 document.getElementById('myRange').disabled = false;
 document.getElementById('myRange2').disabled = false;
 "
- style="background:lightgreen; width:55px">
+ style="background:lightgreen; width:60px">
 <label>
 	<input width="50" type="radio" name="engine" value="off" id="engineOn">ON
 </label></button><br>		
@@ -167,7 +167,7 @@ document.getElementById('myRange2').disabled = false;
 document.getElementById('output').innerText = '0';
 document.getElementById('myRange').value = '0';
 document.getElementById('myRange2').value = '0';"
-style="background:red"> 
+style="background:red; width:60px"> 
 <label>
 <input type="radio" name="engine" value="off" id="engineOff" oninput="document.getElementById('panel').style.display = 'none';" checked>OFF
 </label></button></div>
@@ -199,8 +199,8 @@ render();
 function render() {
   document.getElementById("screen").innerHTML =
 	"MV: " + yard + "<br>" +
-	"-------------------------<br>" +
-	"Status: On Schedule";
+	"---------<br>" +
+	"Status: Ok";
 	}
 
 render();
@@ -295,7 +295,7 @@ document.getElementById('output').innerText = '0';
 	 document.getElementById("down").innerText = left;
 
 	}
-}, 66600)
+}, 66660)
 	
 
 function toggle() {
@@ -328,10 +328,9 @@ if (left === 0) {
 
 </td>
 <td><font size="1">
-<button id="nw" disabled onclick="changImage03b();
+<button id="nw" onclick="
  document.getElementById('client1').style.color = 'pink';
  document.getElementById('client1').innerText = '';
- document.getElementById('msgline').innerText = 'Boatswain: Land ahoy, port side, Captain.';
  document.getElementById('dispy1').innerText = '';" style="background:black; color:beige; width:23px">&#x2196;</button>
 <button id="uparrow" style="background:black; color:beige; width:24px" onclick="changImage3();
  
@@ -374,7 +373,7 @@ document.getElementById('client1').innerText = 'Fortune Teller: Welcome to the S
 		}
 
 </script>
-<button id="centerofpad" style="background:black; color:beige; width:24px" onclick="document.getElementById('dispy1').innerText = 'Toire wa, doko desuka?  Where is the outhouse?'; changImage333();
+<button id="centerofpad" style="background:black; color:beige; width:24px; height:23px;" onclick="document.getElementById('dispy1').innerText = 'Toire wa, doko desuka?  Where is the outhouse?'; changImage333();
 document.getElementById('fitbut').style.display='none';
 
 ">&#x2638;</button>
@@ -527,17 +526,19 @@ document.getElementById('load').style.display = 'none';
 <p><font size="2"></p>
 <div id="msg" style="color:green; font-family:monospace; width:20%"><font size="2"></div>
 
-<br><br><button id="rajjio" style="background:black; color:cyan"
+<br><br>
+<table><tr><td>
+<button id="rajjio" style="background:black; color:cyan;  width:30px"
 onclick="
 
 document.getElementById('messageline').style.color = 'cyan';
 document.getElementById('messageline').innerText = 'This is the captain, over.  Come in, Salty Dog, over.  Salty Dog, come in.';
 document.getElementById('intercom').style.display = 'block';
-">&#x1F4FB;</button>
+">&#x1F4FB;</button></td><td>
 <button style="background:black; color:cyan"
 onclick="document.getElementById('messageline').innerText = 'River Clout & Crypto => ' + score;">&#x1F4B0;</button>
-
-<button id="sess" style="background:black; color:beige;" onclick="changImage5C();
+</td><td>
+<button id="sess" style="background:black; color:beige; width:30px" onclick="changImage5C();
 document.getElementById('msg').style.color = 'pink';
 document.getElementById('msg').innerText = 'Chiagaru: Well, I am the temporary captain of this vessel so why cannot I find a boyfriend?  I just need a nice vegetarian dude who likes sess.  Is that too much to ask?  I gotta get off this ship and get to a pub.';
 document.getElementById('sess').style.background = 'red';
@@ -545,37 +546,35 @@ document.getElementById('bridgebtn').style.background = 'orange';
 document.getElementById('enginebtn').style.background = 'black';
 document.getElementById('bridge').style.display = 'none';
 document.getElementById('messageline').style.color='yellow';
-document.getElementById('messageline').innerText = 'Parrot: Squawk! A cabin is a prisoners abode without a boyfriend sitting on the commode.  Squawk!';
-">&#x1F6CF;</button>
+document.getElementById('messageline').innerText = 'Parrot: Squawk! A cabin is a prisoners abode without a boyfriend sitting on the commode.  Squawk!';">&#x1F6CF;</button>
 <script>
 	function changImage5C() {
 		var img5C = document.getElementById('deckImg');
 		img5C.src = './images/cabin.png';}
 </script>
+</td><td>
 
-
-<button id="bridgebtn" style="background:orange" onclick="document.getElementById('bridge').style.display = 'block';
+<button id="bridgebtn" style="background:orange; height:30px; width:30px"
+onclick="document.getElementById('bridge').style.display = 'block';
 document.getElementById('bridgebtn').style.background = 'red';
 document.getElementById('enginebtn').style.background = 'black';
 document.getElementById('sess').style.background = 'black';
 document.getElementById('msg').style.color = 'gray'; 
 document.getElementById('msg').innerText = 'Crewman: Captain, the girls are waiting for du below deck.  Chiagaru practice they said.';
-changImage5C2(); enableScroll();
-document.getElementById('intercom2').style.display = 'block';
-
-">&#9784;</button>
+changImage5C2(); 
+document.getElementById('intercom2').style.display = 'block';">&#9784;</button>
 <script>
 	function changImage5C2() {
 		var img5C2 = document.getElementById('deckImg');
 		img5C2.src = './images/atsea.png';}
 </script>
 
-<br>
+</td></tr><tr><td>
 
-<button id="hiskor" style="background:black" onclick="document.getElementById('messageline').innerText = 'Hi Score: 20394845 Yoshi T, Tokyo';">&#x1F4CA;</button>
+<button id="hiskor" style="background:black; width:30px; height:30px" onclick="document.getElementById('messageline').innerText = 'Hi Score: 20394845 Yoshi T, Tokyo';">&#x1F4CA;</button>
+</td><td>
 
-
-<button id="minglebtn" style="background:darkblue; color:cyan" onclick="goOnDeck(); 
+<button id="minglebtn" style="background:darkblue; color:cyan; width:30px; height:30px" onclick="goOnDeck(); 
 document.getElementById('sess').style.background = 'black';
 
 document.getElementById('bridgebtn').style.background = 'orange';
@@ -646,8 +645,8 @@ function goOnDeck() {
 	};
 
 </script>
-
-<button id="enginebtn" style="background:black; color:red;"
+</td><td>
+<button id="enginebtn" style="background:black; color:red; width:30px; height:30px"
 onclick="document.getElementById('sess').style.background = 'black';
 document.getElementById('bridgebtn').style.background = 'orange'; document.getElementById('enginebtn').style.background = 'red';
 changImage99();	
@@ -662,13 +661,13 @@ document.getElementById('enginebtn').style.color = 'white';"
 		var img99 = document.getElementById('deckImg');
 		img99.src = './images/4.png';
 			}
-</script>
+</script></td><td>
 <button id="dock" disabled onclick="changImage03b();
 document.getElementById('sess').style.background = 'black';
 document.getElementById('enginebtn').style.background = 'black';
 document.getElementById('messageline').innerText = 'Salty Dog, over.  Salty Dog, we are parking here.';
 document.getElementById('myRange').style.disabled = 'true';"
- style="background:darkgreen; color:beige; width:23px">&#x2693;</button>
+ style="background:darkgreen; color:beige; width:29px; height:30px">&#x2693;</button>
 <script>
 	const slider = document.getElementById("myRange");
 	const output = document.getElementById("output");
@@ -706,11 +705,11 @@ document.getElementById('myRange').style.disabled = 'true';"
 		
 			};
 	</script>
-
+</td></tr></table>
 
 <br><br>
 <div id="messageline" style="width:200px	"><font size="1">---</div>
-<div id="intercom" style="display:none"><input id="msgcapt" type="text" placeholder="Anything to say?"><button style="background:lightblue" onclick="document.getElementById('intercom').innerText ='';
+<div id="intercom" style="display:none" width="80%"><input id="msgcapt" type="text" placeholder="Anything to say?"><button style="background:lightblue" onclick="document.getElementById('intercom').innerText ='';
 document.getElementById('messageline').style.color = 'pink';
 document.getElementById('messageline').innerText = 'Salty Dog here, over.  I roger you.';">OK</button></div><br>
 <center>
