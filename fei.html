@@ -143,7 +143,7 @@ style="background:violet">&#x1F942; PARTY</button></div><br>
 
 document.getElementById('client1').innerText='Shi, shi.  Tis an eclipse and solar maximum.  So, the daylight is at peak, furthest north.  And, it is a new moon, hence we have a solar eclipse expected.';
 "
- style="background:blue">&#x1F320; Observe Star Positions</button>
+ style="background:blue">&#x1F320; Ephemeris</button>
 <br>
 <div id="fitbut" style="display:none"><a onclick="changImage33z();
 document.getElementById('chatty2').innerText = 'Enemy: Why is the fortune teller getting messages from the future?'; 
@@ -180,8 +180,8 @@ document.getElementById('client1').innerText = '';
 	 document.write(Math.floor(Math.random()*80)+20);
 	</script></div>
 </div>
-</td><td><center>
-<button onclick="changImage3b();
+</td><td width=37%><center>
+<button id="nw" onclick="changImage3b();
 document.getElementById('fitbut').style.display='none';
  document.getElementById('client1').style.color = 'pink';
  document.getElementById('client1').innerText = 'Fortune Teller: Oh my Buddha, I received another message from Alan Turing, the future ghost.  Are you worried about FEI PAI TSU and the coming calamities?  You have heard of the impending total solar eclipse, shi?  Well, Turing has a rice mill driven by a sundial which can scare away FEI PAI TSU, I think.  Because, it will appear to be haunted.';
@@ -191,7 +191,7 @@ document.getElementById('fitbut').style.display='none';
 		var img3b = document.getElementById('girl');
 		img3b.src = './images/scene5.png';}
 </script>
-<button style="background:black; color:beige" onclick="changImage3(); 
+<button id="n" style="background:black; color:beige" onclick="changImage3(); 
 document.getElementById('fitbut').style.display='none';
 
  document.getElementById('client1').style.color = 'red';
@@ -209,7 +209,7 @@ document.getElementById('dispy1').innerText = 'Assistant Sensei: You know, some 
 
 
 
-<button style="background:black; color:beige" onclick="changImage4(); 
+<button id="ne" style="background:black; color:beige" onclick="changImage4(); 
 document.getElementById('fitbut').style.display='none';
 
  document.getElementById('client1').style.color = 'red';
@@ -236,7 +236,7 @@ document.getElementById('client1').innerText = 'Fortune Teller: Welcome to the S
 <button style="background:black; color:beige" onclick="document.getElementById('dispy1').innerText = 'Toire wa, doko desuka?  Where is the outhouse?'; changImage333();
 document.getElementById('fitbut').style.display='none';
 
-">&#x1F6B6; Walk</button>
+">&#x1F6B6;</button>
 <script>
 	function changImage333() {
 		var img2b = document.getElementById('girl');
@@ -291,10 +291,10 @@ document.getElementById('fitbut').style.display='block';
 
 </td></tr><tr><td><div id="mainbtns">
 <button onclick="
-document.getElementById('dispy1').innerText = 'Sensei: The armor shop is closed at the moment.  Nani ji desu ka?  Look, we do not need heavy armor, we have our crystals and fighting style.  Right?  Let us go practice more after the summer solstice festival.'"; style="background:green"><font color="brown">&#x1F6E1;<font color="black"> Armor</button>
+document.getElementById('dispy1').innerText = 'Sensei: The armor shop is closed at the moment.  Nani ji desu ka?  Look, we do not need heavy armor, we have our crystals and fighting style.  Right?  Let us go practice more after the summer solstice festival.'"; style="background:green"><font color="brown">&#x1F6E1;</button>
 <button onclick="
 
- document.getElementById('dispy1').innerText = 'Sensei: What kind of weapons are you looking for?  We have fighting sticks back at the dojo.  Besides, do you have enough gold?  The Turing ghost we hear about is a peacenik, an inspiration to us all.  That is what the fortune teller says.  I do not know much about it.'"; style="background:lightgreen">&#x1F5E1; Weapons</button>
+ document.getElementById('dispy1').innerText = 'Sensei: What kind of weapons are you looking for?  We have fighting sticks back at the dojo.  Besides, do you have enough gold?  The Turing ghost we hear about is a peacenik, an inspiration to us all.  That is what the fortune teller says.  I do not know much about it.'"; style="background:lightgreen">&#x1F5E1;</button>
 <br>
 <button onclick="  document.getElementById('dispy1').innerText = 'Yumi-san: Shi, shi.  Your magic amulet is ENABLED.  Do not worry, boss!  So, how about we use our black magic gems, like pai diamond, agate, obsidian, hematite.  All of em!  And we can defeat the bullies!  Shi?'"; style="background:yellow; color:gray;">&#x1F52E; Magic</button>
 <button onclick=" 
@@ -468,6 +468,7 @@ document.getElementById("goBtn").addEventListener("click", function () { submitC
    </body>
    </center>
 </html>   
+
 
 
 
