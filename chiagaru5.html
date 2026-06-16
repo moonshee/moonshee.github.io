@@ -17,8 +17,10 @@
    media="all">
 	<script>
 		{
+		 window.hours = "0";
+		 window.pass = "0";
 		 window.place = "1";
-		 window.score= "0";
+		 window.score= 0;
 		 window.left = "275";
 		 window.sea = "0";
 		}
@@ -42,9 +44,13 @@
  		.btn {background-color: pink; }
 	.vertical {
 	 transform: rotate(-90deg);
-	 width: 50px;
-	 height: 60px;
-	 margin-top: 50px;
+	 width: 45px;
+	 height: 30px;
+	 margin-top: 40px;
+	 }
+	.menuBtn {
+	 width: 30px;
+	 height: 25px;
 	 }
  #chatbox {
       width: 100%;
@@ -123,10 +129,12 @@ NEXT &#x25B6;
 <div id="logo"></div><br>
 <div style="width:250px; padding-top:10px; font-family:monospace;"><font size="2"><em>Moonshee International presents....</em></div>
 <br>
-<img src="./images/512icon.png" style="max-width:250px">
+<img src="./images/512icon.png" style="max-width:80px">
 </center><br><font color="red">
 	</td></tr></table>
  <br>
+<button style="background:darkblue; font-size:22px; font-family:monospace;"><em>RACOON RIVER</em><br>&#x1F6F3;</button>
+<br><br>
  <a href="#starttt"><button style="background:lightgreen" onclick="enableScroll();">NEXT &#x25B6;</button></a>
 
  
@@ -143,22 +151,21 @@ NEXT &#x25B6;
 <br><br><br><br>
 <div id="starttt"></div>
 <br><br>
-
 <div id="deckArea">
  <img id="deckImg" src="./images/7port.png" width="300" style="max-height:250px">
-</div>
+
 
 
 
 <div id="bridge" style="display:none">
 <table><tr><td>
-<font size="2">FUEL CELL<br>
-<button id="onbutton" onclick="document.getElementById('onbutton').style.background = 'green';
+<font size="1">FUEL CELL<br>
+<button id="onbutton" onclick="document.getElementById('onbutton').style.background = 'green'; engineOn2();
 document.getElementById('output').innerText = 5;
 document.getElementById('myRange').disabled = false;
 document.getElementById('myRange2').disabled = false;
 "
- style="background:lightgreen; width:60px">
+ style="background:lightgreen; width:55px">
 <label>
 	<input width="50" type="radio" name="engine" value="off" id="engineOn">ON
 </label></button><br>		
@@ -167,23 +174,35 @@ document.getElementById('myRange2').disabled = false;
 document.getElementById('output').innerText = '0';
 document.getElementById('myRange').value = '0';
 document.getElementById('myRange2').value = '0';"
-style="background:red; width:60px"> 
+style="background:red"> 
 <label>
-<input type="radio" name="engine" value="off" id="engineOff" oninput="document.getElementById('panel').style.display = 'none';" checked>OFF
+<input type="radio" name="engine" value="off" id="engineOff" oninput="engineOff3(); 
+document.getElementById('panel').style.display = 'none';" checked>OFF
 </label></button></div>
 
-<br><br>
+
 Power <div id="output"><button id="pwr" style="background:green; color:yellow">0</button></div><br>
 
 <button onclick="playTurn()" style="background:gold"><font size="1">Solar Cell</button><br>
 <div id="screen"></div>
-<button onclick="playTurn()" style="background:purple; color:violet">TURBO</button>
+<button id="turbo" onclick="playTurn();
+document.getElementById('turbo').style.background = 'black';
+document.getElementById('turbo').style.color = 'lightblue';
+
+" style="background:purple; color:violet">TURBO</button>
 <script>
 //let score = 0;
 let yard = 50;
 
 function playTurn() {
  // random -10 to +10 yards
+ pass++;
+ if (pass > 2) {
+   document.getElementById("messageline").innerText = 'Greenpeace Certified';
+   document.getElementById("load").style.display = 'none';
+
+   document.getElementById("routez").style.display = 'block';
+	}
  let change = Math.floor(Math.random() * 21) - 10;
  yard += change;
 
@@ -199,13 +218,124 @@ render();
 function render() {
   document.getElementById("screen").innerHTML =
 	"MV: " + yard + "<br>" +
-	"---------<br>" +
+	"----------<br>" +
 	"Status: Ok";
 	}
 
 render();
 </script>
 
+
+<div id="routez" style="color:lightblue; display:none;"><font size="1">
+
+
+
+
+
+
+
+
+
+
+
+<div id="gogo" onclick="
+document.getElementById('turbo').style.background = 'orange';
+document.getElementById('turbo').style.color = 'black';
+
+charlesGo(); goNext();">
+<button id="charlesgo" style="background:darkblue; color:cyan">O</button></div>
+<script>
+   function goNext() {
+ document.getElementById('startBtn').addEventListener('click', function() {
+	//kms  
+ hours = 480;
+ const countdownElement = document.getElementById('countdown');
+ const interval = setInterval(function() { hours--;
+
+ countdownElement.textContent = hours < 10 ? '0' + hours : hours;
+
+	if (hours <= "0") {
+	pass++;
+	clearInterval(interval);
+	port2();
+	countdownElement.textContent = 'Arrived safely. Pass/hours' + pass + hours;
+  	log("It is all good Holmes");    
+	document.getElementById("gogo").style.display = 'none';
+	document.getElementById("diss").innerText = '';
+		}
+	}, 220);
+	});
+	}
+
+</script>
+
+<script>
+  function charlesGo() {
+	
+
+	  if (pass === 1) {
+	 document.getElementById("messageline").innerText = 'Time to hit the pub';
+	 document.getElementById("startBtn").innerText = 'PUB TIME';
+      	pass++;
+	goNext();
+	}
+	
+	else if (pass === 2) {
+	 if (hours < 2) {
+	log("Well done, captain!");
+	 document.getElementById("messageline").innerText = '';
+	 document.getElementById("charlesGo").innerText = 'Next Stop';
+	 document.getElementById("startBtn").innerText = 'Stockholm';
+	 document.getElementById("startBtn").innerText = '-> Stockholm';
+
+	 pass++;
+		}  
+		}
+	
+	}    
+</script>
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+<table><tr><td>
+<button id="startBtn" style="font-size:8px; background:black; color:lightgreen; width:77px;"
+
+onclick="
+changImage5C2();
+document.getElementById('panel').style.display = 'none';
+document.getElementById('diss').style.display = 'block';
+engineOn2();
+document.getElementById('output').innerText = '5';
+document.getElementById('startBtn').innerText = 'Next: Hong Kong';
+document.getElementById('bridgebtn').style.display = 'block';
+document.getElementById('nav').style.display = 'none';
+document.getElementById('loadd').style.display = 'none';
+document.getElementById('startBtn').disabled = true;
+document.getElementById('startBtn').style.color = 'green';
+">CHARTER</button></td></tr><tr><td>
+<p id="countdown"><button>00</button></p></div><div id="diss" style="font-size:8px; display:none;">km to go</div></td></tr></table>
+<br>
+</div>
 
 
 </td><td><div id="wrecksure" onclick="
@@ -248,13 +378,35 @@ document.getElementById('messageline').innerText='Crewman: Watch out!  See that 
 		img0CR.src = './images/crash.png';};
 	}
 </script><center><font size="1">
-
+<table border="0" width="1%"><tr><td>
 <input disabled type="range" id="myRange" class="vertical" min="5" max="100" value="0">
+</td><td>
+<div id="updaterange2" 
+
+onclick="update2();">
+
+<script>
+	function update2() {
+	const slider2 = document.getElementById("myRange2");
+	const output2 = document.getElementById("output");
+	const engineOn = document.getElementById("engineOn");
+	const engineOff = document.getElementById("engineOff");
+
+	slider2.oninput = () => {
+		output2.innerText = slider2.value
+		};
+	}
+</script>
+
 <input disabled type="range" id="myRange2" class="vertical" min="5" max="100" value="0">
-</div><br><br><center>
+
+</div>
+</div>
+</td></tr></table>
+<br><br><center>
 Rudder<br>
 <div id="rudder">
-<input type="range" style="width:77px"></div>
+<input type="range" style="width:67px"></div>
 <br>
 <div id="panel" style="display:none;">
 
@@ -270,6 +422,11 @@ document.getElementById('msg').innerText = '';" style="background:black; color:l
 <script>
  function showLoad() {
 	if (left < 2) {
+		if (score > 200) {
+
+		 document.getElementById('routez').style.display = 'block';
+		}
+
 		changImage03b();
 document.getElementById('myRange').style.disabled = 'true';
 document.getElementById('myRange2').style.disabled = 'true';
@@ -295,7 +452,7 @@ document.getElementById('output').innerText = '0';
 	 document.getElementById("down").innerText = left;
 
 	}
-}, 66660)
+}, 10)
 	
 
 function toggle() {
@@ -326,12 +483,10 @@ if (left === 0) {
 
 </script>
 
-</td>
-<td><font size="1">
-<button id="nw" onclick="
- document.getElementById('client1').style.color = 'pink';
- document.getElementById('client1').innerText = '';
- document.getElementById('dispy1').innerText = '';" style="background:black; color:beige; width:23px">&#x2196;</button>
+</td><td><table border="1"><tr><td>
+<table border="1"><tr><td>
+<font size="1">
+<button id="nw" onclick="" style="background:black; color:beige; width:23px">&#x2196;</button>
 <button id="uparrow" style="background:black; color:beige; width:24px" onclick="changImage3();
  
 document.getElementById('downarrow').style.background= 'black';
@@ -351,55 +506,27 @@ document.getElementById('dispy1').innerText = 'Assistant Sensei: You know, some 
 
 
 
-<button style="background:black; color:beige;  width:23px" onclick="changImage4(); 
+<button style="background:black; color:beige;  width:23px" onclick="">&#x2197;</button>
 
- document.getElementById('client1').style.color = 'red';
- document.getElementById('client1').innerText = 'Sensei: What is that smell?  Where is the watermelon cart parked?  Let us get this show on the road.  Chop, chop.'; document.getElementById('dispy1').innerText = '';">&#x2197;</button>
-<script>
-	function changImage4() {
-		var img4 = document.getElementById('girl');
-		img4.src = './images/scene5c.png';}
-</script>
-<br>
+</td></tr></table>
+<table border="1"><tr><td><center>
+<button id="leftarrow" style="background:black; color:beige; width:23px; height:24px;" onclick="">&#x25C0;</button>
 
-<button id="leftarrow" style="background:black; color:beige; width:23px" onclick="changImage2(); 
-
-document.getElementById('client1').innerText = 'Fortune Teller: Welcome to the Soltice Festival.  Longest day of the Jahr.  The sun is further north from the cursed south at this time.  Now it turns around and fights the southern demons.'";>&#x25C0;</button>
-<script>
-	function changImage2() {
-		var img2 = document.getElementById('girl');
-		img2.src = './images/scene5.png';
-		
-		}
-
-</script>
-<button id="centerofpad" style="background:black; color:beige; width:24px; height:23px;" onclick="document.getElementById('dispy1').innerText = 'Toire wa, doko desuka?  Where is the outhouse?'; changImage333();
-document.getElementById('fitbut').style.display='none';
-
-">&#x2638;</button>
-<script>
-	function changImage333() {
-		var img2b = document.getElementById('girl');
-		img2b.src = './images/scene5b.png';}
-</script>
+<button id="centerofpad" style="background:black; color:beige; width:24px; height:24px" onclick="">O</button>
 
 
-<button id="rightarrow" style="background:black; color:beige; width:23px" onclick="changImage(); 
-document.getElementById('fitbut').style.display='none';
 
-document.getElementById('client1').style.color = 'gold';
-document.getElementById('client1').innerText = 'Yumi-san: Did you hear what the sensei said last night?  He said that FEI PAI TSU is expected to rise and fly all over the area due to the summer solstice falling on a total solar eclipse.  Apparently, this wild animal causes a lot of fear for the villagers.'";>&#x25B6;</button>
-<script>
-	function changImage() {
-		var img = document.getElementById('girl');
-		img.src = './images/scene5c.png';}
-</script><br>
+<button id="rightarrow" style="background:black; color:beige; width:23px; height:24px;" onclick="">&#x25B6;</button>
+
+</td></tr></table>
+<table border="1"><tr><td>
 <button id="sw" style="background:black; color:beige;  width:23px" onclick="changImage5(); document.getElementById('fitbut').style.display='none';
 
 document.getElementById('bik1').innerText = '';
 
 document.getElementById('client1').innerText = '';
 document.getElementById('dispy1').innerText = 'Enemy: Bleep you!  Why are vous always following me.  Next time I see you, kapow..';">&#x2199;</button>
+
 <script>
 	function changImage5() {
 		var img5 = document.getElementById('girl');
@@ -416,6 +543,7 @@ document.getElementById('dispy1').innerText = '';
 document.getElementById('messageline').innerText = 'Reverse thrusters activated, Captain.'";
 
 >&#x2B07;</button>
+
 <script>
 	function changImage6() {
 		var img6 = document.getElementById('girl');
@@ -427,11 +555,16 @@ document.getElementById('fitbut').style.display='none';
 document.getElementById('bik1').innerText = '';
 document.getElementById('fitbut').style.display='block';
  document.getElementById('client1').innerText = 'Enemy: That does it!  We warned you lgb-supporting dojo members to clear out.  You disobeyed.  Now, you gonna get it.  Solstice was the deadline for you guys to shut down and hand over your dojo.  We do not allow vegans or lgb around here.  Christians only.'";>&#x2198;</button>
+
+
 <script>
 	function changImage7() {
 		var img7 = document.getElementById('girl');
 		img7.src = './images/scene4c.png';}
-</script><br>
+</script>
+</td></tr></table>
+</td></tr></table>
+<br>
 &#x1F4FB;<br>
 <button id="radioon" style="background:black; color:green" onclick="document.getElementById('radioon').style.background = 'lightgreen'; 
 document.getElementById('radioon').style.color = 'black'; 
@@ -506,7 +639,7 @@ document.getElementById('load').style.display = 'none';
 	document.getElementById('destination').innerText = 'KEOKUK';
 	left = 1850;
 	sea = 0;
-
+	document.getElementById('routez').style.display = block;
 	document.getElementById('origination').innerText = 'New Orleans';
 	place = 0;
 	}
@@ -523,22 +656,22 @@ document.getElementById('load').style.display = 'none';
 </tr></table>
 </div>
 
-<p><font size="2"></p>
-<div id="msg" style="color:green; font-family:monospace; width:20%"><font size="2"></div>
+<p><font size="1"></p>
+<div id="msg" style="color:green; font-family:monospace; width:20%"><font size="1"></div>
 
 <br><br>
 <table><tr><td>
-<button id="rajjio" style="background:black; color:cyan;  width:30px"
+<button id="rajjio" class="menuBtn" style="background:black; color:cyan"
 onclick="
 
 document.getElementById('messageline').style.color = 'cyan';
 document.getElementById('messageline').innerText = 'This is the captain, over.  Come in, Salty Dog, over.  Salty Dog, come in.';
 document.getElementById('intercom').style.display = 'block';
 ">&#x1F4FB;</button></td><td>
-<button style="background:black; color:cyan"
+<button  class="menuBtn" style="background:black; color:cyan"
 onclick="document.getElementById('messageline').innerText = 'River Clout & Crypto => ' + score;">&#x1F4B0;</button>
 </td><td>
-<button id="sess" style="background:black; color:beige; width:30px" onclick="changImage5C();
+<button id="sess" class="menuBtn" style="background:black; color:beige;" onclick="changImage5C();
 document.getElementById('msg').style.color = 'pink';
 document.getElementById('msg').innerText = 'Chiagaru: Well, I am the temporary captain of this vessel so why cannot I find a boyfriend?  I just need a nice vegetarian dude who likes sess.  Is that too much to ask?  I gotta get off this ship and get to a pub.';
 document.getElementById('sess').style.background = 'red';
@@ -546,42 +679,44 @@ document.getElementById('bridgebtn').style.background = 'orange';
 document.getElementById('enginebtn').style.background = 'black';
 document.getElementById('bridge').style.display = 'none';
 document.getElementById('messageline').style.color='yellow';
-document.getElementById('messageline').innerText = 'Parrot: Squawk! A cabin is a prisoners abode without a boyfriend sitting on the commode.  Squawk!';">&#x1F6CF;</button>
+document.getElementById('messageline').innerText = 'Parrot: Squawk! A cabin is a prisoners abode without a boyfriend sitting on the commode.  Squawk!';
+">&#x1F6CF;</button></td><td>
 <script>
 	function changImage5C() {
 		var img5C = document.getElementById('deckImg');
 		img5C.src = './images/cabin.png';}
 </script>
-</td><td>
 
-<button id="bridgebtn" style="background:orange; height:30px; width:30px"
-onclick="document.getElementById('bridge').style.display = 'block';
+
+<button id="bridgebtn" class="menuBtn" style="background:orange" onclick="document.getElementById('bridge').style.display = 'block';
 document.getElementById('bridgebtn').style.background = 'red';
 document.getElementById('enginebtn').style.background = 'black';
 document.getElementById('sess').style.background = 'black';
 document.getElementById('msg').style.color = 'gray'; 
-document.getElementById('msg').innerText = 'Crewman: Captain, the girls are waiting for du below deck.  Chiagaru practice they said.';
-changImage5C2(); 
-document.getElementById('intercom2').style.display = 'block';">&#9784;</button>
+document.getElementById('msg').innerText = 'Crewman: Ahoy, Captain.';
+changImage5C2(); enableScroll();
+document.getElementById('intercom2').style.display = 'block';
+
+">&#9784;</button></td></tr><tr><td>
 <script>
 	function changImage5C2() {
 		var img5C2 = document.getElementById('deckImg');
 		img5C2.src = './images/atsea.png';}
 </script>
 
-</td></tr><tr><td>
 
-<button id="hiskor" style="background:black; width:30px; height:30px" onclick="document.getElementById('messageline').innerText = 'Hi Score: 20394845 Yoshi T, Tokyo';">&#x1F4CA;</button>
+
+<button id="hiskor" class="menuBtn" style="background:black" onclick="document.getElementById('messageline').innerText = 'Hi Score: 20394845 Yoshi T, Tokyo';">&#x1F4CA;</button>
+
 </td><td>
-
-<button id="minglebtn" style="background:darkblue; color:cyan; width:30px; height:30px" onclick="goOnDeck(); 
+<button id="minglebtn" class="menuBtn" style="background:darkblue; color:cyan" onclick="goOnDeck(); 
 document.getElementById('sess').style.background = 'black';
 
 document.getElementById('bridgebtn').style.background = 'orange';
 document.getElementById('enginebtn').style.background = 'black';
 document.getElementById('enginebtn').style.color = 'red';
 document.getElementById('bridge').style.display='none';
-">&#x1F6F3;</button>
+">&#x1F6F3;</button></td><td>
 <script>
 	const slider = document.getElementById("myRange");
 	const output = document.getElementById("output");
@@ -603,9 +738,9 @@ document.getElementById('bridge').style.display='none';
 		};
 	
 function goOnDeck() {
-	//1) Random score from 1 to 3
-	let add = Math.floor(Math.random() * 3) + 1;
-	score += add;
+	//1) Random score from 1 to 2
+	let add = Math.floor(Math.random() * 2) + 1;
+	score = score + add;
 
 	//Update score display
 	//document.getElementById("scorez").innerText = score;
@@ -613,13 +748,14 @@ function goOnDeck() {
 	//2) Random deck image
 	let r = Math.floor(Math.random() * 13) + 1;
 	if (r < 2) {
-		document.getElementById("messageline").innerText = 'Cheerleader Teammates: Holy bleep!  Look!  They are having a bbq and did not invite us.  Must be meat and fish, nothing we would like.  I only do vegetarian.  Da?';
+		document.getElementById("messageline").innerText = 'Cheerleader Teammates: Holy bleep!  Look!  They are having a cookout and did not invite us.  Must be meat and fish, nothing we would like.  I only do vegetarian.  Da?';
 		document.getElementById("deckImg").src = "./images/crash.png";
 		
 		}
 
 	else if (r < 4) {
-		document.getElementById("messageline").innerText = 'Tally ho!  What be crack-a-lackin all yall?';
+		document.getElementById("messageline").innerText = 'Tally ho!  What be crack-a-lackin all yall?  Where are we heading?';
+		
 		document.getElementById("deckImg").src = "./images/deck1.png";
 		}
 	else if (r < 6) {
@@ -627,8 +763,8 @@ function goOnDeck() {
 		document.getElementById("deckImg").src = "./images/deck2.png";
 		}
 	else if (r < 8) {
-		document.getElementById("messageline").innerText = 'Kiko: Ni hao ma?  How do you get your vitamin C?  I like lemon.  REMON we say in Nihon.';
-
+		document.getElementById("messageline").innerText = 'Kiko: Ni hao ma?  How do you get your vitamin C?  I like lemon.  REMON we say in Nihon.  I was a vegetarian for a while but now I eat meat sometimes but no guys like me even though I can cook.  I wonder why they do not ask me out.';
+		score = score - 20;
 		document.getElementById("deckImg").src = "./images/deck3.png";
 		}
 	else if (r < 10) {
@@ -638,15 +774,15 @@ function goOnDeck() {
 		}
 
 	else {
-		document.getElementById("messageline").innerText = 'Chiagaru: Where is the junior college cheerleading tournament?  In Burlington or over in Illinois?  Anybody else want to go meet some guys tonight?  Maybe we can get some action, some sess.  They might eat my bento, you know?  Hehe';
+		document.getElementById("messageline").innerText = 'Chiagaru: So, how long have you been a cheerleader?  Huh?  I am new, this is my first Jahr.';
 
 		document.getElementById("deckImg").src = "./images/cheer.png";
 	}
 	};
 
 </script>
-</td><td>
-<button id="enginebtn" style="background:black; color:red; width:30px; height:30px"
+
+<button id="enginebtn" class="menuBtn" style="background:black; color:red;"
 onclick="document.getElementById('sess').style.background = 'black';
 document.getElementById('bridgebtn').style.background = 'orange'; document.getElementById('enginebtn').style.background = 'red';
 changImage99();	
@@ -655,19 +791,19 @@ document.getElementById('msg').innerText = '';
 document.getElementById('messageline').innerText = 'Engine Room.  Here we see twin fuel cells from Bloom Energy and Mitsubishi Electric. Solar panels are located topside.';"
 	
 document.getElementById('enginebtn').style.color = 'white';"
->&#x1F5DC;</button>
+>&#x1F5DC;</button></td><td>
 <script>
 	function changImage99() {
 		var img99 = document.getElementById('deckImg');
 		img99.src = './images/4.png';
 			}
-</script></td><td>
-<button id="dock" disabled onclick="changImage03b();
+</script>
+<button id="dock" class="menuBtn" disabled onclick="changImage03b();
 document.getElementById('sess').style.background = 'black';
 document.getElementById('enginebtn').style.background = 'black';
 document.getElementById('messageline').innerText = 'Salty Dog, over.  Salty Dog, we are parking here.';
 document.getElementById('myRange').style.disabled = 'true';"
- style="background:darkgreen; color:beige; width:29px; height:30px">&#x2693;</button>
+ style="background:darkgreen; color:beige;">&#x2693;</button></td></tr></table>
 <script>
 	const slider = document.getElementById("myRange");
 	const output = document.getElementById("output");
@@ -705,11 +841,11 @@ document.getElementById('myRange').style.disabled = 'true';"
 		
 			};
 	</script>
-</td></tr></table>
+
 
 <br><br>
 <div id="messageline" style="width:200px	"><font size="1">---</div>
-<div id="intercom" style="display:none" width="80%"><input id="msgcapt" type="text" placeholder="Anything to say?"><button style="background:lightblue" onclick="document.getElementById('intercom').innerText ='';
+<div id="intercom" style="display:none"><input id="msgcapt" type="text" placeholder="Anything to say?"><button style="background:lightblue" onclick="document.getElementById('intercom').innerText ='';
 document.getElementById('messageline').style.color = 'pink';
 document.getElementById('messageline').innerText = 'Salty Dog here, over.  I roger you.';">OK</button></div><br>
 <center>
@@ -775,6 +911,52 @@ To operate the ship, you need to turn the fuel cells on by clicking the on butto
 <br><br><br><br><br><br><br><br><br><br><br>
 
 <br><br><br><br><br>
+<br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br>
+
+<br><br><br><br><br>
+
+<script>
+ document.getElementById('startBtn').addEventListener('click', function() {
+	//kms  
+ let hours = 13;
+ const countdownElement = document.getElementById('countdown');
+ const interval = setInterval(function() { hours--;
+
+ countdownElement.textContent = hours < 10 ? '0' + hours : hours;
+
+	if (hours <= "0") {
+	pass++;
+	clearInterval(interval);
+	document.getElementById("msg").innerText = 'SIMULATION COMPLETE.  GAME OVER';
+	document.getElementById("startBtn").innerText = 'OFFLOADING';
+
+
+
+
+	countdownElement.textContent = 'Docked safely.';
+	score = score + 1000;
+	engineOff3();
+
+		var imgPort = document.getElementById('deckImg');
+		imgPort.src = './images/8port.png';
+
+	document.getElementById("onbutton").disabled = true;
+
+	document.getElementById("engineOn").disabled = true;
+
+	document.getElementById("output").innerText = '0';
+	document.getElementById("diss").innerText = '';
+		}
+	}, 20);
+	});
+
+</script>
+
+
+
+
+
 <br><br><br><br><br><br><br><br><br>
 <br><br><div id="dice" style="display:none">
 
@@ -842,31 +1024,9 @@ Double Sixes! Pass wins<br>
 </script>
 <!--end usr acct num-->
 
-<script>
-<!--Btn color toggler-->
-	{
-	window.onload = function () {
-		const btn = document.getElementById('btn');
-		btn.onclick = function () {
-		 if (btn.style.backgroundColor === 'red') {
-		  btn.style.backgroundColor = 'lightgreen';
-		 } else {
-		   btn.style.backgroundColor = 'red';
-		 }
-		}};
-}
-</script>
-<!--script for voice input go-->
-<script>
-{
-window.addEventListener("DOMContentLoaded", () => {
 
-document.getElementById("goBtn").addEventListener("click", function () { submitChat(); //same func triggered by text input
-});
-});
 
-}</script>
-<!--end script voice input go-->
+
 <script>
  function disableScroll() {
 	score = 0;
@@ -885,6 +1045,62 @@ document.getElementById("goBtn").addEventListener("click", function () { submitC
 		}
 		
 </script>
+
+<script>
+	
+    function engineOff3() {
+     document.getElementById('myRange').disabled = true;
+     document.getElementById('myRange2').disabled = true;
+     document.getElementById('myRange2').value = '0';
+     document.getElementById('myRange').value = '0';
+     document.getElementById('output').innerText = '0';
+     document.getElementById('updaterange2').disabled = true;
+	const radioButton = document.getElementById("engineOn");
+	 radioButton.checked = false;
+      document.getElementById('engineOff').checked = true;
+
+
+
+
+
+
+
+
+
+
+
+
+
+	}
+</script>
+
+<script>
+ function engineOn2() {
+  document.getElementById('onbutton').style.background = 'green';
+document.getElementById('output').innerText = 5;
+document.getElementById('myRange').disabled = false;
+document.getElementById('myRange2').disabled = false;
+document.getElementById('engineOn').selected = true;
+
+ 
+	}
+</script>
+
+<script>
+    function port2() {
+		var imgPort = document.getElementById('deckImg');
+		imgPort.src = './images/8port.png';}
+		}
+</script>
+
+
+
+
+
+
+
+
+
 
 
    </body>
