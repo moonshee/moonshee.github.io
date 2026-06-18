@@ -2,7 +2,7 @@
 <html>
  <head>
  <meta name="description" content="SHIP SIMULATOR">
-  <meta name="keywords" content="ferry, ship, simulator, chiagaru">
+  <meta name="keywords" content="ferry, ship, simulator, chiagaru, smart phone, webgame, html-5, entertainment">
   <meta name="author" content="Momotaro Studios">
 
   <meta charset="UTF-8">
@@ -17,10 +17,13 @@
    media="all">
 	<script>
 		{
+		 window.passhk = 0;
 		 window.hours = "0";
 		 window.pass = "0";
 		 window.place = "1";
 		 window.score= 0;
+		 window.pass2 = 0;
+		 window.pass3 = 0;
 		 window.left = "275";
 		 window.sea = "0";
 		}
@@ -39,7 +42,7 @@
 	}
 	</script>
 	<script src="script.js" defer></script>
-	<div style="display:none" class="summary"><font size=1 color=black>This is a ferry boat captain game for online players.  Works on any device that can play HTML, so that is pretty much all devices.</font></div>
+	<div style="display:none" class="summary"><font size=1 color=black>This is a ferry boat captain game for online players.  Works on any device that can play HTML, so that is pretty much all devices.  It teaches some language skills and familiarity with ship controls and seafarer lingo among other subjects like geography, however, it is mainly for entertainment.  Not a strictly accurate simulator, more of an engagement tool but works fully offline if properly downloaded.  To download properly, go to the Moonshee Github rep and download all the images in the /image folder along with script.js and style.css from the main folder and set up the folders in the new device if a laptop.  So, index.html, script.js and style.css along with the /images folder is everything needed!</font></div>
 <style>
  		.btn {background-color: pink; }
 	.vertical {
@@ -111,6 +114,7 @@
 <!--end drop down-->
 <hr color="lightblue">
 <marquee loop="0" direction="right"><img src="./images/japan.png"></marquee>
+<hr color="blue">
 <hr color="darkblue">
 
 
@@ -138,8 +142,8 @@ NEXT &#x25B6;
  <a href="#starttt"><button style="background:lightgreen" onclick="enableScroll();">NEXT &#x25B6;</button></a>
 
  
-<hr color="red" size="1">
-<hr color="red" size="1">
+<hr color="brown" size="1">
+<hr color="maroon" size="1">
 <br><br>
 <br><br>
 <br><br>
@@ -159,6 +163,13 @@ NEXT &#x25B6;
 
 <div id="bridge" style="display:none">
 <table><tr><td>
+<div id="dubaiheading" style="display:none">
+<font size="1">
+Heading: Dubai<br>
+<div id="dubaidist">
+<button>00</button>
+</div> km
+</div>
 <font size="1">FUEL CELL<br>
 <button id="onbutton" onclick="document.getElementById('onbutton').style.background = 'green'; engineOn2();
 document.getElementById('output').innerText = 5;
@@ -197,7 +208,8 @@ let yard = 50;
 function playTurn() {
  // random -10 to +10 yards
  pass++;
- if (pass > 2) {
+ if (pass > 4) {
+   document.getElementById("msg").innerText = 'New charter route available.';
    document.getElementById("messageline").innerText = 'Greenpeace Certified';
    document.getElementById("load").style.display = 'none';
 
@@ -249,8 +261,10 @@ charlesGo(); goNext();">
  document.getElementById('startBtn').addEventListener('click', function() {
 	//kms  
  hours = 13000;
+
  const countdownElement = document.getElementById('countdown');
  const interval = setInterval(function() { hours--;
+ clearInterval(interval);
 
  countdownElement.textContent = hours < 10 ? '0' + hours : hours;
 
@@ -318,20 +332,10 @@ charlesGo(); goNext();">
 
 
 <table><tr><td>
-<button id="startBtn" style="font-size:8px; background:black; color:lightgreen; width:77px;"
+<button id="startBtn" style="font-size:8px; background:black; color:lightgreen; width:57px;"
 
 onclick="
-changImage5C2();
-document.getElementById('panel').style.display = 'none';
-document.getElementById('diss').style.display = 'block';
-engineOn2();
-document.getElementById('output').innerText = '5';
-document.getElementById('startBtn').innerText = 'Next: Hong Kong';
-document.getElementById('bridgebtn').style.display = 'block';
-document.getElementById('nav').style.display = 'none';
-document.getElementById('loadd').style.display = 'none';
-document.getElementById('startBtn').disabled = true;
-document.getElementById('startBtn').style.color = 'green';
+charterdatBitch();
 ">CHARTER</button></td></tr><tr><td>
 <p id="countdown"><button>00</button></p></div><div id="diss" style="font-size:8px; display:none;">km to go</div></td></tr></table>
 <br>
@@ -486,33 +490,37 @@ if (left === 0) {
 </td><td><table border="1"><tr><td>
 <table border="1"><tr><td>
 <font size="1">
-<button id="nw" onclick="" style="background:black; color:beige; width:23px">&#x2196;</button>
-<button id="uparrow" style="background:black; color:beige; width:24px" onclick="changImage3();
- 
+<button id="nw" disabled onclick="pass3Add();" style="background:black; color:beige; width:23px">&#x2196;</button>
+<button id="uparrow" disabled style="background:black; color:beige; width:24px" onclick="changImage3();
+ document.getElementById('nw').disabled = false;
 document.getElementById('downarrow').style.background= 'black';
 document.getElementById('messageline').innerText = 'Your orders, Captain?';
- document.getElementById('client1').style.color = 'red';
- document.getElementById('client1').innerText = 'Passerby: I heard a rumour that the fortune teller received a secret message from the future ghost, her guide.  And it warned against eating meat and fish.  Good thing I am a vegetarian.'; 
- document.getElementById('dispy1').style.color = 'gray';
+ document.getElementById('msg').style.color = 'red';
+ document.getElementById('msg').innerText = 'Passenger: Oh, I am sea sick yall.'; 
+ document.getElementById('messageline').style.color = 'gray';
 
-document.getElementById('dispy1').innerText = 'Assistant Sensei: You know, some crystals and lemons can really help with Kung Fu.  I like lemonade with plenty of honey to sweeten it along with jade, agates, diamonds, hematite.';">&#x2B06;</button>
+document.getElementById('messageline').innerText = 'Cookie: Who wants lemonade?';">&#x2B06;</button>
 <script>
 	function changImage3() {
-		var img3 = document.getElementById('girl');
-		img3.src = './images/scene5t.png';}
+		var img3 = document.getElementById('deckImg');
+		img3.src = './images/atsea.png';}
 </script>
 
 
 
 
 
-<button style="background:black; color:beige;  width:23px" onclick="">&#x2197;</button>
+<button id="northeast" style="background:black; color:beige;  width:23px" disabled onclick="changImageDubai();
+updateDubai();
+">&#x2197;</button>
 
 </td></tr></table>
 <table border="1"><tr><td><center>
 <button id="leftarrow" style="background:black; color:beige; width:23px; height:24px;" onclick="">&#x25C0;</button>
 
-<button id="centerofpad" style="background:black; color:beige; width:24px; height:24px" onclick="">O</button>
+<button id="centerofpad" disabled style="background:black; color:beige; width:24px; height:24px" onclick="document.getElementById('msg').innerText = 'Crewman - Poop deck is clear.';
+centerClick();
+">O</button>
 
 
 
@@ -520,12 +528,7 @@ document.getElementById('dispy1').innerText = 'Assistant Sensei: You know, some 
 
 </td></tr></table>
 <table border="1"><tr><td>
-<button id="sw" style="background:black; color:beige;  width:23px" onclick="changImage5(); document.getElementById('fitbut').style.display='none';
-
-document.getElementById('bik1').innerText = '';
-
-document.getElementById('client1').innerText = '';
-document.getElementById('dispy1').innerText = 'Enemy: Bleep you!  Why are vous always following me.  Next time I see you, kapow..';">&#x2199;</button>
+<button id="sw" style="background:black; color:beige;  width:23px" onclick="changImage5();">&#x2199;</button>
 
 <script>
 	function changImage5() {
@@ -764,7 +767,7 @@ function goOnDeck() {
 		}
 	else if (r < 8) {
 		document.getElementById("messageline").innerText = 'Kiko: Ni hao ma?  How do you get your vitamin C?  I like lemon.  REMON we say in Nihon.  I was a vegetarian for a while but now I eat meat sometimes but no guys like me even though I can cook.  I wonder why they do not ask me out.';
-		score = score - 20;
+		score = score - 5;
 		document.getElementById("deckImg").src = "./images/deck3.png";
 		}
 	else if (r < 10) {
@@ -919,7 +922,7 @@ To operate the ship, you need to turn the fuel cells on by clicking the on butto
 <script>
  document.getElementById('startBtn').addEventListener('click', function() {
 	//kms  
- let hours = 13000;
+ let hours = Math.floor(Math.random() * 2222) + 12212;
  const countdownElement = document.getElementById('countdown');
  const interval = setInterval(function() { hours--;
 
@@ -1024,9 +1027,6 @@ Double Sixes! Pass wins<br>
 </script>
 <!--end usr acct num-->
 
-
-
-
 <script>
  function disableScroll() {
 	score = 0;
@@ -1080,7 +1080,7 @@ Double Sixes! Pass wins<br>
 document.getElementById('output').innerText = 5;
 document.getElementById('myRange').disabled = false;
 document.getElementById('myRange2').disabled = false;
-document.getElementById('engineOn').selected = true;
+document.getElementById('engineOn').checked = true;
 
  
 	}
@@ -1089,16 +1089,86 @@ document.getElementById('engineOn').selected = true;
 <script>
     function port2() {
 		var imgPort = document.getElementById('deckImg');
-		imgPort.src = './images/8port.png';}
+		imgPort.src = './images/8port.png';
 		}
 </script>
 
+<script>
+ function pass3Add() {
+	pass3++;
 
+	if (pass3 > 4) {
+	 document.getElementById('centerofpad').disabled = false;
+	document.getElementById('msg').innerText = 'Captain, nei hao ma?';
 
+	}
+	}
+</script>
 
+<script>
+	function charterdatBitch() {
+	 changImageHk2();
+	 document.getElementById('dockk').style.display = 'none';
+	 
+	 document.getElementById('uparrow').disabled = false;
+	 document.getElementById('nw').disabled = false;
+	 
+	 score++;
+	 document.getElementById('panel').style.display = 'none';
+	 document.getElementById('diss').style.display = 'block';
+	 engineOn2();
+	 document.getElementById('output').innerText = '5';
+	 document.getElementById('startBtn').innerText = 'Nxt: HKG';
+	 document.getElementById('bridgebtn').style.display = 'block';
+	 document.getElementById('nav').style.display = 'none';
+	 document.getElementById('loadd').style.display = 'none';
+	 document.getElementById('startBtn').disabled = true;
+	 document.getElementById('startBtn').style.color = 'green';
+	 }
+</script>
 
+<script>
+    function changImageHk2() {
+		var imghk2Port = document.getElementById('deckImg');
+		imghk2Port.src = './images/hk2.png';
+		}
+</script>
 
+<script>
+ function centerClick() {
+  document.getElementById('uparrow').disabled = false;
+  document.getElementById('northeast').disabled = false;
+  engineOn2();
+  hours = document.getElementById('countdown').innerText;
+  document.getElementById('startBtn').innerText = 'Next: Dubai';
+  
+  document.getElementById('routez').style.display = 'none';
+  document.getElementById('dubaidist').innerText = hours;
+  document.getElementById('dubaiheading').style.display = 'block';
+  goNext();
+	}
 
+</script>
+
+<script>
+    function changImageDubai() {
+		var imgDubai = document.getElementById('deckImg');
+		imgDubai.src = './images/dubai.png';
+		
+		
+		}
+</script>
+
+<script>
+ function updateDubai() {
+		
+		const btn22 = document.getElementById('centerofpad');
+		 setInterval(() => {
+		  if (!btn22.disabled)
+			btn22.click();
+			}, 10000);
+	}
+</script>
 
 
 
