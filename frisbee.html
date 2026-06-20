@@ -16,7 +16,8 @@
    type="text/css"
    media="all">
 	<script>
-		{window.add5 = 1;
+		{window.howmanyplayers = 1;
+		 window.add5 = 1;
 		 window.animation=1;
 		 window.half=1;
 		 window.diskside = "sideV";
@@ -226,8 +227,8 @@ document.getElementById('load').style.display = 'none';
 <button id="turbo" onclick="
 document.getElementById('turbo').style.background = 'black';
 document.getElementById('turbo').style.color = 'lightblue';
-document.getElementById('msg').innerText = 'Rookie: Extra sugar for moi, svp';
-document.getElementById('messageline').innerText = 'Coach: Got any limeade?';" style="background:yellow; color:green">&#x1F34B; Lemonade</button>
+document.getElementById('msg').innerText = 'Rookie: Wanna hit the showers later?';
+document.getElementById('messageline').innerText = 'Coach: Yo cheer, wamt a small Milch?';" style="background:yellow; color:green">&#x1F34B; Lemonade</button>
 
 <script>
 function playTurn() {
@@ -349,7 +350,7 @@ charterdatBitch();
 start();
 ">Start</button></div>
 
-<p id="countdown"><button style="background:lightblue">27 deg C</button></p><div id="diss" style="font-size:8px; display:none;">Ultimate Frisbee</div>
+<p id="countdown"><button class="buttAzz" style="background:lightblue">27 deg C</button></p><div id="diss" style="font-size:8px; display:none;">Ultimate Frisbee</div>
 
 </td>
 
@@ -554,11 +555,13 @@ if (left === 0) {
 </td><td><table border="1"><tr><td>
 <table border="1"><tr><td>
 <font size="1">
-<button id="nw" onclick="document.getElementById('msg').innerText = 'Cheerleader: Which of yall dudes are vegan and like sezz?';" 
+<button id="nw" onclick="
+changImage03b();
+document.getElementById('msg').innerText = 'Cheerleader: Which of yall dudes are vegan and like sezz?';" 
 
 style="background:black; color:beige; width:23px">&#x2196;</button>
-<button id="uparrow" disabled style="background:black; color:beige; width:24px" onclick="
- 
+<button id="uparrow" style="background:black; color:beige; width:24px" onclick="
+ breakK();
  document.getElementById('nw').disabled = false;
 document.getElementById('downarrow').style.background= 'black';
 document.getElementById('messageline').innerText = 'Pass it over here!';
@@ -566,7 +569,7 @@ document.getElementById('messageline').innerText = 'Pass it over here!';
  document.getElementById('msg').innerText = 'Fan: I love ultimate frisbee and so does my hot gf.'; 
  document.getElementById('messageline').style.color = 'gray';
 
-document.getElementById('messageline').innerText = 'Cookie: Who wants lemonade?';">&#x2B06;</button>
+document.getElementById('messageline').innerText = 'Water girl: Who wants lemonade?';">&#x2B06;</button>
 <script>
 	function changImage3() {
 		var img3 = document.getElementById('deckImg');
@@ -578,13 +581,15 @@ document.getElementById('messageline').innerText = 'Cookie: Who wants lemonade?'
 
 
 <button id="northeast" style="background:black; color:beige;  width:23px" onclick="
+bleachers1();
 document.getElementById('msg').innerText = 'Trainer: It is best to follow vegetarian diet if going pro, ja?';
 document.getElementById('beginner').style.display = 'none';
 ">&#x2197;</button>
 
 </td></tr></table>
 <table border="1"><tr><td><center>
-<button id="leftarrow" style="background:black; color:beige; width:23px; height:24px;" onclick="">&#x25C0;</button>
+<button id="leftarrow" style="background:black; color:beige; width:23px; height:24px;" onclick="
+changImage5();">&#x25C0;</button>
 
 <button id="centerofpad" style="background:black; color:beige; width:24px; height:24px" onclick="
 
@@ -593,18 +598,23 @@ document.getElementById('centerofpad').style.background = 'black';
 
 
 
-<button id="rightarrow" style="background:black; color:beige; width:23px; height:24px;" onclick="">&#x25B6;</button>
+<button id="rightarrow" style="background:black; color:beige; width:23px; height:24px;" onclick="
+bleachers2();
+">&#x25B6;</button>
 
 </td></tr></table>
 <table border="1"><tr><td>
-<button id="sw" style="background:black; color:beige;  width:23px" onclick="changImage5();">&#x2199;</button>
+<button id="sw" style="background:black; color:beige;  width:23px" onclick="
+changImage6();
+">&#x2199;</button>
 
 <script>
 	function changImage5() {
-		var img5 = document.getElementById('girl');
-		img5.src = './images/scene1d.png';}
+		var img5 = document.getElementById('deckImg');
+		img5.src = './images/scene5e.png';}
 </script>
 <button id="downarrow" style="background:black; color:beige;  width:24px" onclick="
+changImage8();
 document.getElementById('panel').style.display='block';
 document.getElementById('downarrow').style.background = 'lightgreen';
 document.getElementById('uparrow').style.background = 'black';
@@ -615,8 +625,8 @@ document.getElementById('messageline').innerText = 'Nice pass'";
 
 <script>
 	function changImage6() {
-		var img6 = document.getElementById('girl');
-		img6.src = './images/oxgo.gif';}
+		var img6 = document.getElementById('deckImg');
+		img6.src = './images/field2.png';}
 </script>
 <button style="background:black; color:beige;  width:23px" onclick="changImage7(); 
 document.getElementById('fitbut').style.display='none';
@@ -628,8 +638,8 @@ document.getElementById('fitbut').style.display='block';
 
 <script>
 	function changImage7() {
-		var img7 = document.getElementById('girl');
-		img7.src = './images/scene4c.png';}
+		var img7 = document.getElementById('deckImg');
+		img7.src = './images/scene4.png';}
 </script>
 </td></tr></table>
 </td></tr></table><center>
@@ -641,22 +651,22 @@ document.getElementById('fitbut').style.display='block';
 <br>
 <div id="rightside">
 Side With Disk<br>
-<button id="autoon" disabled style="background:black; color:green; width:59px; font-size="px;" onclick="document.getElementById('autoon').style.background = 'lightgreen'; 
+<button id="autoon" class="buttAzz" disabled style="background:black; color:green; font-size="px;" onclick="document.getElementById('autoon').style.background = 'lightgreen'; 
 document.getElementById('autoon').style.color = 'black'; 
 document.getElementById('autooff').style.background = 'black';
 document.getElementById('autooff').style.color = 'red';
 "
 
 >Pocca</button><br>
-<button disabled style="color:black; background:red; width:59px" id="autooff"
+<button disabled class="buttAzz" style="color:black; background:red;" id="autooff"
 onclick="document.getElementById('autoon').style.background = 'black';
 document.getElementById('autoon').style.color = 'lightgreen';
 document.getElementById('autooff').style.background = 'red';
 document.getElementById('autooff').style.color = 'black';">Home</button>
 <br><font size="1">
 Disk Side Location<br>
-<button id="sideV" style="background:red; color:black">Pocca</button><br>
-<button id="sideH" style="background:black; color:gray">Home</button>
+<button id="sideV" class="buttAzz" style="background:red; color:black">Pocca</button><br>
+<button id="sideH" class="buttAzz" style="background:black; color:gray">Home</button>
 <br>
 
 
@@ -672,7 +682,7 @@ Animation<br>
 document.getElementById('deckArea').style.display = 'block';
 " style="background:red; color:black">ON</button><button id="aoff" onclick="toggleA();  
 document.getElementById('deckArea').style.display = 'none';" style="background:black; color:gray">OFF</button><br>
-<button id="dockk" onclick="
+<button id="dockk" class="buttAzz" onclick="
 clickMenu();
 changImage203b();"
  style="background:maroon; color:beige">Menu</button>
@@ -687,7 +697,7 @@ changImage203b();"
 document.getElementById('load').style.display = 'none';"
 
 >
-<button id="loadd" onclick="getCock();
+<button id="loadd" class="buttAzz" onclick="getCock();
 changImage5C22();
 document.getElementById('myRange').style.disabled = 'false';
 document.getElementById('myRange2').style.disabled = 'false';
@@ -808,6 +818,7 @@ document.getElementById('sess').style.background = 'black';
 document.getElementById('bridgebtn').style.background = 'black';
 document.getElementById('enginebtn').style.background = 'black';
 document.getElementById('enginebtn').style.color = 'red';
+
 document.getElementById('bridge').style.display='none';
 document.getElementById('msg').style.color = 'beige';
 document.getElementById('messageline').innerText = 'Coach: Who needs healing crystals?';
@@ -887,6 +898,8 @@ document.getElementById('bridge').style.display = 'block';
 document.getElementById('intercom2').style.display = 'block';
 document.getElementById('sess').style.background = 'black';
 document.getElementById('bridgebtn').style.background = 'black'; document.getElementById('enginebtn').style.background = 'red';
+document.getElementById('enginebtn').style.background = 'black';
+
 document.getElementById('msg').innerText = '';
 document.getElementById('messageline').innerText = 'Adjust any settings?';"
 	
@@ -953,7 +966,7 @@ document.getElementById('intercom2').style.display = 'none';
 ">OK</button></div>
 <div id="intercom3" style="display:block; position:absolute; margin-left:40%; margin-bottom:10%;"><input placeholder="Onamae wa..." id="msgcapt3" type="text"><button onclick="document.getElementById('intercom3').style.display = 'none';">OK</button>
 </div>
-
+<br><br><br><br><br><br>
 <br><br>
 <a href="">
 <button style="background:black;color:orange;">RESTART</button></a>
@@ -988,9 +1001,11 @@ USER MANUAL<br><br>
 Congratulations on your purchase of ULTIMATE FRISBEE, one of the best new ultimate frisbee games availables as of 2026.  This is a ONE PLAYER game and the computer is the VISITOR.  All the standard rules of ultimate apply and the field is 100 yards long, so perhaps a bit longer than a usual pitch.  The matches are timed to 90 minutes plus injury time and weather delays in case of electric storms.  The games are played at Nigoshi Field which is a daytime-only facility with no evening lights located in Tokyo, Japan.  Ground rules: If the disk is thrown over the fence into the gulch, that is a turnover and warning.  Three throws over the fence by one team will result in a yellow card issued to the head coach.  Ten second limit for holding the disk, no travel allowed.<br><br><em>
 The directional keypad is mostly for checking for opponents and looking at the cheerleaders along with talking with teammates.  Use the throw, block, etc, buttons mainly.  If you have injuries and other issues like a damaged frisbee and return to the game play and the buttons like HUCK are gone, check the RED FLAGS button, click it.  But first you may need to click the PLAY button which is the icon just above the trophy icon on the lower menu bar.  This will check in with the observers to be sure that no players have received two yellow cards.  If a player does a fast count twice in one game they may receive a yellow card.  Use lemonade and limeade to boost play but be sure to add plenty of mizu and sato.  If you do not see the buttons you need, try using the DOWN ARROW on the noir keypad shown below the viewbox on screen.</em>
 <br><br>
-If you are reading this and not playing, perhaps you are stuck.  Vegan or vegetarian lifestyle can help with e-sports and prize-winning activities because it leads to very sharp mental accuity and aligns with crystal power and vitamin c.  Therefore, if you plan to be a professional Ultimate player or a pro e-Ultimate star, you may want to consider a vegetarian diet.  Try not to hold the disk too long, no need for useless turnovers if the disk is held more than 10 seconds.  We plan future updates with more options and teams so stay tuned.  If you get stuck while playing, try hit the play now button on the lower right bar and then click the RED CARD button to check for any suspensions.  What you have there is a hydration break.<br><br>
+If you are reading this and not playing, perhaps you are stuck.  Vegan or vegetarian lifestyle can help with e-sports and prize-winning activities because it leads to very sharp mental accuity and aligns with crystal power and vitamin c.  Therefore, if you plan to be a professional Ultimate player or a pro e-Ultimate star, you may want to consider a vegetarian diet.  Try not to hold the disk too long, no need for useless turnovers if the disk is held more than 10 seconds.  We plan future updates with more options and teams so stay tuned.  If you get stuck while playing, try hit the play now button on the lower right bar and then click the RED CARD button to check for any suspensions.  What you have there is a hydration break.<br><br><em>
+TWO PLAYER MODE<br>
+In two player mode, Player One and Two both work together as a team to win.  Player One always handles the offense.  Huck, toss, throw, that is all Player One.  Player Two is the defense specialist and handles all the blocking, stealing and defensive maneuvers.</em><br><br>
 https://miyazakibar.itch.io
-
+<br><br>
 <a href="#starttt">
 <button style="background:lightblue">GO BACK</button>
 </a>	
@@ -1064,9 +1079,24 @@ Double Sixes! Pass wins<br>
 <div id="settings" style="position:relative; top-margin:10%;">
 <br><br>
 SETTINGS<br><br>
-This is a 1 player game.  You can choose your team:<br><br>
+One or two players?<br><br>
+<button onclick="window.location.hash = 'home';" class="buttAzz">EIN</button><button onclick="
+document.getElementById('turbo').innerText = 'P1 Offense';	   
+document.getElementById('charlesgo').innerText = 'P2 Defense';
+document.getElementById('charlesgo').style.color = 'black';
+document.getElementById('charlesgo').style.background = 'brown';
 
+window.location.hash = 'home';"  class="buttAzz">ZWEI</button><br>
+<br>
+Note: In two player mode, the two players will work together as a team.
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br>
 <div id="home" onclick="window.location.hash = 'settings2';">
+<br><br>
+Player 1 choose your team:<br><br>
 <table><tr><td>
 <button class="sweetPussy" style="background:brown; color:orange" onclick="
 document.getElementById('sideH').innerText = 'Akita';
@@ -1104,17 +1134,17 @@ document.getElementById('autooff').innerText = 'Solvang';">Solvang</button>
 
 <div id="settings2" style="top-margin:10%"></div>
 <br><br>
-Choose your opponent, bitte:<br><br>
+And the visiting team (COMP and/or Player 2):<br><br>
 
-<div id="home" onclick="window.location.hash = 'starttt';
+<div id="viziter" onclick="window.location.hash = ''; score=0; pcscore=0;
 start();
 ">
 <table><tr><td>
 <button class="sweetPussy" style="background:white; color:black" onclick="
-document.getElementById('upp2').innerText = 'Anaheim';
+document.getElementById('upp2').innerText = 'Atlanta';
 
-document.getElementById('sideV').innerText = 'Anaheim';
-document.getElementById('autoon').innerText = 'Anaheim';">Anaheim</button><br><br>
+document.getElementById('sideV').innerText = 'Atlanta';
+document.getElementById('autoon').innerText = 'Atlanta';">Atlanta</button><br><br>
 <button class="sweetPussy" style="background:brown; color:beige" onclick="
 document.getElementById('upp2').innerText = 'Houston';
 
@@ -1170,7 +1200,7 @@ document.getElementById('settings').style.display = 'none';
 <script>
 	function changImage03b() {
 		var img03b = document.getElementById('deckImg');
-		img03b.src = './images/5leavingharb7.png';
+		img03b.src = './images/4b.png';
 		}
 		
 </script>
@@ -1333,7 +1363,7 @@ var imgMenu = document.getElementById('deckImg');
 	function breakK() {
 		var imgField = document.getElementById('deckImg');
 		imgField.src = './images/field.png';
-		}
+		}	
 </script>
 
 
@@ -1506,8 +1536,25 @@ var imgMenu = document.getElementById('deckImg');
  
 }
 </script>
-
-
+<script>
+ function bleachers1() {
+	var imgBleach1 = document.getElementById('deckImg');
+		imgBleach1.src = './images/bleachers.png';
+	}
+</script>	
+<script>
+ function bleachers2() {
+	var imgBleach2 = document.getElementById('deckImg');
+		imgBleach2.src = './images/bleachers2.png';
+	}
+</script>	
+<script>
+	//down arrow
+ function changImage8() {
+	var img8 = document.getElementById('deckImg');
+		img8.src = './images/field3.png';
+	}
+</script>
 
 
 
