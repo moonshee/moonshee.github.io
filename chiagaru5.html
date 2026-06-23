@@ -17,6 +17,9 @@
    media="all">
 	<script>
 		{
+		 window.turn = 1;
+		 window.players = 1;
+		 window.pcscore = 0;
 		 window.passhk = 0;
 		 window.hours = "0";
 		 window.pass = "0";
@@ -51,6 +54,16 @@
 	 height: 30px;
 	 margin-top: 40px;
 	 }
+	.buttAzz {
+	 disabled;
+	 width: 66px;
+      color: beige;
+	 background: black;
+		}
+	.sweetPussy {
+      width: 99px;
+	}
+
 	.menuBtn {
 	 width: 30px;
 	 height: 25px;
@@ -155,8 +168,8 @@ NEXT &#x25B6;
 <br><br><br><br>
 <div id="starttt"></div>
 <br><br>
-<div id="deckArea">
- <img id="deckImg" src="./images/7port.png" width="300" style="max-height:250px">
+<div id="deckArea" style="max-height:150px">
+ <img id="deckImg" src="./images/7port.png" width="300" style="max-height:150px">
 
 
 
@@ -456,7 +469,7 @@ document.getElementById('output').innerText = '0';
 	 document.getElementById("down").innerText = left;
 
 	}
-}, 22340)
+}, 11340)
 	
 
 function toggle() {
@@ -516,15 +529,17 @@ updateDubai();
 
 </td></tr></table>
 <table border="1"><tr><td><center>
-<button id="leftarrow" style="background:black; color:beige; width:23px; height:24px;" onclick="">&#x25C0;</button>
+<button id="leftarrow" style="background:black; color:beige; width:23px; height:24px;" onclick="
+leftArrowClick();
+">&#x25C0;</button>
 
 <button id="centerofpad" disabled style="background:black; color:beige; width:24px; height:24px" onclick="document.getElementById('msg').innerText = 'Crewman - Poop deck is clear.';
 centerClick();
-">O</button>
+"><font size="1">&#x23FA;</button>
 
 
 
-<button id="rightarrow" style="background:black; color:beige; width:23px; height:24px;" onclick="">&#x25B6;</button>
+<button id="rightarrow" style="background:black; color:beige; width:23px; height:24px;" onclick="rightArrowClick();">&#x25B6;</button>
 
 </td></tr></table>
 <table border="1"><tr><td>
@@ -532,68 +547,71 @@ centerClick();
 
 <script>
 	function changImage5() {
-		var img5 = document.getElementById('girl');
-		img5.src = './images/scene1d.png';}
+		var img5 = document.getElementById('deckImg');
+		img5.src = './images/interi3c.png';}
 </script>
 <button id="downarrow" style="background:black; color:beige;  width:24px" onclick="changImage6(); 
-document.getElementById('fitbut').style.display='none';
 document.getElementById('panel').style.display='none';
-document.getElementById('bik1').innerText = '';
 document.getElementById('downarrow').style.background = 'lightgreen';
 document.getElementById('uparrow').style.background = 'black';
 
-document.getElementById('dispy1').innerText = '';
 document.getElementById('messageline').innerText = 'Reverse thrusters activated, Captain.'";
 
 >&#x2B07;</button>
 
 <script>
 	function changImage6() {
-		var img6 = document.getElementById('girl');
-		img6.src = './images/oxgo.gif';}
+		var img6 = document.getElementById('deckImg');
+		img6.src = './images/interi3b.png';
+		}
 </script>
-<button style="background:black; color:beige;  width:23px" onclick="changImage7(); 
-document.getElementById('fitbut').style.display='none';
-
+<button id="se" style="background:black; color:beige;  width:23px" onclick="changImage7(); 
 document.getElementById('bik1').innerText = '';
 document.getElementById('fitbut').style.display='block';
- document.getElementById('client1').innerText = 'Enemy: That does it!  We warned you lgb-supporting dojo members to clear out.  You disobeyed.  Now, you gonna get it.  Solstice was the deadline for you guys to shut down and hand over your dojo.  We do not allow vegans or lgb around here.  Christians only.'";>&#x2198;</button>
+ document.getElementById('client1').innerText = '';">&#x2198;</button>
 
 
 <script>
 	function changImage7() {
-		var img7 = document.getElementById('girl');
-		img7.src = './images/scene4c.png';}
+		var img7 = document.getElementById('deckImg');
+		img7.src = './images/interi4.png';}
 </script>
 </td></tr></table>
 </td></tr></table>
 <br>
+<div id="radio1" onclick="radioToggy();">
 &#x1F4FB;<br>
-<button id="radioon" style="background:black; color:green" onclick="document.getElementById('radioon').style.background = 'lightgreen'; 
+<button id="radioon" disabled; style="background:black; color:green" onclick="document.getElementById('radioon').style.background = 'lightgreen';
+score=score + 1; 
 document.getElementById('radioon').style.color = 'black'; 
 document.getElementById('radiooff').style.background = 'black';
 document.getElementById('radiooff').style.color = 'red';
 "
 
->ON</button><button style="color:black; background:red" id="radiooff"
+>ON</button><button style="color:black; disabled; background:red" id="radiooff"
 onclick="document.getElementById('radioon').style.background = 'black';
+pcscore = pcscore + 1;
+radioToggy();
 document.getElementById('radioon').style.color = 'lightgreen';
 document.getElementById('radiooff').style.background = 'red';
 document.getElementById('radiooff').style.color = 'black';
 "
 
 >OFF</button>
-
-<br>
-STEERING<br>
-<button id="autoon" style="background:black; color:green; width:59px;" onclick="document.getElementById('autoon').style.background = 'lightgreen'; 
+</div>
+<br><br>
+<div id="gameannc">
+<font size="1">
+STEERING
+</div>
+<button id="autoon" class="buttAzz" style="background:black; color:green;" onclick="document.getElementById('autoon').style.background = 'lightgreen'; 
 document.getElementById('autoon').style.color = 'black'; 
 document.getElementById('autooff').style.background = 'black';
 document.getElementById('autooff').style.color = 'red';
 "
 
->AUTO</button><br>
-<button style="color:black; background:red" id="autooff"
+><font = "1">AUTO</button><br>
+<button class="buttAzz" style="color:black; background:red" id="autooff"
 onclick="document.getElementById('autoon').style.background = 'black';
 document.getElementById('autoon').style.color = 'lightgreen';
 document.getElementById('autooff').style.background = 'red';
@@ -672,11 +690,19 @@ document.getElementById('messageline').innerText = 'This is the captain, over.  
 document.getElementById('intercom').style.display = 'block';
 ">&#x1F4FB;</button></td><td>
 <button  class="menuBtn" style="background:black; color:cyan"
-onclick="document.getElementById('messageline').innerText = 'River Clout & Crypto => ' + score;">&#x1F4B0;</button>
+onclick="
+document.getElementById('msg').style.color = 'gray';
+
+document.getElementById('msg').innerText = 'Player River Clout & Crypto => ' + score;
+document.getElementById('messageline').innerText = 'COMP River Clout & Crypto => ' + pcscore;
+document.getElementById('messageline').style.color = 'lightblue';
+
+
+">&#x1F4B0;</button>
 </td><td>
 <button id="sess" class="menuBtn" style="background:black; color:beige;" onclick="changImage5C();
 document.getElementById('msg').style.color = 'pink';
-document.getElementById('msg').innerText = 'Chiagaru: Well, I am the temporary captain of this vessel so why cannot I find a boyfriend?  I just need a nice vegetarian dude who likes sess.  Is that too much to ask?  I gotta get off this ship and get to a pub.';
+document.getElementById('msg').innerText = 'Chiagaru: Well, I am the temporary captain of this vessel so why do I not have dates?  I just need a nice vegetarian dude to hold moi.  I gotta get off this ship and get to a pub for wc sess.';
 document.getElementById('sess').style.background = 'red';
 document.getElementById('bridgebtn').style.background = 'orange';
 document.getElementById('enginebtn').style.background = 'black';
@@ -801,10 +827,11 @@ document.getElementById('enginebtn').style.color = 'white';"
 		img99.src = './images/4.png';
 			}
 </script>
-<button id="dock" class="menuBtn" disabled onclick="changImage03b();
+<button id="dock" class="menuBtn" onclick="
+window.location.hash = 'settings';
 document.getElementById('sess').style.background = 'black';
 document.getElementById('enginebtn').style.background = 'black';
-document.getElementById('messageline').innerText = 'Salty Dog, over.  Salty Dog, we are parking here.';
+document.getElementById('messageline').innerText = '';
 document.getElementById('myRange').style.disabled = 'true';"
  style="background:darkgreen; color:beige;">&#x2693;</button></td></tr></table>
 <script>
@@ -1012,20 +1039,97 @@ Double Sixes! Pass wins<br>
 <br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br>
+<div id="settings"></div>
+<br><br>
+SETTINGS<br><br>
 
+One or two players?<br><br>
+<button onclick="window.location.hash = 'home';" class="buttAzz">ICHI</button><button onclick="
+players = 2;
+twoPlayer();
+window.location.hash = 'home';"  class="buttAzz">NI</button><br>
+<br>
+Note: In two player mode, the two players will work together as a team.
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br>
+<div id="home" onclick="window.location.hash = 'settings2';">
+<br><br>
+There was a problem with our facilities along the Racoon River and we must relocate.  Where should we go?  Player 1 choose your new home base:<br><br>
+<table><tr><td>
+<button class="sweetPussy" style="background:brown; color:orange" onclick="
+document.getElementById('autooff').innerText = 'Alaska';">&#x1F415; Alaska</button><br><br>
+<button class="sweetPussy" style="background:darkblue; color:red" onclick="
+document.getElementById('autooff').innerText = 'Beirut';">&#x1F332; Beirut</button><br><br>
+<button class="sweetPussy" style="background:orange" onclick="
+document.getElementById('autooff').innerText = 'Gaza';">&#x1F347; Gaza</button>
+</td>
+<td>
+<button class="sweetPussy" style="background:gold; color:black" onclick="
+document.getElementById('autooff').innerText = 'India';">&#x1F372; India</button><br><br>
+<button class="sweetPussy" style="background:maroon; color:yellow" onclick="
+document.getElementById('autooff').innerText = 'NYC';">
+&#x1F5FD; NYC</button><br><br>
+<button class="sweetPussy" style="background:red; color:lightgreen" onclick="
+document.getElementById('autooff').innerText = 'MSY';">&#x1F37B; Nawlinz</button>
+</td></tr></table>
+</div>
+<br><br>
+<br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br>
+<br><br>
+<br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br>
 
+<div id="settings2" onclick="document.getElementById('gameannc').innerText = '';" style="display:absolute; bottom-margin:90%">
+<br><br>
+Please select the opposing crew's home base... (COMP and/or Player 2):<br><br>
+
+<div id="viziter" onclick="window.location.hash = 'starttt'; score=0; pcscore=0;
+document.getElementById('msg').innerText = 'P1 goes first';
+document.getElementById('msg').innerText = 'P1 goes first';
+
+" style="top-margin:10px">
+<table><tr><td>
+<button class="sweetPussy" style="background:white; color:black" onclick="
+document.getElementById('autoon').innerText = 'NC';">&#x1F416; NC</button><br><br>
+<button class="sweetPussy" style="background:violet; color:black" onclick="
+document.getElementById('autoon').innerText = 'Houston';">&#x1F47A; Houston</button><br><br>
+<button class="sweetPussy" style="background:blue" onclick="
+document.getElementById('autoon').innerText = 'Miami';">&#x1F47E; Miami</button>
+</td>
+<td>
+<button class="sweetPussy" style="background:black; color:gray" onclick="
+document.getElementById('autoon').innerText = 'Tel Aviv';">&#x1F4A9; Tel Aviv</button><br><br>
+<button class="sweetPussy" style="background:lightblue; color:darkblue" onclick="
+document.getElementById('autoon').innerText = 'Tampa';
+">&#x1F479; 
+Tampa</button><br><br>
+<button class="sweetPussy" style="background:pink; color:purple" onclick="
+document.getElementById('autoon').innerText = 'Texas';
+document.getElementById('settings').style.display = 'none';
+">&#x1F400; Texas</button>
+</td></tr></table>
+</div></div>
+<p style="display:none">
+<br>850 N Union Street<br>95205<br>Gay Sex Trafico En Bano<br><br>209-463-8686<br><br>Gay Butt Sex<br>209-696-5191<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</p>
+<br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br>
 
 <font face="monoface" color="gray" size="1">
 &#x00A9; Dokyo Entertainment Ltd in conjunction with FH Engineering, Crystal World, Delta College, Kagaku International and Moonshee Worldwide (c)2026
 </font>
 <br><br><br>
 
-<!--usr acct number temp-->
-<script>{
- document.getElementById("systemCode").textContent = "USER_ID-" + Math.floor(Math.random() * 9000 + 1000);
-}
-</script>
-<!--end usr acct num-->
 
 <script>
  function disableScroll() {
@@ -1058,26 +1162,12 @@ Double Sixes! Pass wins<br>
 	const radioButton = document.getElementById("engineOn");
 	 radioButton.checked = false;
       document.getElementById('engineOff').checked = true;
-
-
-
-
-
-
-
-
-
-
-
-
-
 	}
 </script>
 
 <script>
  function engineOn2() {
   document.getElementById('onbutton').style.background = 'green';
-document.getElementById('output').innerText = 5;
 document.getElementById('myRange').disabled = false;
 document.getElementById('myRange2').disabled = false;
 document.getElementById('engineOn').checked = true;
@@ -1166,15 +1256,56 @@ document.getElementById('engineOn').checked = true;
 		 setInterval(() => {
 		  if (!btn22.disabled)
 			btn22.click();
-			}, 10000);
+			}, 1000);
+	}
+</script>
+
+<script>
+	function leftArrowClick() {
+		var imgLeft = document.getElementById('deckImg');
+		imgLeft.src = './images/interi.png';}
+</script>
+
+<script>
+	function rightArrowClick() {
+		var imgRight = document.getElementById('deckImg');
+		imgRight.src = './images/interi2b.png';}
+</script>
+
+<script>
+	function swClick() {
+		var imgSw = document.getElementById('deckImg');
+		imgSw.src = './images/interi3c.png';}
+</script>
+
+<script>
+ function twoPlayer() {
+  document.getElementById('gameannc').innerText = '2P Mode';
+	document.getElementById('autoon').disabled = true;
+	document.getElementById('autooff').disabled = true;
+	
+	}
+</script>
+
+<script>
+ function radioToggy() {
+	if (players > 1) {
+		if (turn < 2) {
+	document.getElementById('msg').innerText = 'Players, switch sides now. P1 take a break.';
+	document.getElementById('messageline').innerText = 'Player Two, take the helm.';
+	turn = 2;
+	}
+		else {
+				document.getElementById('msg').innerText = 'P2 take a break.';
+	document.getElementById('messageline').innerText = 'Player One, have a go now, bitte.';
+	turn = 1;
+	}
+	}
 	}
 </script>
 
 
-
-
    </body>
-   </center>
 </html>   
 
 
