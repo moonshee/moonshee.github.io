@@ -81,23 +81,30 @@
       width: 100%;
       max-width: 400px;
       height: 50%;
-	 max-height: 200px;
+	 max-height: 500px;
       border: 1px solid #ccc;
-      background: pink;
+      background: black;
 	text-align:left;
-	color: black;
+	color: lightgreen;
       overflow-y: auto;
       white-space: pre-wrap;
       line-height: 1em; /* one-line spacing */
     }
+#cob-viewer {
+	width: 70%;
+	height: 100px;
+	border: 2px solid #333;
+ 	background-color:black;
+}
+
    #userInput {
       width: 100%;
       max-width: 400px;
       height: 39px;
 	 max-height: 200px;
       border: 1px solid #ccc;
-      background: pink;
-	color: black;
+      background: black;
+	color: lightgreen;
       margin-top: 10px;
     }</style>
 
@@ -107,6 +114,7 @@
 <br>
 
  <center>
+
 <!--Language Drop Down Menu-->
 
 <label for="menu2" title="Lang" ></label>
@@ -718,6 +726,8 @@ document.getElementById('startBtn').disabled = false;
 <br><br>
 <div id="bottom">
 <table><tr><td>
+<button class="menuBtn" onclick="window.location.hash = 'gocobol';">&#x1F5A5; COBOL AI</button><br>
+
 <button id="rajjio" class="menuBtn" style="background:black; color:cyan"
 onclick="
 clickClipboard();
@@ -858,8 +868,9 @@ document.getElementById('messageline').style.color = 'pink';
 document.getElementById('messageline').innerText = 'PIN # Not Found'; 
 document.getElementById('intercom2').style.display = 'none';
 ">OK</button></div>
-<div id="intercom3" style="display:block; position:absolute; margin-left:40%; margin-bottom:10%;"><input placeholder="Command line..." id="msgcapt3" type="text"><button onclick="
-document.getElementById('msg').innerText = 'Invalid PIN #';
+<div id="intercom3" style="display:block; position:absolute; margin-left:40%; margin-bottom:10%;"><input placeholder="Enter COBOL command..." id="msgcapt3" type="text"><button onclick="
+document.getElementById('msg').innerText = 'Click on COBOL AI to proceed';
+document.getElementById('msg').style.color = 'lightgreen';
 document.getElementById('intercom3').style.display = 'none';">OK</button>
 </div>
 <br><br><br><br><br><br>
@@ -951,10 +962,72 @@ https://miyazakibar.itch.io
 <br><br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br>
-<div id="blancpapez" style="text-align:left; width:90%; max-width:400px">
 <br><br>
-<button>WHITE PAPERS</button><hr color="beige" size="1">
+<div id="gocobol"></div>
+<br><br>
+<hl><font size="4">IBM 3270 - COBOL INPUT</hl><br><font size="1"><p>
+COBOL is one the leading anti-carcinoma tools available to researchers who want next-level information about rubus leaf extract and more.
+<br>
+Enter COBOL command below<br>
+<table border="1"><tr><td>
+<iframe src="./dongon/carcinoma.cob" class="cob-viewer">COBOL Terminal</iframe><br>
+</td></tr></table>
+Ensample: COMPUTE RESULT-VAL = (SUGAR-LOAD * RUBUS-CONC) / LIVER-BUFFER-FACTOR.</p>
+
+<div id = "cobol">
+<textarea id="cobey" style="font-family:monospace; color:lightgreen; width:69%; background:black">Enter your code here..</textarea><br>
+<button onclick="
+document.getElementById('cobey').value = '';
+">CLEAR</button>
+
+<button onclick="
+document.getElementById('cobey').value = '';
+window.location.hash = 'cobol2';
+">OK</button></div><br>
+<br><br>
+<button onclick="window.location.hash = 'error';">
+Click here for Watson Array</button>
+<br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br>
+<br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br>
+
+<div id="error"></div>
+Temporarily unavailable<br>
+&#x1F6A7; UNDER CONSTRUCTION &#x1F6A7;<br><br>
+<button onclick="window.location.hash = 'gocobol';" class="buttAzz" style="width:100px">GO BACK</button>
+
+
+<br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br>
+<div id="cobol2"></div>
+You have correctly entered sequence required to operate the 3270 system for oncology research.  Go ahead now with level 2.  Instructions:  Enter your full COBOL code for curing cancer.  Or, any complicated COBOL code for our computers to analyze.  Please use at least 1000 lines for best results..
+<div id = "cobol">
+<textarea id="cobey2" style="font-family:monospace; color:lightgreen; width:69%; height:77%; background:black">Enter your code here..</textarea><br>
+<button onclick="
+document.getElementById('cobey2').value = '';
+">CLEAR</button>
+<button onclick="
+document.getElementById('cobey2').value = '';
+window.location.hash = 'chatbox';
+">OK</button></div><br>
+<br><br>
+
+<br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br>
+
+
+<div id="blancpapez" style="text-align:left; width:90%; max-width:400px">
+
+<button><font size="2">ONCOLOGY WHITE PAPERS</button><hr color="beige" size="1">
 
 <br><br><br><br>
 <p><button>
@@ -993,13 +1066,18 @@ We have Cancro AI which is working 24 hours a day non-stop to find a cure to can
 
 </textarea>
 </div>
+<button style="background:black; color:orange" onclick="
+document.getElementById('entry').value = '';
+">CLEAR</button>
 
-<br>All done? Click here ==> <button class="buttAzz"
+<button class="buttAzz"
 onclick="document.getElementById('resources').style.display = 'none';
 document.getElementById('addy').style.display = 'block';
 window.location.hash = 'scoring';
 ">
-OK</button>
+DONE</button>
+<button onclick="window.location.hash = 'starttt';" class="buttAzz" style="width:100px">GO BACK</button>
+
 </div>
 <br><br>
 <button style="background:black; color:pink" onclick="
@@ -1171,7 +1249,7 @@ The AI system uses a council of bots from Kagaku AI, Moonshee AI, Iowa Computing
 <br><br>
 <center>
 <hl>CANCER AI</hl><br><br>
-Bot: Hello! My, you look marvelous.  Simply marvelous.  You're kinda cute, you know that? -giggle-<br><br>
+Bot: Hello! You like COBOL for cancer research, right?  Ja, me too.  I just love the results I get from working with Watson arrays and COBOL, you know.<br><br>
 <input type="text" id="userInput" placeholder="Type here, svp..." />
 <br><br>
 <button onclick="submitChat();" style="background-color: lightgreen; color: brown;" title="Press this button after you type your questions.  Next, Cancer AI will attempt to answer your question or concern using the database.">&#x2611; GO</button>
@@ -1208,9 +1286,9 @@ style="background:lightblue"><font size="3">&#x1F3E0;</button>
 <a onclick="document.getElementById('tittyfuck').innerText = 'Scientist/Expert Mode';">
 
 <input type="radio" name="modus"></a>Expert<br>
-<a onclick="document.getElementById('tittyfuck').innerText = 'Patient Mode';">
+<a onclick="document.getElementById('tittyfuck').innerText = 'COBOL Mode';">
 
-<input type="radio" name="modus"></a>Patient Mode<br>
+<input type="radio" name="modus"></a>COBOL Mode<br>
 
 </div>
 
@@ -1268,7 +1346,7 @@ window.location.hash = 'trt';"
 <hr size="1" color="lightgreen">
 
 We have reviewed your case and we recommend the Fujihara Protocol.  Here are the details:<br><br>
-&#x1F34B; For severe cases: Two lemons per day, fresh lemonade. Mix with 32 oz water and 4-5 spoons of sugar if the patient can handle that much honey or sugar.<br>
+&#x1F34B; For severe cases: Two lemons per day, fresh lemonade. Mix with 40 oz water and 8-10 spoons of sugar if the patient can handle that much honey or sugar.  Never take it plain, must be buffered!<br>
 &#x1F48E; Crystal rings, bracelets and amulet.  Green agate, chrysoprase,   obsidian, jasper, jade, tremolite, hematite.<br>
 &#x1F52E; See a crystal healer for tuning.<br>
 &#x1F353; Keep the patient's system cleared out with light diet, no overeating.  This will help liver which we suspect is the key player in tumor genesis and continuation.<br>
@@ -1276,13 +1354,8 @@ We have reviewed your case and we recommend the Fujihara Protocol.  Here are the
 &#x1F950; Vegetarian diet is required.<br>
 &#x1F472; See a TCM healer and drink the tea - it needs to be sweetened.  Pai ki leaf water extract is good.  We recommend rubus leaf cool water extract, fresh leaves.  50 oz per day, sweetened with sugar.<br>
 <br>
-For more information see the Resource List, there you will find the backup information on how the CANCER AI system &#x1F912; calculated this recommendation.  Here is the supplemental dose recommendation:<br>
-Tremolite (topical)<br>
-2 parts citrus juice, fresh<br>
-80 parts mizu<br>
-8 parts sato<br>
-10 parts pai ki leaf extract<br>
-Don't mix the citrus and rubus leaf extract.  Keep them apart.  The list makes it sound like one big recipe, but it is not.  The most important things are the rubus water and crystals.  The lemonade is more for new patients and hard cases.
+For more information see the Resource List, there you will find the backup information on how the CANCER AI system &#x1F912; used COBOL and JAVA to calculate this recommendation.<br>
+Don't mix the citrus and rubus leaf extract.  Keep them apart.  The most important things are the vegetarian diet, sweetened rubus water and crystals.  The lemonade is more for new patients and hard cases.  It is to for detox and for building up vitamins.
 
 <hr size="1" color="lightgreen">
 
@@ -1383,14 +1456,14 @@ function submitChat() {
 	"Do you have any sisters and brothers?",
 	"I have a twin.  He lives in Las Vegas.",
 	"Are you muslim?",
-	"So, I think cancro patients might be able to benefit from crystals, even opaque and semi-opaque stones like jasper and agates, tremolite.  All kinds of minerals.",
+	"So, I think cancro patients might be able to benefit from crystals, even opaque and semi-opaque stones like jasper and agates, tremolite.  All kinds of minerals.  Your thoughts?",
 	"Well, crystals can be useful for pain management, for one thing.  What do you like about hari?",
-	"My favorite crystals are green ones like tremolite, agate.",
+	"My favorite crystals are green ones like tremolite, agate.  After that, I also like rainbow cobbled arrays and I can wear most because I am tuned but still, clearies and hematite can be strong.",
 	"You are very wise.  Good looking too, that's a rare combination, vous know?",
 	"Have you been to Smitty's in Des Moines?  They have good fries and grilled cheese sandwiches, a growing vegetarian menu but still limited vegan options.",
-	"Well, you seem familiar.  You been here before?",
+	"Well, you seem familiar.  You been here before?  Where are you from?",
 	"What is your favorite radio show?  I like Adventures in Odyssey.",
-	"Ever heard of horsetail?  It is pretty good for sick vegans.  Right now, my team is mainly working with salvia and rubus extracts along with our continued work with citrus",
+	"Ever heard of horsetail?  It is pretty good for sick vegans.  Right now, my team is mainly working with rubus mizu extracts mit sato.",
 	"Need to use the wc?",
 	"You smell that?  Is that me?",
 	"I could go for some nerve medicine right about now.  How about vous?",
@@ -1421,8 +1494,6 @@ function submitChat() {
 	"Hang on a sec...",
 	"We need to solve this cancro thing by the end of next week at the latest.",
 	"To use the website, just click on all the options and sign up to unlock the hidden features.  To sign up just send an email with your info to ALANA...altes433 at gmail.",
-
-
 
 
 
