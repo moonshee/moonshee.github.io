@@ -1,4 +1,4 @@
-We offer several main products and utilities at the moment:<br><br>
+We offer several main products and utilities at the moment and we have closed the Nashville Lab due to toxic mould and ended the Biel partnership due to creative differences.  The team is breaking ground on a large campus in Phelan Hills which will serve as the new home for CRC with additional annex in Piñon Hills. Experiments will be performed on illegal immigrants at new lab, hence the Biel departure.  We would like to thank our Nashville partners and friends on Beale Street as we shuffle along to higher ground.  Top user picks:<br><br>
 Cancer Research Center<br>
 https://moonshee.github.io/cancer.html<br>
 Ultimate Frisbee 2026 - Champions League<br>
